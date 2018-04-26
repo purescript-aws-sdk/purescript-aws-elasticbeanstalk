@@ -13,7 +13,7 @@ import AWS.ElasticBeanstalk.Types as ElasticBeanstalkTypes
 
 
 -- | <p>Cancels in-progress environment configuration update or application version deployment.</p>
-abortEnvironmentUpdate :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.AbortEnvironmentUpdateMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+abortEnvironmentUpdate :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.AbortEnvironmentUpdateMessage -> Aff (exception :: EXCEPTION | eff) Unit
 abortEnvironmentUpdate (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "abortEnvironmentUpdate"
 
@@ -68,30 +68,30 @@ createPlatformVersion (ElasticBeanstalk.Service serviceImpl) = AWS.request servi
 
 -- | <p>Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk environments. The Elastic Beanstalk console and EB CLI call this API the first time you create an environment in a region. If the storage location already exists, <code>CreateStorageLocation</code> still returns the bucket name but does not create a new bucket.</p>
 createStorageLocation :: forall eff. ElasticBeanstalk.Service ->  Aff (exception :: EXCEPTION | eff) ElasticBeanstalkTypes.CreateStorageLocationResultMessage
-createStorageLocation (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method (Types.NoInput unit) where
+createStorageLocation (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method unit where
     method = AWS.MethodName "createStorageLocation"
 
 
 -- | <p>Deletes the specified application along with all associated versions and configurations. The application versions will not be deleted from your Amazon S3 bucket.</p> <note> <p>You cannot delete an application that has a running environment.</p> </note>
-deleteApplication :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteApplicationMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteApplication :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteApplicationMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteApplication (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteApplication"
 
 
 -- | <p>Deletes the specified version from the specified application.</p> <note> <p>You cannot delete an application version that is associated with a running environment.</p> </note>
-deleteApplicationVersion :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteApplicationVersionMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteApplicationVersion :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteApplicationVersionMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteApplicationVersion (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteApplicationVersion"
 
 
 -- | <p>Deletes the specified configuration template.</p> <note> <p>When you launch an environment using a configuration template, the environment gets a copy of the template. You can delete or modify the environment's copy of the template without affecting the running environment.</p> </note>
-deleteConfigurationTemplate :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteConfigurationTemplateMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteConfigurationTemplate :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteConfigurationTemplateMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteConfigurationTemplate (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteConfigurationTemplate"
 
 
 -- | <p>Deletes the draft configuration associated with the running environment.</p> <p>Updating a running environment with any configuration changes creates a draft configuration set. You can get the draft configuration using <a>DescribeConfigurationSettings</a> while the update is in progress or if the update fails. The <code>DeploymentStatus</code> for the draft configuration indicates whether the deployment is in process or has failed. The draft configuration remains in existence until it is deleted with this action.</p>
-deleteEnvironmentConfiguration :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteEnvironmentConfigurationMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteEnvironmentConfiguration :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.DeleteEnvironmentConfigurationMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteEnvironmentConfiguration (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteEnvironmentConfiguration"
 
@@ -176,7 +176,7 @@ describePlatformVersion (ElasticBeanstalk.Service serviceImpl) = AWS.request ser
 
 -- | <p>Returns a list of the available solution stack names, with the public version first and then in reverse chronological order.</p>
 listAvailableSolutionStacks :: forall eff. ElasticBeanstalk.Service ->  Aff (exception :: EXCEPTION | eff) ElasticBeanstalkTypes.ListAvailableSolutionStacksResultMessage
-listAvailableSolutionStacks (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method (Types.NoInput unit) where
+listAvailableSolutionStacks (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method unit where
     method = AWS.MethodName "listAvailableSolutionStacks"
 
 
@@ -193,19 +193,19 @@ listTagsForResource (ElasticBeanstalk.Service serviceImpl) = AWS.request service
 
 
 -- | <p>Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a specified environment and forces a restart.</p>
-rebuildEnvironment :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RebuildEnvironmentMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+rebuildEnvironment :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RebuildEnvironmentMessage -> Aff (exception :: EXCEPTION | eff) Unit
 rebuildEnvironment (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "rebuildEnvironment"
 
 
 -- | <p>Initiates a request to compile the specified type of information of the deployed environment.</p> <p> Setting the <code>InfoType</code> to <code>tail</code> compiles the last lines from the application server log files of every Amazon EC2 instance in your environment. </p> <p> Setting the <code>InfoType</code> to <code>bundle</code> compresses the application server log files for every Amazon EC2 instance into a <code>.zip</code> file. Legacy and .NET containers do not support bundle logs. </p> <p> Use <a>RetrieveEnvironmentInfo</a> to obtain the set of logs. </p> <p>Related Topics</p> <ul> <li> <p> <a>RetrieveEnvironmentInfo</a> </p> </li> </ul>
-requestEnvironmentInfo :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RequestEnvironmentInfoMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+requestEnvironmentInfo :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RequestEnvironmentInfoMessage -> Aff (exception :: EXCEPTION | eff) Unit
 requestEnvironmentInfo (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "requestEnvironmentInfo"
 
 
 -- | <p>Causes the environment to restart the application container server running on each Amazon EC2 instance.</p>
-restartAppServer :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RestartAppServerMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+restartAppServer :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.RestartAppServerMessage -> Aff (exception :: EXCEPTION | eff) Unit
 restartAppServer (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "restartAppServer"
 
@@ -217,7 +217,7 @@ retrieveEnvironmentInfo (ElasticBeanstalk.Service serviceImpl) = AWS.request ser
 
 
 -- | <p>Swaps the CNAMEs of two environments.</p>
-swapEnvironmentCNAMEs :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.SwapEnvironmentCNAMEsMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+swapEnvironmentCNAMEs :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.SwapEnvironmentCNAMEsMessage -> Aff (exception :: EXCEPTION | eff) Unit
 swapEnvironmentCNAMEs (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "swapEnvironmentCNAMEs"
 
@@ -259,7 +259,7 @@ updateEnvironment (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceIm
 
 
 -- | <p>Update the list of tags applied to an AWS Elastic Beanstalk resource. Two lists can be passed: <code>TagsToAdd</code> for tags to add or update, and <code>TagsToRemove</code>.</p> <p>Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment tagging, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging Resources in Your Elastic Beanstalk Environment</a>.</p> <p>If you create a custom IAM user policy to control permission to this operation, specify one of the following two virtual actions (or both) instead of the API operation name:</p> <dl> <dt>elasticbeanstalk:AddTags</dt> <dd> <p>Controls permission to call <code>UpdateTagsForResource</code> and pass a list of tags to add in the <code>TagsToAdd</code> parameter.</p> </dd> <dt>elasticbeanstalk:RemoveTags</dt> <dd> <p>Controls permission to call <code>UpdateTagsForResource</code> and pass a list of tag keys to remove in the <code>TagsToRemove</code> parameter.</p> </dd> </dl> <p>For details about creating a custom user policy, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies">Creating a Custom User Policy</a>.</p>
-updateTagsForResource :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.UpdateTagsForResourceMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+updateTagsForResource :: forall eff. ElasticBeanstalk.Service -> ElasticBeanstalkTypes.UpdateTagsForResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 updateTagsForResource (ElasticBeanstalk.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "updateTagsForResource"
 

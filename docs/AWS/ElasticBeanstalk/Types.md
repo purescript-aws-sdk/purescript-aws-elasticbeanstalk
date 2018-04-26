@@ -26,7 +26,7 @@ Encode ARN
 
 ``` purescript
 newtype AbortEnvironmentUpdateMessage
-  = AbortEnvironmentUpdateMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = AbortEnvironmentUpdateMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p/>
@@ -51,7 +51,7 @@ Constructs AbortEnvironmentUpdateMessage from required parameters
 #### `newAbortEnvironmentUpdateMessage'`
 
 ``` purescript
-newAbortEnvironmentUpdateMessage' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> AbortEnvironmentUpdateMessage
+newAbortEnvironmentUpdateMessage' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }) -> AbortEnvironmentUpdateMessage
 ```
 
 Constructs AbortEnvironmentUpdateMessage's fields from required parameters
@@ -124,7 +124,7 @@ Encode ActionType
 
 ``` purescript
 newtype ApplicationDescription
-  = ApplicationDescription { "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Versions" :: NullOrUndefined (VersionLabelsList), "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }
+  = ApplicationDescription { "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Versions" :: Maybe (VersionLabelsList), "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }
 ```
 
 <p>Describes the properties of an application.</p>
@@ -149,7 +149,7 @@ Constructs ApplicationDescription from required parameters
 #### `newApplicationDescription'`
 
 ``` purescript
-newApplicationDescription' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Versions" :: NullOrUndefined (VersionLabelsList), "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Versions" :: NullOrUndefined (VersionLabelsList), "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }) -> ApplicationDescription
+newApplicationDescription' :: ({ "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Versions" :: Maybe (VersionLabelsList), "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Versions" :: Maybe (VersionLabelsList), "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }) -> ApplicationDescription
 ```
 
 Constructs ApplicationDescription's fields from required parameters
@@ -174,7 +174,7 @@ Encode ApplicationDescriptionList
 
 ``` purescript
 newtype ApplicationDescriptionMessage
-  = ApplicationDescriptionMessage { "Application" :: NullOrUndefined (ApplicationDescription) }
+  = ApplicationDescriptionMessage { "Application" :: Maybe (ApplicationDescription) }
 ```
 
 <p>Result message containing a single description of an application.</p>
@@ -199,7 +199,7 @@ Constructs ApplicationDescriptionMessage from required parameters
 #### `newApplicationDescriptionMessage'`
 
 ``` purescript
-newApplicationDescriptionMessage' :: ({ "Application" :: NullOrUndefined (ApplicationDescription) } -> { "Application" :: NullOrUndefined (ApplicationDescription) }) -> ApplicationDescriptionMessage
+newApplicationDescriptionMessage' :: ({ "Application" :: Maybe (ApplicationDescription) } -> { "Application" :: Maybe (ApplicationDescription) }) -> ApplicationDescriptionMessage
 ```
 
 Constructs ApplicationDescriptionMessage's fields from required parameters
@@ -208,7 +208,7 @@ Constructs ApplicationDescriptionMessage's fields from required parameters
 
 ``` purescript
 newtype ApplicationDescriptionsMessage
-  = ApplicationDescriptionsMessage { "Applications" :: NullOrUndefined (ApplicationDescriptionList) }
+  = ApplicationDescriptionsMessage { "Applications" :: Maybe (ApplicationDescriptionList) }
 ```
 
 <p>Result message containing a list of application descriptions.</p>
@@ -233,7 +233,7 @@ Constructs ApplicationDescriptionsMessage from required parameters
 #### `newApplicationDescriptionsMessage'`
 
 ``` purescript
-newApplicationDescriptionsMessage' :: ({ "Applications" :: NullOrUndefined (ApplicationDescriptionList) } -> { "Applications" :: NullOrUndefined (ApplicationDescriptionList) }) -> ApplicationDescriptionsMessage
+newApplicationDescriptionsMessage' :: ({ "Applications" :: Maybe (ApplicationDescriptionList) } -> { "Applications" :: Maybe (ApplicationDescriptionList) }) -> ApplicationDescriptionsMessage
 ```
 
 Constructs ApplicationDescriptionsMessage's fields from required parameters
@@ -242,7 +242,7 @@ Constructs ApplicationDescriptionsMessage's fields from required parameters
 
 ``` purescript
 newtype ApplicationMetrics
-  = ApplicationMetrics { "Duration" :: NullOrUndefined (NullableInteger), "RequestCount" :: NullOrUndefined (RequestCount), "StatusCodes" :: NullOrUndefined (StatusCodes), "Latency" :: NullOrUndefined (Latency) }
+  = ApplicationMetrics { "Duration" :: Maybe (NullableInteger), "RequestCount" :: Maybe (RequestCount), "StatusCodes" :: Maybe (StatusCodes), "Latency" :: Maybe (Latency) }
 ```
 
 <p>Application request metrics for an AWS Elastic Beanstalk environment.</p>
@@ -267,7 +267,7 @@ Constructs ApplicationMetrics from required parameters
 #### `newApplicationMetrics'`
 
 ``` purescript
-newApplicationMetrics' :: ({ "Duration" :: NullOrUndefined (NullableInteger), "RequestCount" :: NullOrUndefined (RequestCount), "StatusCodes" :: NullOrUndefined (StatusCodes), "Latency" :: NullOrUndefined (Latency) } -> { "Duration" :: NullOrUndefined (NullableInteger), "RequestCount" :: NullOrUndefined (RequestCount), "StatusCodes" :: NullOrUndefined (StatusCodes), "Latency" :: NullOrUndefined (Latency) }) -> ApplicationMetrics
+newApplicationMetrics' :: ({ "Duration" :: Maybe (NullableInteger), "RequestCount" :: Maybe (RequestCount), "StatusCodes" :: Maybe (StatusCodes), "Latency" :: Maybe (Latency) } -> { "Duration" :: Maybe (NullableInteger), "RequestCount" :: Maybe (RequestCount), "StatusCodes" :: Maybe (StatusCodes), "Latency" :: Maybe (Latency) }) -> ApplicationMetrics
 ```
 
 Constructs ApplicationMetrics's fields from required parameters
@@ -308,7 +308,7 @@ Encode ApplicationNamesList
 
 ``` purescript
 newtype ApplicationResourceLifecycleConfig
-  = ApplicationResourceLifecycleConfig { "ServiceRole" :: NullOrUndefined (String), "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig) }
+  = ApplicationResourceLifecycleConfig { "ServiceRole" :: Maybe (String), "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig) }
 ```
 
 <p>The resource lifecycle configuration for an application. Defines lifecycle settings for resources that belong to the application, and the service role that Elastic Beanstalk assumes in order to apply lifecycle settings. The version lifecycle configuration defines lifecycle settings for application versions.</p>
@@ -333,7 +333,7 @@ Constructs ApplicationResourceLifecycleConfig from required parameters
 #### `newApplicationResourceLifecycleConfig'`
 
 ``` purescript
-newApplicationResourceLifecycleConfig' :: ({ "ServiceRole" :: NullOrUndefined (String), "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig) } -> { "ServiceRole" :: NullOrUndefined (String), "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig) }) -> ApplicationResourceLifecycleConfig
+newApplicationResourceLifecycleConfig' :: ({ "ServiceRole" :: Maybe (String), "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig) } -> { "ServiceRole" :: Maybe (String), "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig) }) -> ApplicationResourceLifecycleConfig
 ```
 
 Constructs ApplicationResourceLifecycleConfig's fields from required parameters
@@ -342,7 +342,7 @@ Constructs ApplicationResourceLifecycleConfig's fields from required parameters
 
 ``` purescript
 newtype ApplicationResourceLifecycleDescriptionMessage
-  = ApplicationResourceLifecycleDescriptionMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }
+  = ApplicationResourceLifecycleDescriptionMessage { "ApplicationName" :: Maybe (ApplicationName), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }
 ```
 
 ##### Instances
@@ -365,7 +365,7 @@ Constructs ApplicationResourceLifecycleDescriptionMessage from required paramete
 #### `newApplicationResourceLifecycleDescriptionMessage'`
 
 ``` purescript
-newApplicationResourceLifecycleDescriptionMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }) -> ApplicationResourceLifecycleDescriptionMessage
+newApplicationResourceLifecycleDescriptionMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: Maybe (ApplicationName), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }) -> ApplicationResourceLifecycleDescriptionMessage
 ```
 
 Constructs ApplicationResourceLifecycleDescriptionMessage's fields from required parameters
@@ -374,7 +374,7 @@ Constructs ApplicationResourceLifecycleDescriptionMessage's fields from required
 
 ``` purescript
 newtype ApplicationVersionDescription
-  = ApplicationVersionDescription { "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "VersionLabel" :: NullOrUndefined (VersionLabel), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "BuildArn" :: NullOrUndefined (String), "SourceBundle" :: NullOrUndefined (S3Location), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (ApplicationVersionStatus) }
+  = ApplicationVersionDescription { "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "VersionLabel" :: Maybe (VersionLabel), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "BuildArn" :: Maybe (String), "SourceBundle" :: Maybe (S3Location), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (ApplicationVersionStatus) }
 ```
 
 <p>Describes the properties of an application version.</p>
@@ -399,7 +399,7 @@ Constructs ApplicationVersionDescription from required parameters
 #### `newApplicationVersionDescription'`
 
 ``` purescript
-newApplicationVersionDescription' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "VersionLabel" :: NullOrUndefined (VersionLabel), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "BuildArn" :: NullOrUndefined (String), "SourceBundle" :: NullOrUndefined (S3Location), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (ApplicationVersionStatus) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "Description" :: NullOrUndefined (Description), "VersionLabel" :: NullOrUndefined (VersionLabel), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "BuildArn" :: NullOrUndefined (String), "SourceBundle" :: NullOrUndefined (S3Location), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (ApplicationVersionStatus) }) -> ApplicationVersionDescription
+newApplicationVersionDescription' :: ({ "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "VersionLabel" :: Maybe (VersionLabel), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "BuildArn" :: Maybe (String), "SourceBundle" :: Maybe (S3Location), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (ApplicationVersionStatus) } -> { "ApplicationName" :: Maybe (ApplicationName), "Description" :: Maybe (Description), "VersionLabel" :: Maybe (VersionLabel), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "BuildArn" :: Maybe (String), "SourceBundle" :: Maybe (S3Location), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (ApplicationVersionStatus) }) -> ApplicationVersionDescription
 ```
 
 Constructs ApplicationVersionDescription's fields from required parameters
@@ -424,7 +424,7 @@ Encode ApplicationVersionDescriptionList
 
 ``` purescript
 newtype ApplicationVersionDescriptionMessage
-  = ApplicationVersionDescriptionMessage { "ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription) }
+  = ApplicationVersionDescriptionMessage { "ApplicationVersion" :: Maybe (ApplicationVersionDescription) }
 ```
 
 <p>Result message wrapping a single description of an application version.</p>
@@ -449,7 +449,7 @@ Constructs ApplicationVersionDescriptionMessage from required parameters
 #### `newApplicationVersionDescriptionMessage'`
 
 ``` purescript
-newApplicationVersionDescriptionMessage' :: ({ "ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription) } -> { "ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription) }) -> ApplicationVersionDescriptionMessage
+newApplicationVersionDescriptionMessage' :: ({ "ApplicationVersion" :: Maybe (ApplicationVersionDescription) } -> { "ApplicationVersion" :: Maybe (ApplicationVersionDescription) }) -> ApplicationVersionDescriptionMessage
 ```
 
 Constructs ApplicationVersionDescriptionMessage's fields from required parameters
@@ -458,7 +458,7 @@ Constructs ApplicationVersionDescriptionMessage's fields from required parameter
 
 ``` purescript
 newtype ApplicationVersionDescriptionsMessage
-  = ApplicationVersionDescriptionsMessage { "ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList), "NextToken" :: NullOrUndefined (Token) }
+  = ApplicationVersionDescriptionsMessage { "ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Result message wrapping a list of application version descriptions.</p>
@@ -483,7 +483,7 @@ Constructs ApplicationVersionDescriptionsMessage from required parameters
 #### `newApplicationVersionDescriptionsMessage'`
 
 ``` purescript
-newApplicationVersionDescriptionsMessage' :: ({ "ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList), "NextToken" :: NullOrUndefined (Token) } -> { "ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList), "NextToken" :: NullOrUndefined (Token) }) -> ApplicationVersionDescriptionsMessage
+newApplicationVersionDescriptionsMessage' :: ({ "ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList), "NextToken" :: Maybe (Token) } -> { "ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList), "NextToken" :: Maybe (Token) }) -> ApplicationVersionDescriptionsMessage
 ```
 
 Constructs ApplicationVersionDescriptionsMessage's fields from required parameters
@@ -492,7 +492,7 @@ Constructs ApplicationVersionDescriptionsMessage's fields from required paramete
 
 ``` purescript
 newtype ApplicationVersionLifecycleConfig
-  = ApplicationVersionLifecycleConfig { "MaxCountRule" :: NullOrUndefined (MaxCountRule), "MaxAgeRule" :: NullOrUndefined (MaxAgeRule) }
+  = ApplicationVersionLifecycleConfig { "MaxCountRule" :: Maybe (MaxCountRule), "MaxAgeRule" :: Maybe (MaxAgeRule) }
 ```
 
 <p>The application version lifecycle settings for an application. Defines the rules that Elastic Beanstalk applies to an application's versions in order to avoid hitting the per-region limit for application versions.</p> <p>When Elastic Beanstalk deletes an application version from its database, you can no longer deploy that version to an environment. The source bundle remains in S3 unless you configure the rule to delete it.</p>
@@ -517,7 +517,7 @@ Constructs ApplicationVersionLifecycleConfig from required parameters
 #### `newApplicationVersionLifecycleConfig'`
 
 ``` purescript
-newApplicationVersionLifecycleConfig' :: ({ "MaxCountRule" :: NullOrUndefined (MaxCountRule), "MaxAgeRule" :: NullOrUndefined (MaxAgeRule) } -> { "MaxCountRule" :: NullOrUndefined (MaxCountRule), "MaxAgeRule" :: NullOrUndefined (MaxAgeRule) }) -> ApplicationVersionLifecycleConfig
+newApplicationVersionLifecycleConfig' :: ({ "MaxCountRule" :: Maybe (MaxCountRule), "MaxAgeRule" :: Maybe (MaxAgeRule) } -> { "MaxCountRule" :: Maybe (MaxCountRule), "MaxAgeRule" :: Maybe (MaxAgeRule) }) -> ApplicationVersionLifecycleConfig
 ```
 
 Constructs ApplicationVersionLifecycleConfig's fields from required parameters
@@ -558,7 +558,7 @@ Encode ApplicationVersionStatus
 
 ``` purescript
 newtype ApplyEnvironmentManagedActionRequest
-  = ApplyEnvironmentManagedActionRequest { "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "ActionId" :: String }
+  = ApplyEnvironmentManagedActionRequest { "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "ActionId" :: String }
 ```
 
 <p>Request to execute a scheduled managed action immediately.</p>
@@ -583,7 +583,7 @@ Constructs ApplyEnvironmentManagedActionRequest from required parameters
 #### `newApplyEnvironmentManagedActionRequest'`
 
 ``` purescript
-newApplyEnvironmentManagedActionRequest' :: String -> ({ "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "ActionId" :: String } -> { "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "ActionId" :: String }) -> ApplyEnvironmentManagedActionRequest
+newApplyEnvironmentManagedActionRequest' :: String -> ({ "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "ActionId" :: String } -> { "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "ActionId" :: String }) -> ApplyEnvironmentManagedActionRequest
 ```
 
 Constructs ApplyEnvironmentManagedActionRequest's fields from required parameters
@@ -592,7 +592,7 @@ Constructs ApplyEnvironmentManagedActionRequest's fields from required parameter
 
 ``` purescript
 newtype ApplyEnvironmentManagedActionResult
-  = ApplyEnvironmentManagedActionResult { "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (String) }
+  = ApplyEnvironmentManagedActionResult { "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (String) }
 ```
 
 <p>The result message containing information about the managed action.</p>
@@ -617,7 +617,7 @@ Constructs ApplyEnvironmentManagedActionResult from required parameters
 #### `newApplyEnvironmentManagedActionResult'`
 
 ``` purescript
-newApplyEnvironmentManagedActionResult' :: ({ "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (String) } -> { "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (String) }) -> ApplyEnvironmentManagedActionResult
+newApplyEnvironmentManagedActionResult' :: ({ "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (String) } -> { "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (String) }) -> ApplyEnvironmentManagedActionResult
 ```
 
 Constructs ApplyEnvironmentManagedActionResult's fields from required parameters
@@ -642,7 +642,7 @@ Encode AutoCreateApplication
 
 ``` purescript
 newtype AutoScalingGroup
-  = AutoScalingGroup { "Name" :: NullOrUndefined (ResourceId) }
+  = AutoScalingGroup { "Name" :: Maybe (ResourceId) }
 ```
 
 <p>Describes an Auto Scaling launch configuration.</p>
@@ -667,7 +667,7 @@ Constructs AutoScalingGroup from required parameters
 #### `newAutoScalingGroup'`
 
 ``` purescript
-newAutoScalingGroup' :: ({ "Name" :: NullOrUndefined (ResourceId) } -> { "Name" :: NullOrUndefined (ResourceId) }) -> AutoScalingGroup
+newAutoScalingGroup' :: ({ "Name" :: Maybe (ResourceId) } -> { "Name" :: Maybe (ResourceId) }) -> AutoScalingGroup
 ```
 
 Constructs AutoScalingGroup's fields from required parameters
@@ -756,7 +756,7 @@ Encode BoxedInt
 
 ``` purescript
 newtype BuildConfiguration
-  = BuildConfiguration { "ArtifactName" :: NullOrUndefined (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: NullOrUndefined (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: NullOrUndefined (BoxedInt) }
+  = BuildConfiguration { "ArtifactName" :: Maybe (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: Maybe (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: Maybe (BoxedInt) }
 ```
 
 <p>Settings for an AWS CodeBuild build.</p>
@@ -781,7 +781,7 @@ Constructs BuildConfiguration from required parameters
 #### `newBuildConfiguration'`
 
 ``` purescript
-newBuildConfiguration' :: NonEmptyString -> NonEmptyString -> ({ "ArtifactName" :: NullOrUndefined (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: NullOrUndefined (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: NullOrUndefined (BoxedInt) } -> { "ArtifactName" :: NullOrUndefined (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: NullOrUndefined (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: NullOrUndefined (BoxedInt) }) -> BuildConfiguration
+newBuildConfiguration' :: NonEmptyString -> NonEmptyString -> ({ "ArtifactName" :: Maybe (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: Maybe (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: Maybe (BoxedInt) } -> { "ArtifactName" :: Maybe (String), "CodeBuildServiceRole" :: NonEmptyString, "ComputeType" :: Maybe (ComputeType), "Image" :: NonEmptyString, "TimeoutInMinutes" :: Maybe (BoxedInt) }) -> BuildConfiguration
 ```
 
 Constructs BuildConfiguration's fields from required parameters
@@ -790,7 +790,7 @@ Constructs BuildConfiguration's fields from required parameters
 
 ``` purescript
 newtype Builder
-  = Builder { "ARN" :: NullOrUndefined (ARN) }
+  = Builder { "ARN" :: Maybe (ARN) }
 ```
 
 <p>The builder used to build the custom platform.</p>
@@ -815,7 +815,7 @@ Constructs Builder from required parameters
 #### `newBuilder'`
 
 ``` purescript
-newBuilder' :: ({ "ARN" :: NullOrUndefined (ARN) } -> { "ARN" :: NullOrUndefined (ARN) }) -> Builder
+newBuilder' :: ({ "ARN" :: Maybe (ARN) } -> { "ARN" :: Maybe (ARN) }) -> Builder
 ```
 
 Constructs Builder's fields from required parameters
@@ -824,7 +824,7 @@ Constructs Builder's fields from required parameters
 
 ``` purescript
 newtype CPUUtilization
-  = CPUUtilization { "User" :: NullOrUndefined (NullableDouble), "Nice" :: NullOrUndefined (NullableDouble), "System" :: NullOrUndefined (NullableDouble), "Idle" :: NullOrUndefined (NullableDouble), "IOWait" :: NullOrUndefined (NullableDouble), "IRQ" :: NullOrUndefined (NullableDouble), "SoftIRQ" :: NullOrUndefined (NullableDouble) }
+  = CPUUtilization { "User" :: Maybe (NullableDouble), "Nice" :: Maybe (NullableDouble), "System" :: Maybe (NullableDouble), "Idle" :: Maybe (NullableDouble), "IOWait" :: Maybe (NullableDouble), "IRQ" :: Maybe (NullableDouble), "SoftIRQ" :: Maybe (NullableDouble) }
 ```
 
 <p>CPU utilization metrics for an instance.</p>
@@ -849,7 +849,7 @@ Constructs CPUUtilization from required parameters
 #### `newCPUUtilization'`
 
 ``` purescript
-newCPUUtilization' :: ({ "User" :: NullOrUndefined (NullableDouble), "Nice" :: NullOrUndefined (NullableDouble), "System" :: NullOrUndefined (NullableDouble), "Idle" :: NullOrUndefined (NullableDouble), "IOWait" :: NullOrUndefined (NullableDouble), "IRQ" :: NullOrUndefined (NullableDouble), "SoftIRQ" :: NullOrUndefined (NullableDouble) } -> { "User" :: NullOrUndefined (NullableDouble), "Nice" :: NullOrUndefined (NullableDouble), "System" :: NullOrUndefined (NullableDouble), "Idle" :: NullOrUndefined (NullableDouble), "IOWait" :: NullOrUndefined (NullableDouble), "IRQ" :: NullOrUndefined (NullableDouble), "SoftIRQ" :: NullOrUndefined (NullableDouble) }) -> CPUUtilization
+newCPUUtilization' :: ({ "User" :: Maybe (NullableDouble), "Nice" :: Maybe (NullableDouble), "System" :: Maybe (NullableDouble), "Idle" :: Maybe (NullableDouble), "IOWait" :: Maybe (NullableDouble), "IRQ" :: Maybe (NullableDouble), "SoftIRQ" :: Maybe (NullableDouble) } -> { "User" :: Maybe (NullableDouble), "Nice" :: Maybe (NullableDouble), "System" :: Maybe (NullableDouble), "Idle" :: Maybe (NullableDouble), "IOWait" :: Maybe (NullableDouble), "IRQ" :: Maybe (NullableDouble), "SoftIRQ" :: Maybe (NullableDouble) }) -> CPUUtilization
 ```
 
 Constructs CPUUtilization's fields from required parameters
@@ -924,7 +924,7 @@ Constructs CheckDNSAvailabilityMessage's fields from required parameters
 
 ``` purescript
 newtype CheckDNSAvailabilityResultMessage
-  = CheckDNSAvailabilityResultMessage { "Available" :: NullOrUndefined (CnameAvailability), "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname) }
+  = CheckDNSAvailabilityResultMessage { "Available" :: Maybe (CnameAvailability), "FullyQualifiedCNAME" :: Maybe (DNSCname) }
 ```
 
 <p>Indicates if the specified CNAME is available.</p>
@@ -949,7 +949,7 @@ Constructs CheckDNSAvailabilityResultMessage from required parameters
 #### `newCheckDNSAvailabilityResultMessage'`
 
 ``` purescript
-newCheckDNSAvailabilityResultMessage' :: ({ "Available" :: NullOrUndefined (CnameAvailability), "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname) } -> { "Available" :: NullOrUndefined (CnameAvailability), "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname) }) -> CheckDNSAvailabilityResultMessage
+newCheckDNSAvailabilityResultMessage' :: ({ "Available" :: Maybe (CnameAvailability), "FullyQualifiedCNAME" :: Maybe (DNSCname) } -> { "Available" :: Maybe (CnameAvailability), "FullyQualifiedCNAME" :: Maybe (DNSCname) }) -> CheckDNSAvailabilityResultMessage
 ```
 
 Constructs CheckDNSAvailabilityResultMessage's fields from required parameters
@@ -992,7 +992,7 @@ Encode CodeBuildNotInServiceRegionException
 
 ``` purescript
 newtype ComposeEnvironmentsMessage
-  = ComposeEnvironmentsMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "GroupName" :: NullOrUndefined (GroupName), "VersionLabels" :: NullOrUndefined (VersionLabels) }
+  = ComposeEnvironmentsMessage { "ApplicationName" :: Maybe (ApplicationName), "GroupName" :: Maybe (GroupName), "VersionLabels" :: Maybe (VersionLabels) }
 ```
 
 <p>Request to create or update a group of environments.</p>
@@ -1017,7 +1017,7 @@ Constructs ComposeEnvironmentsMessage from required parameters
 #### `newComposeEnvironmentsMessage'`
 
 ``` purescript
-newComposeEnvironmentsMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "GroupName" :: NullOrUndefined (GroupName), "VersionLabels" :: NullOrUndefined (VersionLabels) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "GroupName" :: NullOrUndefined (GroupName), "VersionLabels" :: NullOrUndefined (VersionLabels) }) -> ComposeEnvironmentsMessage
+newComposeEnvironmentsMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "GroupName" :: Maybe (GroupName), "VersionLabels" :: Maybe (VersionLabels) } -> { "ApplicationName" :: Maybe (ApplicationName), "GroupName" :: Maybe (GroupName), "VersionLabels" :: Maybe (VersionLabels) }) -> ComposeEnvironmentsMessage
 ```
 
 Constructs ComposeEnvironmentsMessage's fields from required parameters
@@ -1074,7 +1074,7 @@ Encode ConfigurationOptionDefaultValue
 
 ``` purescript
 newtype ConfigurationOptionDescription
-  = ConfigurationOptionDescription { "Namespace" :: NullOrUndefined (OptionNamespace), "Name" :: NullOrUndefined (ConfigurationOptionName), "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue), "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity), "UserDefined" :: NullOrUndefined (UserDefinedOption), "ValueType" :: NullOrUndefined (ConfigurationOptionValueType), "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues), "MinValue" :: NullOrUndefined (OptionRestrictionMinValue), "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue), "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength), "Regex" :: NullOrUndefined (OptionRestrictionRegex) }
+  = ConfigurationOptionDescription { "Namespace" :: Maybe (OptionNamespace), "Name" :: Maybe (ConfigurationOptionName), "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue), "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity), "UserDefined" :: Maybe (UserDefinedOption), "ValueType" :: Maybe (ConfigurationOptionValueType), "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues), "MinValue" :: Maybe (OptionRestrictionMinValue), "MaxValue" :: Maybe (OptionRestrictionMaxValue), "MaxLength" :: Maybe (OptionRestrictionMaxLength), "Regex" :: Maybe (OptionRestrictionRegex) }
 ```
 
 <p>Describes the possible values for a configuration option.</p>
@@ -1099,7 +1099,7 @@ Constructs ConfigurationOptionDescription from required parameters
 #### `newConfigurationOptionDescription'`
 
 ``` purescript
-newConfigurationOptionDescription' :: ({ "Namespace" :: NullOrUndefined (OptionNamespace), "Name" :: NullOrUndefined (ConfigurationOptionName), "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue), "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity), "UserDefined" :: NullOrUndefined (UserDefinedOption), "ValueType" :: NullOrUndefined (ConfigurationOptionValueType), "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues), "MinValue" :: NullOrUndefined (OptionRestrictionMinValue), "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue), "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength), "Regex" :: NullOrUndefined (OptionRestrictionRegex) } -> { "Namespace" :: NullOrUndefined (OptionNamespace), "Name" :: NullOrUndefined (ConfigurationOptionName), "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue), "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity), "UserDefined" :: NullOrUndefined (UserDefinedOption), "ValueType" :: NullOrUndefined (ConfigurationOptionValueType), "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues), "MinValue" :: NullOrUndefined (OptionRestrictionMinValue), "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue), "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength), "Regex" :: NullOrUndefined (OptionRestrictionRegex) }) -> ConfigurationOptionDescription
+newConfigurationOptionDescription' :: ({ "Namespace" :: Maybe (OptionNamespace), "Name" :: Maybe (ConfigurationOptionName), "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue), "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity), "UserDefined" :: Maybe (UserDefinedOption), "ValueType" :: Maybe (ConfigurationOptionValueType), "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues), "MinValue" :: Maybe (OptionRestrictionMinValue), "MaxValue" :: Maybe (OptionRestrictionMaxValue), "MaxLength" :: Maybe (OptionRestrictionMaxLength), "Regex" :: Maybe (OptionRestrictionRegex) } -> { "Namespace" :: Maybe (OptionNamespace), "Name" :: Maybe (ConfigurationOptionName), "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue), "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity), "UserDefined" :: Maybe (UserDefinedOption), "ValueType" :: Maybe (ConfigurationOptionValueType), "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues), "MinValue" :: Maybe (OptionRestrictionMinValue), "MaxValue" :: Maybe (OptionRestrictionMaxValue), "MaxLength" :: Maybe (OptionRestrictionMaxLength), "Regex" :: Maybe (OptionRestrictionRegex) }) -> ConfigurationOptionDescription
 ```
 
 Constructs ConfigurationOptionDescription's fields from required parameters
@@ -1172,7 +1172,7 @@ Encode ConfigurationOptionPossibleValues
 
 ``` purescript
 newtype ConfigurationOptionSetting
-  = ConfigurationOptionSetting { "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName), "Value" :: NullOrUndefined (ConfigurationOptionValue) }
+  = ConfigurationOptionSetting { "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName), "Value" :: Maybe (ConfigurationOptionValue) }
 ```
 
 <p> A specification identifying an individual configuration option along with its current value. For a list of possible option values, go to <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html">Option Values</a> in the <i>AWS Elastic Beanstalk Developer Guide</i>. </p>
@@ -1197,7 +1197,7 @@ Constructs ConfigurationOptionSetting from required parameters
 #### `newConfigurationOptionSetting'`
 
 ``` purescript
-newConfigurationOptionSetting' :: ({ "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName), "Value" :: NullOrUndefined (ConfigurationOptionValue) } -> { "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName), "Value" :: NullOrUndefined (ConfigurationOptionValue) }) -> ConfigurationOptionSetting
+newConfigurationOptionSetting' :: ({ "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName), "Value" :: Maybe (ConfigurationOptionValue) } -> { "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName), "Value" :: Maybe (ConfigurationOptionValue) }) -> ConfigurationOptionSetting
 ```
 
 Constructs ConfigurationOptionSetting's fields from required parameters
@@ -1270,7 +1270,7 @@ Encode ConfigurationOptionValueType
 
 ``` purescript
 newtype ConfigurationOptionsDescription
-  = ConfigurationOptionsDescription { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList) }
+  = ConfigurationOptionsDescription { "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (ConfigurationOptionDescriptionsList) }
 ```
 
 <p>Describes the settings for a specified configuration set.</p>
@@ -1295,7 +1295,7 @@ Constructs ConfigurationOptionsDescription from required parameters
 #### `newConfigurationOptionsDescription'`
 
 ``` purescript
-newConfigurationOptionsDescription' :: ({ "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList) } -> { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList) }) -> ConfigurationOptionsDescription
+newConfigurationOptionsDescription' :: ({ "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (ConfigurationOptionDescriptionsList) } -> { "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (ConfigurationOptionDescriptionsList) }) -> ConfigurationOptionsDescription
 ```
 
 Constructs ConfigurationOptionsDescription's fields from required parameters
@@ -1304,7 +1304,7 @@ Constructs ConfigurationOptionsDescription's fields from required parameters
 
 ``` purescript
 newtype ConfigurationSettingsDescription
-  = ConfigurationSettingsDescription { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }
+  = ConfigurationSettingsDescription { "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EnvironmentName" :: Maybe (EnvironmentName), "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }
 ```
 
 <p>Describes the settings for a configuration set.</p>
@@ -1329,7 +1329,7 @@ Constructs ConfigurationSettingsDescription from required parameters
 #### `newConfigurationSettingsDescription'`
 
 ``` purescript
-newConfigurationSettingsDescription' :: ({ "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }) -> ConfigurationSettingsDescription
+newConfigurationSettingsDescription' :: ({ "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EnvironmentName" :: Maybe (EnvironmentName), "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> { "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EnvironmentName" :: Maybe (EnvironmentName), "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }) -> ConfigurationSettingsDescription
 ```
 
 Constructs ConfigurationSettingsDescription's fields from required parameters
@@ -1354,7 +1354,7 @@ Encode ConfigurationSettingsDescriptionList
 
 ``` purescript
 newtype ConfigurationSettingsDescriptions
-  = ConfigurationSettingsDescriptions { "ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList) }
+  = ConfigurationSettingsDescriptions { "ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList) }
 ```
 
 <p>The results from a request to change the configuration settings of an environment.</p>
@@ -1379,7 +1379,7 @@ Constructs ConfigurationSettingsDescriptions from required parameters
 #### `newConfigurationSettingsDescriptions'`
 
 ``` purescript
-newConfigurationSettingsDescriptions' :: ({ "ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList) } -> { "ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList) }) -> ConfigurationSettingsDescriptions
+newConfigurationSettingsDescriptions' :: ({ "ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList) } -> { "ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList) }) -> ConfigurationSettingsDescriptions
 ```
 
 Constructs ConfigurationSettingsDescriptions's fields from required parameters
@@ -1388,7 +1388,7 @@ Constructs ConfigurationSettingsDescriptions's fields from required parameters
 
 ``` purescript
 newtype ConfigurationSettingsValidationMessages
-  = ConfigurationSettingsValidationMessages { "Messages" :: NullOrUndefined (ValidationMessagesList) }
+  = ConfigurationSettingsValidationMessages { "Messages" :: Maybe (ValidationMessagesList) }
 ```
 
 <p>Provides a list of validation messages.</p>
@@ -1413,7 +1413,7 @@ Constructs ConfigurationSettingsValidationMessages from required parameters
 #### `newConfigurationSettingsValidationMessages'`
 
 ``` purescript
-newConfigurationSettingsValidationMessages' :: ({ "Messages" :: NullOrUndefined (ValidationMessagesList) } -> { "Messages" :: NullOrUndefined (ValidationMessagesList) }) -> ConfigurationSettingsValidationMessages
+newConfigurationSettingsValidationMessages' :: ({ "Messages" :: Maybe (ValidationMessagesList) } -> { "Messages" :: Maybe (ValidationMessagesList) }) -> ConfigurationSettingsValidationMessages
 ```
 
 Constructs ConfigurationSettingsValidationMessages's fields from required parameters
@@ -1454,7 +1454,7 @@ Encode ConfigurationTemplateNamesList
 
 ``` purescript
 newtype CreateApplicationMessage
-  = CreateApplicationMessage { "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }
+  = CreateApplicationMessage { "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }
 ```
 
 <p>Request to create an application.</p>
@@ -1479,7 +1479,7 @@ Constructs CreateApplicationMessage from required parameters
 #### `newCreateApplicationMessage'`
 
 ``` purescript
-newCreateApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description), "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) }) -> CreateApplicationMessage
+newCreateApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> { "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description), "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) }) -> CreateApplicationMessage
 ```
 
 Constructs CreateApplicationMessage's fields from required parameters
@@ -1488,7 +1488,7 @@ Constructs CreateApplicationMessage's fields from required parameters
 
 ``` purescript
 newtype CreateApplicationVersionMessage
-  = CreateApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "SourceBundle" :: NullOrUndefined (S3Location), "BuildConfiguration" :: NullOrUndefined (BuildConfiguration), "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication), "Process" :: NullOrUndefined (ApplicationVersionProccess) }
+  = CreateApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "SourceBundle" :: Maybe (S3Location), "BuildConfiguration" :: Maybe (BuildConfiguration), "AutoCreateApplication" :: Maybe (AutoCreateApplication), "Process" :: Maybe (ApplicationVersionProccess) }
 ```
 
 <p/>
@@ -1513,7 +1513,7 @@ Constructs CreateApplicationVersionMessage from required parameters
 #### `newCreateApplicationVersionMessage'`
 
 ``` purescript
-newCreateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "SourceBundle" :: NullOrUndefined (S3Location), "BuildConfiguration" :: NullOrUndefined (BuildConfiguration), "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication), "Process" :: NullOrUndefined (ApplicationVersionProccess) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description), "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation), "SourceBundle" :: NullOrUndefined (S3Location), "BuildConfiguration" :: NullOrUndefined (BuildConfiguration), "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication), "Process" :: NullOrUndefined (ApplicationVersionProccess) }) -> CreateApplicationVersionMessage
+newCreateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "SourceBundle" :: Maybe (S3Location), "BuildConfiguration" :: Maybe (BuildConfiguration), "AutoCreateApplication" :: Maybe (AutoCreateApplication), "Process" :: Maybe (ApplicationVersionProccess) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description), "SourceBuildInformation" :: Maybe (SourceBuildInformation), "SourceBundle" :: Maybe (S3Location), "BuildConfiguration" :: Maybe (BuildConfiguration), "AutoCreateApplication" :: Maybe (AutoCreateApplication), "Process" :: Maybe (ApplicationVersionProccess) }) -> CreateApplicationVersionMessage
 ```
 
 Constructs CreateApplicationVersionMessage's fields from required parameters
@@ -1522,7 +1522,7 @@ Constructs CreateApplicationVersionMessage's fields from required parameters
 
 ``` purescript
 newtype CreateConfigurationTemplateMessage
-  = CreateConfigurationTemplateMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "SourceConfiguration" :: NullOrUndefined (SourceConfiguration), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }
+  = CreateConfigurationTemplateMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "SourceConfiguration" :: Maybe (SourceConfiguration), "EnvironmentId" :: Maybe (EnvironmentId), "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }
 ```
 
 <p>Request to create a configuration template.</p>
@@ -1547,7 +1547,7 @@ Constructs CreateConfigurationTemplateMessage from required parameters
 #### `newCreateConfigurationTemplateMessage'`
 
 ``` purescript
-newCreateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "SourceConfiguration" :: NullOrUndefined (SourceConfiguration), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "SourceConfiguration" :: NullOrUndefined (SourceConfiguration), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }) -> CreateConfigurationTemplateMessage
+newCreateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "SourceConfiguration" :: Maybe (SourceConfiguration), "EnvironmentId" :: Maybe (EnvironmentId), "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "SourceConfiguration" :: Maybe (SourceConfiguration), "EnvironmentId" :: Maybe (EnvironmentId), "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }) -> CreateConfigurationTemplateMessage
 ```
 
 Constructs CreateConfigurationTemplateMessage's fields from required parameters
@@ -1556,7 +1556,7 @@ Constructs CreateConfigurationTemplateMessage's fields from required parameters
 
 ``` purescript
 newtype CreateEnvironmentMessage
-  = CreateEnvironmentMessage { "ApplicationName" :: ApplicationName, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix), "Tier" :: NullOrUndefined (EnvironmentTier), "Tags" :: NullOrUndefined (Tags), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }
+  = CreateEnvironmentMessage { "ApplicationName" :: ApplicationName, "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "CNAMEPrefix" :: Maybe (DNSCnamePrefix), "Tier" :: Maybe (EnvironmentTier), "Tags" :: Maybe (Tags), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }
 ```
 
 <p/>
@@ -1581,7 +1581,7 @@ Constructs CreateEnvironmentMessage from required parameters
 #### `newCreateEnvironmentMessage'`
 
 ``` purescript
-newCreateEnvironmentMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix), "Tier" :: NullOrUndefined (EnvironmentTier), "Tags" :: NullOrUndefined (Tags), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> { "ApplicationName" :: ApplicationName, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix), "Tier" :: NullOrUndefined (EnvironmentTier), "Tags" :: NullOrUndefined (Tags), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }) -> CreateEnvironmentMessage
+newCreateEnvironmentMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "CNAMEPrefix" :: Maybe (DNSCnamePrefix), "Tier" :: Maybe (EnvironmentTier), "Tags" :: Maybe (Tags), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> { "ApplicationName" :: ApplicationName, "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "CNAMEPrefix" :: Maybe (DNSCnamePrefix), "Tier" :: Maybe (EnvironmentTier), "Tags" :: Maybe (Tags), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }) -> CreateEnvironmentMessage
 ```
 
 Constructs CreateEnvironmentMessage's fields from required parameters
@@ -1590,7 +1590,7 @@ Constructs CreateEnvironmentMessage's fields from required parameters
 
 ``` purescript
 newtype CreatePlatformVersionRequest
-  = CreatePlatformVersionRequest { "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }
+  = CreatePlatformVersionRequest { "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }
 ```
 
 <p>Request to create a new platform version.</p>
@@ -1615,7 +1615,7 @@ Constructs CreatePlatformVersionRequest from required parameters
 #### `newCreatePlatformVersionRequest'`
 
 ``` purescript
-newCreatePlatformVersionRequest' :: S3Location -> PlatformName -> PlatformVersion -> ({ "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> { "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) }) -> CreatePlatformVersionRequest
+newCreatePlatformVersionRequest' :: S3Location -> PlatformName -> PlatformVersion -> ({ "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> { "PlatformName" :: PlatformName, "PlatformVersion" :: PlatformVersion, "PlatformDefinitionBundle" :: S3Location, "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) }) -> CreatePlatformVersionRequest
 ```
 
 Constructs CreatePlatformVersionRequest's fields from required parameters
@@ -1624,7 +1624,7 @@ Constructs CreatePlatformVersionRequest's fields from required parameters
 
 ``` purescript
 newtype CreatePlatformVersionResult
-  = CreatePlatformVersionResult { "PlatformSummary" :: NullOrUndefined (PlatformSummary), "Builder" :: NullOrUndefined (Builder) }
+  = CreatePlatformVersionResult { "PlatformSummary" :: Maybe (PlatformSummary), "Builder" :: Maybe (Builder) }
 ```
 
 ##### Instances
@@ -1647,7 +1647,7 @@ Constructs CreatePlatformVersionResult from required parameters
 #### `newCreatePlatformVersionResult'`
 
 ``` purescript
-newCreatePlatformVersionResult' :: ({ "PlatformSummary" :: NullOrUndefined (PlatformSummary), "Builder" :: NullOrUndefined (Builder) } -> { "PlatformSummary" :: NullOrUndefined (PlatformSummary), "Builder" :: NullOrUndefined (Builder) }) -> CreatePlatformVersionResult
+newCreatePlatformVersionResult' :: ({ "PlatformSummary" :: Maybe (PlatformSummary), "Builder" :: Maybe (Builder) } -> { "PlatformSummary" :: Maybe (PlatformSummary), "Builder" :: Maybe (Builder) }) -> CreatePlatformVersionResult
 ```
 
 Constructs CreatePlatformVersionResult's fields from required parameters
@@ -1656,7 +1656,7 @@ Constructs CreatePlatformVersionResult's fields from required parameters
 
 ``` purescript
 newtype CreateStorageLocationResultMessage
-  = CreateStorageLocationResultMessage { "S3Bucket" :: NullOrUndefined (S3Bucket) }
+  = CreateStorageLocationResultMessage { "S3Bucket" :: Maybe (S3Bucket) }
 ```
 
 <p>Results of a <a>CreateStorageLocationResult</a> call.</p>
@@ -1681,7 +1681,7 @@ Constructs CreateStorageLocationResultMessage from required parameters
 #### `newCreateStorageLocationResultMessage'`
 
 ``` purescript
-newCreateStorageLocationResultMessage' :: ({ "S3Bucket" :: NullOrUndefined (S3Bucket) } -> { "S3Bucket" :: NullOrUndefined (S3Bucket) }) -> CreateStorageLocationResultMessage
+newCreateStorageLocationResultMessage' :: ({ "S3Bucket" :: Maybe (S3Bucket) } -> { "S3Bucket" :: Maybe (S3Bucket) }) -> CreateStorageLocationResultMessage
 ```
 
 Constructs CreateStorageLocationResultMessage's fields from required parameters
@@ -1706,7 +1706,7 @@ Encode CreationDate
 
 ``` purescript
 newtype CustomAmi
-  = CustomAmi { "VirtualizationType" :: NullOrUndefined (VirtualizationType), "ImageId" :: NullOrUndefined (ImageId) }
+  = CustomAmi { "VirtualizationType" :: Maybe (VirtualizationType), "ImageId" :: Maybe (ImageId) }
 ```
 
 <p>A custom AMI available to platforms.</p>
@@ -1731,7 +1731,7 @@ Constructs CustomAmi from required parameters
 #### `newCustomAmi'`
 
 ``` purescript
-newCustomAmi' :: ({ "VirtualizationType" :: NullOrUndefined (VirtualizationType), "ImageId" :: NullOrUndefined (ImageId) } -> { "VirtualizationType" :: NullOrUndefined (VirtualizationType), "ImageId" :: NullOrUndefined (ImageId) }) -> CustomAmi
+newCustomAmi' :: ({ "VirtualizationType" :: Maybe (VirtualizationType), "ImageId" :: Maybe (ImageId) } -> { "VirtualizationType" :: Maybe (VirtualizationType), "ImageId" :: Maybe (ImageId) }) -> CustomAmi
 ```
 
 Constructs CustomAmi's fields from required parameters
@@ -1788,7 +1788,7 @@ Encode DNSCnamePrefix
 
 ``` purescript
 newtype DeleteApplicationMessage
-  = DeleteApplicationMessage { "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce) }
+  = DeleteApplicationMessage { "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: Maybe (TerminateEnvForce) }
 ```
 
 <p>Request to delete an application.</p>
@@ -1813,7 +1813,7 @@ Constructs DeleteApplicationMessage from required parameters
 #### `newDeleteApplicationMessage'`
 
 ``` purescript
-newDeleteApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce) } -> { "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce) }) -> DeleteApplicationMessage
+newDeleteApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: Maybe (TerminateEnvForce) } -> { "ApplicationName" :: ApplicationName, "TerminateEnvByForce" :: Maybe (TerminateEnvForce) }) -> DeleteApplicationMessage
 ```
 
 Constructs DeleteApplicationMessage's fields from required parameters
@@ -1822,7 +1822,7 @@ Constructs DeleteApplicationMessage's fields from required parameters
 
 ``` purescript
 newtype DeleteApplicationVersionMessage
-  = DeleteApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle) }
+  = DeleteApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: Maybe (DeleteSourceBundle) }
 ```
 
 <p>Request to delete an application version.</p>
@@ -1847,7 +1847,7 @@ Constructs DeleteApplicationVersionMessage from required parameters
 #### `newDeleteApplicationVersionMessage'`
 
 ``` purescript
-newDeleteApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle) }) -> DeleteApplicationVersionMessage
+newDeleteApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: Maybe (DeleteSourceBundle) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "DeleteSourceBundle" :: Maybe (DeleteSourceBundle) }) -> DeleteApplicationVersionMessage
 ```
 
 Constructs DeleteApplicationVersionMessage's fields from required parameters
@@ -1924,7 +1924,7 @@ Constructs DeleteEnvironmentConfigurationMessage's fields from required paramete
 
 ``` purescript
 newtype DeletePlatformVersionRequest
-  = DeletePlatformVersionRequest { "PlatformArn" :: NullOrUndefined (PlatformArn) }
+  = DeletePlatformVersionRequest { "PlatformArn" :: Maybe (PlatformArn) }
 ```
 
 ##### Instances
@@ -1947,7 +1947,7 @@ Constructs DeletePlatformVersionRequest from required parameters
 #### `newDeletePlatformVersionRequest'`
 
 ``` purescript
-newDeletePlatformVersionRequest' :: ({ "PlatformArn" :: NullOrUndefined (PlatformArn) } -> { "PlatformArn" :: NullOrUndefined (PlatformArn) }) -> DeletePlatformVersionRequest
+newDeletePlatformVersionRequest' :: ({ "PlatformArn" :: Maybe (PlatformArn) } -> { "PlatformArn" :: Maybe (PlatformArn) }) -> DeletePlatformVersionRequest
 ```
 
 Constructs DeletePlatformVersionRequest's fields from required parameters
@@ -1956,7 +1956,7 @@ Constructs DeletePlatformVersionRequest's fields from required parameters
 
 ``` purescript
 newtype DeletePlatformVersionResult
-  = DeletePlatformVersionResult { "PlatformSummary" :: NullOrUndefined (PlatformSummary) }
+  = DeletePlatformVersionResult { "PlatformSummary" :: Maybe (PlatformSummary) }
 ```
 
 ##### Instances
@@ -1979,7 +1979,7 @@ Constructs DeletePlatformVersionResult from required parameters
 #### `newDeletePlatformVersionResult'`
 
 ``` purescript
-newDeletePlatformVersionResult' :: ({ "PlatformSummary" :: NullOrUndefined (PlatformSummary) } -> { "PlatformSummary" :: NullOrUndefined (PlatformSummary) }) -> DeletePlatformVersionResult
+newDeletePlatformVersionResult' :: ({ "PlatformSummary" :: Maybe (PlatformSummary) } -> { "PlatformSummary" :: Maybe (PlatformSummary) }) -> DeletePlatformVersionResult
 ```
 
 Constructs DeletePlatformVersionResult's fields from required parameters
@@ -2004,7 +2004,7 @@ Encode DeleteSourceBundle
 
 ``` purescript
 newtype Deployment
-  = Deployment { "VersionLabel" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (NullableLong), "Status" :: NullOrUndefined (String), "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp) }
+  = Deployment { "VersionLabel" :: Maybe (String), "DeploymentId" :: Maybe (NullableLong), "Status" :: Maybe (String), "DeploymentTime" :: Maybe (DeploymentTimestamp) }
 ```
 
 <p>Information about an application version deployment.</p>
@@ -2029,7 +2029,7 @@ Constructs Deployment from required parameters
 #### `newDeployment'`
 
 ``` purescript
-newDeployment' :: ({ "VersionLabel" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (NullableLong), "Status" :: NullOrUndefined (String), "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp) } -> { "VersionLabel" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (NullableLong), "Status" :: NullOrUndefined (String), "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp) }) -> Deployment
+newDeployment' :: ({ "VersionLabel" :: Maybe (String), "DeploymentId" :: Maybe (NullableLong), "Status" :: Maybe (String), "DeploymentTime" :: Maybe (DeploymentTimestamp) } -> { "VersionLabel" :: Maybe (String), "DeploymentId" :: Maybe (NullableLong), "Status" :: Maybe (String), "DeploymentTime" :: Maybe (DeploymentTimestamp) }) -> Deployment
 ```
 
 Constructs Deployment's fields from required parameters
@@ -2054,7 +2054,7 @@ Encode DeploymentTimestamp
 
 ``` purescript
 newtype DescribeApplicationVersionsMessage
-  = DescribeApplicationVersionsMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabels" :: NullOrUndefined (VersionLabelsList), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }
+  = DescribeApplicationVersionsMessage { "ApplicationName" :: Maybe (ApplicationName), "VersionLabels" :: Maybe (VersionLabelsList), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Request to describe application versions.</p>
@@ -2079,7 +2079,7 @@ Constructs DescribeApplicationVersionsMessage from required parameters
 #### `newDescribeApplicationVersionsMessage'`
 
 ``` purescript
-newDescribeApplicationVersionsMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabels" :: NullOrUndefined (VersionLabelsList), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabels" :: NullOrUndefined (VersionLabelsList), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }) -> DescribeApplicationVersionsMessage
+newDescribeApplicationVersionsMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "VersionLabels" :: Maybe (VersionLabelsList), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) } -> { "ApplicationName" :: Maybe (ApplicationName), "VersionLabels" :: Maybe (VersionLabelsList), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }) -> DescribeApplicationVersionsMessage
 ```
 
 Constructs DescribeApplicationVersionsMessage's fields from required parameters
@@ -2088,7 +2088,7 @@ Constructs DescribeApplicationVersionsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeApplicationsMessage
-  = DescribeApplicationsMessage { "ApplicationNames" :: NullOrUndefined (ApplicationNamesList) }
+  = DescribeApplicationsMessage { "ApplicationNames" :: Maybe (ApplicationNamesList) }
 ```
 
 <p>Request to describe one or more applications.</p>
@@ -2113,7 +2113,7 @@ Constructs DescribeApplicationsMessage from required parameters
 #### `newDescribeApplicationsMessage'`
 
 ``` purescript
-newDescribeApplicationsMessage' :: ({ "ApplicationNames" :: NullOrUndefined (ApplicationNamesList) } -> { "ApplicationNames" :: NullOrUndefined (ApplicationNamesList) }) -> DescribeApplicationsMessage
+newDescribeApplicationsMessage' :: ({ "ApplicationNames" :: Maybe (ApplicationNamesList) } -> { "ApplicationNames" :: Maybe (ApplicationNamesList) }) -> DescribeApplicationsMessage
 ```
 
 Constructs DescribeApplicationsMessage's fields from required parameters
@@ -2122,7 +2122,7 @@ Constructs DescribeApplicationsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeConfigurationOptionsMessage
-  = DescribeConfigurationOptionsMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (OptionsSpecifierList) }
+  = DescribeConfigurationOptionsMessage { "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (OptionsSpecifierList) }
 ```
 
 <p>Result message containing a list of application version descriptions.</p>
@@ -2147,7 +2147,7 @@ Constructs DescribeConfigurationOptionsMessage from required parameters
 #### `newDescribeConfigurationOptionsMessage'`
 
 ``` purescript
-newDescribeConfigurationOptionsMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (OptionsSpecifierList) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "Options" :: NullOrUndefined (OptionsSpecifierList) }) -> DescribeConfigurationOptionsMessage
+newDescribeConfigurationOptionsMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (OptionsSpecifierList) } -> { "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "Options" :: Maybe (OptionsSpecifierList) }) -> DescribeConfigurationOptionsMessage
 ```
 
 Constructs DescribeConfigurationOptionsMessage's fields from required parameters
@@ -2156,7 +2156,7 @@ Constructs DescribeConfigurationOptionsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeConfigurationSettingsMessage
-  = DescribeConfigurationSettingsMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = DescribeConfigurationSettingsMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p>Result message containing all of the configuration settings for a specified solution stack or configuration template.</p>
@@ -2181,7 +2181,7 @@ Constructs DescribeConfigurationSettingsMessage from required parameters
 #### `newDescribeConfigurationSettingsMessage'`
 
 ``` purescript
-newDescribeConfigurationSettingsMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> DescribeConfigurationSettingsMessage
+newDescribeConfigurationSettingsMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName) }) -> DescribeConfigurationSettingsMessage
 ```
 
 Constructs DescribeConfigurationSettingsMessage's fields from required parameters
@@ -2190,7 +2190,7 @@ Constructs DescribeConfigurationSettingsMessage's fields from required parameter
 
 ``` purescript
 newtype DescribeEnvironmentHealthRequest
-  = DescribeEnvironmentHealthRequest { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes) }
+  = DescribeEnvironmentHealthRequest { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (EnvironmentHealthAttributes) }
 ```
 
 <p>See the example below to learn how to create a request body.</p>
@@ -2215,7 +2215,7 @@ Constructs DescribeEnvironmentHealthRequest from required parameters
 #### `newDescribeEnvironmentHealthRequest'`
 
 ``` purescript
-newDescribeEnvironmentHealthRequest' :: ({ "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes) } -> { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes) }) -> DescribeEnvironmentHealthRequest
+newDescribeEnvironmentHealthRequest' :: ({ "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (EnvironmentHealthAttributes) } -> { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (EnvironmentHealthAttributes) }) -> DescribeEnvironmentHealthRequest
 ```
 
 Constructs DescribeEnvironmentHealthRequest's fields from required parameters
@@ -2224,7 +2224,7 @@ Constructs DescribeEnvironmentHealthRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeEnvironmentHealthResult
-  = DescribeEnvironmentHealthResult { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "HealthStatus" :: NullOrUndefined (String), "Status" :: NullOrUndefined (EnvironmentHealth), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary), "RefreshedAt" :: NullOrUndefined (RefreshedAt) }
+  = DescribeEnvironmentHealthResult { "EnvironmentName" :: Maybe (EnvironmentName), "HealthStatus" :: Maybe (String), "Status" :: Maybe (EnvironmentHealth), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "InstancesHealth" :: Maybe (InstanceHealthSummary), "RefreshedAt" :: Maybe (RefreshedAt) }
 ```
 
 <p>Health details for an AWS Elastic Beanstalk environment.</p>
@@ -2249,7 +2249,7 @@ Constructs DescribeEnvironmentHealthResult from required parameters
 #### `newDescribeEnvironmentHealthResult'`
 
 ``` purescript
-newDescribeEnvironmentHealthResult' :: ({ "EnvironmentName" :: NullOrUndefined (EnvironmentName), "HealthStatus" :: NullOrUndefined (String), "Status" :: NullOrUndefined (EnvironmentHealth), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary), "RefreshedAt" :: NullOrUndefined (RefreshedAt) } -> { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "HealthStatus" :: NullOrUndefined (String), "Status" :: NullOrUndefined (EnvironmentHealth), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary), "RefreshedAt" :: NullOrUndefined (RefreshedAt) }) -> DescribeEnvironmentHealthResult
+newDescribeEnvironmentHealthResult' :: ({ "EnvironmentName" :: Maybe (EnvironmentName), "HealthStatus" :: Maybe (String), "Status" :: Maybe (EnvironmentHealth), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "InstancesHealth" :: Maybe (InstanceHealthSummary), "RefreshedAt" :: Maybe (RefreshedAt) } -> { "EnvironmentName" :: Maybe (EnvironmentName), "HealthStatus" :: Maybe (String), "Status" :: Maybe (EnvironmentHealth), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "InstancesHealth" :: Maybe (InstanceHealthSummary), "RefreshedAt" :: Maybe (RefreshedAt) }) -> DescribeEnvironmentHealthResult
 ```
 
 Constructs DescribeEnvironmentHealthResult's fields from required parameters
@@ -2258,7 +2258,7 @@ Constructs DescribeEnvironmentHealthResult's fields from required parameters
 
 ``` purescript
 newtype DescribeEnvironmentManagedActionHistoryRequest
-  = DescribeEnvironmentManagedActionHistoryRequest { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "NextToken" :: NullOrUndefined (String), "MaxItems" :: NullOrUndefined (Int) }
+  = DescribeEnvironmentManagedActionHistoryRequest { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "NextToken" :: Maybe (String), "MaxItems" :: Maybe (Int) }
 ```
 
 <p>Request to list completed and failed managed actions.</p>
@@ -2283,7 +2283,7 @@ Constructs DescribeEnvironmentManagedActionHistoryRequest from required paramete
 #### `newDescribeEnvironmentManagedActionHistoryRequest'`
 
 ``` purescript
-newDescribeEnvironmentManagedActionHistoryRequest' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "NextToken" :: NullOrUndefined (String), "MaxItems" :: NullOrUndefined (Int) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "NextToken" :: NullOrUndefined (String), "MaxItems" :: NullOrUndefined (Int) }) -> DescribeEnvironmentManagedActionHistoryRequest
+newDescribeEnvironmentManagedActionHistoryRequest' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "NextToken" :: Maybe (String), "MaxItems" :: Maybe (Int) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "NextToken" :: Maybe (String), "MaxItems" :: Maybe (Int) }) -> DescribeEnvironmentManagedActionHistoryRequest
 ```
 
 Constructs DescribeEnvironmentManagedActionHistoryRequest's fields from required parameters
@@ -2292,7 +2292,7 @@ Constructs DescribeEnvironmentManagedActionHistoryRequest's fields from required
 
 ``` purescript
 newtype DescribeEnvironmentManagedActionHistoryResult
-  = DescribeEnvironmentManagedActionHistoryResult { "ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems), "NextToken" :: NullOrUndefined (String) }
+  = DescribeEnvironmentManagedActionHistoryResult { "ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems), "NextToken" :: Maybe (String) }
 ```
 
 <p>A result message containing a list of completed and failed managed actions.</p>
@@ -2317,7 +2317,7 @@ Constructs DescribeEnvironmentManagedActionHistoryResult from required parameter
 #### `newDescribeEnvironmentManagedActionHistoryResult'`
 
 ``` purescript
-newDescribeEnvironmentManagedActionHistoryResult' :: ({ "ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems), "NextToken" :: NullOrUndefined (String) } -> { "ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems), "NextToken" :: NullOrUndefined (String) }) -> DescribeEnvironmentManagedActionHistoryResult
+newDescribeEnvironmentManagedActionHistoryResult' :: ({ "ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems), "NextToken" :: Maybe (String) } -> { "ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems), "NextToken" :: Maybe (String) }) -> DescribeEnvironmentManagedActionHistoryResult
 ```
 
 Constructs DescribeEnvironmentManagedActionHistoryResult's fields from required parameters
@@ -2326,7 +2326,7 @@ Constructs DescribeEnvironmentManagedActionHistoryResult's fields from required 
 
 ``` purescript
 newtype DescribeEnvironmentManagedActionsRequest
-  = DescribeEnvironmentManagedActionsRequest { "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (ActionStatus) }
+  = DescribeEnvironmentManagedActionsRequest { "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "Status" :: Maybe (ActionStatus) }
 ```
 
 <p>Request to list an environment's upcoming and in-progress managed actions.</p>
@@ -2351,7 +2351,7 @@ Constructs DescribeEnvironmentManagedActionsRequest from required parameters
 #### `newDescribeEnvironmentManagedActionsRequest'`
 
 ``` purescript
-newDescribeEnvironmentManagedActionsRequest' :: ({ "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (ActionStatus) } -> { "EnvironmentName" :: NullOrUndefined (String), "EnvironmentId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (ActionStatus) }) -> DescribeEnvironmentManagedActionsRequest
+newDescribeEnvironmentManagedActionsRequest' :: ({ "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "Status" :: Maybe (ActionStatus) } -> { "EnvironmentName" :: Maybe (String), "EnvironmentId" :: Maybe (String), "Status" :: Maybe (ActionStatus) }) -> DescribeEnvironmentManagedActionsRequest
 ```
 
 Constructs DescribeEnvironmentManagedActionsRequest's fields from required parameters
@@ -2360,7 +2360,7 @@ Constructs DescribeEnvironmentManagedActionsRequest's fields from required param
 
 ``` purescript
 newtype DescribeEnvironmentManagedActionsResult
-  = DescribeEnvironmentManagedActionsResult { "ManagedActions" :: NullOrUndefined (ManagedActions) }
+  = DescribeEnvironmentManagedActionsResult { "ManagedActions" :: Maybe (ManagedActions) }
 ```
 
 <p>The result message containing a list of managed actions.</p>
@@ -2385,7 +2385,7 @@ Constructs DescribeEnvironmentManagedActionsResult from required parameters
 #### `newDescribeEnvironmentManagedActionsResult'`
 
 ``` purescript
-newDescribeEnvironmentManagedActionsResult' :: ({ "ManagedActions" :: NullOrUndefined (ManagedActions) } -> { "ManagedActions" :: NullOrUndefined (ManagedActions) }) -> DescribeEnvironmentManagedActionsResult
+newDescribeEnvironmentManagedActionsResult' :: ({ "ManagedActions" :: Maybe (ManagedActions) } -> { "ManagedActions" :: Maybe (ManagedActions) }) -> DescribeEnvironmentManagedActionsResult
 ```
 
 Constructs DescribeEnvironmentManagedActionsResult's fields from required parameters
@@ -2394,7 +2394,7 @@ Constructs DescribeEnvironmentManagedActionsResult's fields from required parame
 
 ``` purescript
 newtype DescribeEnvironmentResourcesMessage
-  = DescribeEnvironmentResourcesMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = DescribeEnvironmentResourcesMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p>Request to describe the resources in an environment.</p>
@@ -2419,7 +2419,7 @@ Constructs DescribeEnvironmentResourcesMessage from required parameters
 #### `newDescribeEnvironmentResourcesMessage'`
 
 ``` purescript
-newDescribeEnvironmentResourcesMessage' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> DescribeEnvironmentResourcesMessage
+newDescribeEnvironmentResourcesMessage' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }) -> DescribeEnvironmentResourcesMessage
 ```
 
 Constructs DescribeEnvironmentResourcesMessage's fields from required parameters
@@ -2428,7 +2428,7 @@ Constructs DescribeEnvironmentResourcesMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeEnvironmentsMessage
-  = DescribeEnvironmentsMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList), "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList), "IncludeDeleted" :: NullOrUndefined (IncludeDeleted), "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }
+  = DescribeEnvironmentsMessage { "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "EnvironmentIds" :: Maybe (EnvironmentIdList), "EnvironmentNames" :: Maybe (EnvironmentNamesList), "IncludeDeleted" :: Maybe (IncludeDeleted), "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Request to describe one or more environments.</p>
@@ -2453,7 +2453,7 @@ Constructs DescribeEnvironmentsMessage from required parameters
 #### `newDescribeEnvironmentsMessage'`
 
 ``` purescript
-newDescribeEnvironmentsMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList), "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList), "IncludeDeleted" :: NullOrUndefined (IncludeDeleted), "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList), "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList), "IncludeDeleted" :: NullOrUndefined (IncludeDeleted), "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }) -> DescribeEnvironmentsMessage
+newDescribeEnvironmentsMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "EnvironmentIds" :: Maybe (EnvironmentIdList), "EnvironmentNames" :: Maybe (EnvironmentNamesList), "IncludeDeleted" :: Maybe (IncludeDeleted), "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) } -> { "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "EnvironmentIds" :: Maybe (EnvironmentIdList), "EnvironmentNames" :: Maybe (EnvironmentNamesList), "IncludeDeleted" :: Maybe (IncludeDeleted), "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }) -> DescribeEnvironmentsMessage
 ```
 
 Constructs DescribeEnvironmentsMessage's fields from required parameters
@@ -2462,7 +2462,7 @@ Constructs DescribeEnvironmentsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeEventsMessage
-  = DescribeEventsMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity), "StartTime" :: NullOrUndefined (TimeFilterStart), "EndTime" :: NullOrUndefined (TimeFilterEnd), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }
+  = DescribeEventsMessage { "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity), "StartTime" :: Maybe (TimeFilterStart), "EndTime" :: Maybe (TimeFilterEnd), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Request to retrieve a list of events for an environment.</p>
@@ -2487,7 +2487,7 @@ Constructs DescribeEventsMessage from required parameters
 #### `newDescribeEventsMessage'`
 
 ``` purescript
-newDescribeEventsMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity), "StartTime" :: NullOrUndefined (TimeFilterStart), "EndTime" :: NullOrUndefined (TimeFilterEnd), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity), "StartTime" :: NullOrUndefined (TimeFilterStart), "EndTime" :: NullOrUndefined (TimeFilterEnd), "MaxRecords" :: NullOrUndefined (MaxRecords), "NextToken" :: NullOrUndefined (Token) }) -> DescribeEventsMessage
+newDescribeEventsMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity), "StartTime" :: Maybe (TimeFilterStart), "EndTime" :: Maybe (TimeFilterEnd), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) } -> { "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity), "StartTime" :: Maybe (TimeFilterStart), "EndTime" :: Maybe (TimeFilterEnd), "MaxRecords" :: Maybe (MaxRecords), "NextToken" :: Maybe (Token) }) -> DescribeEventsMessage
 ```
 
 Constructs DescribeEventsMessage's fields from required parameters
@@ -2496,7 +2496,7 @@ Constructs DescribeEventsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeInstancesHealthRequest
-  = DescribeInstancesHealthRequest { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeInstancesHealthRequest { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (InstancesHealthAttributes), "NextToken" :: Maybe (NextToken) }
 ```
 
 <p>Parameters for a call to <code>DescribeInstancesHealth</code>.</p>
@@ -2521,7 +2521,7 @@ Constructs DescribeInstancesHealthRequest from required parameters
 #### `newDescribeInstancesHealthRequest'`
 
 ``` purescript
-newDescribeInstancesHealthRequest' :: ({ "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes), "NextToken" :: NullOrUndefined (NextToken) } -> { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeInstancesHealthRequest
+newDescribeInstancesHealthRequest' :: ({ "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (InstancesHealthAttributes), "NextToken" :: Maybe (NextToken) } -> { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "AttributeNames" :: Maybe (InstancesHealthAttributes), "NextToken" :: Maybe (NextToken) }) -> DescribeInstancesHealthRequest
 ```
 
 Constructs DescribeInstancesHealthRequest's fields from required parameters
@@ -2530,7 +2530,7 @@ Constructs DescribeInstancesHealthRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeInstancesHealthResult
-  = DescribeInstancesHealthResult { "InstanceHealthList" :: NullOrUndefined (InstanceHealthList), "RefreshedAt" :: NullOrUndefined (RefreshedAt), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeInstancesHealthResult { "InstanceHealthList" :: Maybe (InstanceHealthList), "RefreshedAt" :: Maybe (RefreshedAt), "NextToken" :: Maybe (NextToken) }
 ```
 
 <p>Detailed health information about the Amazon EC2 instances in an AWS Elastic Beanstalk environment.</p>
@@ -2555,7 +2555,7 @@ Constructs DescribeInstancesHealthResult from required parameters
 #### `newDescribeInstancesHealthResult'`
 
 ``` purescript
-newDescribeInstancesHealthResult' :: ({ "InstanceHealthList" :: NullOrUndefined (InstanceHealthList), "RefreshedAt" :: NullOrUndefined (RefreshedAt), "NextToken" :: NullOrUndefined (NextToken) } -> { "InstanceHealthList" :: NullOrUndefined (InstanceHealthList), "RefreshedAt" :: NullOrUndefined (RefreshedAt), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeInstancesHealthResult
+newDescribeInstancesHealthResult' :: ({ "InstanceHealthList" :: Maybe (InstanceHealthList), "RefreshedAt" :: Maybe (RefreshedAt), "NextToken" :: Maybe (NextToken) } -> { "InstanceHealthList" :: Maybe (InstanceHealthList), "RefreshedAt" :: Maybe (RefreshedAt), "NextToken" :: Maybe (NextToken) }) -> DescribeInstancesHealthResult
 ```
 
 Constructs DescribeInstancesHealthResult's fields from required parameters
@@ -2564,7 +2564,7 @@ Constructs DescribeInstancesHealthResult's fields from required parameters
 
 ``` purescript
 newtype DescribePlatformVersionRequest
-  = DescribePlatformVersionRequest { "PlatformArn" :: NullOrUndefined (PlatformArn) }
+  = DescribePlatformVersionRequest { "PlatformArn" :: Maybe (PlatformArn) }
 ```
 
 ##### Instances
@@ -2587,7 +2587,7 @@ Constructs DescribePlatformVersionRequest from required parameters
 #### `newDescribePlatformVersionRequest'`
 
 ``` purescript
-newDescribePlatformVersionRequest' :: ({ "PlatformArn" :: NullOrUndefined (PlatformArn) } -> { "PlatformArn" :: NullOrUndefined (PlatformArn) }) -> DescribePlatformVersionRequest
+newDescribePlatformVersionRequest' :: ({ "PlatformArn" :: Maybe (PlatformArn) } -> { "PlatformArn" :: Maybe (PlatformArn) }) -> DescribePlatformVersionRequest
 ```
 
 Constructs DescribePlatformVersionRequest's fields from required parameters
@@ -2596,7 +2596,7 @@ Constructs DescribePlatformVersionRequest's fields from required parameters
 
 ``` purescript
 newtype DescribePlatformVersionResult
-  = DescribePlatformVersionResult { "PlatformDescription" :: NullOrUndefined (PlatformDescription) }
+  = DescribePlatformVersionResult { "PlatformDescription" :: Maybe (PlatformDescription) }
 ```
 
 ##### Instances
@@ -2619,7 +2619,7 @@ Constructs DescribePlatformVersionResult from required parameters
 #### `newDescribePlatformVersionResult'`
 
 ``` purescript
-newDescribePlatformVersionResult' :: ({ "PlatformDescription" :: NullOrUndefined (PlatformDescription) } -> { "PlatformDescription" :: NullOrUndefined (PlatformDescription) }) -> DescribePlatformVersionResult
+newDescribePlatformVersionResult' :: ({ "PlatformDescription" :: Maybe (PlatformDescription) } -> { "PlatformDescription" :: Maybe (PlatformDescription) }) -> DescribePlatformVersionResult
 ```
 
 Constructs DescribePlatformVersionResult's fields from required parameters
@@ -2660,7 +2660,7 @@ Encode Ec2InstanceId
 
 ``` purescript
 newtype ElasticBeanstalkServiceException
-  = ElasticBeanstalkServiceException { message :: NullOrUndefined (ExceptionMessage) }
+  = ElasticBeanstalkServiceException { message :: Maybe (ExceptionMessage) }
 ```
 
 <p>A generic service exception has occurred.</p>
@@ -2685,7 +2685,7 @@ Constructs ElasticBeanstalkServiceException from required parameters
 #### `newElasticBeanstalkServiceException'`
 
 ``` purescript
-newElasticBeanstalkServiceException' :: ({ message :: NullOrUndefined (ExceptionMessage) } -> { message :: NullOrUndefined (ExceptionMessage) }) -> ElasticBeanstalkServiceException
+newElasticBeanstalkServiceException' :: ({ message :: Maybe (ExceptionMessage) } -> { message :: Maybe (ExceptionMessage) }) -> ElasticBeanstalkServiceException
 ```
 
 Constructs ElasticBeanstalkServiceException's fields from required parameters
@@ -2726,7 +2726,7 @@ Encode EnvironmentArn
 
 ``` purescript
 newtype EnvironmentDescription
-  = EnvironmentDescription { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EndpointURL" :: NullOrUndefined (EndpointURL), "CNAME" :: NullOrUndefined (DNSCname), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (EnvironmentStatus), "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress), "Health" :: NullOrUndefined (EnvironmentHealth), "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus), "Resources" :: NullOrUndefined (EnvironmentResourcesDescription), "Tier" :: NullOrUndefined (EnvironmentTier), "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks), "EnvironmentArn" :: NullOrUndefined (EnvironmentArn) }
+  = EnvironmentDescription { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EndpointURL" :: Maybe (EndpointURL), "CNAME" :: Maybe (DNSCname), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (EnvironmentStatus), "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress), "Health" :: Maybe (EnvironmentHealth), "HealthStatus" :: Maybe (EnvironmentHealthStatus), "Resources" :: Maybe (EnvironmentResourcesDescription), "Tier" :: Maybe (EnvironmentTier), "EnvironmentLinks" :: Maybe (EnvironmentLinks), "EnvironmentArn" :: Maybe (EnvironmentArn) }
 ```
 
 <p>Describes the properties of an environment.</p>
@@ -2751,7 +2751,7 @@ Constructs EnvironmentDescription from required parameters
 #### `newEnvironmentDescription'`
 
 ``` purescript
-newEnvironmentDescription' :: ({ "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EndpointURL" :: NullOrUndefined (EndpointURL), "CNAME" :: NullOrUndefined (DNSCname), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (EnvironmentStatus), "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress), "Health" :: NullOrUndefined (EnvironmentHealth), "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus), "Resources" :: NullOrUndefined (EnvironmentResourcesDescription), "Tier" :: NullOrUndefined (EnvironmentTier), "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks), "EnvironmentArn" :: NullOrUndefined (EnvironmentArn) } -> { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "Description" :: NullOrUndefined (Description), "EndpointURL" :: NullOrUndefined (EndpointURL), "CNAME" :: NullOrUndefined (DNSCname), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "Status" :: NullOrUndefined (EnvironmentStatus), "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress), "Health" :: NullOrUndefined (EnvironmentHealth), "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus), "Resources" :: NullOrUndefined (EnvironmentResourcesDescription), "Tier" :: NullOrUndefined (EnvironmentTier), "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks), "EnvironmentArn" :: NullOrUndefined (EnvironmentArn) }) -> EnvironmentDescription
+newEnvironmentDescription' :: ({ "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EndpointURL" :: Maybe (EndpointURL), "CNAME" :: Maybe (DNSCname), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (EnvironmentStatus), "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress), "Health" :: Maybe (EnvironmentHealth), "HealthStatus" :: Maybe (EnvironmentHealthStatus), "Resources" :: Maybe (EnvironmentResourcesDescription), "Tier" :: Maybe (EnvironmentTier), "EnvironmentLinks" :: Maybe (EnvironmentLinks), "EnvironmentArn" :: Maybe (EnvironmentArn) } -> { "EnvironmentName" :: Maybe (EnvironmentName), "EnvironmentId" :: Maybe (EnvironmentId), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "TemplateName" :: Maybe (ConfigurationTemplateName), "Description" :: Maybe (Description), "EndpointURL" :: Maybe (EndpointURL), "CNAME" :: Maybe (DNSCname), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "Status" :: Maybe (EnvironmentStatus), "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress), "Health" :: Maybe (EnvironmentHealth), "HealthStatus" :: Maybe (EnvironmentHealthStatus), "Resources" :: Maybe (EnvironmentResourcesDescription), "Tier" :: Maybe (EnvironmentTier), "EnvironmentLinks" :: Maybe (EnvironmentLinks), "EnvironmentArn" :: Maybe (EnvironmentArn) }) -> EnvironmentDescription
 ```
 
 Constructs EnvironmentDescription's fields from required parameters
@@ -2776,7 +2776,7 @@ Encode EnvironmentDescriptionsList
 
 ``` purescript
 newtype EnvironmentDescriptionsMessage
-  = EnvironmentDescriptionsMessage { "Environments" :: NullOrUndefined (EnvironmentDescriptionsList), "NextToken" :: NullOrUndefined (Token) }
+  = EnvironmentDescriptionsMessage { "Environments" :: Maybe (EnvironmentDescriptionsList), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Result message containing a list of environment descriptions.</p>
@@ -2801,7 +2801,7 @@ Constructs EnvironmentDescriptionsMessage from required parameters
 #### `newEnvironmentDescriptionsMessage'`
 
 ``` purescript
-newEnvironmentDescriptionsMessage' :: ({ "Environments" :: NullOrUndefined (EnvironmentDescriptionsList), "NextToken" :: NullOrUndefined (Token) } -> { "Environments" :: NullOrUndefined (EnvironmentDescriptionsList), "NextToken" :: NullOrUndefined (Token) }) -> EnvironmentDescriptionsMessage
+newEnvironmentDescriptionsMessage' :: ({ "Environments" :: Maybe (EnvironmentDescriptionsList), "NextToken" :: Maybe (Token) } -> { "Environments" :: Maybe (EnvironmentDescriptionsList), "NextToken" :: Maybe (Token) }) -> EnvironmentDescriptionsMessage
 ```
 
 Constructs EnvironmentDescriptionsMessage's fields from required parameters
@@ -2906,7 +2906,7 @@ Encode EnvironmentIdList
 
 ``` purescript
 newtype EnvironmentInfoDescription
-  = EnvironmentInfoDescription { "InfoType" :: NullOrUndefined (EnvironmentInfoType), "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId), "SampleTimestamp" :: NullOrUndefined (SampleTimestamp), "Message" :: NullOrUndefined (Message) }
+  = EnvironmentInfoDescription { "InfoType" :: Maybe (EnvironmentInfoType), "Ec2InstanceId" :: Maybe (Ec2InstanceId), "SampleTimestamp" :: Maybe (SampleTimestamp), "Message" :: Maybe (Message) }
 ```
 
 <p>The information retrieved from the Amazon EC2 instances.</p>
@@ -2931,7 +2931,7 @@ Constructs EnvironmentInfoDescription from required parameters
 #### `newEnvironmentInfoDescription'`
 
 ``` purescript
-newEnvironmentInfoDescription' :: ({ "InfoType" :: NullOrUndefined (EnvironmentInfoType), "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId), "SampleTimestamp" :: NullOrUndefined (SampleTimestamp), "Message" :: NullOrUndefined (Message) } -> { "InfoType" :: NullOrUndefined (EnvironmentInfoType), "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId), "SampleTimestamp" :: NullOrUndefined (SampleTimestamp), "Message" :: NullOrUndefined (Message) }) -> EnvironmentInfoDescription
+newEnvironmentInfoDescription' :: ({ "InfoType" :: Maybe (EnvironmentInfoType), "Ec2InstanceId" :: Maybe (Ec2InstanceId), "SampleTimestamp" :: Maybe (SampleTimestamp), "Message" :: Maybe (Message) } -> { "InfoType" :: Maybe (EnvironmentInfoType), "Ec2InstanceId" :: Maybe (Ec2InstanceId), "SampleTimestamp" :: Maybe (SampleTimestamp), "Message" :: Maybe (Message) }) -> EnvironmentInfoDescription
 ```
 
 Constructs EnvironmentInfoDescription's fields from required parameters
@@ -2972,7 +2972,7 @@ Encode EnvironmentInfoType
 
 ``` purescript
 newtype EnvironmentLink
-  = EnvironmentLink { "LinkName" :: NullOrUndefined (String), "EnvironmentName" :: NullOrUndefined (String) }
+  = EnvironmentLink { "LinkName" :: Maybe (String), "EnvironmentName" :: Maybe (String) }
 ```
 
 <p>A link to another environment, defined in the environment's manifest. Links provide connection information in system properties that can be used to connect to another environment in the same group. See <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-cfg-manifest.html">Environment Manifest (env.yaml)</a> for details.</p>
@@ -2997,7 +2997,7 @@ Constructs EnvironmentLink from required parameters
 #### `newEnvironmentLink'`
 
 ``` purescript
-newEnvironmentLink' :: ({ "LinkName" :: NullOrUndefined (String), "EnvironmentName" :: NullOrUndefined (String) } -> { "LinkName" :: NullOrUndefined (String), "EnvironmentName" :: NullOrUndefined (String) }) -> EnvironmentLink
+newEnvironmentLink' :: ({ "LinkName" :: Maybe (String), "EnvironmentName" :: Maybe (String) } -> { "LinkName" :: Maybe (String), "EnvironmentName" :: Maybe (String) }) -> EnvironmentLink
 ```
 
 Constructs EnvironmentLink's fields from required parameters
@@ -3054,7 +3054,7 @@ Encode EnvironmentNamesList
 
 ``` purescript
 newtype EnvironmentResourceDescription
-  = EnvironmentResourceDescription { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList), "Instances" :: NullOrUndefined (InstanceList), "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList), "LoadBalancers" :: NullOrUndefined (LoadBalancerList), "Triggers" :: NullOrUndefined (TriggerList), "Queues" :: NullOrUndefined (QueueList) }
+  = EnvironmentResourceDescription { "EnvironmentName" :: Maybe (EnvironmentName), "AutoScalingGroups" :: Maybe (AutoScalingGroupList), "Instances" :: Maybe (InstanceList), "LaunchConfigurations" :: Maybe (LaunchConfigurationList), "LoadBalancers" :: Maybe (LoadBalancerList), "Triggers" :: Maybe (TriggerList), "Queues" :: Maybe (QueueList) }
 ```
 
 <p>Describes the AWS resources in use by this environment. This data is live.</p>
@@ -3079,7 +3079,7 @@ Constructs EnvironmentResourceDescription from required parameters
 #### `newEnvironmentResourceDescription'`
 
 ``` purescript
-newEnvironmentResourceDescription' :: ({ "EnvironmentName" :: NullOrUndefined (EnvironmentName), "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList), "Instances" :: NullOrUndefined (InstanceList), "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList), "LoadBalancers" :: NullOrUndefined (LoadBalancerList), "Triggers" :: NullOrUndefined (TriggerList), "Queues" :: NullOrUndefined (QueueList) } -> { "EnvironmentName" :: NullOrUndefined (EnvironmentName), "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList), "Instances" :: NullOrUndefined (InstanceList), "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList), "LoadBalancers" :: NullOrUndefined (LoadBalancerList), "Triggers" :: NullOrUndefined (TriggerList), "Queues" :: NullOrUndefined (QueueList) }) -> EnvironmentResourceDescription
+newEnvironmentResourceDescription' :: ({ "EnvironmentName" :: Maybe (EnvironmentName), "AutoScalingGroups" :: Maybe (AutoScalingGroupList), "Instances" :: Maybe (InstanceList), "LaunchConfigurations" :: Maybe (LaunchConfigurationList), "LoadBalancers" :: Maybe (LoadBalancerList), "Triggers" :: Maybe (TriggerList), "Queues" :: Maybe (QueueList) } -> { "EnvironmentName" :: Maybe (EnvironmentName), "AutoScalingGroups" :: Maybe (AutoScalingGroupList), "Instances" :: Maybe (InstanceList), "LaunchConfigurations" :: Maybe (LaunchConfigurationList), "LoadBalancers" :: Maybe (LoadBalancerList), "Triggers" :: Maybe (TriggerList), "Queues" :: Maybe (QueueList) }) -> EnvironmentResourceDescription
 ```
 
 Constructs EnvironmentResourceDescription's fields from required parameters
@@ -3088,7 +3088,7 @@ Constructs EnvironmentResourceDescription's fields from required parameters
 
 ``` purescript
 newtype EnvironmentResourceDescriptionsMessage
-  = EnvironmentResourceDescriptionsMessage { "EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription) }
+  = EnvironmentResourceDescriptionsMessage { "EnvironmentResources" :: Maybe (EnvironmentResourceDescription) }
 ```
 
 <p>Result message containing a list of environment resource descriptions.</p>
@@ -3113,7 +3113,7 @@ Constructs EnvironmentResourceDescriptionsMessage from required parameters
 #### `newEnvironmentResourceDescriptionsMessage'`
 
 ``` purescript
-newEnvironmentResourceDescriptionsMessage' :: ({ "EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription) } -> { "EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription) }) -> EnvironmentResourceDescriptionsMessage
+newEnvironmentResourceDescriptionsMessage' :: ({ "EnvironmentResources" :: Maybe (EnvironmentResourceDescription) } -> { "EnvironmentResources" :: Maybe (EnvironmentResourceDescription) }) -> EnvironmentResourceDescriptionsMessage
 ```
 
 Constructs EnvironmentResourceDescriptionsMessage's fields from required parameters
@@ -3122,7 +3122,7 @@ Constructs EnvironmentResourceDescriptionsMessage's fields from required paramet
 
 ``` purescript
 newtype EnvironmentResourcesDescription
-  = EnvironmentResourcesDescription { "LoadBalancer" :: NullOrUndefined (LoadBalancerDescription) }
+  = EnvironmentResourcesDescription { "LoadBalancer" :: Maybe (LoadBalancerDescription) }
 ```
 
 <p>Describes the AWS resources in use by this environment. This data is not live data.</p>
@@ -3147,7 +3147,7 @@ Constructs EnvironmentResourcesDescription from required parameters
 #### `newEnvironmentResourcesDescription'`
 
 ``` purescript
-newEnvironmentResourcesDescription' :: ({ "LoadBalancer" :: NullOrUndefined (LoadBalancerDescription) } -> { "LoadBalancer" :: NullOrUndefined (LoadBalancerDescription) }) -> EnvironmentResourcesDescription
+newEnvironmentResourcesDescription' :: ({ "LoadBalancer" :: Maybe (LoadBalancerDescription) } -> { "LoadBalancer" :: Maybe (LoadBalancerDescription) }) -> EnvironmentResourcesDescription
 ```
 
 Constructs EnvironmentResourcesDescription's fields from required parameters
@@ -3172,7 +3172,7 @@ Encode EnvironmentStatus
 
 ``` purescript
 newtype EnvironmentTier
-  = EnvironmentTier { "Name" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = EnvironmentTier { "Name" :: Maybe (String), "Type" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 <p>Describes the properties of an environment tier</p>
@@ -3197,7 +3197,7 @@ Constructs EnvironmentTier from required parameters
 #### `newEnvironmentTier'`
 
 ``` purescript
-newEnvironmentTier' :: ({ "Name" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Name" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> EnvironmentTier
+newEnvironmentTier' :: ({ "Name" :: Maybe (String), "Type" :: Maybe (String), "Version" :: Maybe (String) } -> { "Name" :: Maybe (String), "Type" :: Maybe (String), "Version" :: Maybe (String) }) -> EnvironmentTier
 ```
 
 Constructs EnvironmentTier's fields from required parameters
@@ -3222,7 +3222,7 @@ Encode EventDate
 
 ``` purescript
 newtype EventDescription
-  = EventDescription { "EventDate" :: NullOrUndefined (EventDate), "Message" :: NullOrUndefined (EventMessage), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity) }
+  = EventDescription { "EventDate" :: Maybe (EventDate), "Message" :: Maybe (EventMessage), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity) }
 ```
 
 <p>Describes an event.</p>
@@ -3247,7 +3247,7 @@ Constructs EventDescription from required parameters
 #### `newEventDescription'`
 
 ``` purescript
-newEventDescription' :: ({ "EventDate" :: NullOrUndefined (EventDate), "Message" :: NullOrUndefined (EventMessage), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity) } -> { "EventDate" :: NullOrUndefined (EventDate), "Message" :: NullOrUndefined (EventMessage), "ApplicationName" :: NullOrUndefined (ApplicationName), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "PlatformArn" :: NullOrUndefined (PlatformArn), "RequestId" :: NullOrUndefined (RequestId), "Severity" :: NullOrUndefined (EventSeverity) }) -> EventDescription
+newEventDescription' :: ({ "EventDate" :: Maybe (EventDate), "Message" :: Maybe (EventMessage), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity) } -> { "EventDate" :: Maybe (EventDate), "Message" :: Maybe (EventMessage), "ApplicationName" :: Maybe (ApplicationName), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "PlatformArn" :: Maybe (PlatformArn), "RequestId" :: Maybe (RequestId), "Severity" :: Maybe (EventSeverity) }) -> EventDescription
 ```
 
 Constructs EventDescription's fields from required parameters
@@ -3272,7 +3272,7 @@ Encode EventDescriptionList
 
 ``` purescript
 newtype EventDescriptionsMessage
-  = EventDescriptionsMessage { "Events" :: NullOrUndefined (EventDescriptionList), "NextToken" :: NullOrUndefined (Token) }
+  = EventDescriptionsMessage { "Events" :: Maybe (EventDescriptionList), "NextToken" :: Maybe (Token) }
 ```
 
 <p>Result message wrapping a list of event descriptions.</p>
@@ -3297,7 +3297,7 @@ Constructs EventDescriptionsMessage from required parameters
 #### `newEventDescriptionsMessage'`
 
 ``` purescript
-newEventDescriptionsMessage' :: ({ "Events" :: NullOrUndefined (EventDescriptionList), "NextToken" :: NullOrUndefined (Token) } -> { "Events" :: NullOrUndefined (EventDescriptionList), "NextToken" :: NullOrUndefined (Token) }) -> EventDescriptionsMessage
+newEventDescriptionsMessage' :: ({ "Events" :: Maybe (EventDescriptionList), "NextToken" :: Maybe (Token) } -> { "Events" :: Maybe (EventDescriptionList), "NextToken" :: Maybe (Token) }) -> EventDescriptionsMessage
 ```
 
 Constructs EventDescriptionsMessage's fields from required parameters
@@ -3466,7 +3466,7 @@ Encode IncludeDeletedBackTo
 
 ``` purescript
 newtype Instance
-  = Instance { "Id" :: NullOrUndefined (ResourceId) }
+  = Instance { "Id" :: Maybe (ResourceId) }
 ```
 
 <p>The description of an Amazon EC2 instance.</p>
@@ -3491,7 +3491,7 @@ Constructs Instance from required parameters
 #### `newInstance'`
 
 ``` purescript
-newInstance' :: ({ "Id" :: NullOrUndefined (ResourceId) } -> { "Id" :: NullOrUndefined (ResourceId) }) -> Instance
+newInstance' :: ({ "Id" :: Maybe (ResourceId) } -> { "Id" :: Maybe (ResourceId) }) -> Instance
 ```
 
 Constructs Instance's fields from required parameters
@@ -3516,7 +3516,7 @@ Encode InstanceHealthList
 
 ``` purescript
 newtype InstanceHealthSummary
-  = InstanceHealthSummary { "NoData" :: NullOrUndefined (NullableInteger), "Unknown" :: NullOrUndefined (NullableInteger), "Pending" :: NullOrUndefined (NullableInteger), "Ok" :: NullOrUndefined (NullableInteger), "Info" :: NullOrUndefined (NullableInteger), "Warning" :: NullOrUndefined (NullableInteger), "Degraded" :: NullOrUndefined (NullableInteger), "Severe" :: NullOrUndefined (NullableInteger) }
+  = InstanceHealthSummary { "NoData" :: Maybe (NullableInteger), "Unknown" :: Maybe (NullableInteger), "Pending" :: Maybe (NullableInteger), "Ok" :: Maybe (NullableInteger), "Info" :: Maybe (NullableInteger), "Warning" :: Maybe (NullableInteger), "Degraded" :: Maybe (NullableInteger), "Severe" :: Maybe (NullableInteger) }
 ```
 
 <p>Represents summary information about the health of an instance. For more information, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced-status.html">Health Colors and Statuses</a>.</p>
@@ -3541,7 +3541,7 @@ Constructs InstanceHealthSummary from required parameters
 #### `newInstanceHealthSummary'`
 
 ``` purescript
-newInstanceHealthSummary' :: ({ "NoData" :: NullOrUndefined (NullableInteger), "Unknown" :: NullOrUndefined (NullableInteger), "Pending" :: NullOrUndefined (NullableInteger), "Ok" :: NullOrUndefined (NullableInteger), "Info" :: NullOrUndefined (NullableInteger), "Warning" :: NullOrUndefined (NullableInteger), "Degraded" :: NullOrUndefined (NullableInteger), "Severe" :: NullOrUndefined (NullableInteger) } -> { "NoData" :: NullOrUndefined (NullableInteger), "Unknown" :: NullOrUndefined (NullableInteger), "Pending" :: NullOrUndefined (NullableInteger), "Ok" :: NullOrUndefined (NullableInteger), "Info" :: NullOrUndefined (NullableInteger), "Warning" :: NullOrUndefined (NullableInteger), "Degraded" :: NullOrUndefined (NullableInteger), "Severe" :: NullOrUndefined (NullableInteger) }) -> InstanceHealthSummary
+newInstanceHealthSummary' :: ({ "NoData" :: Maybe (NullableInteger), "Unknown" :: Maybe (NullableInteger), "Pending" :: Maybe (NullableInteger), "Ok" :: Maybe (NullableInteger), "Info" :: Maybe (NullableInteger), "Warning" :: Maybe (NullableInteger), "Degraded" :: Maybe (NullableInteger), "Severe" :: Maybe (NullableInteger) } -> { "NoData" :: Maybe (NullableInteger), "Unknown" :: Maybe (NullableInteger), "Pending" :: Maybe (NullableInteger), "Ok" :: Maybe (NullableInteger), "Info" :: Maybe (NullableInteger), "Warning" :: Maybe (NullableInteger), "Degraded" :: Maybe (NullableInteger), "Severe" :: Maybe (NullableInteger) }) -> InstanceHealthSummary
 ```
 
 Constructs InstanceHealthSummary's fields from required parameters
@@ -3650,7 +3650,7 @@ Encode InvalidRequestException
 
 ``` purescript
 newtype Latency
-  = Latency { "P999" :: NullOrUndefined (NullableDouble), "P99" :: NullOrUndefined (NullableDouble), "P95" :: NullOrUndefined (NullableDouble), "P90" :: NullOrUndefined (NullableDouble), "P85" :: NullOrUndefined (NullableDouble), "P75" :: NullOrUndefined (NullableDouble), "P50" :: NullOrUndefined (NullableDouble), "P10" :: NullOrUndefined (NullableDouble) }
+  = Latency { "P999" :: Maybe (NullableDouble), "P99" :: Maybe (NullableDouble), "P95" :: Maybe (NullableDouble), "P90" :: Maybe (NullableDouble), "P85" :: Maybe (NullableDouble), "P75" :: Maybe (NullableDouble), "P50" :: Maybe (NullableDouble), "P10" :: Maybe (NullableDouble) }
 ```
 
 <p>Represents the average latency for the slowest X percent of requests over the last 10 seconds.</p>
@@ -3675,7 +3675,7 @@ Constructs Latency from required parameters
 #### `newLatency'`
 
 ``` purescript
-newLatency' :: ({ "P999" :: NullOrUndefined (NullableDouble), "P99" :: NullOrUndefined (NullableDouble), "P95" :: NullOrUndefined (NullableDouble), "P90" :: NullOrUndefined (NullableDouble), "P85" :: NullOrUndefined (NullableDouble), "P75" :: NullOrUndefined (NullableDouble), "P50" :: NullOrUndefined (NullableDouble), "P10" :: NullOrUndefined (NullableDouble) } -> { "P999" :: NullOrUndefined (NullableDouble), "P99" :: NullOrUndefined (NullableDouble), "P95" :: NullOrUndefined (NullableDouble), "P90" :: NullOrUndefined (NullableDouble), "P85" :: NullOrUndefined (NullableDouble), "P75" :: NullOrUndefined (NullableDouble), "P50" :: NullOrUndefined (NullableDouble), "P10" :: NullOrUndefined (NullableDouble) }) -> Latency
+newLatency' :: ({ "P999" :: Maybe (NullableDouble), "P99" :: Maybe (NullableDouble), "P95" :: Maybe (NullableDouble), "P90" :: Maybe (NullableDouble), "P85" :: Maybe (NullableDouble), "P75" :: Maybe (NullableDouble), "P50" :: Maybe (NullableDouble), "P10" :: Maybe (NullableDouble) } -> { "P999" :: Maybe (NullableDouble), "P99" :: Maybe (NullableDouble), "P95" :: Maybe (NullableDouble), "P90" :: Maybe (NullableDouble), "P85" :: Maybe (NullableDouble), "P75" :: Maybe (NullableDouble), "P50" :: Maybe (NullableDouble), "P10" :: Maybe (NullableDouble) }) -> Latency
 ```
 
 Constructs Latency's fields from required parameters
@@ -3684,7 +3684,7 @@ Constructs Latency's fields from required parameters
 
 ``` purescript
 newtype LaunchConfiguration
-  = LaunchConfiguration { "Name" :: NullOrUndefined (ResourceId) }
+  = LaunchConfiguration { "Name" :: Maybe (ResourceId) }
 ```
 
 <p>Describes an Auto Scaling launch configuration.</p>
@@ -3709,7 +3709,7 @@ Constructs LaunchConfiguration from required parameters
 #### `newLaunchConfiguration'`
 
 ``` purescript
-newLaunchConfiguration' :: ({ "Name" :: NullOrUndefined (ResourceId) } -> { "Name" :: NullOrUndefined (ResourceId) }) -> LaunchConfiguration
+newLaunchConfiguration' :: ({ "Name" :: Maybe (ResourceId) } -> { "Name" :: Maybe (ResourceId) }) -> LaunchConfiguration
 ```
 
 Constructs LaunchConfiguration's fields from required parameters
@@ -3750,7 +3750,7 @@ Encode LaunchedAt
 
 ``` purescript
 newtype ListAvailableSolutionStacksResultMessage
-  = ListAvailableSolutionStacksResultMessage { "SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList), "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList) }
+  = ListAvailableSolutionStacksResultMessage { "SolutionStacks" :: Maybe (AvailableSolutionStackNamesList), "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList) }
 ```
 
 <p>A list of available AWS Elastic Beanstalk solution stacks.</p>
@@ -3775,7 +3775,7 @@ Constructs ListAvailableSolutionStacksResultMessage from required parameters
 #### `newListAvailableSolutionStacksResultMessage'`
 
 ``` purescript
-newListAvailableSolutionStacksResultMessage' :: ({ "SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList), "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList) } -> { "SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList), "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList) }) -> ListAvailableSolutionStacksResultMessage
+newListAvailableSolutionStacksResultMessage' :: ({ "SolutionStacks" :: Maybe (AvailableSolutionStackNamesList), "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList) } -> { "SolutionStacks" :: Maybe (AvailableSolutionStackNamesList), "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList) }) -> ListAvailableSolutionStacksResultMessage
 ```
 
 Constructs ListAvailableSolutionStacksResultMessage's fields from required parameters
@@ -3784,7 +3784,7 @@ Constructs ListAvailableSolutionStacksResultMessage's fields from required param
 
 ``` purescript
 newtype ListPlatformVersionsRequest
-  = ListPlatformVersionsRequest { "Filters" :: NullOrUndefined (PlatformFilters), "MaxRecords" :: NullOrUndefined (PlatformMaxRecords), "NextToken" :: NullOrUndefined (Token) }
+  = ListPlatformVersionsRequest { "Filters" :: Maybe (PlatformFilters), "MaxRecords" :: Maybe (PlatformMaxRecords), "NextToken" :: Maybe (Token) }
 ```
 
 ##### Instances
@@ -3807,7 +3807,7 @@ Constructs ListPlatformVersionsRequest from required parameters
 #### `newListPlatformVersionsRequest'`
 
 ``` purescript
-newListPlatformVersionsRequest' :: ({ "Filters" :: NullOrUndefined (PlatformFilters), "MaxRecords" :: NullOrUndefined (PlatformMaxRecords), "NextToken" :: NullOrUndefined (Token) } -> { "Filters" :: NullOrUndefined (PlatformFilters), "MaxRecords" :: NullOrUndefined (PlatformMaxRecords), "NextToken" :: NullOrUndefined (Token) }) -> ListPlatformVersionsRequest
+newListPlatformVersionsRequest' :: ({ "Filters" :: Maybe (PlatformFilters), "MaxRecords" :: Maybe (PlatformMaxRecords), "NextToken" :: Maybe (Token) } -> { "Filters" :: Maybe (PlatformFilters), "MaxRecords" :: Maybe (PlatformMaxRecords), "NextToken" :: Maybe (Token) }) -> ListPlatformVersionsRequest
 ```
 
 Constructs ListPlatformVersionsRequest's fields from required parameters
@@ -3816,7 +3816,7 @@ Constructs ListPlatformVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListPlatformVersionsResult
-  = ListPlatformVersionsResult { "PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList), "NextToken" :: NullOrUndefined (Token) }
+  = ListPlatformVersionsResult { "PlatformSummaryList" :: Maybe (PlatformSummaryList), "NextToken" :: Maybe (Token) }
 ```
 
 ##### Instances
@@ -3839,7 +3839,7 @@ Constructs ListPlatformVersionsResult from required parameters
 #### `newListPlatformVersionsResult'`
 
 ``` purescript
-newListPlatformVersionsResult' :: ({ "PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList), "NextToken" :: NullOrUndefined (Token) } -> { "PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList), "NextToken" :: NullOrUndefined (Token) }) -> ListPlatformVersionsResult
+newListPlatformVersionsResult' :: ({ "PlatformSummaryList" :: Maybe (PlatformSummaryList), "NextToken" :: Maybe (Token) } -> { "PlatformSummaryList" :: Maybe (PlatformSummaryList), "NextToken" :: Maybe (Token) }) -> ListPlatformVersionsResult
 ```
 
 Constructs ListPlatformVersionsResult's fields from required parameters
@@ -3880,7 +3880,7 @@ Constructs ListTagsForResourceMessage's fields from required parameters
 
 ``` purescript
 newtype Listener
-  = Listener { "Protocol" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) }
+  = Listener { "Protocol" :: Maybe (String), "Port" :: Maybe (Int) }
 ```
 
 <p>Describes the properties of a Listener for the LoadBalancer.</p>
@@ -3905,7 +3905,7 @@ Constructs Listener from required parameters
 #### `newListener'`
 
 ``` purescript
-newListener' :: ({ "Protocol" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) } -> { "Protocol" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) }) -> Listener
+newListener' :: ({ "Protocol" :: Maybe (String), "Port" :: Maybe (Int) } -> { "Protocol" :: Maybe (String), "Port" :: Maybe (Int) }) -> Listener
 ```
 
 Constructs Listener's fields from required parameters
@@ -3946,7 +3946,7 @@ Encode LoadAverageValue
 
 ``` purescript
 newtype LoadBalancer
-  = LoadBalancer { "Name" :: NullOrUndefined (ResourceId) }
+  = LoadBalancer { "Name" :: Maybe (ResourceId) }
 ```
 
 <p>Describes a LoadBalancer.</p>
@@ -3971,7 +3971,7 @@ Constructs LoadBalancer from required parameters
 #### `newLoadBalancer'`
 
 ``` purescript
-newLoadBalancer' :: ({ "Name" :: NullOrUndefined (ResourceId) } -> { "Name" :: NullOrUndefined (ResourceId) }) -> LoadBalancer
+newLoadBalancer' :: ({ "Name" :: Maybe (ResourceId) } -> { "Name" :: Maybe (ResourceId) }) -> LoadBalancer
 ```
 
 Constructs LoadBalancer's fields from required parameters
@@ -3980,7 +3980,7 @@ Constructs LoadBalancer's fields from required parameters
 
 ``` purescript
 newtype LoadBalancerDescription
-  = LoadBalancerDescription { "LoadBalancerName" :: NullOrUndefined (String), "Domain" :: NullOrUndefined (String), "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription) }
+  = LoadBalancerDescription { "LoadBalancerName" :: Maybe (String), "Domain" :: Maybe (String), "Listeners" :: Maybe (LoadBalancerListenersDescription) }
 ```
 
 <p>Describes the details of a LoadBalancer.</p>
@@ -4005,7 +4005,7 @@ Constructs LoadBalancerDescription from required parameters
 #### `newLoadBalancerDescription'`
 
 ``` purescript
-newLoadBalancerDescription' :: ({ "LoadBalancerName" :: NullOrUndefined (String), "Domain" :: NullOrUndefined (String), "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription) } -> { "LoadBalancerName" :: NullOrUndefined (String), "Domain" :: NullOrUndefined (String), "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription) }) -> LoadBalancerDescription
+newLoadBalancerDescription' :: ({ "LoadBalancerName" :: Maybe (String), "Domain" :: Maybe (String), "Listeners" :: Maybe (LoadBalancerListenersDescription) } -> { "LoadBalancerName" :: Maybe (String), "Domain" :: Maybe (String), "Listeners" :: Maybe (LoadBalancerListenersDescription) }) -> LoadBalancerDescription
 ```
 
 Constructs LoadBalancerDescription's fields from required parameters
@@ -4062,7 +4062,7 @@ Encode Maintainer
 
 ``` purescript
 newtype ManagedAction
-  = ManagedAction { "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (ActionStatus), "WindowStartTime" :: NullOrUndefined (Timestamp) }
+  = ManagedAction { "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (ActionStatus), "WindowStartTime" :: Maybe (Timestamp) }
 ```
 
 <p>The record of an upcoming or in-progress managed action.</p>
@@ -4087,7 +4087,7 @@ Constructs ManagedAction from required parameters
 #### `newManagedAction'`
 
 ``` purescript
-newManagedAction' :: ({ "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (ActionStatus), "WindowStartTime" :: NullOrUndefined (Timestamp) } -> { "ActionId" :: NullOrUndefined (String), "ActionDescription" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "Status" :: NullOrUndefined (ActionStatus), "WindowStartTime" :: NullOrUndefined (Timestamp) }) -> ManagedAction
+newManagedAction' :: ({ "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (ActionStatus), "WindowStartTime" :: Maybe (Timestamp) } -> { "ActionId" :: Maybe (String), "ActionDescription" :: Maybe (String), "ActionType" :: Maybe (ActionType), "Status" :: Maybe (ActionStatus), "WindowStartTime" :: Maybe (Timestamp) }) -> ManagedAction
 ```
 
 Constructs ManagedAction's fields from required parameters
@@ -4096,7 +4096,7 @@ Constructs ManagedAction's fields from required parameters
 
 ``` purescript
 newtype ManagedActionHistoryItem
-  = ManagedActionHistoryItem { "ActionId" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "ActionDescription" :: NullOrUndefined (String), "FailureType" :: NullOrUndefined (FailureType), "Status" :: NullOrUndefined (ActionHistoryStatus), "FailureDescription" :: NullOrUndefined (String), "ExecutedTime" :: NullOrUndefined (Timestamp), "FinishedTime" :: NullOrUndefined (Timestamp) }
+  = ManagedActionHistoryItem { "ActionId" :: Maybe (String), "ActionType" :: Maybe (ActionType), "ActionDescription" :: Maybe (String), "FailureType" :: Maybe (FailureType), "Status" :: Maybe (ActionHistoryStatus), "FailureDescription" :: Maybe (String), "ExecutedTime" :: Maybe (Timestamp), "FinishedTime" :: Maybe (Timestamp) }
 ```
 
 <p>The record of a completed or failed managed action.</p>
@@ -4121,7 +4121,7 @@ Constructs ManagedActionHistoryItem from required parameters
 #### `newManagedActionHistoryItem'`
 
 ``` purescript
-newManagedActionHistoryItem' :: ({ "ActionId" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "ActionDescription" :: NullOrUndefined (String), "FailureType" :: NullOrUndefined (FailureType), "Status" :: NullOrUndefined (ActionHistoryStatus), "FailureDescription" :: NullOrUndefined (String), "ExecutedTime" :: NullOrUndefined (Timestamp), "FinishedTime" :: NullOrUndefined (Timestamp) } -> { "ActionId" :: NullOrUndefined (String), "ActionType" :: NullOrUndefined (ActionType), "ActionDescription" :: NullOrUndefined (String), "FailureType" :: NullOrUndefined (FailureType), "Status" :: NullOrUndefined (ActionHistoryStatus), "FailureDescription" :: NullOrUndefined (String), "ExecutedTime" :: NullOrUndefined (Timestamp), "FinishedTime" :: NullOrUndefined (Timestamp) }) -> ManagedActionHistoryItem
+newManagedActionHistoryItem' :: ({ "ActionId" :: Maybe (String), "ActionType" :: Maybe (ActionType), "ActionDescription" :: Maybe (String), "FailureType" :: Maybe (FailureType), "Status" :: Maybe (ActionHistoryStatus), "FailureDescription" :: Maybe (String), "ExecutedTime" :: Maybe (Timestamp), "FinishedTime" :: Maybe (Timestamp) } -> { "ActionId" :: Maybe (String), "ActionType" :: Maybe (ActionType), "ActionDescription" :: Maybe (String), "FailureType" :: Maybe (FailureType), "Status" :: Maybe (ActionHistoryStatus), "FailureDescription" :: Maybe (String), "ExecutedTime" :: Maybe (Timestamp), "FinishedTime" :: Maybe (Timestamp) }) -> ManagedActionHistoryItem
 ```
 
 Constructs ManagedActionHistoryItem's fields from required parameters
@@ -4180,7 +4180,7 @@ Encode ManagedActions
 
 ``` purescript
 newtype MaxAgeRule
-  = MaxAgeRule { "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) }
+  = MaxAgeRule { "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) }
 ```
 
 <p>A lifecycle rule that deletes application versions after the specified number of days.</p>
@@ -4205,7 +4205,7 @@ Constructs MaxAgeRule from required parameters
 #### `newMaxAgeRule'`
 
 ``` purescript
-newMaxAgeRule' :: BoxedBoolean -> ({ "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } -> { "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) }) -> MaxAgeRule
+newMaxAgeRule' :: BoxedBoolean -> ({ "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } -> { "Enabled" :: BoxedBoolean, "MaxAgeInDays" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) }) -> MaxAgeRule
 ```
 
 Constructs MaxAgeRule's fields from required parameters
@@ -4214,7 +4214,7 @@ Constructs MaxAgeRule's fields from required parameters
 
 ``` purescript
 newtype MaxCountRule
-  = MaxCountRule { "Enabled" :: BoxedBoolean, "MaxCount" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) }
+  = MaxCountRule { "Enabled" :: BoxedBoolean, "MaxCount" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) }
 ```
 
 <p>A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.</p>
@@ -4239,7 +4239,7 @@ Constructs MaxCountRule from required parameters
 #### `newMaxCountRule'`
 
 ``` purescript
-newMaxCountRule' :: BoxedBoolean -> ({ "Enabled" :: BoxedBoolean, "MaxCount" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } -> { "Enabled" :: BoxedBoolean, "MaxCount" :: NullOrUndefined (BoxedInt), "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) }) -> MaxCountRule
+newMaxCountRule' :: BoxedBoolean -> ({ "Enabled" :: BoxedBoolean, "MaxCount" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } -> { "Enabled" :: BoxedBoolean, "MaxCount" :: Maybe (BoxedInt), "DeleteSourceFromS3" :: Maybe (BoxedBoolean) }) -> MaxCountRule
 ```
 
 Constructs MaxCountRule's fields from required parameters
@@ -4474,7 +4474,7 @@ Encode OptionRestrictionMinValue
 
 ``` purescript
 newtype OptionRestrictionRegex
-  = OptionRestrictionRegex { "Pattern" :: NullOrUndefined (RegexPattern), "Label" :: NullOrUndefined (RegexLabel) }
+  = OptionRestrictionRegex { "Pattern" :: Maybe (RegexPattern), "Label" :: Maybe (RegexLabel) }
 ```
 
 <p>A regular expression representing a restriction on a string configuration option value.</p>
@@ -4499,7 +4499,7 @@ Constructs OptionRestrictionRegex from required parameters
 #### `newOptionRestrictionRegex'`
 
 ``` purescript
-newOptionRestrictionRegex' :: ({ "Pattern" :: NullOrUndefined (RegexPattern), "Label" :: NullOrUndefined (RegexLabel) } -> { "Pattern" :: NullOrUndefined (RegexPattern), "Label" :: NullOrUndefined (RegexLabel) }) -> OptionRestrictionRegex
+newOptionRestrictionRegex' :: ({ "Pattern" :: Maybe (RegexPattern), "Label" :: Maybe (RegexLabel) } -> { "Pattern" :: Maybe (RegexPattern), "Label" :: Maybe (RegexLabel) }) -> OptionRestrictionRegex
 ```
 
 Constructs OptionRestrictionRegex's fields from required parameters
@@ -4508,7 +4508,7 @@ Constructs OptionRestrictionRegex's fields from required parameters
 
 ``` purescript
 newtype OptionSpecification
-  = OptionSpecification { "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) }
+  = OptionSpecification { "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) }
 ```
 
 <p>A specification identifying an individual configuration option.</p>
@@ -4533,7 +4533,7 @@ Constructs OptionSpecification from required parameters
 #### `newOptionSpecification'`
 
 ``` purescript
-newOptionSpecification' :: ({ "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) } -> { "ResourceName" :: NullOrUndefined (ResourceName), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) }) -> OptionSpecification
+newOptionSpecification' :: ({ "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) } -> { "ResourceName" :: Maybe (ResourceName), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) }) -> OptionSpecification
 ```
 
 Constructs OptionSpecification's fields from required parameters
@@ -4590,7 +4590,7 @@ Encode PlatformCategory
 
 ``` purescript
 newtype PlatformDescription
-  = PlatformDescription { "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformName" :: NullOrUndefined (PlatformName), "PlatformVersion" :: NullOrUndefined (PlatformVersion), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "Description" :: NullOrUndefined (Description), "Maintainer" :: NullOrUndefined (Maintainer), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages), "Frameworks" :: NullOrUndefined (PlatformFrameworks), "CustomAmiList" :: NullOrUndefined (CustomAmiList), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) }
+  = PlatformDescription { "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformName" :: Maybe (PlatformName), "PlatformVersion" :: Maybe (PlatformVersion), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformStatus" :: Maybe (PlatformStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "PlatformCategory" :: Maybe (PlatformCategory), "Description" :: Maybe (Description), "Maintainer" :: Maybe (Maintainer), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages), "Frameworks" :: Maybe (PlatformFrameworks), "CustomAmiList" :: Maybe (CustomAmiList), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) }
 ```
 
 <p>Detailed information about a platform.</p>
@@ -4615,7 +4615,7 @@ Constructs PlatformDescription from required parameters
 #### `newPlatformDescription'`
 
 ``` purescript
-newPlatformDescription' :: ({ "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformName" :: NullOrUndefined (PlatformName), "PlatformVersion" :: NullOrUndefined (PlatformVersion), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "Description" :: NullOrUndefined (Description), "Maintainer" :: NullOrUndefined (Maintainer), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages), "Frameworks" :: NullOrUndefined (PlatformFrameworks), "CustomAmiList" :: NullOrUndefined (CustomAmiList), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } -> { "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformName" :: NullOrUndefined (PlatformName), "PlatformVersion" :: NullOrUndefined (PlatformVersion), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "DateCreated" :: NullOrUndefined (CreationDate), "DateUpdated" :: NullOrUndefined (UpdateDate), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "Description" :: NullOrUndefined (Description), "Maintainer" :: NullOrUndefined (Maintainer), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages), "Frameworks" :: NullOrUndefined (PlatformFrameworks), "CustomAmiList" :: NullOrUndefined (CustomAmiList), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) }) -> PlatformDescription
+newPlatformDescription' :: ({ "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformName" :: Maybe (PlatformName), "PlatformVersion" :: Maybe (PlatformVersion), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformStatus" :: Maybe (PlatformStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "PlatformCategory" :: Maybe (PlatformCategory), "Description" :: Maybe (Description), "Maintainer" :: Maybe (Maintainer), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages), "Frameworks" :: Maybe (PlatformFrameworks), "CustomAmiList" :: Maybe (CustomAmiList), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) } -> { "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformName" :: Maybe (PlatformName), "PlatformVersion" :: Maybe (PlatformVersion), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformStatus" :: Maybe (PlatformStatus), "DateCreated" :: Maybe (CreationDate), "DateUpdated" :: Maybe (UpdateDate), "PlatformCategory" :: Maybe (PlatformCategory), "Description" :: Maybe (Description), "Maintainer" :: Maybe (Maintainer), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages), "Frameworks" :: Maybe (PlatformFrameworks), "CustomAmiList" :: Maybe (CustomAmiList), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) }) -> PlatformDescription
 ```
 
 Constructs PlatformDescription's fields from required parameters
@@ -4624,7 +4624,7 @@ Constructs PlatformDescription's fields from required parameters
 
 ``` purescript
 newtype PlatformFilter
-  = PlatformFilter { "Type" :: NullOrUndefined (PlatformFilterType), "Operator" :: NullOrUndefined (PlatformFilterOperator), "Values" :: NullOrUndefined (PlatformFilterValueList) }
+  = PlatformFilter { "Type" :: Maybe (PlatformFilterType), "Operator" :: Maybe (PlatformFilterOperator), "Values" :: Maybe (PlatformFilterValueList) }
 ```
 
 <p>Specify criteria to restrict the results when listing custom platforms.</p> <p>The filter is evaluated as the expression:</p> <p> <code>Type</code> <code>Operator</code> <code>Values[i]</code> </p>
@@ -4649,7 +4649,7 @@ Constructs PlatformFilter from required parameters
 #### `newPlatformFilter'`
 
 ``` purescript
-newPlatformFilter' :: ({ "Type" :: NullOrUndefined (PlatformFilterType), "Operator" :: NullOrUndefined (PlatformFilterOperator), "Values" :: NullOrUndefined (PlatformFilterValueList) } -> { "Type" :: NullOrUndefined (PlatformFilterType), "Operator" :: NullOrUndefined (PlatformFilterOperator), "Values" :: NullOrUndefined (PlatformFilterValueList) }) -> PlatformFilter
+newPlatformFilter' :: ({ "Type" :: Maybe (PlatformFilterType), "Operator" :: Maybe (PlatformFilterOperator), "Values" :: Maybe (PlatformFilterValueList) } -> { "Type" :: Maybe (PlatformFilterType), "Operator" :: Maybe (PlatformFilterOperator), "Values" :: Maybe (PlatformFilterValueList) }) -> PlatformFilter
 ```
 
 Constructs PlatformFilter's fields from required parameters
@@ -4738,7 +4738,7 @@ Encode PlatformFilters
 
 ``` purescript
 newtype PlatformFramework
-  = PlatformFramework { "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = PlatformFramework { "Name" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 <p>A framework supported by the custom platform.</p>
@@ -4763,7 +4763,7 @@ Constructs PlatformFramework from required parameters
 #### `newPlatformFramework'`
 
 ``` purescript
-newPlatformFramework' :: ({ "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> PlatformFramework
+newPlatformFramework' :: ({ "Name" :: Maybe (String), "Version" :: Maybe (String) } -> { "Name" :: Maybe (String), "Version" :: Maybe (String) }) -> PlatformFramework
 ```
 
 Constructs PlatformFramework's fields from required parameters
@@ -4836,7 +4836,7 @@ Encode PlatformOwner
 
 ``` purescript
 newtype PlatformProgrammingLanguage
-  = PlatformProgrammingLanguage { "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = PlatformProgrammingLanguage { "Name" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 <p>A programming language supported by the platform.</p>
@@ -4861,7 +4861,7 @@ Constructs PlatformProgrammingLanguage from required parameters
 #### `newPlatformProgrammingLanguage'`
 
 ``` purescript
-newPlatformProgrammingLanguage' :: ({ "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Name" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> PlatformProgrammingLanguage
+newPlatformProgrammingLanguage' :: ({ "Name" :: Maybe (String), "Version" :: Maybe (String) } -> { "Name" :: Maybe (String), "Version" :: Maybe (String) }) -> PlatformProgrammingLanguage
 ```
 
 Constructs PlatformProgrammingLanguage's fields from required parameters
@@ -4902,7 +4902,7 @@ Encode PlatformStatus
 
 ``` purescript
 newtype PlatformSummary
-  = PlatformSummary { "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) }
+  = PlatformSummary { "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformStatus" :: Maybe (PlatformStatus), "PlatformCategory" :: Maybe (PlatformCategory), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) }
 ```
 
 <p>Detailed information about a platform.</p>
@@ -4927,7 +4927,7 @@ Constructs PlatformSummary from required parameters
 #### `newPlatformSummary'`
 
 ``` purescript
-newPlatformSummary' :: ({ "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } -> { "PlatformArn" :: NullOrUndefined (PlatformArn), "PlatformOwner" :: NullOrUndefined (PlatformOwner), "PlatformStatus" :: NullOrUndefined (PlatformStatus), "PlatformCategory" :: NullOrUndefined (PlatformCategory), "OperatingSystemName" :: NullOrUndefined (OperatingSystemName), "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion), "SupportedTierList" :: NullOrUndefined (SupportedTierList), "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) }) -> PlatformSummary
+newPlatformSummary' :: ({ "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformStatus" :: Maybe (PlatformStatus), "PlatformCategory" :: Maybe (PlatformCategory), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) } -> { "PlatformArn" :: Maybe (PlatformArn), "PlatformOwner" :: Maybe (PlatformOwner), "PlatformStatus" :: Maybe (PlatformStatus), "PlatformCategory" :: Maybe (PlatformCategory), "OperatingSystemName" :: Maybe (OperatingSystemName), "OperatingSystemVersion" :: Maybe (OperatingSystemVersion), "SupportedTierList" :: Maybe (SupportedTierList), "SupportedAddonList" :: Maybe (SupportedAddonList) }) -> PlatformSummary
 ```
 
 Constructs PlatformSummary's fields from required parameters
@@ -4986,7 +4986,7 @@ Encode PlatformVersionStillReferencedException
 
 ``` purescript
 newtype Queue
-  = Queue { "Name" :: NullOrUndefined (String), "URL" :: NullOrUndefined (String) }
+  = Queue { "Name" :: Maybe (String), "URL" :: Maybe (String) }
 ```
 
 <p>Describes a queue.</p>
@@ -5011,7 +5011,7 @@ Constructs Queue from required parameters
 #### `newQueue'`
 
 ``` purescript
-newQueue' :: ({ "Name" :: NullOrUndefined (String), "URL" :: NullOrUndefined (String) } -> { "Name" :: NullOrUndefined (String), "URL" :: NullOrUndefined (String) }) -> Queue
+newQueue' :: ({ "Name" :: Maybe (String), "URL" :: Maybe (String) } -> { "Name" :: Maybe (String), "URL" :: Maybe (String) }) -> Queue
 ```
 
 Constructs Queue's fields from required parameters
@@ -5036,7 +5036,7 @@ Encode QueueList
 
 ``` purescript
 newtype RebuildEnvironmentMessage
-  = RebuildEnvironmentMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = RebuildEnvironmentMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p/>
@@ -5061,7 +5061,7 @@ Constructs RebuildEnvironmentMessage from required parameters
 #### `newRebuildEnvironmentMessage'`
 
 ``` purescript
-newRebuildEnvironmentMessage' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> RebuildEnvironmentMessage
+newRebuildEnvironmentMessage' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }) -> RebuildEnvironmentMessage
 ```
 
 Constructs RebuildEnvironmentMessage's fields from required parameters
@@ -5134,7 +5134,7 @@ Encode RequestCount
 
 ``` purescript
 newtype RequestEnvironmentInfoMessage
-  = RequestEnvironmentInfoMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType }
+  = RequestEnvironmentInfoMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType }
 ```
 
 <p>Request to retrieve logs from an environment and store them in your Elastic Beanstalk storage bucket.</p>
@@ -5159,7 +5159,7 @@ Constructs RequestEnvironmentInfoMessage from required parameters
 #### `newRequestEnvironmentInfoMessage'`
 
 ``` purescript
-newRequestEnvironmentInfoMessage' :: EnvironmentInfoType -> ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType }) -> RequestEnvironmentInfoMessage
+newRequestEnvironmentInfoMessage' :: EnvironmentInfoType -> ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType }) -> RequestEnvironmentInfoMessage
 ```
 
 Constructs RequestEnvironmentInfoMessage's fields from required parameters
@@ -5250,7 +5250,7 @@ Encode ResourceNotFoundException
 
 ``` purescript
 newtype ResourceTagsDescriptionMessage
-  = ResourceTagsDescriptionMessage { "ResourceArn" :: NullOrUndefined (ResourceArn), "ResourceTags" :: NullOrUndefined (TagList) }
+  = ResourceTagsDescriptionMessage { "ResourceArn" :: Maybe (ResourceArn), "ResourceTags" :: Maybe (TagList) }
 ```
 
 ##### Instances
@@ -5273,7 +5273,7 @@ Constructs ResourceTagsDescriptionMessage from required parameters
 #### `newResourceTagsDescriptionMessage'`
 
 ``` purescript
-newResourceTagsDescriptionMessage' :: ({ "ResourceArn" :: NullOrUndefined (ResourceArn), "ResourceTags" :: NullOrUndefined (TagList) } -> { "ResourceArn" :: NullOrUndefined (ResourceArn), "ResourceTags" :: NullOrUndefined (TagList) }) -> ResourceTagsDescriptionMessage
+newResourceTagsDescriptionMessage' :: ({ "ResourceArn" :: Maybe (ResourceArn), "ResourceTags" :: Maybe (TagList) } -> { "ResourceArn" :: Maybe (ResourceArn), "ResourceTags" :: Maybe (TagList) }) -> ResourceTagsDescriptionMessage
 ```
 
 Constructs ResourceTagsDescriptionMessage's fields from required parameters
@@ -5300,7 +5300,7 @@ Encode ResourceTypeNotSupportedException
 
 ``` purescript
 newtype RestartAppServerMessage
-  = RestartAppServerMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = RestartAppServerMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p/>
@@ -5325,7 +5325,7 @@ Constructs RestartAppServerMessage from required parameters
 #### `newRestartAppServerMessage'`
 
 ``` purescript
-newRestartAppServerMessage' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> RestartAppServerMessage
+newRestartAppServerMessage' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName) }) -> RestartAppServerMessage
 ```
 
 Constructs RestartAppServerMessage's fields from required parameters
@@ -5334,7 +5334,7 @@ Constructs RestartAppServerMessage's fields from required parameters
 
 ``` purescript
 newtype RetrieveEnvironmentInfoMessage
-  = RetrieveEnvironmentInfoMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType }
+  = RetrieveEnvironmentInfoMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType }
 ```
 
 <p>Request to download logs retrieved with <a>RequestEnvironmentInfo</a>.</p>
@@ -5359,7 +5359,7 @@ Constructs RetrieveEnvironmentInfoMessage from required parameters
 #### `newRetrieveEnvironmentInfoMessage'`
 
 ``` purescript
-newRetrieveEnvironmentInfoMessage' :: EnvironmentInfoType -> ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "InfoType" :: EnvironmentInfoType }) -> RetrieveEnvironmentInfoMessage
+newRetrieveEnvironmentInfoMessage' :: EnvironmentInfoType -> ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "InfoType" :: EnvironmentInfoType }) -> RetrieveEnvironmentInfoMessage
 ```
 
 Constructs RetrieveEnvironmentInfoMessage's fields from required parameters
@@ -5368,7 +5368,7 @@ Constructs RetrieveEnvironmentInfoMessage's fields from required parameters
 
 ``` purescript
 newtype RetrieveEnvironmentInfoResultMessage
-  = RetrieveEnvironmentInfoResultMessage { "EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList) }
+  = RetrieveEnvironmentInfoResultMessage { "EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList) }
 ```
 
 <p>Result message containing a description of the requested environment info.</p>
@@ -5393,7 +5393,7 @@ Constructs RetrieveEnvironmentInfoResultMessage from required parameters
 #### `newRetrieveEnvironmentInfoResultMessage'`
 
 ``` purescript
-newRetrieveEnvironmentInfoResultMessage' :: ({ "EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList) } -> { "EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList) }) -> RetrieveEnvironmentInfoResultMessage
+newRetrieveEnvironmentInfoResultMessage' :: ({ "EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList) } -> { "EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList) }) -> RetrieveEnvironmentInfoResultMessage
 ```
 
 Constructs RetrieveEnvironmentInfoResultMessage's fields from required parameters
@@ -5434,7 +5434,7 @@ Encode S3Key
 
 ``` purescript
 newtype S3Location
-  = S3Location { "S3Bucket" :: NullOrUndefined (S3Bucket), "S3Key" :: NullOrUndefined (S3Key) }
+  = S3Location { "S3Bucket" :: Maybe (S3Bucket), "S3Key" :: Maybe (S3Key) }
 ```
 
 <p>The bucket and key of an item stored in Amazon S3.</p>
@@ -5459,7 +5459,7 @@ Constructs S3Location from required parameters
 #### `newS3Location'`
 
 ``` purescript
-newS3Location' :: ({ "S3Bucket" :: NullOrUndefined (S3Bucket), "S3Key" :: NullOrUndefined (S3Key) } -> { "S3Bucket" :: NullOrUndefined (S3Bucket), "S3Key" :: NullOrUndefined (S3Key) }) -> S3Location
+newS3Location' :: ({ "S3Bucket" :: Maybe (S3Bucket), "S3Key" :: Maybe (S3Key) } -> { "S3Bucket" :: Maybe (S3Bucket), "S3Key" :: Maybe (S3Key) }) -> S3Location
 ```
 
 Constructs S3Location's fields from required parameters
@@ -5520,7 +5520,7 @@ Encode SampleTimestamp
 
 ``` purescript
 newtype SingleInstanceHealth
-  = SingleInstanceHealth { "InstanceId" :: NullOrUndefined (InstanceId), "HealthStatus" :: NullOrUndefined (String), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "LaunchedAt" :: NullOrUndefined (LaunchedAt), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "System" :: NullOrUndefined (SystemStatus), "Deployment" :: NullOrUndefined (Deployment), "AvailabilityZone" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String) }
+  = SingleInstanceHealth { "InstanceId" :: Maybe (InstanceId), "HealthStatus" :: Maybe (String), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "LaunchedAt" :: Maybe (LaunchedAt), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "System" :: Maybe (SystemStatus), "Deployment" :: Maybe (Deployment), "AvailabilityZone" :: Maybe (String), "InstanceType" :: Maybe (String) }
 ```
 
 <p>Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.</p>
@@ -5545,7 +5545,7 @@ Constructs SingleInstanceHealth from required parameters
 #### `newSingleInstanceHealth'`
 
 ``` purescript
-newSingleInstanceHealth' :: ({ "InstanceId" :: NullOrUndefined (InstanceId), "HealthStatus" :: NullOrUndefined (String), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "LaunchedAt" :: NullOrUndefined (LaunchedAt), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "System" :: NullOrUndefined (SystemStatus), "Deployment" :: NullOrUndefined (Deployment), "AvailabilityZone" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String) } -> { "InstanceId" :: NullOrUndefined (InstanceId), "HealthStatus" :: NullOrUndefined (String), "Color" :: NullOrUndefined (String), "Causes" :: NullOrUndefined (Causes), "LaunchedAt" :: NullOrUndefined (LaunchedAt), "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics), "System" :: NullOrUndefined (SystemStatus), "Deployment" :: NullOrUndefined (Deployment), "AvailabilityZone" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String) }) -> SingleInstanceHealth
+newSingleInstanceHealth' :: ({ "InstanceId" :: Maybe (InstanceId), "HealthStatus" :: Maybe (String), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "LaunchedAt" :: Maybe (LaunchedAt), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "System" :: Maybe (SystemStatus), "Deployment" :: Maybe (Deployment), "AvailabilityZone" :: Maybe (String), "InstanceType" :: Maybe (String) } -> { "InstanceId" :: Maybe (InstanceId), "HealthStatus" :: Maybe (String), "Color" :: Maybe (String), "Causes" :: Maybe (Causes), "LaunchedAt" :: Maybe (LaunchedAt), "ApplicationMetrics" :: Maybe (ApplicationMetrics), "System" :: Maybe (SystemStatus), "Deployment" :: Maybe (Deployment), "AvailabilityZone" :: Maybe (String), "InstanceType" :: Maybe (String) }) -> SingleInstanceHealth
 ```
 
 Constructs SingleInstanceHealth's fields from required parameters
@@ -5554,7 +5554,7 @@ Constructs SingleInstanceHealth's fields from required parameters
 
 ``` purescript
 newtype SolutionStackDescription
-  = SolutionStackDescription { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList) }
+  = SolutionStackDescription { "SolutionStackName" :: Maybe (SolutionStackName), "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList) }
 ```
 
 <p>Describes the solution stack.</p>
@@ -5579,7 +5579,7 @@ Constructs SolutionStackDescription from required parameters
 #### `newSolutionStackDescription'`
 
 ``` purescript
-newSolutionStackDescription' :: ({ "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList) } -> { "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList) }) -> SolutionStackDescription
+newSolutionStackDescription' :: ({ "SolutionStackName" :: Maybe (SolutionStackName), "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList) } -> { "SolutionStackName" :: Maybe (SolutionStackName), "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList) }) -> SolutionStackDescription
 ```
 
 Constructs SolutionStackDescription's fields from required parameters
@@ -5672,7 +5672,7 @@ Encode SourceBundleDeletionException
 
 ``` purescript
 newtype SourceConfiguration
-  = SourceConfiguration { "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) }
+  = SourceConfiguration { "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName) }
 ```
 
 <p>A specification for an environment configuration</p>
@@ -5697,7 +5697,7 @@ Constructs SourceConfiguration from required parameters
 #### `newSourceConfiguration'`
 
 ``` purescript
-newSourceConfiguration' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) }) -> SourceConfiguration
+newSourceConfiguration' :: ({ "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName) } -> { "ApplicationName" :: Maybe (ApplicationName), "TemplateName" :: Maybe (ConfigurationTemplateName) }) -> SourceConfiguration
 ```
 
 Constructs SourceConfiguration's fields from required parameters
@@ -5754,7 +5754,7 @@ Encode SourceType
 
 ``` purescript
 newtype StatusCodes
-  = StatusCodes { "Status2xx" :: NullOrUndefined (NullableInteger), "Status3xx" :: NullOrUndefined (NullableInteger), "Status4xx" :: NullOrUndefined (NullableInteger), "Status5xx" :: NullOrUndefined (NullableInteger) }
+  = StatusCodes { "Status2xx" :: Maybe (NullableInteger), "Status3xx" :: Maybe (NullableInteger), "Status4xx" :: Maybe (NullableInteger), "Status5xx" :: Maybe (NullableInteger) }
 ```
 
 <p>Represents the percentage of requests over the last 10 seconds that resulted in each type of status code response. For more information, see <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Status Code Definitions</a>.</p>
@@ -5779,7 +5779,7 @@ Constructs StatusCodes from required parameters
 #### `newStatusCodes'`
 
 ``` purescript
-newStatusCodes' :: ({ "Status2xx" :: NullOrUndefined (NullableInteger), "Status3xx" :: NullOrUndefined (NullableInteger), "Status4xx" :: NullOrUndefined (NullableInteger), "Status5xx" :: NullOrUndefined (NullableInteger) } -> { "Status2xx" :: NullOrUndefined (NullableInteger), "Status3xx" :: NullOrUndefined (NullableInteger), "Status4xx" :: NullOrUndefined (NullableInteger), "Status5xx" :: NullOrUndefined (NullableInteger) }) -> StatusCodes
+newStatusCodes' :: ({ "Status2xx" :: Maybe (NullableInteger), "Status3xx" :: Maybe (NullableInteger), "Status4xx" :: Maybe (NullableInteger), "Status5xx" :: Maybe (NullableInteger) } -> { "Status2xx" :: Maybe (NullableInteger), "Status3xx" :: Maybe (NullableInteger), "Status4xx" :: Maybe (NullableInteger), "Status5xx" :: Maybe (NullableInteger) }) -> StatusCodes
 ```
 
 Constructs StatusCodes's fields from required parameters
@@ -5852,7 +5852,7 @@ Encode SupportedTierList
 
 ``` purescript
 newtype SwapEnvironmentCNAMEsMessage
-  = SwapEnvironmentCNAMEsMessage { "SourceEnvironmentId" :: NullOrUndefined (EnvironmentId), "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName), "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId), "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName) }
+  = SwapEnvironmentCNAMEsMessage { "SourceEnvironmentId" :: Maybe (EnvironmentId), "SourceEnvironmentName" :: Maybe (EnvironmentName), "DestinationEnvironmentId" :: Maybe (EnvironmentId), "DestinationEnvironmentName" :: Maybe (EnvironmentName) }
 ```
 
 <p>Swaps the CNAMEs of two environments.</p>
@@ -5877,7 +5877,7 @@ Constructs SwapEnvironmentCNAMEsMessage from required parameters
 #### `newSwapEnvironmentCNAMEsMessage'`
 
 ``` purescript
-newSwapEnvironmentCNAMEsMessage' :: ({ "SourceEnvironmentId" :: NullOrUndefined (EnvironmentId), "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName), "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId), "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName) } -> { "SourceEnvironmentId" :: NullOrUndefined (EnvironmentId), "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName), "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId), "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName) }) -> SwapEnvironmentCNAMEsMessage
+newSwapEnvironmentCNAMEsMessage' :: ({ "SourceEnvironmentId" :: Maybe (EnvironmentId), "SourceEnvironmentName" :: Maybe (EnvironmentName), "DestinationEnvironmentId" :: Maybe (EnvironmentId), "DestinationEnvironmentName" :: Maybe (EnvironmentName) } -> { "SourceEnvironmentId" :: Maybe (EnvironmentId), "SourceEnvironmentName" :: Maybe (EnvironmentName), "DestinationEnvironmentId" :: Maybe (EnvironmentId), "DestinationEnvironmentName" :: Maybe (EnvironmentName) }) -> SwapEnvironmentCNAMEsMessage
 ```
 
 Constructs SwapEnvironmentCNAMEsMessage's fields from required parameters
@@ -5886,7 +5886,7 @@ Constructs SwapEnvironmentCNAMEsMessage's fields from required parameters
 
 ``` purescript
 newtype SystemStatus
-  = SystemStatus { "CPUUtilization" :: NullOrUndefined (CPUUtilization), "LoadAverage" :: NullOrUndefined (LoadAverage) }
+  = SystemStatus { "CPUUtilization" :: Maybe (CPUUtilization), "LoadAverage" :: Maybe (LoadAverage) }
 ```
 
 <p>CPU utilization and load average metrics for an Amazon EC2 instance.</p>
@@ -5911,7 +5911,7 @@ Constructs SystemStatus from required parameters
 #### `newSystemStatus'`
 
 ``` purescript
-newSystemStatus' :: ({ "CPUUtilization" :: NullOrUndefined (CPUUtilization), "LoadAverage" :: NullOrUndefined (LoadAverage) } -> { "CPUUtilization" :: NullOrUndefined (CPUUtilization), "LoadAverage" :: NullOrUndefined (LoadAverage) }) -> SystemStatus
+newSystemStatus' :: ({ "CPUUtilization" :: Maybe (CPUUtilization), "LoadAverage" :: Maybe (LoadAverage) } -> { "CPUUtilization" :: Maybe (CPUUtilization), "LoadAverage" :: Maybe (LoadAverage) }) -> SystemStatus
 ```
 
 Constructs SystemStatus's fields from required parameters
@@ -5920,7 +5920,7 @@ Constructs SystemStatus's fields from required parameters
 
 ``` purescript
 newtype Tag
-  = Tag { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }
+  = Tag { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }
 ```
 
 <p>Describes a tag applied to a resource in an environment.</p>
@@ -5945,7 +5945,7 @@ Constructs Tag from required parameters
 #### `newTag'`
 
 ``` purescript
-newTag' :: ({ "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) } -> { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }) -> Tag
+newTag' :: ({ "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) } -> { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }) -> Tag
 ```
 
 Constructs Tag's fields from required parameters
@@ -6050,7 +6050,7 @@ Encode TerminateEnvForce
 
 ``` purescript
 newtype TerminateEnvironmentMessage
-  = TerminateEnvironmentMessage { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources), "ForceTerminate" :: NullOrUndefined (ForceTerminate) }
+  = TerminateEnvironmentMessage { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "TerminateResources" :: Maybe (TerminateEnvironmentResources), "ForceTerminate" :: Maybe (ForceTerminate) }
 ```
 
 <p>Request to terminate an environment.</p>
@@ -6075,7 +6075,7 @@ Constructs TerminateEnvironmentMessage from required parameters
 #### `newTerminateEnvironmentMessage'`
 
 ``` purescript
-newTerminateEnvironmentMessage' :: ({ "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources), "ForceTerminate" :: NullOrUndefined (ForceTerminate) } -> { "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources), "ForceTerminate" :: NullOrUndefined (ForceTerminate) }) -> TerminateEnvironmentMessage
+newTerminateEnvironmentMessage' :: ({ "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "TerminateResources" :: Maybe (TerminateEnvironmentResources), "ForceTerminate" :: Maybe (ForceTerminate) } -> { "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "TerminateResources" :: Maybe (TerminateEnvironmentResources), "ForceTerminate" :: Maybe (ForceTerminate) }) -> TerminateEnvironmentMessage
 ```
 
 Constructs TerminateEnvironmentMessage's fields from required parameters
@@ -6274,7 +6274,7 @@ Encode TooManyTagsException
 
 ``` purescript
 newtype Trigger
-  = Trigger { "Name" :: NullOrUndefined (ResourceId) }
+  = Trigger { "Name" :: Maybe (ResourceId) }
 ```
 
 <p>Describes a trigger.</p>
@@ -6299,7 +6299,7 @@ Constructs Trigger from required parameters
 #### `newTrigger'`
 
 ``` purescript
-newTrigger' :: ({ "Name" :: NullOrUndefined (ResourceId) } -> { "Name" :: NullOrUndefined (ResourceId) }) -> Trigger
+newTrigger' :: ({ "Name" :: Maybe (ResourceId) } -> { "Name" :: Maybe (ResourceId) }) -> Trigger
 ```
 
 Constructs Trigger's fields from required parameters
@@ -6324,7 +6324,7 @@ Encode TriggerList
 
 ``` purescript
 newtype UpdateApplicationMessage
-  = UpdateApplicationMessage { "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description) }
+  = UpdateApplicationMessage { "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description) }
 ```
 
 <p>Request to update an application.</p>
@@ -6349,7 +6349,7 @@ Constructs UpdateApplicationMessage from required parameters
 #### `newUpdateApplicationMessage'`
 
 ``` purescript
-newUpdateApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description) } -> { "ApplicationName" :: ApplicationName, "Description" :: NullOrUndefined (Description) }) -> UpdateApplicationMessage
+newUpdateApplicationMessage' :: ApplicationName -> ({ "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description) } -> { "ApplicationName" :: ApplicationName, "Description" :: Maybe (Description) }) -> UpdateApplicationMessage
 ```
 
 Constructs UpdateApplicationMessage's fields from required parameters
@@ -6390,7 +6390,7 @@ Constructs UpdateApplicationResourceLifecycleMessage's fields from required para
 
 ``` purescript
 newtype UpdateApplicationVersionMessage
-  = UpdateApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description) }
+  = UpdateApplicationVersionMessage { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description) }
 ```
 
 <p/>
@@ -6415,7 +6415,7 @@ Constructs UpdateApplicationVersionMessage from required parameters
 #### `newUpdateApplicationVersionMessage'`
 
 ``` purescript
-newUpdateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: NullOrUndefined (Description) }) -> UpdateApplicationVersionMessage
+newUpdateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ({ "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description) } -> { "ApplicationName" :: ApplicationName, "VersionLabel" :: VersionLabel, "Description" :: Maybe (Description) }) -> UpdateApplicationVersionMessage
 ```
 
 Constructs UpdateApplicationVersionMessage's fields from required parameters
@@ -6424,7 +6424,7 @@ Constructs UpdateApplicationVersionMessage's fields from required parameters
 
 ``` purescript
 newtype UpdateConfigurationTemplateMessage
-  = UpdateConfigurationTemplateMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }
+  = UpdateConfigurationTemplateMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }
 ```
 
 <p>The result message containing the options for the specified solution stack.</p>
@@ -6449,7 +6449,7 @@ Constructs UpdateConfigurationTemplateMessage from required parameters
 #### `newUpdateConfigurationTemplateMessage'`
 
 ``` purescript
-newUpdateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: NullOrUndefined (Description), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }) -> UpdateConfigurationTemplateMessage
+newUpdateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: ConfigurationTemplateName, "Description" :: Maybe (Description), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }) -> UpdateConfigurationTemplateMessage
 ```
 
 Constructs UpdateConfigurationTemplateMessage's fields from required parameters
@@ -6474,7 +6474,7 @@ Encode UpdateDate
 
 ``` purescript
 newtype UpdateEnvironmentMessage
-  = UpdateEnvironmentMessage { "ApplicationName" :: NullOrUndefined (ApplicationName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "Tier" :: NullOrUndefined (EnvironmentTier), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }
+  = UpdateEnvironmentMessage { "ApplicationName" :: Maybe (ApplicationName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "Tier" :: Maybe (EnvironmentTier), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }
 ```
 
 <p>Request to update an environment.</p>
@@ -6499,7 +6499,7 @@ Constructs UpdateEnvironmentMessage from required parameters
 #### `newUpdateEnvironmentMessage'`
 
 ``` purescript
-newUpdateEnvironmentMessage' :: ({ "ApplicationName" :: NullOrUndefined (ApplicationName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "Tier" :: NullOrUndefined (EnvironmentTier), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> { "ApplicationName" :: NullOrUndefined (ApplicationName), "EnvironmentId" :: NullOrUndefined (EnvironmentId), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "GroupName" :: NullOrUndefined (GroupName), "Description" :: NullOrUndefined (Description), "Tier" :: NullOrUndefined (EnvironmentTier), "VersionLabel" :: NullOrUndefined (VersionLabel), "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "SolutionStackName" :: NullOrUndefined (SolutionStackName), "PlatformArn" :: NullOrUndefined (PlatformArn), "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList), "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) }) -> UpdateEnvironmentMessage
+newUpdateEnvironmentMessage' :: ({ "ApplicationName" :: Maybe (ApplicationName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "Tier" :: Maybe (EnvironmentTier), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> { "ApplicationName" :: Maybe (ApplicationName), "EnvironmentId" :: Maybe (EnvironmentId), "EnvironmentName" :: Maybe (EnvironmentName), "GroupName" :: Maybe (GroupName), "Description" :: Maybe (Description), "Tier" :: Maybe (EnvironmentTier), "VersionLabel" :: Maybe (VersionLabel), "TemplateName" :: Maybe (ConfigurationTemplateName), "SolutionStackName" :: Maybe (SolutionStackName), "PlatformArn" :: Maybe (PlatformArn), "OptionSettings" :: Maybe (ConfigurationOptionSettingsList), "OptionsToRemove" :: Maybe (OptionsSpecifierList) }) -> UpdateEnvironmentMessage
 ```
 
 Constructs UpdateEnvironmentMessage's fields from required parameters
@@ -6508,7 +6508,7 @@ Constructs UpdateEnvironmentMessage's fields from required parameters
 
 ``` purescript
 newtype UpdateTagsForResourceMessage
-  = UpdateTagsForResourceMessage { "ResourceArn" :: ResourceArn, "TagsToAdd" :: NullOrUndefined (TagList), "TagsToRemove" :: NullOrUndefined (TagKeyList) }
+  = UpdateTagsForResourceMessage { "ResourceArn" :: ResourceArn, "TagsToAdd" :: Maybe (TagList), "TagsToRemove" :: Maybe (TagKeyList) }
 ```
 
 ##### Instances
@@ -6531,7 +6531,7 @@ Constructs UpdateTagsForResourceMessage from required parameters
 #### `newUpdateTagsForResourceMessage'`
 
 ``` purescript
-newUpdateTagsForResourceMessage' :: ResourceArn -> ({ "ResourceArn" :: ResourceArn, "TagsToAdd" :: NullOrUndefined (TagList), "TagsToRemove" :: NullOrUndefined (TagKeyList) } -> { "ResourceArn" :: ResourceArn, "TagsToAdd" :: NullOrUndefined (TagList), "TagsToRemove" :: NullOrUndefined (TagKeyList) }) -> UpdateTagsForResourceMessage
+newUpdateTagsForResourceMessage' :: ResourceArn -> ({ "ResourceArn" :: ResourceArn, "TagsToAdd" :: Maybe (TagList), "TagsToRemove" :: Maybe (TagKeyList) } -> { "ResourceArn" :: ResourceArn, "TagsToAdd" :: Maybe (TagList), "TagsToRemove" :: Maybe (TagKeyList) }) -> UpdateTagsForResourceMessage
 ```
 
 Constructs UpdateTagsForResourceMessage's fields from required parameters
@@ -6556,7 +6556,7 @@ Encode UserDefinedOption
 
 ``` purescript
 newtype ValidateConfigurationSettingsMessage
-  = ValidateConfigurationSettingsMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList }
+  = ValidateConfigurationSettingsMessage { "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList }
 ```
 
 <p>A list of validation messages for a specified configuration template.</p>
@@ -6581,7 +6581,7 @@ Constructs ValidateConfigurationSettingsMessage from required parameters
 #### `newValidateConfigurationSettingsMessage'`
 
 ``` purescript
-newValidateConfigurationSettingsMessage' :: ApplicationName -> ConfigurationOptionSettingsList -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: NullOrUndefined (ConfigurationTemplateName), "EnvironmentName" :: NullOrUndefined (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList }) -> ValidateConfigurationSettingsMessage
+newValidateConfigurationSettingsMessage' :: ApplicationName -> ConfigurationOptionSettingsList -> ({ "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList } -> { "ApplicationName" :: ApplicationName, "TemplateName" :: Maybe (ConfigurationTemplateName), "EnvironmentName" :: Maybe (EnvironmentName), "OptionSettings" :: ConfigurationOptionSettingsList }) -> ValidateConfigurationSettingsMessage
 ```
 
 Constructs ValidateConfigurationSettingsMessage's fields from required parameters
@@ -6590,7 +6590,7 @@ Constructs ValidateConfigurationSettingsMessage's fields from required parameter
 
 ``` purescript
 newtype ValidationMessage
-  = ValidationMessage { "Message" :: NullOrUndefined (ValidationMessageString), "Severity" :: NullOrUndefined (ValidationSeverity), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) }
+  = ValidationMessage { "Message" :: Maybe (ValidationMessageString), "Severity" :: Maybe (ValidationSeverity), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) }
 ```
 
 <p>An error or warning for a desired configuration option value.</p>
@@ -6615,7 +6615,7 @@ Constructs ValidationMessage from required parameters
 #### `newValidationMessage'`
 
 ``` purescript
-newValidationMessage' :: ({ "Message" :: NullOrUndefined (ValidationMessageString), "Severity" :: NullOrUndefined (ValidationSeverity), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) } -> { "Message" :: NullOrUndefined (ValidationMessageString), "Severity" :: NullOrUndefined (ValidationSeverity), "Namespace" :: NullOrUndefined (OptionNamespace), "OptionName" :: NullOrUndefined (ConfigurationOptionName) }) -> ValidationMessage
+newValidationMessage' :: ({ "Message" :: Maybe (ValidationMessageString), "Severity" :: Maybe (ValidationSeverity), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) } -> { "Message" :: Maybe (ValidationMessageString), "Severity" :: Maybe (ValidationSeverity), "Namespace" :: Maybe (OptionNamespace), "OptionName" :: Maybe (ConfigurationOptionName) }) -> ValidationMessage
 ```
 
 Constructs ValidationMessage's fields from required parameters

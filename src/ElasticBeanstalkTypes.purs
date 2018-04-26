@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -29,8 +28,8 @@ instance encodeARN :: Encode ARN where encode = genericEncode options
 
 -- | <p/>
 newtype AbortEnvironmentUpdateMessage = AbortEnvironmentUpdateMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeAbortEnvironmentUpdateMessage :: Newtype AbortEnvironmentUpdateMessage _
 derive instance repGenericAbortEnvironmentUpdateMessage :: Generic AbortEnvironmentUpdateMessage _
@@ -40,12 +39,12 @@ instance encodeAbortEnvironmentUpdateMessage :: Encode AbortEnvironmentUpdateMes
 
 -- | Constructs AbortEnvironmentUpdateMessage from required parameters
 newAbortEnvironmentUpdateMessage :: AbortEnvironmentUpdateMessage
-newAbortEnvironmentUpdateMessage  = AbortEnvironmentUpdateMessage { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newAbortEnvironmentUpdateMessage  = AbortEnvironmentUpdateMessage { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs AbortEnvironmentUpdateMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAbortEnvironmentUpdateMessage' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> AbortEnvironmentUpdateMessage
-newAbortEnvironmentUpdateMessage'  customize = (AbortEnvironmentUpdateMessage <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newAbortEnvironmentUpdateMessage' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } ) -> AbortEnvironmentUpdateMessage
+newAbortEnvironmentUpdateMessage'  customize = (AbortEnvironmentUpdateMessage <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
@@ -87,13 +86,13 @@ instance encodeActionType :: Encode ActionType where encode = genericEncode opti
 
 -- | <p>Describes the properties of an application.</p>
 newtype ApplicationDescription = ApplicationDescription 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "Description" :: NullOrUndefined (Description)
-  , "DateCreated" :: NullOrUndefined (CreationDate)
-  , "DateUpdated" :: NullOrUndefined (UpdateDate)
-  , "Versions" :: NullOrUndefined (VersionLabelsList)
-  , "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList)
-  , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "Description" :: Maybe (Description)
+  , "DateCreated" :: Maybe (CreationDate)
+  , "DateUpdated" :: Maybe (UpdateDate)
+  , "Versions" :: Maybe (VersionLabelsList)
+  , "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList)
+  , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig)
   }
 derive instance newtypeApplicationDescription :: Newtype ApplicationDescription _
 derive instance repGenericApplicationDescription :: Generic ApplicationDescription _
@@ -103,12 +102,12 @@ instance encodeApplicationDescription :: Encode ApplicationDescription where enc
 
 -- | Constructs ApplicationDescription from required parameters
 newApplicationDescription :: ApplicationDescription
-newApplicationDescription  = ApplicationDescription { "ApplicationName": (NullOrUndefined Nothing), "ConfigurationTemplates": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newApplicationDescription  = ApplicationDescription { "ApplicationName": Nothing, "ConfigurationTemplates": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "ResourceLifecycleConfig": Nothing, "Versions": Nothing }
 
 -- | Constructs ApplicationDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationDescription' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "Description" :: NullOrUndefined (Description) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Versions" :: NullOrUndefined (VersionLabelsList) , "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "Description" :: NullOrUndefined (Description) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Versions" :: NullOrUndefined (VersionLabelsList) , "ConfigurationTemplates" :: NullOrUndefined (ConfigurationTemplateNamesList) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } ) -> ApplicationDescription
-newApplicationDescription'  customize = (ApplicationDescription <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "ConfigurationTemplates": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newApplicationDescription' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "Description" :: Maybe (Description) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Versions" :: Maybe (VersionLabelsList) , "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: Maybe (ApplicationName) , "Description" :: Maybe (Description) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Versions" :: Maybe (VersionLabelsList) , "ConfigurationTemplates" :: Maybe (ConfigurationTemplateNamesList) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } ) -> ApplicationDescription
+newApplicationDescription'  customize = (ApplicationDescription <<< customize) { "ApplicationName": Nothing, "ConfigurationTemplates": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "ResourceLifecycleConfig": Nothing, "Versions": Nothing }
 
 
 
@@ -123,7 +122,7 @@ instance encodeApplicationDescriptionList :: Encode ApplicationDescriptionList w
 
 -- | <p>Result message containing a single description of an application.</p>
 newtype ApplicationDescriptionMessage = ApplicationDescriptionMessage 
-  { "Application" :: NullOrUndefined (ApplicationDescription)
+  { "Application" :: Maybe (ApplicationDescription)
   }
 derive instance newtypeApplicationDescriptionMessage :: Newtype ApplicationDescriptionMessage _
 derive instance repGenericApplicationDescriptionMessage :: Generic ApplicationDescriptionMessage _
@@ -133,18 +132,18 @@ instance encodeApplicationDescriptionMessage :: Encode ApplicationDescriptionMes
 
 -- | Constructs ApplicationDescriptionMessage from required parameters
 newApplicationDescriptionMessage :: ApplicationDescriptionMessage
-newApplicationDescriptionMessage  = ApplicationDescriptionMessage { "Application": (NullOrUndefined Nothing) }
+newApplicationDescriptionMessage  = ApplicationDescriptionMessage { "Application": Nothing }
 
 -- | Constructs ApplicationDescriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationDescriptionMessage' :: ( { "Application" :: NullOrUndefined (ApplicationDescription) } -> {"Application" :: NullOrUndefined (ApplicationDescription) } ) -> ApplicationDescriptionMessage
-newApplicationDescriptionMessage'  customize = (ApplicationDescriptionMessage <<< customize) { "Application": (NullOrUndefined Nothing) }
+newApplicationDescriptionMessage' :: ( { "Application" :: Maybe (ApplicationDescription) } -> {"Application" :: Maybe (ApplicationDescription) } ) -> ApplicationDescriptionMessage
+newApplicationDescriptionMessage'  customize = (ApplicationDescriptionMessage <<< customize) { "Application": Nothing }
 
 
 
 -- | <p>Result message containing a list of application descriptions.</p>
 newtype ApplicationDescriptionsMessage = ApplicationDescriptionsMessage 
-  { "Applications" :: NullOrUndefined (ApplicationDescriptionList)
+  { "Applications" :: Maybe (ApplicationDescriptionList)
   }
 derive instance newtypeApplicationDescriptionsMessage :: Newtype ApplicationDescriptionsMessage _
 derive instance repGenericApplicationDescriptionsMessage :: Generic ApplicationDescriptionsMessage _
@@ -154,21 +153,21 @@ instance encodeApplicationDescriptionsMessage :: Encode ApplicationDescriptionsM
 
 -- | Constructs ApplicationDescriptionsMessage from required parameters
 newApplicationDescriptionsMessage :: ApplicationDescriptionsMessage
-newApplicationDescriptionsMessage  = ApplicationDescriptionsMessage { "Applications": (NullOrUndefined Nothing) }
+newApplicationDescriptionsMessage  = ApplicationDescriptionsMessage { "Applications": Nothing }
 
 -- | Constructs ApplicationDescriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationDescriptionsMessage' :: ( { "Applications" :: NullOrUndefined (ApplicationDescriptionList) } -> {"Applications" :: NullOrUndefined (ApplicationDescriptionList) } ) -> ApplicationDescriptionsMessage
-newApplicationDescriptionsMessage'  customize = (ApplicationDescriptionsMessage <<< customize) { "Applications": (NullOrUndefined Nothing) }
+newApplicationDescriptionsMessage' :: ( { "Applications" :: Maybe (ApplicationDescriptionList) } -> {"Applications" :: Maybe (ApplicationDescriptionList) } ) -> ApplicationDescriptionsMessage
+newApplicationDescriptionsMessage'  customize = (ApplicationDescriptionsMessage <<< customize) { "Applications": Nothing }
 
 
 
 -- | <p>Application request metrics for an AWS Elastic Beanstalk environment.</p>
 newtype ApplicationMetrics = ApplicationMetrics 
-  { "Duration" :: NullOrUndefined (NullableInteger)
-  , "RequestCount" :: NullOrUndefined (RequestCount)
-  , "StatusCodes" :: NullOrUndefined (StatusCodes)
-  , "Latency" :: NullOrUndefined (Latency)
+  { "Duration" :: Maybe (NullableInteger)
+  , "RequestCount" :: Maybe (RequestCount)
+  , "StatusCodes" :: Maybe (StatusCodes)
+  , "Latency" :: Maybe (Latency)
   }
 derive instance newtypeApplicationMetrics :: Newtype ApplicationMetrics _
 derive instance repGenericApplicationMetrics :: Generic ApplicationMetrics _
@@ -178,12 +177,12 @@ instance encodeApplicationMetrics :: Encode ApplicationMetrics where encode = ge
 
 -- | Constructs ApplicationMetrics from required parameters
 newApplicationMetrics :: ApplicationMetrics
-newApplicationMetrics  = ApplicationMetrics { "Duration": (NullOrUndefined Nothing), "Latency": (NullOrUndefined Nothing), "RequestCount": (NullOrUndefined Nothing), "StatusCodes": (NullOrUndefined Nothing) }
+newApplicationMetrics  = ApplicationMetrics { "Duration": Nothing, "Latency": Nothing, "RequestCount": Nothing, "StatusCodes": Nothing }
 
 -- | Constructs ApplicationMetrics's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationMetrics' :: ( { "Duration" :: NullOrUndefined (NullableInteger) , "RequestCount" :: NullOrUndefined (RequestCount) , "StatusCodes" :: NullOrUndefined (StatusCodes) , "Latency" :: NullOrUndefined (Latency) } -> {"Duration" :: NullOrUndefined (NullableInteger) , "RequestCount" :: NullOrUndefined (RequestCount) , "StatusCodes" :: NullOrUndefined (StatusCodes) , "Latency" :: NullOrUndefined (Latency) } ) -> ApplicationMetrics
-newApplicationMetrics'  customize = (ApplicationMetrics <<< customize) { "Duration": (NullOrUndefined Nothing), "Latency": (NullOrUndefined Nothing), "RequestCount": (NullOrUndefined Nothing), "StatusCodes": (NullOrUndefined Nothing) }
+newApplicationMetrics' :: ( { "Duration" :: Maybe (NullableInteger) , "RequestCount" :: Maybe (RequestCount) , "StatusCodes" :: Maybe (StatusCodes) , "Latency" :: Maybe (Latency) } -> {"Duration" :: Maybe (NullableInteger) , "RequestCount" :: Maybe (RequestCount) , "StatusCodes" :: Maybe (StatusCodes) , "Latency" :: Maybe (Latency) } ) -> ApplicationMetrics
+newApplicationMetrics'  customize = (ApplicationMetrics <<< customize) { "Duration": Nothing, "Latency": Nothing, "RequestCount": Nothing, "StatusCodes": Nothing }
 
 
 
@@ -207,8 +206,8 @@ instance encodeApplicationNamesList :: Encode ApplicationNamesList where encode 
 
 -- | <p>The resource lifecycle configuration for an application. Defines lifecycle settings for resources that belong to the application, and the service role that Elastic Beanstalk assumes in order to apply lifecycle settings. The version lifecycle configuration defines lifecycle settings for application versions.</p>
 newtype ApplicationResourceLifecycleConfig = ApplicationResourceLifecycleConfig 
-  { "ServiceRole" :: NullOrUndefined (String)
-  , "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig)
+  { "ServiceRole" :: Maybe (String)
+  , "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig)
   }
 derive instance newtypeApplicationResourceLifecycleConfig :: Newtype ApplicationResourceLifecycleConfig _
 derive instance repGenericApplicationResourceLifecycleConfig :: Generic ApplicationResourceLifecycleConfig _
@@ -218,18 +217,18 @@ instance encodeApplicationResourceLifecycleConfig :: Encode ApplicationResourceL
 
 -- | Constructs ApplicationResourceLifecycleConfig from required parameters
 newApplicationResourceLifecycleConfig :: ApplicationResourceLifecycleConfig
-newApplicationResourceLifecycleConfig  = ApplicationResourceLifecycleConfig { "ServiceRole": (NullOrUndefined Nothing), "VersionLifecycleConfig": (NullOrUndefined Nothing) }
+newApplicationResourceLifecycleConfig  = ApplicationResourceLifecycleConfig { "ServiceRole": Nothing, "VersionLifecycleConfig": Nothing }
 
 -- | Constructs ApplicationResourceLifecycleConfig's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationResourceLifecycleConfig' :: ( { "ServiceRole" :: NullOrUndefined (String) , "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig) } -> {"ServiceRole" :: NullOrUndefined (String) , "VersionLifecycleConfig" :: NullOrUndefined (ApplicationVersionLifecycleConfig) } ) -> ApplicationResourceLifecycleConfig
-newApplicationResourceLifecycleConfig'  customize = (ApplicationResourceLifecycleConfig <<< customize) { "ServiceRole": (NullOrUndefined Nothing), "VersionLifecycleConfig": (NullOrUndefined Nothing) }
+newApplicationResourceLifecycleConfig' :: ( { "ServiceRole" :: Maybe (String) , "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig) } -> {"ServiceRole" :: Maybe (String) , "VersionLifecycleConfig" :: Maybe (ApplicationVersionLifecycleConfig) } ) -> ApplicationResourceLifecycleConfig
+newApplicationResourceLifecycleConfig'  customize = (ApplicationResourceLifecycleConfig <<< customize) { "ServiceRole": Nothing, "VersionLifecycleConfig": Nothing }
 
 
 
 newtype ApplicationResourceLifecycleDescriptionMessage = ApplicationResourceLifecycleDescriptionMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig)
   }
 derive instance newtypeApplicationResourceLifecycleDescriptionMessage :: Newtype ApplicationResourceLifecycleDescriptionMessage _
 derive instance repGenericApplicationResourceLifecycleDescriptionMessage :: Generic ApplicationResourceLifecycleDescriptionMessage _
@@ -239,26 +238,26 @@ instance encodeApplicationResourceLifecycleDescriptionMessage :: Encode Applicat
 
 -- | Constructs ApplicationResourceLifecycleDescriptionMessage from required parameters
 newApplicationResourceLifecycleDescriptionMessage :: ApplicationResourceLifecycleDescriptionMessage
-newApplicationResourceLifecycleDescriptionMessage  = ApplicationResourceLifecycleDescriptionMessage { "ApplicationName": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing) }
+newApplicationResourceLifecycleDescriptionMessage  = ApplicationResourceLifecycleDescriptionMessage { "ApplicationName": Nothing, "ResourceLifecycleConfig": Nothing }
 
 -- | Constructs ApplicationResourceLifecycleDescriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationResourceLifecycleDescriptionMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } ) -> ApplicationResourceLifecycleDescriptionMessage
-newApplicationResourceLifecycleDescriptionMessage'  customize = (ApplicationResourceLifecycleDescriptionMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing) }
+newApplicationResourceLifecycleDescriptionMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: Maybe (ApplicationName) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } ) -> ApplicationResourceLifecycleDescriptionMessage
+newApplicationResourceLifecycleDescriptionMessage'  customize = (ApplicationResourceLifecycleDescriptionMessage <<< customize) { "ApplicationName": Nothing, "ResourceLifecycleConfig": Nothing }
 
 
 
 -- | <p>Describes the properties of an application version.</p>
 newtype ApplicationVersionDescription = ApplicationVersionDescription 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "Description" :: NullOrUndefined (Description)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation)
-  , "BuildArn" :: NullOrUndefined (String)
-  , "SourceBundle" :: NullOrUndefined (S3Location)
-  , "DateCreated" :: NullOrUndefined (CreationDate)
-  , "DateUpdated" :: NullOrUndefined (UpdateDate)
-  , "Status" :: NullOrUndefined (ApplicationVersionStatus)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "Description" :: Maybe (Description)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "SourceBuildInformation" :: Maybe (SourceBuildInformation)
+  , "BuildArn" :: Maybe (String)
+  , "SourceBundle" :: Maybe (S3Location)
+  , "DateCreated" :: Maybe (CreationDate)
+  , "DateUpdated" :: Maybe (UpdateDate)
+  , "Status" :: Maybe (ApplicationVersionStatus)
   }
 derive instance newtypeApplicationVersionDescription :: Newtype ApplicationVersionDescription _
 derive instance repGenericApplicationVersionDescription :: Generic ApplicationVersionDescription _
@@ -268,12 +267,12 @@ instance encodeApplicationVersionDescription :: Encode ApplicationVersionDescrip
 
 -- | Constructs ApplicationVersionDescription from required parameters
 newApplicationVersionDescription :: ApplicationVersionDescription
-newApplicationVersionDescription  = ApplicationVersionDescription { "ApplicationName": (NullOrUndefined Nothing), "BuildArn": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "SourceBuildInformation": (NullOrUndefined Nothing), "SourceBundle": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newApplicationVersionDescription  = ApplicationVersionDescription { "ApplicationName": Nothing, "BuildArn": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "SourceBuildInformation": Nothing, "SourceBundle": Nothing, "Status": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs ApplicationVersionDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationVersionDescription' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "Description" :: NullOrUndefined (Description) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation) , "BuildArn" :: NullOrUndefined (String) , "SourceBundle" :: NullOrUndefined (S3Location) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Status" :: NullOrUndefined (ApplicationVersionStatus) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "Description" :: NullOrUndefined (Description) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation) , "BuildArn" :: NullOrUndefined (String) , "SourceBundle" :: NullOrUndefined (S3Location) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Status" :: NullOrUndefined (ApplicationVersionStatus) } ) -> ApplicationVersionDescription
-newApplicationVersionDescription'  customize = (ApplicationVersionDescription <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "BuildArn": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "SourceBuildInformation": (NullOrUndefined Nothing), "SourceBundle": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newApplicationVersionDescription' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "Description" :: Maybe (Description) , "VersionLabel" :: Maybe (VersionLabel) , "SourceBuildInformation" :: Maybe (SourceBuildInformation) , "BuildArn" :: Maybe (String) , "SourceBundle" :: Maybe (S3Location) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Status" :: Maybe (ApplicationVersionStatus) } -> {"ApplicationName" :: Maybe (ApplicationName) , "Description" :: Maybe (Description) , "VersionLabel" :: Maybe (VersionLabel) , "SourceBuildInformation" :: Maybe (SourceBuildInformation) , "BuildArn" :: Maybe (String) , "SourceBundle" :: Maybe (S3Location) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Status" :: Maybe (ApplicationVersionStatus) } ) -> ApplicationVersionDescription
+newApplicationVersionDescription'  customize = (ApplicationVersionDescription <<< customize) { "ApplicationName": Nothing, "BuildArn": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "SourceBuildInformation": Nothing, "SourceBundle": Nothing, "Status": Nothing, "VersionLabel": Nothing }
 
 
 
@@ -288,7 +287,7 @@ instance encodeApplicationVersionDescriptionList :: Encode ApplicationVersionDes
 
 -- | <p>Result message wrapping a single description of an application version.</p>
 newtype ApplicationVersionDescriptionMessage = ApplicationVersionDescriptionMessage 
-  { "ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription)
+  { "ApplicationVersion" :: Maybe (ApplicationVersionDescription)
   }
 derive instance newtypeApplicationVersionDescriptionMessage :: Newtype ApplicationVersionDescriptionMessage _
 derive instance repGenericApplicationVersionDescriptionMessage :: Generic ApplicationVersionDescriptionMessage _
@@ -298,19 +297,19 @@ instance encodeApplicationVersionDescriptionMessage :: Encode ApplicationVersion
 
 -- | Constructs ApplicationVersionDescriptionMessage from required parameters
 newApplicationVersionDescriptionMessage :: ApplicationVersionDescriptionMessage
-newApplicationVersionDescriptionMessage  = ApplicationVersionDescriptionMessage { "ApplicationVersion": (NullOrUndefined Nothing) }
+newApplicationVersionDescriptionMessage  = ApplicationVersionDescriptionMessage { "ApplicationVersion": Nothing }
 
 -- | Constructs ApplicationVersionDescriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationVersionDescriptionMessage' :: ( { "ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription) } -> {"ApplicationVersion" :: NullOrUndefined (ApplicationVersionDescription) } ) -> ApplicationVersionDescriptionMessage
-newApplicationVersionDescriptionMessage'  customize = (ApplicationVersionDescriptionMessage <<< customize) { "ApplicationVersion": (NullOrUndefined Nothing) }
+newApplicationVersionDescriptionMessage' :: ( { "ApplicationVersion" :: Maybe (ApplicationVersionDescription) } -> {"ApplicationVersion" :: Maybe (ApplicationVersionDescription) } ) -> ApplicationVersionDescriptionMessage
+newApplicationVersionDescriptionMessage'  customize = (ApplicationVersionDescriptionMessage <<< customize) { "ApplicationVersion": Nothing }
 
 
 
 -- | <p>Result message wrapping a list of application version descriptions.</p>
 newtype ApplicationVersionDescriptionsMessage = ApplicationVersionDescriptionsMessage 
-  { "ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeApplicationVersionDescriptionsMessage :: Newtype ApplicationVersionDescriptionsMessage _
 derive instance repGenericApplicationVersionDescriptionsMessage :: Generic ApplicationVersionDescriptionsMessage _
@@ -320,19 +319,19 @@ instance encodeApplicationVersionDescriptionsMessage :: Encode ApplicationVersio
 
 -- | Constructs ApplicationVersionDescriptionsMessage from required parameters
 newApplicationVersionDescriptionsMessage :: ApplicationVersionDescriptionsMessage
-newApplicationVersionDescriptionsMessage  = ApplicationVersionDescriptionsMessage { "ApplicationVersions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newApplicationVersionDescriptionsMessage  = ApplicationVersionDescriptionsMessage { "ApplicationVersions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ApplicationVersionDescriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationVersionDescriptionsMessage' :: ( { "ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList) , "NextToken" :: NullOrUndefined (Token) } -> {"ApplicationVersions" :: NullOrUndefined (ApplicationVersionDescriptionList) , "NextToken" :: NullOrUndefined (Token) } ) -> ApplicationVersionDescriptionsMessage
-newApplicationVersionDescriptionsMessage'  customize = (ApplicationVersionDescriptionsMessage <<< customize) { "ApplicationVersions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newApplicationVersionDescriptionsMessage' :: ( { "ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList) , "NextToken" :: Maybe (Token) } -> {"ApplicationVersions" :: Maybe (ApplicationVersionDescriptionList) , "NextToken" :: Maybe (Token) } ) -> ApplicationVersionDescriptionsMessage
+newApplicationVersionDescriptionsMessage'  customize = (ApplicationVersionDescriptionsMessage <<< customize) { "ApplicationVersions": Nothing, "NextToken": Nothing }
 
 
 
 -- | <p>The application version lifecycle settings for an application. Defines the rules that Elastic Beanstalk applies to an application's versions in order to avoid hitting the per-region limit for application versions.</p> <p>When Elastic Beanstalk deletes an application version from its database, you can no longer deploy that version to an environment. The source bundle remains in S3 unless you configure the rule to delete it.</p>
 newtype ApplicationVersionLifecycleConfig = ApplicationVersionLifecycleConfig 
-  { "MaxCountRule" :: NullOrUndefined (MaxCountRule)
-  , "MaxAgeRule" :: NullOrUndefined (MaxAgeRule)
+  { "MaxCountRule" :: Maybe (MaxCountRule)
+  , "MaxAgeRule" :: Maybe (MaxAgeRule)
   }
 derive instance newtypeApplicationVersionLifecycleConfig :: Newtype ApplicationVersionLifecycleConfig _
 derive instance repGenericApplicationVersionLifecycleConfig :: Generic ApplicationVersionLifecycleConfig _
@@ -342,12 +341,12 @@ instance encodeApplicationVersionLifecycleConfig :: Encode ApplicationVersionLif
 
 -- | Constructs ApplicationVersionLifecycleConfig from required parameters
 newApplicationVersionLifecycleConfig :: ApplicationVersionLifecycleConfig
-newApplicationVersionLifecycleConfig  = ApplicationVersionLifecycleConfig { "MaxAgeRule": (NullOrUndefined Nothing), "MaxCountRule": (NullOrUndefined Nothing) }
+newApplicationVersionLifecycleConfig  = ApplicationVersionLifecycleConfig { "MaxAgeRule": Nothing, "MaxCountRule": Nothing }
 
 -- | Constructs ApplicationVersionLifecycleConfig's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationVersionLifecycleConfig' :: ( { "MaxCountRule" :: NullOrUndefined (MaxCountRule) , "MaxAgeRule" :: NullOrUndefined (MaxAgeRule) } -> {"MaxCountRule" :: NullOrUndefined (MaxCountRule) , "MaxAgeRule" :: NullOrUndefined (MaxAgeRule) } ) -> ApplicationVersionLifecycleConfig
-newApplicationVersionLifecycleConfig'  customize = (ApplicationVersionLifecycleConfig <<< customize) { "MaxAgeRule": (NullOrUndefined Nothing), "MaxCountRule": (NullOrUndefined Nothing) }
+newApplicationVersionLifecycleConfig' :: ( { "MaxCountRule" :: Maybe (MaxCountRule) , "MaxAgeRule" :: Maybe (MaxAgeRule) } -> {"MaxCountRule" :: Maybe (MaxCountRule) , "MaxAgeRule" :: Maybe (MaxAgeRule) } ) -> ApplicationVersionLifecycleConfig
+newApplicationVersionLifecycleConfig'  customize = (ApplicationVersionLifecycleConfig <<< customize) { "MaxAgeRule": Nothing, "MaxCountRule": Nothing }
 
 
 
@@ -371,8 +370,8 @@ instance encodeApplicationVersionStatus :: Encode ApplicationVersionStatus where
 
 -- | <p>Request to execute a scheduled managed action immediately.</p>
 newtype ApplyEnvironmentManagedActionRequest = ApplyEnvironmentManagedActionRequest 
-  { "EnvironmentName" :: NullOrUndefined (String)
-  , "EnvironmentId" :: NullOrUndefined (String)
+  { "EnvironmentName" :: Maybe (String)
+  , "EnvironmentId" :: Maybe (String)
   , "ActionId" :: (String)
   }
 derive instance newtypeApplyEnvironmentManagedActionRequest :: Newtype ApplyEnvironmentManagedActionRequest _
@@ -383,21 +382,21 @@ instance encodeApplyEnvironmentManagedActionRequest :: Encode ApplyEnvironmentMa
 
 -- | Constructs ApplyEnvironmentManagedActionRequest from required parameters
 newApplyEnvironmentManagedActionRequest :: String -> ApplyEnvironmentManagedActionRequest
-newApplyEnvironmentManagedActionRequest _ActionId = ApplyEnvironmentManagedActionRequest { "ActionId": _ActionId, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newApplyEnvironmentManagedActionRequest _ActionId = ApplyEnvironmentManagedActionRequest { "ActionId": _ActionId, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs ApplyEnvironmentManagedActionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplyEnvironmentManagedActionRequest' :: String -> ( { "EnvironmentName" :: NullOrUndefined (String) , "EnvironmentId" :: NullOrUndefined (String) , "ActionId" :: (String) } -> {"EnvironmentName" :: NullOrUndefined (String) , "EnvironmentId" :: NullOrUndefined (String) , "ActionId" :: (String) } ) -> ApplyEnvironmentManagedActionRequest
-newApplyEnvironmentManagedActionRequest' _ActionId customize = (ApplyEnvironmentManagedActionRequest <<< customize) { "ActionId": _ActionId, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newApplyEnvironmentManagedActionRequest' :: String -> ( { "EnvironmentName" :: Maybe (String) , "EnvironmentId" :: Maybe (String) , "ActionId" :: (String) } -> {"EnvironmentName" :: Maybe (String) , "EnvironmentId" :: Maybe (String) , "ActionId" :: (String) } ) -> ApplyEnvironmentManagedActionRequest
+newApplyEnvironmentManagedActionRequest' _ActionId customize = (ApplyEnvironmentManagedActionRequest <<< customize) { "ActionId": _ActionId, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
 -- | <p>The result message containing information about the managed action.</p>
 newtype ApplyEnvironmentManagedActionResult = ApplyEnvironmentManagedActionResult 
-  { "ActionId" :: NullOrUndefined (String)
-  , "ActionDescription" :: NullOrUndefined (String)
-  , "ActionType" :: NullOrUndefined (ActionType)
-  , "Status" :: NullOrUndefined (String)
+  { "ActionId" :: Maybe (String)
+  , "ActionDescription" :: Maybe (String)
+  , "ActionType" :: Maybe (ActionType)
+  , "Status" :: Maybe (String)
   }
 derive instance newtypeApplyEnvironmentManagedActionResult :: Newtype ApplyEnvironmentManagedActionResult _
 derive instance repGenericApplyEnvironmentManagedActionResult :: Generic ApplyEnvironmentManagedActionResult _
@@ -407,12 +406,12 @@ instance encodeApplyEnvironmentManagedActionResult :: Encode ApplyEnvironmentMan
 
 -- | Constructs ApplyEnvironmentManagedActionResult from required parameters
 newApplyEnvironmentManagedActionResult :: ApplyEnvironmentManagedActionResult
-newApplyEnvironmentManagedActionResult  = ApplyEnvironmentManagedActionResult { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newApplyEnvironmentManagedActionResult  = ApplyEnvironmentManagedActionResult { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "Status": Nothing }
 
 -- | Constructs ApplyEnvironmentManagedActionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplyEnvironmentManagedActionResult' :: ( { "ActionId" :: NullOrUndefined (String) , "ActionDescription" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "Status" :: NullOrUndefined (String) } -> {"ActionId" :: NullOrUndefined (String) , "ActionDescription" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "Status" :: NullOrUndefined (String) } ) -> ApplyEnvironmentManagedActionResult
-newApplyEnvironmentManagedActionResult'  customize = (ApplyEnvironmentManagedActionResult <<< customize) { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newApplyEnvironmentManagedActionResult' :: ( { "ActionId" :: Maybe (String) , "ActionDescription" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "Status" :: Maybe (String) } -> {"ActionId" :: Maybe (String) , "ActionDescription" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "Status" :: Maybe (String) } ) -> ApplyEnvironmentManagedActionResult
+newApplyEnvironmentManagedActionResult'  customize = (ApplyEnvironmentManagedActionResult <<< customize) { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "Status": Nothing }
 
 
 
@@ -427,7 +426,7 @@ instance encodeAutoCreateApplication :: Encode AutoCreateApplication where encod
 
 -- | <p>Describes an Auto Scaling launch configuration.</p>
 newtype AutoScalingGroup = AutoScalingGroup 
-  { "Name" :: NullOrUndefined (ResourceId)
+  { "Name" :: Maybe (ResourceId)
   }
 derive instance newtypeAutoScalingGroup :: Newtype AutoScalingGroup _
 derive instance repGenericAutoScalingGroup :: Generic AutoScalingGroup _
@@ -437,12 +436,12 @@ instance encodeAutoScalingGroup :: Encode AutoScalingGroup where encode = generi
 
 -- | Constructs AutoScalingGroup from required parameters
 newAutoScalingGroup :: AutoScalingGroup
-newAutoScalingGroup  = AutoScalingGroup { "Name": (NullOrUndefined Nothing) }
+newAutoScalingGroup  = AutoScalingGroup { "Name": Nothing }
 
 -- | Constructs AutoScalingGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAutoScalingGroup' :: ( { "Name" :: NullOrUndefined (ResourceId) } -> {"Name" :: NullOrUndefined (ResourceId) } ) -> AutoScalingGroup
-newAutoScalingGroup'  customize = (AutoScalingGroup <<< customize) { "Name": (NullOrUndefined Nothing) }
+newAutoScalingGroup' :: ( { "Name" :: Maybe (ResourceId) } -> {"Name" :: Maybe (ResourceId) } ) -> AutoScalingGroup
+newAutoScalingGroup'  customize = (AutoScalingGroup <<< customize) { "Name": Nothing }
 
 
 
@@ -493,11 +492,11 @@ instance encodeBoxedInt :: Encode BoxedInt where encode = genericEncode options
 
 -- | <p>Settings for an AWS CodeBuild build.</p>
 newtype BuildConfiguration = BuildConfiguration 
-  { "ArtifactName" :: NullOrUndefined (String)
+  { "ArtifactName" :: Maybe (String)
   , "CodeBuildServiceRole" :: (NonEmptyString)
-  , "ComputeType" :: NullOrUndefined (ComputeType)
+  , "ComputeType" :: Maybe (ComputeType)
   , "Image" :: (NonEmptyString)
-  , "TimeoutInMinutes" :: NullOrUndefined (BoxedInt)
+  , "TimeoutInMinutes" :: Maybe (BoxedInt)
   }
 derive instance newtypeBuildConfiguration :: Newtype BuildConfiguration _
 derive instance repGenericBuildConfiguration :: Generic BuildConfiguration _
@@ -507,18 +506,18 @@ instance encodeBuildConfiguration :: Encode BuildConfiguration where encode = ge
 
 -- | Constructs BuildConfiguration from required parameters
 newBuildConfiguration :: NonEmptyString -> NonEmptyString -> BuildConfiguration
-newBuildConfiguration _CodeBuildServiceRole _Image = BuildConfiguration { "CodeBuildServiceRole": _CodeBuildServiceRole, "Image": _Image, "ArtifactName": (NullOrUndefined Nothing), "ComputeType": (NullOrUndefined Nothing), "TimeoutInMinutes": (NullOrUndefined Nothing) }
+newBuildConfiguration _CodeBuildServiceRole _Image = BuildConfiguration { "CodeBuildServiceRole": _CodeBuildServiceRole, "Image": _Image, "ArtifactName": Nothing, "ComputeType": Nothing, "TimeoutInMinutes": Nothing }
 
 -- | Constructs BuildConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBuildConfiguration' :: NonEmptyString -> NonEmptyString -> ( { "ArtifactName" :: NullOrUndefined (String) , "CodeBuildServiceRole" :: (NonEmptyString) , "ComputeType" :: NullOrUndefined (ComputeType) , "Image" :: (NonEmptyString) , "TimeoutInMinutes" :: NullOrUndefined (BoxedInt) } -> {"ArtifactName" :: NullOrUndefined (String) , "CodeBuildServiceRole" :: (NonEmptyString) , "ComputeType" :: NullOrUndefined (ComputeType) , "Image" :: (NonEmptyString) , "TimeoutInMinutes" :: NullOrUndefined (BoxedInt) } ) -> BuildConfiguration
-newBuildConfiguration' _CodeBuildServiceRole _Image customize = (BuildConfiguration <<< customize) { "CodeBuildServiceRole": _CodeBuildServiceRole, "Image": _Image, "ArtifactName": (NullOrUndefined Nothing), "ComputeType": (NullOrUndefined Nothing), "TimeoutInMinutes": (NullOrUndefined Nothing) }
+newBuildConfiguration' :: NonEmptyString -> NonEmptyString -> ( { "ArtifactName" :: Maybe (String) , "CodeBuildServiceRole" :: (NonEmptyString) , "ComputeType" :: Maybe (ComputeType) , "Image" :: (NonEmptyString) , "TimeoutInMinutes" :: Maybe (BoxedInt) } -> {"ArtifactName" :: Maybe (String) , "CodeBuildServiceRole" :: (NonEmptyString) , "ComputeType" :: Maybe (ComputeType) , "Image" :: (NonEmptyString) , "TimeoutInMinutes" :: Maybe (BoxedInt) } ) -> BuildConfiguration
+newBuildConfiguration' _CodeBuildServiceRole _Image customize = (BuildConfiguration <<< customize) { "CodeBuildServiceRole": _CodeBuildServiceRole, "Image": _Image, "ArtifactName": Nothing, "ComputeType": Nothing, "TimeoutInMinutes": Nothing }
 
 
 
 -- | <p>The builder used to build the custom platform.</p>
 newtype Builder = Builder 
-  { "ARN" :: NullOrUndefined (ARN)
+  { "ARN" :: Maybe (ARN)
   }
 derive instance newtypeBuilder :: Newtype Builder _
 derive instance repGenericBuilder :: Generic Builder _
@@ -528,24 +527,24 @@ instance encodeBuilder :: Encode Builder where encode = genericEncode options
 
 -- | Constructs Builder from required parameters
 newBuilder :: Builder
-newBuilder  = Builder { "ARN": (NullOrUndefined Nothing) }
+newBuilder  = Builder { "ARN": Nothing }
 
 -- | Constructs Builder's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBuilder' :: ( { "ARN" :: NullOrUndefined (ARN) } -> {"ARN" :: NullOrUndefined (ARN) } ) -> Builder
-newBuilder'  customize = (Builder <<< customize) { "ARN": (NullOrUndefined Nothing) }
+newBuilder' :: ( { "ARN" :: Maybe (ARN) } -> {"ARN" :: Maybe (ARN) } ) -> Builder
+newBuilder'  customize = (Builder <<< customize) { "ARN": Nothing }
 
 
 
 -- | <p>CPU utilization metrics for an instance.</p>
 newtype CPUUtilization = CPUUtilization 
-  { "User" :: NullOrUndefined (NullableDouble)
-  , "Nice" :: NullOrUndefined (NullableDouble)
-  , "System" :: NullOrUndefined (NullableDouble)
-  , "Idle" :: NullOrUndefined (NullableDouble)
-  , "IOWait" :: NullOrUndefined (NullableDouble)
-  , "IRQ" :: NullOrUndefined (NullableDouble)
-  , "SoftIRQ" :: NullOrUndefined (NullableDouble)
+  { "User" :: Maybe (NullableDouble)
+  , "Nice" :: Maybe (NullableDouble)
+  , "System" :: Maybe (NullableDouble)
+  , "Idle" :: Maybe (NullableDouble)
+  , "IOWait" :: Maybe (NullableDouble)
+  , "IRQ" :: Maybe (NullableDouble)
+  , "SoftIRQ" :: Maybe (NullableDouble)
   }
 derive instance newtypeCPUUtilization :: Newtype CPUUtilization _
 derive instance repGenericCPUUtilization :: Generic CPUUtilization _
@@ -555,12 +554,12 @@ instance encodeCPUUtilization :: Encode CPUUtilization where encode = genericEnc
 
 -- | Constructs CPUUtilization from required parameters
 newCPUUtilization :: CPUUtilization
-newCPUUtilization  = CPUUtilization { "IOWait": (NullOrUndefined Nothing), "IRQ": (NullOrUndefined Nothing), "Idle": (NullOrUndefined Nothing), "Nice": (NullOrUndefined Nothing), "SoftIRQ": (NullOrUndefined Nothing), "System": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newCPUUtilization  = CPUUtilization { "IOWait": Nothing, "IRQ": Nothing, "Idle": Nothing, "Nice": Nothing, "SoftIRQ": Nothing, "System": Nothing, "User": Nothing }
 
 -- | Constructs CPUUtilization's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCPUUtilization' :: ( { "User" :: NullOrUndefined (NullableDouble) , "Nice" :: NullOrUndefined (NullableDouble) , "System" :: NullOrUndefined (NullableDouble) , "Idle" :: NullOrUndefined (NullableDouble) , "IOWait" :: NullOrUndefined (NullableDouble) , "IRQ" :: NullOrUndefined (NullableDouble) , "SoftIRQ" :: NullOrUndefined (NullableDouble) } -> {"User" :: NullOrUndefined (NullableDouble) , "Nice" :: NullOrUndefined (NullableDouble) , "System" :: NullOrUndefined (NullableDouble) , "Idle" :: NullOrUndefined (NullableDouble) , "IOWait" :: NullOrUndefined (NullableDouble) , "IRQ" :: NullOrUndefined (NullableDouble) , "SoftIRQ" :: NullOrUndefined (NullableDouble) } ) -> CPUUtilization
-newCPUUtilization'  customize = (CPUUtilization <<< customize) { "IOWait": (NullOrUndefined Nothing), "IRQ": (NullOrUndefined Nothing), "Idle": (NullOrUndefined Nothing), "Nice": (NullOrUndefined Nothing), "SoftIRQ": (NullOrUndefined Nothing), "System": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newCPUUtilization' :: ( { "User" :: Maybe (NullableDouble) , "Nice" :: Maybe (NullableDouble) , "System" :: Maybe (NullableDouble) , "Idle" :: Maybe (NullableDouble) , "IOWait" :: Maybe (NullableDouble) , "IRQ" :: Maybe (NullableDouble) , "SoftIRQ" :: Maybe (NullableDouble) } -> {"User" :: Maybe (NullableDouble) , "Nice" :: Maybe (NullableDouble) , "System" :: Maybe (NullableDouble) , "Idle" :: Maybe (NullableDouble) , "IOWait" :: Maybe (NullableDouble) , "IRQ" :: Maybe (NullableDouble) , "SoftIRQ" :: Maybe (NullableDouble) } ) -> CPUUtilization
+newCPUUtilization'  customize = (CPUUtilization <<< customize) { "IOWait": Nothing, "IRQ": Nothing, "Idle": Nothing, "Nice": Nothing, "SoftIRQ": Nothing, "System": Nothing, "User": Nothing }
 
 
 
@@ -605,8 +604,8 @@ newCheckDNSAvailabilityMessage' _CNAMEPrefix customize = (CheckDNSAvailabilityMe
 
 -- | <p>Indicates if the specified CNAME is available.</p>
 newtype CheckDNSAvailabilityResultMessage = CheckDNSAvailabilityResultMessage 
-  { "Available" :: NullOrUndefined (CnameAvailability)
-  , "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname)
+  { "Available" :: Maybe (CnameAvailability)
+  , "FullyQualifiedCNAME" :: Maybe (DNSCname)
   }
 derive instance newtypeCheckDNSAvailabilityResultMessage :: Newtype CheckDNSAvailabilityResultMessage _
 derive instance repGenericCheckDNSAvailabilityResultMessage :: Generic CheckDNSAvailabilityResultMessage _
@@ -616,12 +615,12 @@ instance encodeCheckDNSAvailabilityResultMessage :: Encode CheckDNSAvailabilityR
 
 -- | Constructs CheckDNSAvailabilityResultMessage from required parameters
 newCheckDNSAvailabilityResultMessage :: CheckDNSAvailabilityResultMessage
-newCheckDNSAvailabilityResultMessage  = CheckDNSAvailabilityResultMessage { "Available": (NullOrUndefined Nothing), "FullyQualifiedCNAME": (NullOrUndefined Nothing) }
+newCheckDNSAvailabilityResultMessage  = CheckDNSAvailabilityResultMessage { "Available": Nothing, "FullyQualifiedCNAME": Nothing }
 
 -- | Constructs CheckDNSAvailabilityResultMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCheckDNSAvailabilityResultMessage' :: ( { "Available" :: NullOrUndefined (CnameAvailability) , "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname) } -> {"Available" :: NullOrUndefined (CnameAvailability) , "FullyQualifiedCNAME" :: NullOrUndefined (DNSCname) } ) -> CheckDNSAvailabilityResultMessage
-newCheckDNSAvailabilityResultMessage'  customize = (CheckDNSAvailabilityResultMessage <<< customize) { "Available": (NullOrUndefined Nothing), "FullyQualifiedCNAME": (NullOrUndefined Nothing) }
+newCheckDNSAvailabilityResultMessage' :: ( { "Available" :: Maybe (CnameAvailability) , "FullyQualifiedCNAME" :: Maybe (DNSCname) } -> {"Available" :: Maybe (CnameAvailability) , "FullyQualifiedCNAME" :: Maybe (DNSCname) } ) -> CheckDNSAvailabilityResultMessage
+newCheckDNSAvailabilityResultMessage'  customize = (CheckDNSAvailabilityResultMessage <<< customize) { "Available": Nothing, "FullyQualifiedCNAME": Nothing }
 
 
 
@@ -646,9 +645,9 @@ instance encodeCodeBuildNotInServiceRegionException :: Encode CodeBuildNotInServ
 
 -- | <p>Request to create or update a group of environments.</p>
 newtype ComposeEnvironmentsMessage = ComposeEnvironmentsMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "GroupName" :: NullOrUndefined (GroupName)
-  , "VersionLabels" :: NullOrUndefined (VersionLabels)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "GroupName" :: Maybe (GroupName)
+  , "VersionLabels" :: Maybe (VersionLabels)
   }
 derive instance newtypeComposeEnvironmentsMessage :: Newtype ComposeEnvironmentsMessage _
 derive instance repGenericComposeEnvironmentsMessage :: Generic ComposeEnvironmentsMessage _
@@ -658,12 +657,12 @@ instance encodeComposeEnvironmentsMessage :: Encode ComposeEnvironmentsMessage w
 
 -- | Constructs ComposeEnvironmentsMessage from required parameters
 newComposeEnvironmentsMessage :: ComposeEnvironmentsMessage
-newComposeEnvironmentsMessage  = ComposeEnvironmentsMessage { "ApplicationName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "VersionLabels": (NullOrUndefined Nothing) }
+newComposeEnvironmentsMessage  = ComposeEnvironmentsMessage { "ApplicationName": Nothing, "GroupName": Nothing, "VersionLabels": Nothing }
 
 -- | Constructs ComposeEnvironmentsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newComposeEnvironmentsMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "GroupName" :: NullOrUndefined (GroupName) , "VersionLabels" :: NullOrUndefined (VersionLabels) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "GroupName" :: NullOrUndefined (GroupName) , "VersionLabels" :: NullOrUndefined (VersionLabels) } ) -> ComposeEnvironmentsMessage
-newComposeEnvironmentsMessage'  customize = (ComposeEnvironmentsMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "VersionLabels": (NullOrUndefined Nothing) }
+newComposeEnvironmentsMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "GroupName" :: Maybe (GroupName) , "VersionLabels" :: Maybe (VersionLabels) } -> {"ApplicationName" :: Maybe (ApplicationName) , "GroupName" :: Maybe (GroupName) , "VersionLabels" :: Maybe (VersionLabels) } ) -> ComposeEnvironmentsMessage
+newComposeEnvironmentsMessage'  customize = (ComposeEnvironmentsMessage <<< customize) { "ApplicationName": Nothing, "GroupName": Nothing, "VersionLabels": Nothing }
 
 
 
@@ -696,17 +695,17 @@ instance encodeConfigurationOptionDefaultValue :: Encode ConfigurationOptionDefa
 
 -- | <p>Describes the possible values for a configuration option.</p>
 newtype ConfigurationOptionDescription = ConfigurationOptionDescription 
-  { "Namespace" :: NullOrUndefined (OptionNamespace)
-  , "Name" :: NullOrUndefined (ConfigurationOptionName)
-  , "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue)
-  , "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity)
-  , "UserDefined" :: NullOrUndefined (UserDefinedOption)
-  , "ValueType" :: NullOrUndefined (ConfigurationOptionValueType)
-  , "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues)
-  , "MinValue" :: NullOrUndefined (OptionRestrictionMinValue)
-  , "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue)
-  , "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength)
-  , "Regex" :: NullOrUndefined (OptionRestrictionRegex)
+  { "Namespace" :: Maybe (OptionNamespace)
+  , "Name" :: Maybe (ConfigurationOptionName)
+  , "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue)
+  , "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity)
+  , "UserDefined" :: Maybe (UserDefinedOption)
+  , "ValueType" :: Maybe (ConfigurationOptionValueType)
+  , "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues)
+  , "MinValue" :: Maybe (OptionRestrictionMinValue)
+  , "MaxValue" :: Maybe (OptionRestrictionMaxValue)
+  , "MaxLength" :: Maybe (OptionRestrictionMaxLength)
+  , "Regex" :: Maybe (OptionRestrictionRegex)
   }
 derive instance newtypeConfigurationOptionDescription :: Newtype ConfigurationOptionDescription _
 derive instance repGenericConfigurationOptionDescription :: Generic ConfigurationOptionDescription _
@@ -716,12 +715,12 @@ instance encodeConfigurationOptionDescription :: Encode ConfigurationOptionDescr
 
 -- | Constructs ConfigurationOptionDescription from required parameters
 newConfigurationOptionDescription :: ConfigurationOptionDescription
-newConfigurationOptionDescription  = ConfigurationOptionDescription { "ChangeSeverity": (NullOrUndefined Nothing), "DefaultValue": (NullOrUndefined Nothing), "MaxLength": (NullOrUndefined Nothing), "MaxValue": (NullOrUndefined Nothing), "MinValue": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Namespace": (NullOrUndefined Nothing), "Regex": (NullOrUndefined Nothing), "UserDefined": (NullOrUndefined Nothing), "ValueOptions": (NullOrUndefined Nothing), "ValueType": (NullOrUndefined Nothing) }
+newConfigurationOptionDescription  = ConfigurationOptionDescription { "ChangeSeverity": Nothing, "DefaultValue": Nothing, "MaxLength": Nothing, "MaxValue": Nothing, "MinValue": Nothing, "Name": Nothing, "Namespace": Nothing, "Regex": Nothing, "UserDefined": Nothing, "ValueOptions": Nothing, "ValueType": Nothing }
 
 -- | Constructs ConfigurationOptionDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationOptionDescription' :: ( { "Namespace" :: NullOrUndefined (OptionNamespace) , "Name" :: NullOrUndefined (ConfigurationOptionName) , "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue) , "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity) , "UserDefined" :: NullOrUndefined (UserDefinedOption) , "ValueType" :: NullOrUndefined (ConfigurationOptionValueType) , "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues) , "MinValue" :: NullOrUndefined (OptionRestrictionMinValue) , "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue) , "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength) , "Regex" :: NullOrUndefined (OptionRestrictionRegex) } -> {"Namespace" :: NullOrUndefined (OptionNamespace) , "Name" :: NullOrUndefined (ConfigurationOptionName) , "DefaultValue" :: NullOrUndefined (ConfigurationOptionDefaultValue) , "ChangeSeverity" :: NullOrUndefined (ConfigurationOptionSeverity) , "UserDefined" :: NullOrUndefined (UserDefinedOption) , "ValueType" :: NullOrUndefined (ConfigurationOptionValueType) , "ValueOptions" :: NullOrUndefined (ConfigurationOptionPossibleValues) , "MinValue" :: NullOrUndefined (OptionRestrictionMinValue) , "MaxValue" :: NullOrUndefined (OptionRestrictionMaxValue) , "MaxLength" :: NullOrUndefined (OptionRestrictionMaxLength) , "Regex" :: NullOrUndefined (OptionRestrictionRegex) } ) -> ConfigurationOptionDescription
-newConfigurationOptionDescription'  customize = (ConfigurationOptionDescription <<< customize) { "ChangeSeverity": (NullOrUndefined Nothing), "DefaultValue": (NullOrUndefined Nothing), "MaxLength": (NullOrUndefined Nothing), "MaxValue": (NullOrUndefined Nothing), "MinValue": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Namespace": (NullOrUndefined Nothing), "Regex": (NullOrUndefined Nothing), "UserDefined": (NullOrUndefined Nothing), "ValueOptions": (NullOrUndefined Nothing), "ValueType": (NullOrUndefined Nothing) }
+newConfigurationOptionDescription' :: ( { "Namespace" :: Maybe (OptionNamespace) , "Name" :: Maybe (ConfigurationOptionName) , "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue) , "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity) , "UserDefined" :: Maybe (UserDefinedOption) , "ValueType" :: Maybe (ConfigurationOptionValueType) , "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues) , "MinValue" :: Maybe (OptionRestrictionMinValue) , "MaxValue" :: Maybe (OptionRestrictionMaxValue) , "MaxLength" :: Maybe (OptionRestrictionMaxLength) , "Regex" :: Maybe (OptionRestrictionRegex) } -> {"Namespace" :: Maybe (OptionNamespace) , "Name" :: Maybe (ConfigurationOptionName) , "DefaultValue" :: Maybe (ConfigurationOptionDefaultValue) , "ChangeSeverity" :: Maybe (ConfigurationOptionSeverity) , "UserDefined" :: Maybe (UserDefinedOption) , "ValueType" :: Maybe (ConfigurationOptionValueType) , "ValueOptions" :: Maybe (ConfigurationOptionPossibleValues) , "MinValue" :: Maybe (OptionRestrictionMinValue) , "MaxValue" :: Maybe (OptionRestrictionMaxValue) , "MaxLength" :: Maybe (OptionRestrictionMaxLength) , "Regex" :: Maybe (OptionRestrictionRegex) } ) -> ConfigurationOptionDescription
+newConfigurationOptionDescription'  customize = (ConfigurationOptionDescription <<< customize) { "ChangeSeverity": Nothing, "DefaultValue": Nothing, "MaxLength": Nothing, "MaxValue": Nothing, "MinValue": Nothing, "Name": Nothing, "Namespace": Nothing, "Regex": Nothing, "UserDefined": Nothing, "ValueOptions": Nothing, "ValueType": Nothing }
 
 
 
@@ -763,10 +762,10 @@ instance encodeConfigurationOptionPossibleValues :: Encode ConfigurationOptionPo
 
 -- | <p> A specification identifying an individual configuration option along with its current value. For a list of possible option values, go to <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html">Option Values</a> in the <i>AWS Elastic Beanstalk Developer Guide</i>. </p>
 newtype ConfigurationOptionSetting = ConfigurationOptionSetting 
-  { "ResourceName" :: NullOrUndefined (ResourceName)
-  , "Namespace" :: NullOrUndefined (OptionNamespace)
-  , "OptionName" :: NullOrUndefined (ConfigurationOptionName)
-  , "Value" :: NullOrUndefined (ConfigurationOptionValue)
+  { "ResourceName" :: Maybe (ResourceName)
+  , "Namespace" :: Maybe (OptionNamespace)
+  , "OptionName" :: Maybe (ConfigurationOptionName)
+  , "Value" :: Maybe (ConfigurationOptionValue)
   }
 derive instance newtypeConfigurationOptionSetting :: Newtype ConfigurationOptionSetting _
 derive instance repGenericConfigurationOptionSetting :: Generic ConfigurationOptionSetting _
@@ -776,12 +775,12 @@ instance encodeConfigurationOptionSetting :: Encode ConfigurationOptionSetting w
 
 -- | Constructs ConfigurationOptionSetting from required parameters
 newConfigurationOptionSetting :: ConfigurationOptionSetting
-newConfigurationOptionSetting  = ConfigurationOptionSetting { "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "ResourceName": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newConfigurationOptionSetting  = ConfigurationOptionSetting { "Namespace": Nothing, "OptionName": Nothing, "ResourceName": Nothing, "Value": Nothing }
 
 -- | Constructs ConfigurationOptionSetting's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationOptionSetting' :: ( { "ResourceName" :: NullOrUndefined (ResourceName) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) , "Value" :: NullOrUndefined (ConfigurationOptionValue) } -> {"ResourceName" :: NullOrUndefined (ResourceName) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) , "Value" :: NullOrUndefined (ConfigurationOptionValue) } ) -> ConfigurationOptionSetting
-newConfigurationOptionSetting'  customize = (ConfigurationOptionSetting <<< customize) { "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "ResourceName": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newConfigurationOptionSetting' :: ( { "ResourceName" :: Maybe (ResourceName) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) , "Value" :: Maybe (ConfigurationOptionValue) } -> {"ResourceName" :: Maybe (ResourceName) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) , "Value" :: Maybe (ConfigurationOptionValue) } ) -> ConfigurationOptionSetting
+newConfigurationOptionSetting'  customize = (ConfigurationOptionSetting <<< customize) { "Namespace": Nothing, "OptionName": Nothing, "ResourceName": Nothing, "Value": Nothing }
 
 
 
@@ -823,9 +822,9 @@ instance encodeConfigurationOptionValueType :: Encode ConfigurationOptionValueTy
 
 -- | <p>Describes the settings for a specified configuration set.</p>
 newtype ConfigurationOptionsDescription = ConfigurationOptionsDescription 
-  { "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList)
+  { "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "Options" :: Maybe (ConfigurationOptionDescriptionsList)
   }
 derive instance newtypeConfigurationOptionsDescription :: Newtype ConfigurationOptionsDescription _
 derive instance repGenericConfigurationOptionsDescription :: Generic ConfigurationOptionsDescription _
@@ -835,27 +834,27 @@ instance encodeConfigurationOptionsDescription :: Encode ConfigurationOptionsDes
 
 -- | Constructs ConfigurationOptionsDescription from required parameters
 newConfigurationOptionsDescription :: ConfigurationOptionsDescription
-newConfigurationOptionsDescription  = ConfigurationOptionsDescription { "Options": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing) }
+newConfigurationOptionsDescription  = ConfigurationOptionsDescription { "Options": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing }
 
 -- | Constructs ConfigurationOptionsDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationOptionsDescription' :: ( { "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList) } -> {"SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "Options" :: NullOrUndefined (ConfigurationOptionDescriptionsList) } ) -> ConfigurationOptionsDescription
-newConfigurationOptionsDescription'  customize = (ConfigurationOptionsDescription <<< customize) { "Options": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing) }
+newConfigurationOptionsDescription' :: ( { "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "Options" :: Maybe (ConfigurationOptionDescriptionsList) } -> {"SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "Options" :: Maybe (ConfigurationOptionDescriptionsList) } ) -> ConfigurationOptionsDescription
+newConfigurationOptionsDescription'  customize = (ConfigurationOptionsDescription <<< customize) { "Options": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing }
 
 
 
 -- | <p>Describes the settings for a configuration set.</p>
 newtype ConfigurationSettingsDescription = ConfigurationSettingsDescription 
-  { "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "Description" :: NullOrUndefined (Description)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus)
-  , "DateCreated" :: NullOrUndefined (CreationDate)
-  , "DateUpdated" :: NullOrUndefined (UpdateDate)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
+  { "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "ApplicationName" :: Maybe (ApplicationName)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "Description" :: Maybe (Description)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus)
+  , "DateCreated" :: Maybe (CreationDate)
+  , "DateUpdated" :: Maybe (UpdateDate)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
   }
 derive instance newtypeConfigurationSettingsDescription :: Newtype ConfigurationSettingsDescription _
 derive instance repGenericConfigurationSettingsDescription :: Generic ConfigurationSettingsDescription _
@@ -865,12 +864,12 @@ instance encodeConfigurationSettingsDescription :: Encode ConfigurationSettingsD
 
 -- | Constructs ConfigurationSettingsDescription from required parameters
 newConfigurationSettingsDescription :: ConfigurationSettingsDescription
-newConfigurationSettingsDescription  = ConfigurationSettingsDescription { "ApplicationName": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "DeploymentStatus": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newConfigurationSettingsDescription  = ConfigurationSettingsDescription { "ApplicationName": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "DeploymentStatus": Nothing, "Description": Nothing, "EnvironmentName": Nothing, "OptionSettings": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing }
 
 -- | Constructs ConfigurationSettingsDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationSettingsDescription' :: ( { "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> {"SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "DeploymentStatus" :: NullOrUndefined (ConfigurationDeploymentStatus) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } ) -> ConfigurationSettingsDescription
-newConfigurationSettingsDescription'  customize = (ConfigurationSettingsDescription <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "DeploymentStatus": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newConfigurationSettingsDescription' :: ( { "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "EnvironmentName" :: Maybe (EnvironmentName) , "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> {"SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "EnvironmentName" :: Maybe (EnvironmentName) , "DeploymentStatus" :: Maybe (ConfigurationDeploymentStatus) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } ) -> ConfigurationSettingsDescription
+newConfigurationSettingsDescription'  customize = (ConfigurationSettingsDescription <<< customize) { "ApplicationName": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "DeploymentStatus": Nothing, "Description": Nothing, "EnvironmentName": Nothing, "OptionSettings": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing }
 
 
 
@@ -885,7 +884,7 @@ instance encodeConfigurationSettingsDescriptionList :: Encode ConfigurationSetti
 
 -- | <p>The results from a request to change the configuration settings of an environment.</p>
 newtype ConfigurationSettingsDescriptions = ConfigurationSettingsDescriptions 
-  { "ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList)
+  { "ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList)
   }
 derive instance newtypeConfigurationSettingsDescriptions :: Newtype ConfigurationSettingsDescriptions _
 derive instance repGenericConfigurationSettingsDescriptions :: Generic ConfigurationSettingsDescriptions _
@@ -895,18 +894,18 @@ instance encodeConfigurationSettingsDescriptions :: Encode ConfigurationSettings
 
 -- | Constructs ConfigurationSettingsDescriptions from required parameters
 newConfigurationSettingsDescriptions :: ConfigurationSettingsDescriptions
-newConfigurationSettingsDescriptions  = ConfigurationSettingsDescriptions { "ConfigurationSettings": (NullOrUndefined Nothing) }
+newConfigurationSettingsDescriptions  = ConfigurationSettingsDescriptions { "ConfigurationSettings": Nothing }
 
 -- | Constructs ConfigurationSettingsDescriptions's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationSettingsDescriptions' :: ( { "ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList) } -> {"ConfigurationSettings" :: NullOrUndefined (ConfigurationSettingsDescriptionList) } ) -> ConfigurationSettingsDescriptions
-newConfigurationSettingsDescriptions'  customize = (ConfigurationSettingsDescriptions <<< customize) { "ConfigurationSettings": (NullOrUndefined Nothing) }
+newConfigurationSettingsDescriptions' :: ( { "ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList) } -> {"ConfigurationSettings" :: Maybe (ConfigurationSettingsDescriptionList) } ) -> ConfigurationSettingsDescriptions
+newConfigurationSettingsDescriptions'  customize = (ConfigurationSettingsDescriptions <<< customize) { "ConfigurationSettings": Nothing }
 
 
 
 -- | <p>Provides a list of validation messages.</p>
 newtype ConfigurationSettingsValidationMessages = ConfigurationSettingsValidationMessages 
-  { "Messages" :: NullOrUndefined (ValidationMessagesList)
+  { "Messages" :: Maybe (ValidationMessagesList)
   }
 derive instance newtypeConfigurationSettingsValidationMessages :: Newtype ConfigurationSettingsValidationMessages _
 derive instance repGenericConfigurationSettingsValidationMessages :: Generic ConfigurationSettingsValidationMessages _
@@ -916,12 +915,12 @@ instance encodeConfigurationSettingsValidationMessages :: Encode ConfigurationSe
 
 -- | Constructs ConfigurationSettingsValidationMessages from required parameters
 newConfigurationSettingsValidationMessages :: ConfigurationSettingsValidationMessages
-newConfigurationSettingsValidationMessages  = ConfigurationSettingsValidationMessages { "Messages": (NullOrUndefined Nothing) }
+newConfigurationSettingsValidationMessages  = ConfigurationSettingsValidationMessages { "Messages": Nothing }
 
 -- | Constructs ConfigurationSettingsValidationMessages's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConfigurationSettingsValidationMessages' :: ( { "Messages" :: NullOrUndefined (ValidationMessagesList) } -> {"Messages" :: NullOrUndefined (ValidationMessagesList) } ) -> ConfigurationSettingsValidationMessages
-newConfigurationSettingsValidationMessages'  customize = (ConfigurationSettingsValidationMessages <<< customize) { "Messages": (NullOrUndefined Nothing) }
+newConfigurationSettingsValidationMessages' :: ( { "Messages" :: Maybe (ValidationMessagesList) } -> {"Messages" :: Maybe (ValidationMessagesList) } ) -> ConfigurationSettingsValidationMessages
+newConfigurationSettingsValidationMessages'  customize = (ConfigurationSettingsValidationMessages <<< customize) { "Messages": Nothing }
 
 
 
@@ -946,8 +945,8 @@ instance encodeConfigurationTemplateNamesList :: Encode ConfigurationTemplateNam
 -- | <p>Request to create an application.</p>
 newtype CreateApplicationMessage = CreateApplicationMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "Description" :: NullOrUndefined (Description)
-  , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig)
+  , "Description" :: Maybe (Description)
+  , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig)
   }
 derive instance newtypeCreateApplicationMessage :: Newtype CreateApplicationMessage _
 derive instance repGenericCreateApplicationMessage :: Generic CreateApplicationMessage _
@@ -957,12 +956,12 @@ instance encodeCreateApplicationMessage :: Encode CreateApplicationMessage where
 
 -- | Constructs CreateApplicationMessage from required parameters
 newCreateApplicationMessage :: ApplicationName -> CreateApplicationMessage
-newCreateApplicationMessage _ApplicationName = CreateApplicationMessage { "ApplicationName": _ApplicationName, "Description": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing) }
+newCreateApplicationMessage _ApplicationName = CreateApplicationMessage { "ApplicationName": _ApplicationName, "Description": Nothing, "ResourceLifecycleConfig": Nothing }
 
 -- | Constructs CreateApplicationMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "Description" :: NullOrUndefined (Description) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: (ApplicationName) , "Description" :: NullOrUndefined (Description) , "ResourceLifecycleConfig" :: NullOrUndefined (ApplicationResourceLifecycleConfig) } ) -> CreateApplicationMessage
-newCreateApplicationMessage' _ApplicationName customize = (CreateApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "Description": (NullOrUndefined Nothing), "ResourceLifecycleConfig": (NullOrUndefined Nothing) }
+newCreateApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "Description" :: Maybe (Description) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } -> {"ApplicationName" :: (ApplicationName) , "Description" :: Maybe (Description) , "ResourceLifecycleConfig" :: Maybe (ApplicationResourceLifecycleConfig) } ) -> CreateApplicationMessage
+newCreateApplicationMessage' _ApplicationName customize = (CreateApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "Description": Nothing, "ResourceLifecycleConfig": Nothing }
 
 
 
@@ -970,12 +969,12 @@ newCreateApplicationMessage' _ApplicationName customize = (CreateApplicationMess
 newtype CreateApplicationVersionMessage = CreateApplicationVersionMessage 
   { "ApplicationName" :: (ApplicationName)
   , "VersionLabel" :: (VersionLabel)
-  , "Description" :: NullOrUndefined (Description)
-  , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation)
-  , "SourceBundle" :: NullOrUndefined (S3Location)
-  , "BuildConfiguration" :: NullOrUndefined (BuildConfiguration)
-  , "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication)
-  , "Process" :: NullOrUndefined (ApplicationVersionProccess)
+  , "Description" :: Maybe (Description)
+  , "SourceBuildInformation" :: Maybe (SourceBuildInformation)
+  , "SourceBundle" :: Maybe (S3Location)
+  , "BuildConfiguration" :: Maybe (BuildConfiguration)
+  , "AutoCreateApplication" :: Maybe (AutoCreateApplication)
+  , "Process" :: Maybe (ApplicationVersionProccess)
   }
 derive instance newtypeCreateApplicationVersionMessage :: Newtype CreateApplicationVersionMessage _
 derive instance repGenericCreateApplicationVersionMessage :: Generic CreateApplicationVersionMessage _
@@ -985,12 +984,12 @@ instance encodeCreateApplicationVersionMessage :: Encode CreateApplicationVersio
 
 -- | Constructs CreateApplicationVersionMessage from required parameters
 newCreateApplicationVersionMessage :: ApplicationName -> VersionLabel -> CreateApplicationVersionMessage
-newCreateApplicationVersionMessage _ApplicationName _VersionLabel = CreateApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "AutoCreateApplication": (NullOrUndefined Nothing), "BuildConfiguration": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Process": (NullOrUndefined Nothing), "SourceBuildInformation": (NullOrUndefined Nothing), "SourceBundle": (NullOrUndefined Nothing) }
+newCreateApplicationVersionMessage _ApplicationName _VersionLabel = CreateApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "AutoCreateApplication": Nothing, "BuildConfiguration": Nothing, "Description": Nothing, "Process": Nothing, "SourceBuildInformation": Nothing, "SourceBundle": Nothing }
 
 -- | Constructs CreateApplicationVersionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: NullOrUndefined (Description) , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation) , "SourceBundle" :: NullOrUndefined (S3Location) , "BuildConfiguration" :: NullOrUndefined (BuildConfiguration) , "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication) , "Process" :: NullOrUndefined (ApplicationVersionProccess) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: NullOrUndefined (Description) , "SourceBuildInformation" :: NullOrUndefined (SourceBuildInformation) , "SourceBundle" :: NullOrUndefined (S3Location) , "BuildConfiguration" :: NullOrUndefined (BuildConfiguration) , "AutoCreateApplication" :: NullOrUndefined (AutoCreateApplication) , "Process" :: NullOrUndefined (ApplicationVersionProccess) } ) -> CreateApplicationVersionMessage
-newCreateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (CreateApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "AutoCreateApplication": (NullOrUndefined Nothing), "BuildConfiguration": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Process": (NullOrUndefined Nothing), "SourceBuildInformation": (NullOrUndefined Nothing), "SourceBundle": (NullOrUndefined Nothing) }
+newCreateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: Maybe (Description) , "SourceBuildInformation" :: Maybe (SourceBuildInformation) , "SourceBundle" :: Maybe (S3Location) , "BuildConfiguration" :: Maybe (BuildConfiguration) , "AutoCreateApplication" :: Maybe (AutoCreateApplication) , "Process" :: Maybe (ApplicationVersionProccess) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: Maybe (Description) , "SourceBuildInformation" :: Maybe (SourceBuildInformation) , "SourceBundle" :: Maybe (S3Location) , "BuildConfiguration" :: Maybe (BuildConfiguration) , "AutoCreateApplication" :: Maybe (AutoCreateApplication) , "Process" :: Maybe (ApplicationVersionProccess) } ) -> CreateApplicationVersionMessage
+newCreateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (CreateApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "AutoCreateApplication": Nothing, "BuildConfiguration": Nothing, "Description": Nothing, "Process": Nothing, "SourceBuildInformation": Nothing, "SourceBundle": Nothing }
 
 
 
@@ -998,12 +997,12 @@ newCreateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (
 newtype CreateConfigurationTemplateMessage = CreateConfigurationTemplateMessage 
   { "ApplicationName" :: (ApplicationName)
   , "TemplateName" :: (ConfigurationTemplateName)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "SourceConfiguration" :: NullOrUndefined (SourceConfiguration)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "Description" :: NullOrUndefined (Description)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "SourceConfiguration" :: Maybe (SourceConfiguration)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "Description" :: Maybe (Description)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
   }
 derive instance newtypeCreateConfigurationTemplateMessage :: Newtype CreateConfigurationTemplateMessage _
 derive instance repGenericCreateConfigurationTemplateMessage :: Generic CreateConfigurationTemplateMessage _
@@ -1013,30 +1012,30 @@ instance encodeCreateConfigurationTemplateMessage :: Encode CreateConfigurationT
 
 -- | Constructs CreateConfigurationTemplateMessage from required parameters
 newCreateConfigurationTemplateMessage :: ApplicationName -> ConfigurationTemplateName -> CreateConfigurationTemplateMessage
-newCreateConfigurationTemplateMessage _ApplicationName _TemplateName = CreateConfigurationTemplateMessage { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "SourceConfiguration": (NullOrUndefined Nothing) }
+newCreateConfigurationTemplateMessage _ApplicationName _TemplateName = CreateConfigurationTemplateMessage { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": Nothing, "EnvironmentId": Nothing, "OptionSettings": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "SourceConfiguration": Nothing }
 
 -- | Constructs CreateConfigurationTemplateMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "SourceConfiguration" :: NullOrUndefined (SourceConfiguration) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "Description" :: NullOrUndefined (Description) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "SourceConfiguration" :: NullOrUndefined (SourceConfiguration) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "Description" :: NullOrUndefined (Description) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } ) -> CreateConfigurationTemplateMessage
-newCreateConfigurationTemplateMessage' _ApplicationName _TemplateName customize = (CreateConfigurationTemplateMessage <<< customize) { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "SourceConfiguration": (NullOrUndefined Nothing) }
+newCreateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "SourceConfiguration" :: Maybe (SourceConfiguration) , "EnvironmentId" :: Maybe (EnvironmentId) , "Description" :: Maybe (Description) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "SourceConfiguration" :: Maybe (SourceConfiguration) , "EnvironmentId" :: Maybe (EnvironmentId) , "Description" :: Maybe (Description) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } ) -> CreateConfigurationTemplateMessage
+newCreateConfigurationTemplateMessage' _ApplicationName _TemplateName customize = (CreateConfigurationTemplateMessage <<< customize) { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": Nothing, "EnvironmentId": Nothing, "OptionSettings": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "SourceConfiguration": Nothing }
 
 
 
 -- | <p/>
 newtype CreateEnvironmentMessage = CreateEnvironmentMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "GroupName" :: NullOrUndefined (GroupName)
-  , "Description" :: NullOrUndefined (Description)
-  , "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix)
-  , "Tier" :: NullOrUndefined (EnvironmentTier)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
-  , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "GroupName" :: Maybe (GroupName)
+  , "Description" :: Maybe (Description)
+  , "CNAMEPrefix" :: Maybe (DNSCnamePrefix)
+  , "Tier" :: Maybe (EnvironmentTier)
+  , "Tags" :: Maybe (Tags)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
+  , "OptionsToRemove" :: Maybe (OptionsSpecifierList)
   }
 derive instance newtypeCreateEnvironmentMessage :: Newtype CreateEnvironmentMessage _
 derive instance repGenericCreateEnvironmentMessage :: Generic CreateEnvironmentMessage _
@@ -1046,12 +1045,12 @@ instance encodeCreateEnvironmentMessage :: Encode CreateEnvironmentMessage where
 
 -- | Constructs CreateEnvironmentMessage from required parameters
 newCreateEnvironmentMessage :: ApplicationName -> CreateEnvironmentMessage
-newCreateEnvironmentMessage _ApplicationName = CreateEnvironmentMessage { "ApplicationName": _ApplicationName, "CNAMEPrefix": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newCreateEnvironmentMessage _ApplicationName = CreateEnvironmentMessage { "ApplicationName": _ApplicationName, "CNAMEPrefix": Nothing, "Description": Nothing, "EnvironmentName": Nothing, "GroupName": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "Tags": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs CreateEnvironmentMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateEnvironmentMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "GroupName" :: NullOrUndefined (GroupName) , "Description" :: NullOrUndefined (Description) , "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix) , "Tier" :: NullOrUndefined (EnvironmentTier) , "Tags" :: NullOrUndefined (Tags) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> {"ApplicationName" :: (ApplicationName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "GroupName" :: NullOrUndefined (GroupName) , "Description" :: NullOrUndefined (Description) , "CNAMEPrefix" :: NullOrUndefined (DNSCnamePrefix) , "Tier" :: NullOrUndefined (EnvironmentTier) , "Tags" :: NullOrUndefined (Tags) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } ) -> CreateEnvironmentMessage
-newCreateEnvironmentMessage' _ApplicationName customize = (CreateEnvironmentMessage <<< customize) { "ApplicationName": _ApplicationName, "CNAMEPrefix": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newCreateEnvironmentMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "EnvironmentName" :: Maybe (EnvironmentName) , "GroupName" :: Maybe (GroupName) , "Description" :: Maybe (Description) , "CNAMEPrefix" :: Maybe (DNSCnamePrefix) , "Tier" :: Maybe (EnvironmentTier) , "Tags" :: Maybe (Tags) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> {"ApplicationName" :: (ApplicationName) , "EnvironmentName" :: Maybe (EnvironmentName) , "GroupName" :: Maybe (GroupName) , "Description" :: Maybe (Description) , "CNAMEPrefix" :: Maybe (DNSCnamePrefix) , "Tier" :: Maybe (EnvironmentTier) , "Tags" :: Maybe (Tags) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } ) -> CreateEnvironmentMessage
+newCreateEnvironmentMessage' _ApplicationName customize = (CreateEnvironmentMessage <<< customize) { "ApplicationName": _ApplicationName, "CNAMEPrefix": Nothing, "Description": Nothing, "EnvironmentName": Nothing, "GroupName": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "Tags": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 
 
@@ -1060,8 +1059,8 @@ newtype CreatePlatformVersionRequest = CreatePlatformVersionRequest
   { "PlatformName" :: (PlatformName)
   , "PlatformVersion" :: (PlatformVersion)
   , "PlatformDefinitionBundle" :: (S3Location)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
   }
 derive instance newtypeCreatePlatformVersionRequest :: Newtype CreatePlatformVersionRequest _
 derive instance repGenericCreatePlatformVersionRequest :: Generic CreatePlatformVersionRequest _
@@ -1071,18 +1070,18 @@ instance encodeCreatePlatformVersionRequest :: Encode CreatePlatformVersionReque
 
 -- | Constructs CreatePlatformVersionRequest from required parameters
 newCreatePlatformVersionRequest :: S3Location -> PlatformName -> PlatformVersion -> CreatePlatformVersionRequest
-newCreatePlatformVersionRequest _PlatformDefinitionBundle _PlatformName _PlatformVersion = CreatePlatformVersionRequest { "PlatformDefinitionBundle": _PlatformDefinitionBundle, "PlatformName": _PlatformName, "PlatformVersion": _PlatformVersion, "EnvironmentName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing) }
+newCreatePlatformVersionRequest _PlatformDefinitionBundle _PlatformName _PlatformVersion = CreatePlatformVersionRequest { "PlatformDefinitionBundle": _PlatformDefinitionBundle, "PlatformName": _PlatformName, "PlatformVersion": _PlatformVersion, "EnvironmentName": Nothing, "OptionSettings": Nothing }
 
 -- | Constructs CreatePlatformVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreatePlatformVersionRequest' :: S3Location -> PlatformName -> PlatformVersion -> ( { "PlatformName" :: (PlatformName) , "PlatformVersion" :: (PlatformVersion) , "PlatformDefinitionBundle" :: (S3Location) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } -> {"PlatformName" :: (PlatformName) , "PlatformVersion" :: (PlatformVersion) , "PlatformDefinitionBundle" :: (S3Location) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) } ) -> CreatePlatformVersionRequest
-newCreatePlatformVersionRequest' _PlatformDefinitionBundle _PlatformName _PlatformVersion customize = (CreatePlatformVersionRequest <<< customize) { "PlatformDefinitionBundle": _PlatformDefinitionBundle, "PlatformName": _PlatformName, "PlatformVersion": _PlatformVersion, "EnvironmentName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing) }
+newCreatePlatformVersionRequest' :: S3Location -> PlatformName -> PlatformVersion -> ( { "PlatformName" :: (PlatformName) , "PlatformVersion" :: (PlatformVersion) , "PlatformDefinitionBundle" :: (S3Location) , "EnvironmentName" :: Maybe (EnvironmentName) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } -> {"PlatformName" :: (PlatformName) , "PlatformVersion" :: (PlatformVersion) , "PlatformDefinitionBundle" :: (S3Location) , "EnvironmentName" :: Maybe (EnvironmentName) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) } ) -> CreatePlatformVersionRequest
+newCreatePlatformVersionRequest' _PlatformDefinitionBundle _PlatformName _PlatformVersion customize = (CreatePlatformVersionRequest <<< customize) { "PlatformDefinitionBundle": _PlatformDefinitionBundle, "PlatformName": _PlatformName, "PlatformVersion": _PlatformVersion, "EnvironmentName": Nothing, "OptionSettings": Nothing }
 
 
 
 newtype CreatePlatformVersionResult = CreatePlatformVersionResult 
-  { "PlatformSummary" :: NullOrUndefined (PlatformSummary)
-  , "Builder" :: NullOrUndefined (Builder)
+  { "PlatformSummary" :: Maybe (PlatformSummary)
+  , "Builder" :: Maybe (Builder)
   }
 derive instance newtypeCreatePlatformVersionResult :: Newtype CreatePlatformVersionResult _
 derive instance repGenericCreatePlatformVersionResult :: Generic CreatePlatformVersionResult _
@@ -1092,18 +1091,18 @@ instance encodeCreatePlatformVersionResult :: Encode CreatePlatformVersionResult
 
 -- | Constructs CreatePlatformVersionResult from required parameters
 newCreatePlatformVersionResult :: CreatePlatformVersionResult
-newCreatePlatformVersionResult  = CreatePlatformVersionResult { "Builder": (NullOrUndefined Nothing), "PlatformSummary": (NullOrUndefined Nothing) }
+newCreatePlatformVersionResult  = CreatePlatformVersionResult { "Builder": Nothing, "PlatformSummary": Nothing }
 
 -- | Constructs CreatePlatformVersionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreatePlatformVersionResult' :: ( { "PlatformSummary" :: NullOrUndefined (PlatformSummary) , "Builder" :: NullOrUndefined (Builder) } -> {"PlatformSummary" :: NullOrUndefined (PlatformSummary) , "Builder" :: NullOrUndefined (Builder) } ) -> CreatePlatformVersionResult
-newCreatePlatformVersionResult'  customize = (CreatePlatformVersionResult <<< customize) { "Builder": (NullOrUndefined Nothing), "PlatformSummary": (NullOrUndefined Nothing) }
+newCreatePlatformVersionResult' :: ( { "PlatformSummary" :: Maybe (PlatformSummary) , "Builder" :: Maybe (Builder) } -> {"PlatformSummary" :: Maybe (PlatformSummary) , "Builder" :: Maybe (Builder) } ) -> CreatePlatformVersionResult
+newCreatePlatformVersionResult'  customize = (CreatePlatformVersionResult <<< customize) { "Builder": Nothing, "PlatformSummary": Nothing }
 
 
 
 -- | <p>Results of a <a>CreateStorageLocationResult</a> call.</p>
 newtype CreateStorageLocationResultMessage = CreateStorageLocationResultMessage 
-  { "S3Bucket" :: NullOrUndefined (S3Bucket)
+  { "S3Bucket" :: Maybe (S3Bucket)
   }
 derive instance newtypeCreateStorageLocationResultMessage :: Newtype CreateStorageLocationResultMessage _
 derive instance repGenericCreateStorageLocationResultMessage :: Generic CreateStorageLocationResultMessage _
@@ -1113,12 +1112,12 @@ instance encodeCreateStorageLocationResultMessage :: Encode CreateStorageLocatio
 
 -- | Constructs CreateStorageLocationResultMessage from required parameters
 newCreateStorageLocationResultMessage :: CreateStorageLocationResultMessage
-newCreateStorageLocationResultMessage  = CreateStorageLocationResultMessage { "S3Bucket": (NullOrUndefined Nothing) }
+newCreateStorageLocationResultMessage  = CreateStorageLocationResultMessage { "S3Bucket": Nothing }
 
 -- | Constructs CreateStorageLocationResultMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateStorageLocationResultMessage' :: ( { "S3Bucket" :: NullOrUndefined (S3Bucket) } -> {"S3Bucket" :: NullOrUndefined (S3Bucket) } ) -> CreateStorageLocationResultMessage
-newCreateStorageLocationResultMessage'  customize = (CreateStorageLocationResultMessage <<< customize) { "S3Bucket": (NullOrUndefined Nothing) }
+newCreateStorageLocationResultMessage' :: ( { "S3Bucket" :: Maybe (S3Bucket) } -> {"S3Bucket" :: Maybe (S3Bucket) } ) -> CreateStorageLocationResultMessage
+newCreateStorageLocationResultMessage'  customize = (CreateStorageLocationResultMessage <<< customize) { "S3Bucket": Nothing }
 
 
 
@@ -1133,8 +1132,8 @@ instance encodeCreationDate :: Encode CreationDate where encode = genericEncode 
 
 -- | <p>A custom AMI available to platforms.</p>
 newtype CustomAmi = CustomAmi 
-  { "VirtualizationType" :: NullOrUndefined (VirtualizationType)
-  , "ImageId" :: NullOrUndefined (ImageId)
+  { "VirtualizationType" :: Maybe (VirtualizationType)
+  , "ImageId" :: Maybe (ImageId)
   }
 derive instance newtypeCustomAmi :: Newtype CustomAmi _
 derive instance repGenericCustomAmi :: Generic CustomAmi _
@@ -1144,12 +1143,12 @@ instance encodeCustomAmi :: Encode CustomAmi where encode = genericEncode option
 
 -- | Constructs CustomAmi from required parameters
 newCustomAmi :: CustomAmi
-newCustomAmi  = CustomAmi { "ImageId": (NullOrUndefined Nothing), "VirtualizationType": (NullOrUndefined Nothing) }
+newCustomAmi  = CustomAmi { "ImageId": Nothing, "VirtualizationType": Nothing }
 
 -- | Constructs CustomAmi's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCustomAmi' :: ( { "VirtualizationType" :: NullOrUndefined (VirtualizationType) , "ImageId" :: NullOrUndefined (ImageId) } -> {"VirtualizationType" :: NullOrUndefined (VirtualizationType) , "ImageId" :: NullOrUndefined (ImageId) } ) -> CustomAmi
-newCustomAmi'  customize = (CustomAmi <<< customize) { "ImageId": (NullOrUndefined Nothing), "VirtualizationType": (NullOrUndefined Nothing) }
+newCustomAmi' :: ( { "VirtualizationType" :: Maybe (VirtualizationType) , "ImageId" :: Maybe (ImageId) } -> {"VirtualizationType" :: Maybe (VirtualizationType) , "ImageId" :: Maybe (ImageId) } ) -> CustomAmi
+newCustomAmi'  customize = (CustomAmi <<< customize) { "ImageId": Nothing, "VirtualizationType": Nothing }
 
 
 
@@ -1183,7 +1182,7 @@ instance encodeDNSCnamePrefix :: Encode DNSCnamePrefix where encode = genericEnc
 -- | <p>Request to delete an application.</p>
 newtype DeleteApplicationMessage = DeleteApplicationMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce)
+  , "TerminateEnvByForce" :: Maybe (TerminateEnvForce)
   }
 derive instance newtypeDeleteApplicationMessage :: Newtype DeleteApplicationMessage _
 derive instance repGenericDeleteApplicationMessage :: Generic DeleteApplicationMessage _
@@ -1193,12 +1192,12 @@ instance encodeDeleteApplicationMessage :: Encode DeleteApplicationMessage where
 
 -- | Constructs DeleteApplicationMessage from required parameters
 newDeleteApplicationMessage :: ApplicationName -> DeleteApplicationMessage
-newDeleteApplicationMessage _ApplicationName = DeleteApplicationMessage { "ApplicationName": _ApplicationName, "TerminateEnvByForce": (NullOrUndefined Nothing) }
+newDeleteApplicationMessage _ApplicationName = DeleteApplicationMessage { "ApplicationName": _ApplicationName, "TerminateEnvByForce": Nothing }
 
 -- | Constructs DeleteApplicationMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce) } -> {"ApplicationName" :: (ApplicationName) , "TerminateEnvByForce" :: NullOrUndefined (TerminateEnvForce) } ) -> DeleteApplicationMessage
-newDeleteApplicationMessage' _ApplicationName customize = (DeleteApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "TerminateEnvByForce": (NullOrUndefined Nothing) }
+newDeleteApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "TerminateEnvByForce" :: Maybe (TerminateEnvForce) } -> {"ApplicationName" :: (ApplicationName) , "TerminateEnvByForce" :: Maybe (TerminateEnvForce) } ) -> DeleteApplicationMessage
+newDeleteApplicationMessage' _ApplicationName customize = (DeleteApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "TerminateEnvByForce": Nothing }
 
 
 
@@ -1206,7 +1205,7 @@ newDeleteApplicationMessage' _ApplicationName customize = (DeleteApplicationMess
 newtype DeleteApplicationVersionMessage = DeleteApplicationVersionMessage 
   { "ApplicationName" :: (ApplicationName)
   , "VersionLabel" :: (VersionLabel)
-  , "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle)
+  , "DeleteSourceBundle" :: Maybe (DeleteSourceBundle)
   }
 derive instance newtypeDeleteApplicationVersionMessage :: Newtype DeleteApplicationVersionMessage _
 derive instance repGenericDeleteApplicationVersionMessage :: Generic DeleteApplicationVersionMessage _
@@ -1216,12 +1215,12 @@ instance encodeDeleteApplicationVersionMessage :: Encode DeleteApplicationVersio
 
 -- | Constructs DeleteApplicationVersionMessage from required parameters
 newDeleteApplicationVersionMessage :: ApplicationName -> VersionLabel -> DeleteApplicationVersionMessage
-newDeleteApplicationVersionMessage _ApplicationName _VersionLabel = DeleteApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "DeleteSourceBundle": (NullOrUndefined Nothing) }
+newDeleteApplicationVersionMessage _ApplicationName _VersionLabel = DeleteApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "DeleteSourceBundle": Nothing }
 
 -- | Constructs DeleteApplicationVersionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "DeleteSourceBundle" :: NullOrUndefined (DeleteSourceBundle) } ) -> DeleteApplicationVersionMessage
-newDeleteApplicationVersionMessage' _ApplicationName _VersionLabel customize = (DeleteApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "DeleteSourceBundle": (NullOrUndefined Nothing) }
+newDeleteApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "DeleteSourceBundle" :: Maybe (DeleteSourceBundle) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "DeleteSourceBundle" :: Maybe (DeleteSourceBundle) } ) -> DeleteApplicationVersionMessage
+newDeleteApplicationVersionMessage' _ApplicationName _VersionLabel customize = (DeleteApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "DeleteSourceBundle": Nothing }
 
 
 
@@ -1270,7 +1269,7 @@ newDeleteEnvironmentConfigurationMessage' _ApplicationName _EnvironmentName cust
 
 
 newtype DeletePlatformVersionRequest = DeletePlatformVersionRequest 
-  { "PlatformArn" :: NullOrUndefined (PlatformArn)
+  { "PlatformArn" :: Maybe (PlatformArn)
   }
 derive instance newtypeDeletePlatformVersionRequest :: Newtype DeletePlatformVersionRequest _
 derive instance repGenericDeletePlatformVersionRequest :: Generic DeletePlatformVersionRequest _
@@ -1280,17 +1279,17 @@ instance encodeDeletePlatformVersionRequest :: Encode DeletePlatformVersionReque
 
 -- | Constructs DeletePlatformVersionRequest from required parameters
 newDeletePlatformVersionRequest :: DeletePlatformVersionRequest
-newDeletePlatformVersionRequest  = DeletePlatformVersionRequest { "PlatformArn": (NullOrUndefined Nothing) }
+newDeletePlatformVersionRequest  = DeletePlatformVersionRequest { "PlatformArn": Nothing }
 
 -- | Constructs DeletePlatformVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeletePlatformVersionRequest' :: ( { "PlatformArn" :: NullOrUndefined (PlatformArn) } -> {"PlatformArn" :: NullOrUndefined (PlatformArn) } ) -> DeletePlatformVersionRequest
-newDeletePlatformVersionRequest'  customize = (DeletePlatformVersionRequest <<< customize) { "PlatformArn": (NullOrUndefined Nothing) }
+newDeletePlatformVersionRequest' :: ( { "PlatformArn" :: Maybe (PlatformArn) } -> {"PlatformArn" :: Maybe (PlatformArn) } ) -> DeletePlatformVersionRequest
+newDeletePlatformVersionRequest'  customize = (DeletePlatformVersionRequest <<< customize) { "PlatformArn": Nothing }
 
 
 
 newtype DeletePlatformVersionResult = DeletePlatformVersionResult 
-  { "PlatformSummary" :: NullOrUndefined (PlatformSummary)
+  { "PlatformSummary" :: Maybe (PlatformSummary)
   }
 derive instance newtypeDeletePlatformVersionResult :: Newtype DeletePlatformVersionResult _
 derive instance repGenericDeletePlatformVersionResult :: Generic DeletePlatformVersionResult _
@@ -1300,12 +1299,12 @@ instance encodeDeletePlatformVersionResult :: Encode DeletePlatformVersionResult
 
 -- | Constructs DeletePlatformVersionResult from required parameters
 newDeletePlatformVersionResult :: DeletePlatformVersionResult
-newDeletePlatformVersionResult  = DeletePlatformVersionResult { "PlatformSummary": (NullOrUndefined Nothing) }
+newDeletePlatformVersionResult  = DeletePlatformVersionResult { "PlatformSummary": Nothing }
 
 -- | Constructs DeletePlatformVersionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeletePlatformVersionResult' :: ( { "PlatformSummary" :: NullOrUndefined (PlatformSummary) } -> {"PlatformSummary" :: NullOrUndefined (PlatformSummary) } ) -> DeletePlatformVersionResult
-newDeletePlatformVersionResult'  customize = (DeletePlatformVersionResult <<< customize) { "PlatformSummary": (NullOrUndefined Nothing) }
+newDeletePlatformVersionResult' :: ( { "PlatformSummary" :: Maybe (PlatformSummary) } -> {"PlatformSummary" :: Maybe (PlatformSummary) } ) -> DeletePlatformVersionResult
+newDeletePlatformVersionResult'  customize = (DeletePlatformVersionResult <<< customize) { "PlatformSummary": Nothing }
 
 
 
@@ -1320,10 +1319,10 @@ instance encodeDeleteSourceBundle :: Encode DeleteSourceBundle where encode = ge
 
 -- | <p>Information about an application version deployment.</p>
 newtype Deployment = Deployment 
-  { "VersionLabel" :: NullOrUndefined (String)
-  , "DeploymentId" :: NullOrUndefined (NullableLong)
-  , "Status" :: NullOrUndefined (String)
-  , "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp)
+  { "VersionLabel" :: Maybe (String)
+  , "DeploymentId" :: Maybe (NullableLong)
+  , "Status" :: Maybe (String)
+  , "DeploymentTime" :: Maybe (DeploymentTimestamp)
   }
 derive instance newtypeDeployment :: Newtype Deployment _
 derive instance repGenericDeployment :: Generic Deployment _
@@ -1333,12 +1332,12 @@ instance encodeDeployment :: Encode Deployment where encode = genericEncode opti
 
 -- | Constructs Deployment from required parameters
 newDeployment :: Deployment
-newDeployment  = Deployment { "DeploymentId": (NullOrUndefined Nothing), "DeploymentTime": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDeployment  = Deployment { "DeploymentId": Nothing, "DeploymentTime": Nothing, "Status": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs Deployment's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeployment' :: ( { "VersionLabel" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (NullableLong) , "Status" :: NullOrUndefined (String) , "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp) } -> {"VersionLabel" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (NullableLong) , "Status" :: NullOrUndefined (String) , "DeploymentTime" :: NullOrUndefined (DeploymentTimestamp) } ) -> Deployment
-newDeployment'  customize = (Deployment <<< customize) { "DeploymentId": (NullOrUndefined Nothing), "DeploymentTime": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDeployment' :: ( { "VersionLabel" :: Maybe (String) , "DeploymentId" :: Maybe (NullableLong) , "Status" :: Maybe (String) , "DeploymentTime" :: Maybe (DeploymentTimestamp) } -> {"VersionLabel" :: Maybe (String) , "DeploymentId" :: Maybe (NullableLong) , "Status" :: Maybe (String) , "DeploymentTime" :: Maybe (DeploymentTimestamp) } ) -> Deployment
+newDeployment'  customize = (Deployment <<< customize) { "DeploymentId": Nothing, "DeploymentTime": Nothing, "Status": Nothing, "VersionLabel": Nothing }
 
 
 
@@ -1353,10 +1352,10 @@ instance encodeDeploymentTimestamp :: Encode DeploymentTimestamp where encode = 
 
 -- | <p>Request to describe application versions.</p>
 newtype DescribeApplicationVersionsMessage = DescribeApplicationVersionsMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "VersionLabels" :: NullOrUndefined (VersionLabelsList)
-  , "MaxRecords" :: NullOrUndefined (MaxRecords)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "VersionLabels" :: Maybe (VersionLabelsList)
+  , "MaxRecords" :: Maybe (MaxRecords)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeDescribeApplicationVersionsMessage :: Newtype DescribeApplicationVersionsMessage _
 derive instance repGenericDescribeApplicationVersionsMessage :: Generic DescribeApplicationVersionsMessage _
@@ -1366,18 +1365,18 @@ instance encodeDescribeApplicationVersionsMessage :: Encode DescribeApplicationV
 
 -- | Constructs DescribeApplicationVersionsMessage from required parameters
 newDescribeApplicationVersionsMessage :: DescribeApplicationVersionsMessage
-newDescribeApplicationVersionsMessage  = DescribeApplicationVersionsMessage { "ApplicationName": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "VersionLabels": (NullOrUndefined Nothing) }
+newDescribeApplicationVersionsMessage  = DescribeApplicationVersionsMessage { "ApplicationName": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "VersionLabels": Nothing }
 
 -- | Constructs DescribeApplicationVersionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeApplicationVersionsMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabels" :: NullOrUndefined (VersionLabelsList) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabels" :: NullOrUndefined (VersionLabelsList) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } ) -> DescribeApplicationVersionsMessage
-newDescribeApplicationVersionsMessage'  customize = (DescribeApplicationVersionsMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "VersionLabels": (NullOrUndefined Nothing) }
+newDescribeApplicationVersionsMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "VersionLabels" :: Maybe (VersionLabelsList) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } -> {"ApplicationName" :: Maybe (ApplicationName) , "VersionLabels" :: Maybe (VersionLabelsList) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } ) -> DescribeApplicationVersionsMessage
+newDescribeApplicationVersionsMessage'  customize = (DescribeApplicationVersionsMessage <<< customize) { "ApplicationName": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "VersionLabels": Nothing }
 
 
 
 -- | <p>Request to describe one or more applications.</p>
 newtype DescribeApplicationsMessage = DescribeApplicationsMessage 
-  { "ApplicationNames" :: NullOrUndefined (ApplicationNamesList)
+  { "ApplicationNames" :: Maybe (ApplicationNamesList)
   }
 derive instance newtypeDescribeApplicationsMessage :: Newtype DescribeApplicationsMessage _
 derive instance repGenericDescribeApplicationsMessage :: Generic DescribeApplicationsMessage _
@@ -1387,23 +1386,23 @@ instance encodeDescribeApplicationsMessage :: Encode DescribeApplicationsMessage
 
 -- | Constructs DescribeApplicationsMessage from required parameters
 newDescribeApplicationsMessage :: DescribeApplicationsMessage
-newDescribeApplicationsMessage  = DescribeApplicationsMessage { "ApplicationNames": (NullOrUndefined Nothing) }
+newDescribeApplicationsMessage  = DescribeApplicationsMessage { "ApplicationNames": Nothing }
 
 -- | Constructs DescribeApplicationsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeApplicationsMessage' :: ( { "ApplicationNames" :: NullOrUndefined (ApplicationNamesList) } -> {"ApplicationNames" :: NullOrUndefined (ApplicationNamesList) } ) -> DescribeApplicationsMessage
-newDescribeApplicationsMessage'  customize = (DescribeApplicationsMessage <<< customize) { "ApplicationNames": (NullOrUndefined Nothing) }
+newDescribeApplicationsMessage' :: ( { "ApplicationNames" :: Maybe (ApplicationNamesList) } -> {"ApplicationNames" :: Maybe (ApplicationNamesList) } ) -> DescribeApplicationsMessage
+newDescribeApplicationsMessage'  customize = (DescribeApplicationsMessage <<< customize) { "ApplicationNames": Nothing }
 
 
 
 -- | <p>Result message containing a list of application version descriptions.</p>
 newtype DescribeConfigurationOptionsMessage = DescribeConfigurationOptionsMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "Options" :: NullOrUndefined (OptionsSpecifierList)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "Options" :: Maybe (OptionsSpecifierList)
   }
 derive instance newtypeDescribeConfigurationOptionsMessage :: Newtype DescribeConfigurationOptionsMessage _
 derive instance repGenericDescribeConfigurationOptionsMessage :: Generic DescribeConfigurationOptionsMessage _
@@ -1413,20 +1412,20 @@ instance encodeDescribeConfigurationOptionsMessage :: Encode DescribeConfigurati
 
 -- | Constructs DescribeConfigurationOptionsMessage from required parameters
 newDescribeConfigurationOptionsMessage :: DescribeConfigurationOptionsMessage
-newDescribeConfigurationOptionsMessage  = DescribeConfigurationOptionsMessage { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Options": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newDescribeConfigurationOptionsMessage  = DescribeConfigurationOptionsMessage { "ApplicationName": Nothing, "EnvironmentName": Nothing, "Options": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing }
 
 -- | Constructs DescribeConfigurationOptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeConfigurationOptionsMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "Options" :: NullOrUndefined (OptionsSpecifierList) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "Options" :: NullOrUndefined (OptionsSpecifierList) } ) -> DescribeConfigurationOptionsMessage
-newDescribeConfigurationOptionsMessage'  customize = (DescribeConfigurationOptionsMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Options": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newDescribeConfigurationOptionsMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "Options" :: Maybe (OptionsSpecifierList) } -> {"ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "Options" :: Maybe (OptionsSpecifierList) } ) -> DescribeConfigurationOptionsMessage
+newDescribeConfigurationOptionsMessage'  customize = (DescribeConfigurationOptionsMessage <<< customize) { "ApplicationName": Nothing, "EnvironmentName": Nothing, "Options": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing }
 
 
 
 -- | <p>Result message containing all of the configuration settings for a specified solution stack or configuration template.</p>
 newtype DescribeConfigurationSettingsMessage = DescribeConfigurationSettingsMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeDescribeConfigurationSettingsMessage :: Newtype DescribeConfigurationSettingsMessage _
 derive instance repGenericDescribeConfigurationSettingsMessage :: Generic DescribeConfigurationSettingsMessage _
@@ -1436,20 +1435,20 @@ instance encodeDescribeConfigurationSettingsMessage :: Encode DescribeConfigurat
 
 -- | Constructs DescribeConfigurationSettingsMessage from required parameters
 newDescribeConfigurationSettingsMessage :: ApplicationName -> DescribeConfigurationSettingsMessage
-newDescribeConfigurationSettingsMessage _ApplicationName = DescribeConfigurationSettingsMessage { "ApplicationName": _ApplicationName, "EnvironmentName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newDescribeConfigurationSettingsMessage _ApplicationName = DescribeConfigurationSettingsMessage { "ApplicationName": _ApplicationName, "EnvironmentName": Nothing, "TemplateName": Nothing }
 
 -- | Constructs DescribeConfigurationSettingsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeConfigurationSettingsMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> DescribeConfigurationSettingsMessage
-newDescribeConfigurationSettingsMessage' _ApplicationName customize = (DescribeConfigurationSettingsMessage <<< customize) { "ApplicationName": _ApplicationName, "EnvironmentName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newDescribeConfigurationSettingsMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) } ) -> DescribeConfigurationSettingsMessage
+newDescribeConfigurationSettingsMessage' _ApplicationName customize = (DescribeConfigurationSettingsMessage <<< customize) { "ApplicationName": _ApplicationName, "EnvironmentName": Nothing, "TemplateName": Nothing }
 
 
 
 -- | <p>See the example below to learn how to create a request body.</p>
 newtype DescribeEnvironmentHealthRequest = DescribeEnvironmentHealthRequest 
-  { "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes)
+  { "EnvironmentName" :: Maybe (EnvironmentName)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "AttributeNames" :: Maybe (EnvironmentHealthAttributes)
   }
 derive instance newtypeDescribeEnvironmentHealthRequest :: Newtype DescribeEnvironmentHealthRequest _
 derive instance repGenericDescribeEnvironmentHealthRequest :: Generic DescribeEnvironmentHealthRequest _
@@ -1459,25 +1458,25 @@ instance encodeDescribeEnvironmentHealthRequest :: Encode DescribeEnvironmentHea
 
 -- | Constructs DescribeEnvironmentHealthRequest from required parameters
 newDescribeEnvironmentHealthRequest :: DescribeEnvironmentHealthRequest
-newDescribeEnvironmentHealthRequest  = DescribeEnvironmentHealthRequest { "AttributeNames": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newDescribeEnvironmentHealthRequest  = DescribeEnvironmentHealthRequest { "AttributeNames": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs DescribeEnvironmentHealthRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentHealthRequest' :: ( { "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes) } -> {"EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "AttributeNames" :: NullOrUndefined (EnvironmentHealthAttributes) } ) -> DescribeEnvironmentHealthRequest
-newDescribeEnvironmentHealthRequest'  customize = (DescribeEnvironmentHealthRequest <<< customize) { "AttributeNames": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newDescribeEnvironmentHealthRequest' :: ( { "EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "AttributeNames" :: Maybe (EnvironmentHealthAttributes) } -> {"EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "AttributeNames" :: Maybe (EnvironmentHealthAttributes) } ) -> DescribeEnvironmentHealthRequest
+newDescribeEnvironmentHealthRequest'  customize = (DescribeEnvironmentHealthRequest <<< customize) { "AttributeNames": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
 -- | <p>Health details for an AWS Elastic Beanstalk environment.</p>
 newtype DescribeEnvironmentHealthResult = DescribeEnvironmentHealthResult 
-  { "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "HealthStatus" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (EnvironmentHealth)
-  , "Color" :: NullOrUndefined (String)
-  , "Causes" :: NullOrUndefined (Causes)
-  , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics)
-  , "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary)
-  , "RefreshedAt" :: NullOrUndefined (RefreshedAt)
+  { "EnvironmentName" :: Maybe (EnvironmentName)
+  , "HealthStatus" :: Maybe (String)
+  , "Status" :: Maybe (EnvironmentHealth)
+  , "Color" :: Maybe (String)
+  , "Causes" :: Maybe (Causes)
+  , "ApplicationMetrics" :: Maybe (ApplicationMetrics)
+  , "InstancesHealth" :: Maybe (InstanceHealthSummary)
+  , "RefreshedAt" :: Maybe (RefreshedAt)
   }
 derive instance newtypeDescribeEnvironmentHealthResult :: Newtype DescribeEnvironmentHealthResult _
 derive instance repGenericDescribeEnvironmentHealthResult :: Generic DescribeEnvironmentHealthResult _
@@ -1487,21 +1486,21 @@ instance encodeDescribeEnvironmentHealthResult :: Encode DescribeEnvironmentHeal
 
 -- | Constructs DescribeEnvironmentHealthResult from required parameters
 newDescribeEnvironmentHealthResult :: DescribeEnvironmentHealthResult
-newDescribeEnvironmentHealthResult  = DescribeEnvironmentHealthResult { "ApplicationMetrics": (NullOrUndefined Nothing), "Causes": (NullOrUndefined Nothing), "Color": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "InstancesHealth": (NullOrUndefined Nothing), "RefreshedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeEnvironmentHealthResult  = DescribeEnvironmentHealthResult { "ApplicationMetrics": Nothing, "Causes": Nothing, "Color": Nothing, "EnvironmentName": Nothing, "HealthStatus": Nothing, "InstancesHealth": Nothing, "RefreshedAt": Nothing, "Status": Nothing }
 
 -- | Constructs DescribeEnvironmentHealthResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentHealthResult' :: ( { "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "HealthStatus" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (EnvironmentHealth) , "Color" :: NullOrUndefined (String) , "Causes" :: NullOrUndefined (Causes) , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics) , "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary) , "RefreshedAt" :: NullOrUndefined (RefreshedAt) } -> {"EnvironmentName" :: NullOrUndefined (EnvironmentName) , "HealthStatus" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (EnvironmentHealth) , "Color" :: NullOrUndefined (String) , "Causes" :: NullOrUndefined (Causes) , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics) , "InstancesHealth" :: NullOrUndefined (InstanceHealthSummary) , "RefreshedAt" :: NullOrUndefined (RefreshedAt) } ) -> DescribeEnvironmentHealthResult
-newDescribeEnvironmentHealthResult'  customize = (DescribeEnvironmentHealthResult <<< customize) { "ApplicationMetrics": (NullOrUndefined Nothing), "Causes": (NullOrUndefined Nothing), "Color": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "InstancesHealth": (NullOrUndefined Nothing), "RefreshedAt": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeEnvironmentHealthResult' :: ( { "EnvironmentName" :: Maybe (EnvironmentName) , "HealthStatus" :: Maybe (String) , "Status" :: Maybe (EnvironmentHealth) , "Color" :: Maybe (String) , "Causes" :: Maybe (Causes) , "ApplicationMetrics" :: Maybe (ApplicationMetrics) , "InstancesHealth" :: Maybe (InstanceHealthSummary) , "RefreshedAt" :: Maybe (RefreshedAt) } -> {"EnvironmentName" :: Maybe (EnvironmentName) , "HealthStatus" :: Maybe (String) , "Status" :: Maybe (EnvironmentHealth) , "Color" :: Maybe (String) , "Causes" :: Maybe (Causes) , "ApplicationMetrics" :: Maybe (ApplicationMetrics) , "InstancesHealth" :: Maybe (InstanceHealthSummary) , "RefreshedAt" :: Maybe (RefreshedAt) } ) -> DescribeEnvironmentHealthResult
+newDescribeEnvironmentHealthResult'  customize = (DescribeEnvironmentHealthResult <<< customize) { "ApplicationMetrics": Nothing, "Causes": Nothing, "Color": Nothing, "EnvironmentName": Nothing, "HealthStatus": Nothing, "InstancesHealth": Nothing, "RefreshedAt": Nothing, "Status": Nothing }
 
 
 
 -- | <p>Request to list completed and failed managed actions.</p>
 newtype DescribeEnvironmentManagedActionHistoryRequest = DescribeEnvironmentManagedActionHistoryRequest 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "NextToken" :: NullOrUndefined (String)
-  , "MaxItems" :: NullOrUndefined (Int)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "NextToken" :: Maybe (String)
+  , "MaxItems" :: Maybe (Int)
   }
 derive instance newtypeDescribeEnvironmentManagedActionHistoryRequest :: Newtype DescribeEnvironmentManagedActionHistoryRequest _
 derive instance repGenericDescribeEnvironmentManagedActionHistoryRequest :: Generic DescribeEnvironmentManagedActionHistoryRequest _
@@ -1511,19 +1510,19 @@ instance encodeDescribeEnvironmentManagedActionHistoryRequest :: Encode Describe
 
 -- | Constructs DescribeEnvironmentManagedActionHistoryRequest from required parameters
 newDescribeEnvironmentManagedActionHistoryRequest :: DescribeEnvironmentManagedActionHistoryRequest
-newDescribeEnvironmentManagedActionHistoryRequest  = DescribeEnvironmentManagedActionHistoryRequest { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "MaxItems": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionHistoryRequest  = DescribeEnvironmentManagedActionHistoryRequest { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "MaxItems": Nothing, "NextToken": Nothing }
 
 -- | Constructs DescribeEnvironmentManagedActionHistoryRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentManagedActionHistoryRequest' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "NextToken" :: NullOrUndefined (String) , "MaxItems" :: NullOrUndefined (Int) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "NextToken" :: NullOrUndefined (String) , "MaxItems" :: NullOrUndefined (Int) } ) -> DescribeEnvironmentManagedActionHistoryRequest
-newDescribeEnvironmentManagedActionHistoryRequest'  customize = (DescribeEnvironmentManagedActionHistoryRequest <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "MaxItems": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionHistoryRequest' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "NextToken" :: Maybe (String) , "MaxItems" :: Maybe (Int) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "NextToken" :: Maybe (String) , "MaxItems" :: Maybe (Int) } ) -> DescribeEnvironmentManagedActionHistoryRequest
+newDescribeEnvironmentManagedActionHistoryRequest'  customize = (DescribeEnvironmentManagedActionHistoryRequest <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "MaxItems": Nothing, "NextToken": Nothing }
 
 
 
 -- | <p>A result message containing a list of completed and failed managed actions.</p>
 newtype DescribeEnvironmentManagedActionHistoryResult = DescribeEnvironmentManagedActionHistoryResult 
-  { "ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems)
-  , "NextToken" :: NullOrUndefined (String)
+  { "ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeDescribeEnvironmentManagedActionHistoryResult :: Newtype DescribeEnvironmentManagedActionHistoryResult _
 derive instance repGenericDescribeEnvironmentManagedActionHistoryResult :: Generic DescribeEnvironmentManagedActionHistoryResult _
@@ -1533,20 +1532,20 @@ instance encodeDescribeEnvironmentManagedActionHistoryResult :: Encode DescribeE
 
 -- | Constructs DescribeEnvironmentManagedActionHistoryResult from required parameters
 newDescribeEnvironmentManagedActionHistoryResult :: DescribeEnvironmentManagedActionHistoryResult
-newDescribeEnvironmentManagedActionHistoryResult  = DescribeEnvironmentManagedActionHistoryResult { "ManagedActionHistoryItems": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionHistoryResult  = DescribeEnvironmentManagedActionHistoryResult { "ManagedActionHistoryItems": Nothing, "NextToken": Nothing }
 
 -- | Constructs DescribeEnvironmentManagedActionHistoryResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentManagedActionHistoryResult' :: ( { "ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems) , "NextToken" :: NullOrUndefined (String) } -> {"ManagedActionHistoryItems" :: NullOrUndefined (ManagedActionHistoryItems) , "NextToken" :: NullOrUndefined (String) } ) -> DescribeEnvironmentManagedActionHistoryResult
-newDescribeEnvironmentManagedActionHistoryResult'  customize = (DescribeEnvironmentManagedActionHistoryResult <<< customize) { "ManagedActionHistoryItems": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionHistoryResult' :: ( { "ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems) , "NextToken" :: Maybe (String) } -> {"ManagedActionHistoryItems" :: Maybe (ManagedActionHistoryItems) , "NextToken" :: Maybe (String) } ) -> DescribeEnvironmentManagedActionHistoryResult
+newDescribeEnvironmentManagedActionHistoryResult'  customize = (DescribeEnvironmentManagedActionHistoryResult <<< customize) { "ManagedActionHistoryItems": Nothing, "NextToken": Nothing }
 
 
 
 -- | <p>Request to list an environment's upcoming and in-progress managed actions.</p>
 newtype DescribeEnvironmentManagedActionsRequest = DescribeEnvironmentManagedActionsRequest 
-  { "EnvironmentName" :: NullOrUndefined (String)
-  , "EnvironmentId" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (ActionStatus)
+  { "EnvironmentName" :: Maybe (String)
+  , "EnvironmentId" :: Maybe (String)
+  , "Status" :: Maybe (ActionStatus)
   }
 derive instance newtypeDescribeEnvironmentManagedActionsRequest :: Newtype DescribeEnvironmentManagedActionsRequest _
 derive instance repGenericDescribeEnvironmentManagedActionsRequest :: Generic DescribeEnvironmentManagedActionsRequest _
@@ -1556,18 +1555,18 @@ instance encodeDescribeEnvironmentManagedActionsRequest :: Encode DescribeEnviro
 
 -- | Constructs DescribeEnvironmentManagedActionsRequest from required parameters
 newDescribeEnvironmentManagedActionsRequest :: DescribeEnvironmentManagedActionsRequest
-newDescribeEnvironmentManagedActionsRequest  = DescribeEnvironmentManagedActionsRequest { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionsRequest  = DescribeEnvironmentManagedActionsRequest { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "Status": Nothing }
 
 -- | Constructs DescribeEnvironmentManagedActionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentManagedActionsRequest' :: ( { "EnvironmentName" :: NullOrUndefined (String) , "EnvironmentId" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (ActionStatus) } -> {"EnvironmentName" :: NullOrUndefined (String) , "EnvironmentId" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (ActionStatus) } ) -> DescribeEnvironmentManagedActionsRequest
-newDescribeEnvironmentManagedActionsRequest'  customize = (DescribeEnvironmentManagedActionsRequest <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionsRequest' :: ( { "EnvironmentName" :: Maybe (String) , "EnvironmentId" :: Maybe (String) , "Status" :: Maybe (ActionStatus) } -> {"EnvironmentName" :: Maybe (String) , "EnvironmentId" :: Maybe (String) , "Status" :: Maybe (ActionStatus) } ) -> DescribeEnvironmentManagedActionsRequest
+newDescribeEnvironmentManagedActionsRequest'  customize = (DescribeEnvironmentManagedActionsRequest <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "Status": Nothing }
 
 
 
 -- | <p>The result message containing a list of managed actions.</p>
 newtype DescribeEnvironmentManagedActionsResult = DescribeEnvironmentManagedActionsResult 
-  { "ManagedActions" :: NullOrUndefined (ManagedActions)
+  { "ManagedActions" :: Maybe (ManagedActions)
   }
 derive instance newtypeDescribeEnvironmentManagedActionsResult :: Newtype DescribeEnvironmentManagedActionsResult _
 derive instance repGenericDescribeEnvironmentManagedActionsResult :: Generic DescribeEnvironmentManagedActionsResult _
@@ -1577,19 +1576,19 @@ instance encodeDescribeEnvironmentManagedActionsResult :: Encode DescribeEnviron
 
 -- | Constructs DescribeEnvironmentManagedActionsResult from required parameters
 newDescribeEnvironmentManagedActionsResult :: DescribeEnvironmentManagedActionsResult
-newDescribeEnvironmentManagedActionsResult  = DescribeEnvironmentManagedActionsResult { "ManagedActions": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionsResult  = DescribeEnvironmentManagedActionsResult { "ManagedActions": Nothing }
 
 -- | Constructs DescribeEnvironmentManagedActionsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentManagedActionsResult' :: ( { "ManagedActions" :: NullOrUndefined (ManagedActions) } -> {"ManagedActions" :: NullOrUndefined (ManagedActions) } ) -> DescribeEnvironmentManagedActionsResult
-newDescribeEnvironmentManagedActionsResult'  customize = (DescribeEnvironmentManagedActionsResult <<< customize) { "ManagedActions": (NullOrUndefined Nothing) }
+newDescribeEnvironmentManagedActionsResult' :: ( { "ManagedActions" :: Maybe (ManagedActions) } -> {"ManagedActions" :: Maybe (ManagedActions) } ) -> DescribeEnvironmentManagedActionsResult
+newDescribeEnvironmentManagedActionsResult'  customize = (DescribeEnvironmentManagedActionsResult <<< customize) { "ManagedActions": Nothing }
 
 
 
 -- | <p>Request to describe the resources in an environment.</p>
 newtype DescribeEnvironmentResourcesMessage = DescribeEnvironmentResourcesMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeDescribeEnvironmentResourcesMessage :: Newtype DescribeEnvironmentResourcesMessage _
 derive instance repGenericDescribeEnvironmentResourcesMessage :: Generic DescribeEnvironmentResourcesMessage _
@@ -1599,25 +1598,25 @@ instance encodeDescribeEnvironmentResourcesMessage :: Encode DescribeEnvironment
 
 -- | Constructs DescribeEnvironmentResourcesMessage from required parameters
 newDescribeEnvironmentResourcesMessage :: DescribeEnvironmentResourcesMessage
-newDescribeEnvironmentResourcesMessage  = DescribeEnvironmentResourcesMessage { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newDescribeEnvironmentResourcesMessage  = DescribeEnvironmentResourcesMessage { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs DescribeEnvironmentResourcesMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentResourcesMessage' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> DescribeEnvironmentResourcesMessage
-newDescribeEnvironmentResourcesMessage'  customize = (DescribeEnvironmentResourcesMessage <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newDescribeEnvironmentResourcesMessage' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } ) -> DescribeEnvironmentResourcesMessage
+newDescribeEnvironmentResourcesMessage'  customize = (DescribeEnvironmentResourcesMessage <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
 -- | <p>Request to describe one or more environments.</p>
 newtype DescribeEnvironmentsMessage = DescribeEnvironmentsMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList)
-  , "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList)
-  , "IncludeDeleted" :: NullOrUndefined (IncludeDeleted)
-  , "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo)
-  , "MaxRecords" :: NullOrUndefined (MaxRecords)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "EnvironmentIds" :: Maybe (EnvironmentIdList)
+  , "EnvironmentNames" :: Maybe (EnvironmentNamesList)
+  , "IncludeDeleted" :: Maybe (IncludeDeleted)
+  , "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo)
+  , "MaxRecords" :: Maybe (MaxRecords)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeDescribeEnvironmentsMessage :: Newtype DescribeEnvironmentsMessage _
 derive instance repGenericDescribeEnvironmentsMessage :: Generic DescribeEnvironmentsMessage _
@@ -1627,29 +1626,29 @@ instance encodeDescribeEnvironmentsMessage :: Encode DescribeEnvironmentsMessage
 
 -- | Constructs DescribeEnvironmentsMessage from required parameters
 newDescribeEnvironmentsMessage :: DescribeEnvironmentsMessage
-newDescribeEnvironmentsMessage  = DescribeEnvironmentsMessage { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentIds": (NullOrUndefined Nothing), "EnvironmentNames": (NullOrUndefined Nothing), "IncludeDeleted": (NullOrUndefined Nothing), "IncludedDeletedBackTo": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDescribeEnvironmentsMessage  = DescribeEnvironmentsMessage { "ApplicationName": Nothing, "EnvironmentIds": Nothing, "EnvironmentNames": Nothing, "IncludeDeleted": Nothing, "IncludedDeletedBackTo": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs DescribeEnvironmentsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEnvironmentsMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList) , "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList) , "IncludeDeleted" :: NullOrUndefined (IncludeDeleted) , "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "EnvironmentIds" :: NullOrUndefined (EnvironmentIdList) , "EnvironmentNames" :: NullOrUndefined (EnvironmentNamesList) , "IncludeDeleted" :: NullOrUndefined (IncludeDeleted) , "IncludedDeletedBackTo" :: NullOrUndefined (IncludeDeletedBackTo) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } ) -> DescribeEnvironmentsMessage
-newDescribeEnvironmentsMessage'  customize = (DescribeEnvironmentsMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentIds": (NullOrUndefined Nothing), "EnvironmentNames": (NullOrUndefined Nothing), "IncludeDeleted": (NullOrUndefined Nothing), "IncludedDeletedBackTo": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDescribeEnvironmentsMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "EnvironmentIds" :: Maybe (EnvironmentIdList) , "EnvironmentNames" :: Maybe (EnvironmentNamesList) , "IncludeDeleted" :: Maybe (IncludeDeleted) , "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } -> {"ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "EnvironmentIds" :: Maybe (EnvironmentIdList) , "EnvironmentNames" :: Maybe (EnvironmentNamesList) , "IncludeDeleted" :: Maybe (IncludeDeleted) , "IncludedDeletedBackTo" :: Maybe (IncludeDeletedBackTo) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } ) -> DescribeEnvironmentsMessage
+newDescribeEnvironmentsMessage'  customize = (DescribeEnvironmentsMessage <<< customize) { "ApplicationName": Nothing, "EnvironmentIds": Nothing, "EnvironmentNames": Nothing, "IncludeDeleted": Nothing, "IncludedDeletedBackTo": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "VersionLabel": Nothing }
 
 
 
 -- | <p>Request to retrieve a list of events for an environment.</p>
 newtype DescribeEventsMessage = DescribeEventsMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "RequestId" :: NullOrUndefined (RequestId)
-  , "Severity" :: NullOrUndefined (EventSeverity)
-  , "StartTime" :: NullOrUndefined (TimeFilterStart)
-  , "EndTime" :: NullOrUndefined (TimeFilterEnd)
-  , "MaxRecords" :: NullOrUndefined (MaxRecords)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "RequestId" :: Maybe (RequestId)
+  , "Severity" :: Maybe (EventSeverity)
+  , "StartTime" :: Maybe (TimeFilterStart)
+  , "EndTime" :: Maybe (TimeFilterEnd)
+  , "MaxRecords" :: Maybe (MaxRecords)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeDescribeEventsMessage :: Newtype DescribeEventsMessage _
 derive instance repGenericDescribeEventsMessage :: Generic DescribeEventsMessage _
@@ -1659,21 +1658,21 @@ instance encodeDescribeEventsMessage :: Encode DescribeEventsMessage where encod
 
 -- | Constructs DescribeEventsMessage from required parameters
 newDescribeEventsMessage :: DescribeEventsMessage
-newDescribeEventsMessage  = DescribeEventsMessage { "ApplicationName": (NullOrUndefined Nothing), "EndTime": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDescribeEventsMessage  = DescribeEventsMessage { "ApplicationName": Nothing, "EndTime": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "PlatformArn": Nothing, "RequestId": Nothing, "Severity": Nothing, "StartTime": Nothing, "TemplateName": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs DescribeEventsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEventsMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "RequestId" :: NullOrUndefined (RequestId) , "Severity" :: NullOrUndefined (EventSeverity) , "StartTime" :: NullOrUndefined (TimeFilterStart) , "EndTime" :: NullOrUndefined (TimeFilterEnd) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "RequestId" :: NullOrUndefined (RequestId) , "Severity" :: NullOrUndefined (EventSeverity) , "StartTime" :: NullOrUndefined (TimeFilterStart) , "EndTime" :: NullOrUndefined (TimeFilterEnd) , "MaxRecords" :: NullOrUndefined (MaxRecords) , "NextToken" :: NullOrUndefined (Token) } ) -> DescribeEventsMessage
-newDescribeEventsMessage'  customize = (DescribeEventsMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "EndTime": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newDescribeEventsMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "PlatformArn" :: Maybe (PlatformArn) , "RequestId" :: Maybe (RequestId) , "Severity" :: Maybe (EventSeverity) , "StartTime" :: Maybe (TimeFilterStart) , "EndTime" :: Maybe (TimeFilterEnd) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } -> {"ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "PlatformArn" :: Maybe (PlatformArn) , "RequestId" :: Maybe (RequestId) , "Severity" :: Maybe (EventSeverity) , "StartTime" :: Maybe (TimeFilterStart) , "EndTime" :: Maybe (TimeFilterEnd) , "MaxRecords" :: Maybe (MaxRecords) , "NextToken" :: Maybe (Token) } ) -> DescribeEventsMessage
+newDescribeEventsMessage'  customize = (DescribeEventsMessage <<< customize) { "ApplicationName": Nothing, "EndTime": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "MaxRecords": Nothing, "NextToken": Nothing, "PlatformArn": Nothing, "RequestId": Nothing, "Severity": Nothing, "StartTime": Nothing, "TemplateName": Nothing, "VersionLabel": Nothing }
 
 
 
 -- | <p>Parameters for a call to <code>DescribeInstancesHealth</code>.</p>
 newtype DescribeInstancesHealthRequest = DescribeInstancesHealthRequest 
-  { "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "EnvironmentName" :: Maybe (EnvironmentName)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "AttributeNames" :: Maybe (InstancesHealthAttributes)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeDescribeInstancesHealthRequest :: Newtype DescribeInstancesHealthRequest _
 derive instance repGenericDescribeInstancesHealthRequest :: Generic DescribeInstancesHealthRequest _
@@ -1683,20 +1682,20 @@ instance encodeDescribeInstancesHealthRequest :: Encode DescribeInstancesHealthR
 
 -- | Constructs DescribeInstancesHealthRequest from required parameters
 newDescribeInstancesHealthRequest :: DescribeInstancesHealthRequest
-newDescribeInstancesHealthRequest  = DescribeInstancesHealthRequest { "AttributeNames": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeInstancesHealthRequest  = DescribeInstancesHealthRequest { "AttributeNames": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "NextToken": Nothing }
 
 -- | Constructs DescribeInstancesHealthRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeInstancesHealthRequest' :: ( { "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes) , "NextToken" :: NullOrUndefined (NextToken) } -> {"EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "AttributeNames" :: NullOrUndefined (InstancesHealthAttributes) , "NextToken" :: NullOrUndefined (NextToken) } ) -> DescribeInstancesHealthRequest
-newDescribeInstancesHealthRequest'  customize = (DescribeInstancesHealthRequest <<< customize) { "AttributeNames": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeInstancesHealthRequest' :: ( { "EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "AttributeNames" :: Maybe (InstancesHealthAttributes) , "NextToken" :: Maybe (NextToken) } -> {"EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "AttributeNames" :: Maybe (InstancesHealthAttributes) , "NextToken" :: Maybe (NextToken) } ) -> DescribeInstancesHealthRequest
+newDescribeInstancesHealthRequest'  customize = (DescribeInstancesHealthRequest <<< customize) { "AttributeNames": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "NextToken": Nothing }
 
 
 
 -- | <p>Detailed health information about the Amazon EC2 instances in an AWS Elastic Beanstalk environment.</p>
 newtype DescribeInstancesHealthResult = DescribeInstancesHealthResult 
-  { "InstanceHealthList" :: NullOrUndefined (InstanceHealthList)
-  , "RefreshedAt" :: NullOrUndefined (RefreshedAt)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "InstanceHealthList" :: Maybe (InstanceHealthList)
+  , "RefreshedAt" :: Maybe (RefreshedAt)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeDescribeInstancesHealthResult :: Newtype DescribeInstancesHealthResult _
 derive instance repGenericDescribeInstancesHealthResult :: Generic DescribeInstancesHealthResult _
@@ -1706,17 +1705,17 @@ instance encodeDescribeInstancesHealthResult :: Encode DescribeInstancesHealthRe
 
 -- | Constructs DescribeInstancesHealthResult from required parameters
 newDescribeInstancesHealthResult :: DescribeInstancesHealthResult
-newDescribeInstancesHealthResult  = DescribeInstancesHealthResult { "InstanceHealthList": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "RefreshedAt": (NullOrUndefined Nothing) }
+newDescribeInstancesHealthResult  = DescribeInstancesHealthResult { "InstanceHealthList": Nothing, "NextToken": Nothing, "RefreshedAt": Nothing }
 
 -- | Constructs DescribeInstancesHealthResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeInstancesHealthResult' :: ( { "InstanceHealthList" :: NullOrUndefined (InstanceHealthList) , "RefreshedAt" :: NullOrUndefined (RefreshedAt) , "NextToken" :: NullOrUndefined (NextToken) } -> {"InstanceHealthList" :: NullOrUndefined (InstanceHealthList) , "RefreshedAt" :: NullOrUndefined (RefreshedAt) , "NextToken" :: NullOrUndefined (NextToken) } ) -> DescribeInstancesHealthResult
-newDescribeInstancesHealthResult'  customize = (DescribeInstancesHealthResult <<< customize) { "InstanceHealthList": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "RefreshedAt": (NullOrUndefined Nothing) }
+newDescribeInstancesHealthResult' :: ( { "InstanceHealthList" :: Maybe (InstanceHealthList) , "RefreshedAt" :: Maybe (RefreshedAt) , "NextToken" :: Maybe (NextToken) } -> {"InstanceHealthList" :: Maybe (InstanceHealthList) , "RefreshedAt" :: Maybe (RefreshedAt) , "NextToken" :: Maybe (NextToken) } ) -> DescribeInstancesHealthResult
+newDescribeInstancesHealthResult'  customize = (DescribeInstancesHealthResult <<< customize) { "InstanceHealthList": Nothing, "NextToken": Nothing, "RefreshedAt": Nothing }
 
 
 
 newtype DescribePlatformVersionRequest = DescribePlatformVersionRequest 
-  { "PlatformArn" :: NullOrUndefined (PlatformArn)
+  { "PlatformArn" :: Maybe (PlatformArn)
   }
 derive instance newtypeDescribePlatformVersionRequest :: Newtype DescribePlatformVersionRequest _
 derive instance repGenericDescribePlatformVersionRequest :: Generic DescribePlatformVersionRequest _
@@ -1726,17 +1725,17 @@ instance encodeDescribePlatformVersionRequest :: Encode DescribePlatformVersionR
 
 -- | Constructs DescribePlatformVersionRequest from required parameters
 newDescribePlatformVersionRequest :: DescribePlatformVersionRequest
-newDescribePlatformVersionRequest  = DescribePlatformVersionRequest { "PlatformArn": (NullOrUndefined Nothing) }
+newDescribePlatformVersionRequest  = DescribePlatformVersionRequest { "PlatformArn": Nothing }
 
 -- | Constructs DescribePlatformVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribePlatformVersionRequest' :: ( { "PlatformArn" :: NullOrUndefined (PlatformArn) } -> {"PlatformArn" :: NullOrUndefined (PlatformArn) } ) -> DescribePlatformVersionRequest
-newDescribePlatformVersionRequest'  customize = (DescribePlatformVersionRequest <<< customize) { "PlatformArn": (NullOrUndefined Nothing) }
+newDescribePlatformVersionRequest' :: ( { "PlatformArn" :: Maybe (PlatformArn) } -> {"PlatformArn" :: Maybe (PlatformArn) } ) -> DescribePlatformVersionRequest
+newDescribePlatformVersionRequest'  customize = (DescribePlatformVersionRequest <<< customize) { "PlatformArn": Nothing }
 
 
 
 newtype DescribePlatformVersionResult = DescribePlatformVersionResult 
-  { "PlatformDescription" :: NullOrUndefined (PlatformDescription)
+  { "PlatformDescription" :: Maybe (PlatformDescription)
   }
 derive instance newtypeDescribePlatformVersionResult :: Newtype DescribePlatformVersionResult _
 derive instance repGenericDescribePlatformVersionResult :: Generic DescribePlatformVersionResult _
@@ -1746,12 +1745,12 @@ instance encodeDescribePlatformVersionResult :: Encode DescribePlatformVersionRe
 
 -- | Constructs DescribePlatformVersionResult from required parameters
 newDescribePlatformVersionResult :: DescribePlatformVersionResult
-newDescribePlatformVersionResult  = DescribePlatformVersionResult { "PlatformDescription": (NullOrUndefined Nothing) }
+newDescribePlatformVersionResult  = DescribePlatformVersionResult { "PlatformDescription": Nothing }
 
 -- | Constructs DescribePlatformVersionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribePlatformVersionResult' :: ( { "PlatformDescription" :: NullOrUndefined (PlatformDescription) } -> {"PlatformDescription" :: NullOrUndefined (PlatformDescription) } ) -> DescribePlatformVersionResult
-newDescribePlatformVersionResult'  customize = (DescribePlatformVersionResult <<< customize) { "PlatformDescription": (NullOrUndefined Nothing) }
+newDescribePlatformVersionResult' :: ( { "PlatformDescription" :: Maybe (PlatformDescription) } -> {"PlatformDescription" :: Maybe (PlatformDescription) } ) -> DescribePlatformVersionResult
+newDescribePlatformVersionResult'  customize = (DescribePlatformVersionResult <<< customize) { "PlatformDescription": Nothing }
 
 
 
@@ -1775,7 +1774,7 @@ instance encodeEc2InstanceId :: Encode Ec2InstanceId where encode = genericEncod
 
 -- | <p>A generic service exception has occurred.</p>
 newtype ElasticBeanstalkServiceException = ElasticBeanstalkServiceException 
-  { "message" :: NullOrUndefined (ExceptionMessage)
+  { "message" :: Maybe (ExceptionMessage)
   }
 derive instance newtypeElasticBeanstalkServiceException :: Newtype ElasticBeanstalkServiceException _
 derive instance repGenericElasticBeanstalkServiceException :: Generic ElasticBeanstalkServiceException _
@@ -1785,12 +1784,12 @@ instance encodeElasticBeanstalkServiceException :: Encode ElasticBeanstalkServic
 
 -- | Constructs ElasticBeanstalkServiceException from required parameters
 newElasticBeanstalkServiceException :: ElasticBeanstalkServiceException
-newElasticBeanstalkServiceException  = ElasticBeanstalkServiceException { "message": (NullOrUndefined Nothing) }
+newElasticBeanstalkServiceException  = ElasticBeanstalkServiceException { "message": Nothing }
 
 -- | Constructs ElasticBeanstalkServiceException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newElasticBeanstalkServiceException' :: ( { "message" :: NullOrUndefined (ExceptionMessage) } -> {"message" :: NullOrUndefined (ExceptionMessage) } ) -> ElasticBeanstalkServiceException
-newElasticBeanstalkServiceException'  customize = (ElasticBeanstalkServiceException <<< customize) { "message": (NullOrUndefined Nothing) }
+newElasticBeanstalkServiceException' :: ( { "message" :: Maybe (ExceptionMessage) } -> {"message" :: Maybe (ExceptionMessage) } ) -> ElasticBeanstalkServiceException
+newElasticBeanstalkServiceException'  customize = (ElasticBeanstalkServiceException <<< customize) { "message": Nothing }
 
 
 
@@ -1814,26 +1813,26 @@ instance encodeEnvironmentArn :: Encode EnvironmentArn where encode = genericEnc
 
 -- | <p>Describes the properties of an environment.</p>
 newtype EnvironmentDescription = EnvironmentDescription 
-  { "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "Description" :: NullOrUndefined (Description)
-  , "EndpointURL" :: NullOrUndefined (EndpointURL)
-  , "CNAME" :: NullOrUndefined (DNSCname)
-  , "DateCreated" :: NullOrUndefined (CreationDate)
-  , "DateUpdated" :: NullOrUndefined (UpdateDate)
-  , "Status" :: NullOrUndefined (EnvironmentStatus)
-  , "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress)
-  , "Health" :: NullOrUndefined (EnvironmentHealth)
-  , "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus)
-  , "Resources" :: NullOrUndefined (EnvironmentResourcesDescription)
-  , "Tier" :: NullOrUndefined (EnvironmentTier)
-  , "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks)
-  , "EnvironmentArn" :: NullOrUndefined (EnvironmentArn)
+  { "EnvironmentName" :: Maybe (EnvironmentName)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "ApplicationName" :: Maybe (ApplicationName)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "Description" :: Maybe (Description)
+  , "EndpointURL" :: Maybe (EndpointURL)
+  , "CNAME" :: Maybe (DNSCname)
+  , "DateCreated" :: Maybe (CreationDate)
+  , "DateUpdated" :: Maybe (UpdateDate)
+  , "Status" :: Maybe (EnvironmentStatus)
+  , "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress)
+  , "Health" :: Maybe (EnvironmentHealth)
+  , "HealthStatus" :: Maybe (EnvironmentHealthStatus)
+  , "Resources" :: Maybe (EnvironmentResourcesDescription)
+  , "Tier" :: Maybe (EnvironmentTier)
+  , "EnvironmentLinks" :: Maybe (EnvironmentLinks)
+  , "EnvironmentArn" :: Maybe (EnvironmentArn)
   }
 derive instance newtypeEnvironmentDescription :: Newtype EnvironmentDescription _
 derive instance repGenericEnvironmentDescription :: Generic EnvironmentDescription _
@@ -1843,12 +1842,12 @@ instance encodeEnvironmentDescription :: Encode EnvironmentDescription where enc
 
 -- | Constructs EnvironmentDescription from required parameters
 newEnvironmentDescription :: EnvironmentDescription
-newEnvironmentDescription  = EnvironmentDescription { "AbortableOperationInProgress": (NullOrUndefined Nothing), "ApplicationName": (NullOrUndefined Nothing), "CNAME": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EndpointURL": (NullOrUndefined Nothing), "EnvironmentArn": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentLinks": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Health": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "Resources": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newEnvironmentDescription  = EnvironmentDescription { "AbortableOperationInProgress": Nothing, "ApplicationName": Nothing, "CNAME": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "EndpointURL": Nothing, "EnvironmentArn": Nothing, "EnvironmentId": Nothing, "EnvironmentLinks": Nothing, "EnvironmentName": Nothing, "Health": Nothing, "HealthStatus": Nothing, "PlatformArn": Nothing, "Resources": Nothing, "SolutionStackName": Nothing, "Status": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs EnvironmentDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentDescription' :: ( { "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "EndpointURL" :: NullOrUndefined (EndpointURL) , "CNAME" :: NullOrUndefined (DNSCname) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Status" :: NullOrUndefined (EnvironmentStatus) , "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress) , "Health" :: NullOrUndefined (EnvironmentHealth) , "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus) , "Resources" :: NullOrUndefined (EnvironmentResourcesDescription) , "Tier" :: NullOrUndefined (EnvironmentTier) , "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks) , "EnvironmentArn" :: NullOrUndefined (EnvironmentArn) } -> {"EnvironmentName" :: NullOrUndefined (EnvironmentName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "EndpointURL" :: NullOrUndefined (EndpointURL) , "CNAME" :: NullOrUndefined (DNSCname) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "Status" :: NullOrUndefined (EnvironmentStatus) , "AbortableOperationInProgress" :: NullOrUndefined (AbortableOperationInProgress) , "Health" :: NullOrUndefined (EnvironmentHealth) , "HealthStatus" :: NullOrUndefined (EnvironmentHealthStatus) , "Resources" :: NullOrUndefined (EnvironmentResourcesDescription) , "Tier" :: NullOrUndefined (EnvironmentTier) , "EnvironmentLinks" :: NullOrUndefined (EnvironmentLinks) , "EnvironmentArn" :: NullOrUndefined (EnvironmentArn) } ) -> EnvironmentDescription
-newEnvironmentDescription'  customize = (EnvironmentDescription <<< customize) { "AbortableOperationInProgress": (NullOrUndefined Nothing), "ApplicationName": (NullOrUndefined Nothing), "CNAME": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EndpointURL": (NullOrUndefined Nothing), "EnvironmentArn": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentLinks": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Health": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "Resources": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newEnvironmentDescription' :: ( { "EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "EndpointURL" :: Maybe (EndpointURL) , "CNAME" :: Maybe (DNSCname) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Status" :: Maybe (EnvironmentStatus) , "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress) , "Health" :: Maybe (EnvironmentHealth) , "HealthStatus" :: Maybe (EnvironmentHealthStatus) , "Resources" :: Maybe (EnvironmentResourcesDescription) , "Tier" :: Maybe (EnvironmentTier) , "EnvironmentLinks" :: Maybe (EnvironmentLinks) , "EnvironmentArn" :: Maybe (EnvironmentArn) } -> {"EnvironmentName" :: Maybe (EnvironmentName) , "EnvironmentId" :: Maybe (EnvironmentId) , "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "EndpointURL" :: Maybe (EndpointURL) , "CNAME" :: Maybe (DNSCname) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "Status" :: Maybe (EnvironmentStatus) , "AbortableOperationInProgress" :: Maybe (AbortableOperationInProgress) , "Health" :: Maybe (EnvironmentHealth) , "HealthStatus" :: Maybe (EnvironmentHealthStatus) , "Resources" :: Maybe (EnvironmentResourcesDescription) , "Tier" :: Maybe (EnvironmentTier) , "EnvironmentLinks" :: Maybe (EnvironmentLinks) , "EnvironmentArn" :: Maybe (EnvironmentArn) } ) -> EnvironmentDescription
+newEnvironmentDescription'  customize = (EnvironmentDescription <<< customize) { "AbortableOperationInProgress": Nothing, "ApplicationName": Nothing, "CNAME": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "EndpointURL": Nothing, "EnvironmentArn": Nothing, "EnvironmentId": Nothing, "EnvironmentLinks": Nothing, "EnvironmentName": Nothing, "Health": Nothing, "HealthStatus": Nothing, "PlatformArn": Nothing, "Resources": Nothing, "SolutionStackName": Nothing, "Status": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 
 
@@ -1863,8 +1862,8 @@ instance encodeEnvironmentDescriptionsList :: Encode EnvironmentDescriptionsList
 
 -- | <p>Result message containing a list of environment descriptions.</p>
 newtype EnvironmentDescriptionsMessage = EnvironmentDescriptionsMessage 
-  { "Environments" :: NullOrUndefined (EnvironmentDescriptionsList)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "Environments" :: Maybe (EnvironmentDescriptionsList)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeEnvironmentDescriptionsMessage :: Newtype EnvironmentDescriptionsMessage _
 derive instance repGenericEnvironmentDescriptionsMessage :: Generic EnvironmentDescriptionsMessage _
@@ -1874,12 +1873,12 @@ instance encodeEnvironmentDescriptionsMessage :: Encode EnvironmentDescriptionsM
 
 -- | Constructs EnvironmentDescriptionsMessage from required parameters
 newEnvironmentDescriptionsMessage :: EnvironmentDescriptionsMessage
-newEnvironmentDescriptionsMessage  = EnvironmentDescriptionsMessage { "Environments": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newEnvironmentDescriptionsMessage  = EnvironmentDescriptionsMessage { "Environments": Nothing, "NextToken": Nothing }
 
 -- | Constructs EnvironmentDescriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentDescriptionsMessage' :: ( { "Environments" :: NullOrUndefined (EnvironmentDescriptionsList) , "NextToken" :: NullOrUndefined (Token) } -> {"Environments" :: NullOrUndefined (EnvironmentDescriptionsList) , "NextToken" :: NullOrUndefined (Token) } ) -> EnvironmentDescriptionsMessage
-newEnvironmentDescriptionsMessage'  customize = (EnvironmentDescriptionsMessage <<< customize) { "Environments": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newEnvironmentDescriptionsMessage' :: ( { "Environments" :: Maybe (EnvironmentDescriptionsList) , "NextToken" :: Maybe (Token) } -> {"Environments" :: Maybe (EnvironmentDescriptionsList) , "NextToken" :: Maybe (Token) } ) -> EnvironmentDescriptionsMessage
+newEnvironmentDescriptionsMessage'  customize = (EnvironmentDescriptionsMessage <<< customize) { "Environments": Nothing, "NextToken": Nothing }
 
 
 
@@ -1939,10 +1938,10 @@ instance encodeEnvironmentIdList :: Encode EnvironmentIdList where encode = gene
 
 -- | <p>The information retrieved from the Amazon EC2 instances.</p>
 newtype EnvironmentInfoDescription = EnvironmentInfoDescription 
-  { "InfoType" :: NullOrUndefined (EnvironmentInfoType)
-  , "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId)
-  , "SampleTimestamp" :: NullOrUndefined (SampleTimestamp)
-  , "Message" :: NullOrUndefined (Message)
+  { "InfoType" :: Maybe (EnvironmentInfoType)
+  , "Ec2InstanceId" :: Maybe (Ec2InstanceId)
+  , "SampleTimestamp" :: Maybe (SampleTimestamp)
+  , "Message" :: Maybe (Message)
   }
 derive instance newtypeEnvironmentInfoDescription :: Newtype EnvironmentInfoDescription _
 derive instance repGenericEnvironmentInfoDescription :: Generic EnvironmentInfoDescription _
@@ -1952,12 +1951,12 @@ instance encodeEnvironmentInfoDescription :: Encode EnvironmentInfoDescription w
 
 -- | Constructs EnvironmentInfoDescription from required parameters
 newEnvironmentInfoDescription :: EnvironmentInfoDescription
-newEnvironmentInfoDescription  = EnvironmentInfoDescription { "Ec2InstanceId": (NullOrUndefined Nothing), "InfoType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "SampleTimestamp": (NullOrUndefined Nothing) }
+newEnvironmentInfoDescription  = EnvironmentInfoDescription { "Ec2InstanceId": Nothing, "InfoType": Nothing, "Message": Nothing, "SampleTimestamp": Nothing }
 
 -- | Constructs EnvironmentInfoDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentInfoDescription' :: ( { "InfoType" :: NullOrUndefined (EnvironmentInfoType) , "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId) , "SampleTimestamp" :: NullOrUndefined (SampleTimestamp) , "Message" :: NullOrUndefined (Message) } -> {"InfoType" :: NullOrUndefined (EnvironmentInfoType) , "Ec2InstanceId" :: NullOrUndefined (Ec2InstanceId) , "SampleTimestamp" :: NullOrUndefined (SampleTimestamp) , "Message" :: NullOrUndefined (Message) } ) -> EnvironmentInfoDescription
-newEnvironmentInfoDescription'  customize = (EnvironmentInfoDescription <<< customize) { "Ec2InstanceId": (NullOrUndefined Nothing), "InfoType": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "SampleTimestamp": (NullOrUndefined Nothing) }
+newEnvironmentInfoDescription' :: ( { "InfoType" :: Maybe (EnvironmentInfoType) , "Ec2InstanceId" :: Maybe (Ec2InstanceId) , "SampleTimestamp" :: Maybe (SampleTimestamp) , "Message" :: Maybe (Message) } -> {"InfoType" :: Maybe (EnvironmentInfoType) , "Ec2InstanceId" :: Maybe (Ec2InstanceId) , "SampleTimestamp" :: Maybe (SampleTimestamp) , "Message" :: Maybe (Message) } ) -> EnvironmentInfoDescription
+newEnvironmentInfoDescription'  customize = (EnvironmentInfoDescription <<< customize) { "Ec2InstanceId": Nothing, "InfoType": Nothing, "Message": Nothing, "SampleTimestamp": Nothing }
 
 
 
@@ -1981,8 +1980,8 @@ instance encodeEnvironmentInfoType :: Encode EnvironmentInfoType where encode = 
 
 -- | <p>A link to another environment, defined in the environment's manifest. Links provide connection information in system properties that can be used to connect to another environment in the same group. See <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-cfg-manifest.html">Environment Manifest (env.yaml)</a> for details.</p>
 newtype EnvironmentLink = EnvironmentLink 
-  { "LinkName" :: NullOrUndefined (String)
-  , "EnvironmentName" :: NullOrUndefined (String)
+  { "LinkName" :: Maybe (String)
+  , "EnvironmentName" :: Maybe (String)
   }
 derive instance newtypeEnvironmentLink :: Newtype EnvironmentLink _
 derive instance repGenericEnvironmentLink :: Generic EnvironmentLink _
@@ -1992,12 +1991,12 @@ instance encodeEnvironmentLink :: Encode EnvironmentLink where encode = genericE
 
 -- | Constructs EnvironmentLink from required parameters
 newEnvironmentLink :: EnvironmentLink
-newEnvironmentLink  = EnvironmentLink { "EnvironmentName": (NullOrUndefined Nothing), "LinkName": (NullOrUndefined Nothing) }
+newEnvironmentLink  = EnvironmentLink { "EnvironmentName": Nothing, "LinkName": Nothing }
 
 -- | Constructs EnvironmentLink's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentLink' :: ( { "LinkName" :: NullOrUndefined (String) , "EnvironmentName" :: NullOrUndefined (String) } -> {"LinkName" :: NullOrUndefined (String) , "EnvironmentName" :: NullOrUndefined (String) } ) -> EnvironmentLink
-newEnvironmentLink'  customize = (EnvironmentLink <<< customize) { "EnvironmentName": (NullOrUndefined Nothing), "LinkName": (NullOrUndefined Nothing) }
+newEnvironmentLink' :: ( { "LinkName" :: Maybe (String) , "EnvironmentName" :: Maybe (String) } -> {"LinkName" :: Maybe (String) , "EnvironmentName" :: Maybe (String) } ) -> EnvironmentLink
+newEnvironmentLink'  customize = (EnvironmentLink <<< customize) { "EnvironmentName": Nothing, "LinkName": Nothing }
 
 
 
@@ -2030,13 +2029,13 @@ instance encodeEnvironmentNamesList :: Encode EnvironmentNamesList where encode 
 
 -- | <p>Describes the AWS resources in use by this environment. This data is live.</p>
 newtype EnvironmentResourceDescription = EnvironmentResourceDescription 
-  { "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList)
-  , "Instances" :: NullOrUndefined (InstanceList)
-  , "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList)
-  , "LoadBalancers" :: NullOrUndefined (LoadBalancerList)
-  , "Triggers" :: NullOrUndefined (TriggerList)
-  , "Queues" :: NullOrUndefined (QueueList)
+  { "EnvironmentName" :: Maybe (EnvironmentName)
+  , "AutoScalingGroups" :: Maybe (AutoScalingGroupList)
+  , "Instances" :: Maybe (InstanceList)
+  , "LaunchConfigurations" :: Maybe (LaunchConfigurationList)
+  , "LoadBalancers" :: Maybe (LoadBalancerList)
+  , "Triggers" :: Maybe (TriggerList)
+  , "Queues" :: Maybe (QueueList)
   }
 derive instance newtypeEnvironmentResourceDescription :: Newtype EnvironmentResourceDescription _
 derive instance repGenericEnvironmentResourceDescription :: Generic EnvironmentResourceDescription _
@@ -2046,18 +2045,18 @@ instance encodeEnvironmentResourceDescription :: Encode EnvironmentResourceDescr
 
 -- | Constructs EnvironmentResourceDescription from required parameters
 newEnvironmentResourceDescription :: EnvironmentResourceDescription
-newEnvironmentResourceDescription  = EnvironmentResourceDescription { "AutoScalingGroups": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Instances": (NullOrUndefined Nothing), "LaunchConfigurations": (NullOrUndefined Nothing), "LoadBalancers": (NullOrUndefined Nothing), "Queues": (NullOrUndefined Nothing), "Triggers": (NullOrUndefined Nothing) }
+newEnvironmentResourceDescription  = EnvironmentResourceDescription { "AutoScalingGroups": Nothing, "EnvironmentName": Nothing, "Instances": Nothing, "LaunchConfigurations": Nothing, "LoadBalancers": Nothing, "Queues": Nothing, "Triggers": Nothing }
 
 -- | Constructs EnvironmentResourceDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentResourceDescription' :: ( { "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList) , "Instances" :: NullOrUndefined (InstanceList) , "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList) , "LoadBalancers" :: NullOrUndefined (LoadBalancerList) , "Triggers" :: NullOrUndefined (TriggerList) , "Queues" :: NullOrUndefined (QueueList) } -> {"EnvironmentName" :: NullOrUndefined (EnvironmentName) , "AutoScalingGroups" :: NullOrUndefined (AutoScalingGroupList) , "Instances" :: NullOrUndefined (InstanceList) , "LaunchConfigurations" :: NullOrUndefined (LaunchConfigurationList) , "LoadBalancers" :: NullOrUndefined (LoadBalancerList) , "Triggers" :: NullOrUndefined (TriggerList) , "Queues" :: NullOrUndefined (QueueList) } ) -> EnvironmentResourceDescription
-newEnvironmentResourceDescription'  customize = (EnvironmentResourceDescription <<< customize) { "AutoScalingGroups": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "Instances": (NullOrUndefined Nothing), "LaunchConfigurations": (NullOrUndefined Nothing), "LoadBalancers": (NullOrUndefined Nothing), "Queues": (NullOrUndefined Nothing), "Triggers": (NullOrUndefined Nothing) }
+newEnvironmentResourceDescription' :: ( { "EnvironmentName" :: Maybe (EnvironmentName) , "AutoScalingGroups" :: Maybe (AutoScalingGroupList) , "Instances" :: Maybe (InstanceList) , "LaunchConfigurations" :: Maybe (LaunchConfigurationList) , "LoadBalancers" :: Maybe (LoadBalancerList) , "Triggers" :: Maybe (TriggerList) , "Queues" :: Maybe (QueueList) } -> {"EnvironmentName" :: Maybe (EnvironmentName) , "AutoScalingGroups" :: Maybe (AutoScalingGroupList) , "Instances" :: Maybe (InstanceList) , "LaunchConfigurations" :: Maybe (LaunchConfigurationList) , "LoadBalancers" :: Maybe (LoadBalancerList) , "Triggers" :: Maybe (TriggerList) , "Queues" :: Maybe (QueueList) } ) -> EnvironmentResourceDescription
+newEnvironmentResourceDescription'  customize = (EnvironmentResourceDescription <<< customize) { "AutoScalingGroups": Nothing, "EnvironmentName": Nothing, "Instances": Nothing, "LaunchConfigurations": Nothing, "LoadBalancers": Nothing, "Queues": Nothing, "Triggers": Nothing }
 
 
 
 -- | <p>Result message containing a list of environment resource descriptions.</p>
 newtype EnvironmentResourceDescriptionsMessage = EnvironmentResourceDescriptionsMessage 
-  { "EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription)
+  { "EnvironmentResources" :: Maybe (EnvironmentResourceDescription)
   }
 derive instance newtypeEnvironmentResourceDescriptionsMessage :: Newtype EnvironmentResourceDescriptionsMessage _
 derive instance repGenericEnvironmentResourceDescriptionsMessage :: Generic EnvironmentResourceDescriptionsMessage _
@@ -2067,18 +2066,18 @@ instance encodeEnvironmentResourceDescriptionsMessage :: Encode EnvironmentResou
 
 -- | Constructs EnvironmentResourceDescriptionsMessage from required parameters
 newEnvironmentResourceDescriptionsMessage :: EnvironmentResourceDescriptionsMessage
-newEnvironmentResourceDescriptionsMessage  = EnvironmentResourceDescriptionsMessage { "EnvironmentResources": (NullOrUndefined Nothing) }
+newEnvironmentResourceDescriptionsMessage  = EnvironmentResourceDescriptionsMessage { "EnvironmentResources": Nothing }
 
 -- | Constructs EnvironmentResourceDescriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentResourceDescriptionsMessage' :: ( { "EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription) } -> {"EnvironmentResources" :: NullOrUndefined (EnvironmentResourceDescription) } ) -> EnvironmentResourceDescriptionsMessage
-newEnvironmentResourceDescriptionsMessage'  customize = (EnvironmentResourceDescriptionsMessage <<< customize) { "EnvironmentResources": (NullOrUndefined Nothing) }
+newEnvironmentResourceDescriptionsMessage' :: ( { "EnvironmentResources" :: Maybe (EnvironmentResourceDescription) } -> {"EnvironmentResources" :: Maybe (EnvironmentResourceDescription) } ) -> EnvironmentResourceDescriptionsMessage
+newEnvironmentResourceDescriptionsMessage'  customize = (EnvironmentResourceDescriptionsMessage <<< customize) { "EnvironmentResources": Nothing }
 
 
 
 -- | <p>Describes the AWS resources in use by this environment. This data is not live data.</p>
 newtype EnvironmentResourcesDescription = EnvironmentResourcesDescription 
-  { "LoadBalancer" :: NullOrUndefined (LoadBalancerDescription)
+  { "LoadBalancer" :: Maybe (LoadBalancerDescription)
   }
 derive instance newtypeEnvironmentResourcesDescription :: Newtype EnvironmentResourcesDescription _
 derive instance repGenericEnvironmentResourcesDescription :: Generic EnvironmentResourcesDescription _
@@ -2088,12 +2087,12 @@ instance encodeEnvironmentResourcesDescription :: Encode EnvironmentResourcesDes
 
 -- | Constructs EnvironmentResourcesDescription from required parameters
 newEnvironmentResourcesDescription :: EnvironmentResourcesDescription
-newEnvironmentResourcesDescription  = EnvironmentResourcesDescription { "LoadBalancer": (NullOrUndefined Nothing) }
+newEnvironmentResourcesDescription  = EnvironmentResourcesDescription { "LoadBalancer": Nothing }
 
 -- | Constructs EnvironmentResourcesDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentResourcesDescription' :: ( { "LoadBalancer" :: NullOrUndefined (LoadBalancerDescription) } -> {"LoadBalancer" :: NullOrUndefined (LoadBalancerDescription) } ) -> EnvironmentResourcesDescription
-newEnvironmentResourcesDescription'  customize = (EnvironmentResourcesDescription <<< customize) { "LoadBalancer": (NullOrUndefined Nothing) }
+newEnvironmentResourcesDescription' :: ( { "LoadBalancer" :: Maybe (LoadBalancerDescription) } -> {"LoadBalancer" :: Maybe (LoadBalancerDescription) } ) -> EnvironmentResourcesDescription
+newEnvironmentResourcesDescription'  customize = (EnvironmentResourcesDescription <<< customize) { "LoadBalancer": Nothing }
 
 
 
@@ -2108,9 +2107,9 @@ instance encodeEnvironmentStatus :: Encode EnvironmentStatus where encode = gene
 
 -- | <p>Describes the properties of an environment tier</p>
 newtype EnvironmentTier = EnvironmentTier 
-  { "Name" :: NullOrUndefined (String)
-  , "Type" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
+  , "Type" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeEnvironmentTier :: Newtype EnvironmentTier _
 derive instance repGenericEnvironmentTier :: Generic EnvironmentTier _
@@ -2120,12 +2119,12 @@ instance encodeEnvironmentTier :: Encode EnvironmentTier where encode = genericE
 
 -- | Constructs EnvironmentTier from required parameters
 newEnvironmentTier :: EnvironmentTier
-newEnvironmentTier  = EnvironmentTier { "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newEnvironmentTier  = EnvironmentTier { "Name": Nothing, "Type": Nothing, "Version": Nothing }
 
 -- | Constructs EnvironmentTier's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEnvironmentTier' :: ( { "Name" :: NullOrUndefined (String) , "Type" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Name" :: NullOrUndefined (String) , "Type" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> EnvironmentTier
-newEnvironmentTier'  customize = (EnvironmentTier <<< customize) { "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newEnvironmentTier' :: ( { "Name" :: Maybe (String) , "Type" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Name" :: Maybe (String) , "Type" :: Maybe (String) , "Version" :: Maybe (String) } ) -> EnvironmentTier
+newEnvironmentTier'  customize = (EnvironmentTier <<< customize) { "Name": Nothing, "Type": Nothing, "Version": Nothing }
 
 
 
@@ -2140,15 +2139,15 @@ instance encodeEventDate :: Encode EventDate where encode = genericEncode option
 
 -- | <p>Describes an event.</p>
 newtype EventDescription = EventDescription 
-  { "EventDate" :: NullOrUndefined (EventDate)
-  , "Message" :: NullOrUndefined (EventMessage)
-  , "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "RequestId" :: NullOrUndefined (RequestId)
-  , "Severity" :: NullOrUndefined (EventSeverity)
+  { "EventDate" :: Maybe (EventDate)
+  , "Message" :: Maybe (EventMessage)
+  , "ApplicationName" :: Maybe (ApplicationName)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "RequestId" :: Maybe (RequestId)
+  , "Severity" :: Maybe (EventSeverity)
   }
 derive instance newtypeEventDescription :: Newtype EventDescription _
 derive instance repGenericEventDescription :: Generic EventDescription _
@@ -2158,12 +2157,12 @@ instance encodeEventDescription :: Encode EventDescription where encode = generi
 
 -- | Constructs EventDescription from required parameters
 newEventDescription :: EventDescription
-newEventDescription  = EventDescription { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "EventDate": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newEventDescription  = EventDescription { "ApplicationName": Nothing, "EnvironmentName": Nothing, "EventDate": Nothing, "Message": Nothing, "PlatformArn": Nothing, "RequestId": Nothing, "Severity": Nothing, "TemplateName": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs EventDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventDescription' :: ( { "EventDate" :: NullOrUndefined (EventDate) , "Message" :: NullOrUndefined (EventMessage) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "RequestId" :: NullOrUndefined (RequestId) , "Severity" :: NullOrUndefined (EventSeverity) } -> {"EventDate" :: NullOrUndefined (EventDate) , "Message" :: NullOrUndefined (EventMessage) , "ApplicationName" :: NullOrUndefined (ApplicationName) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "RequestId" :: NullOrUndefined (RequestId) , "Severity" :: NullOrUndefined (EventSeverity) } ) -> EventDescription
-newEventDescription'  customize = (EventDescription <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "EventDate": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newEventDescription' :: ( { "EventDate" :: Maybe (EventDate) , "Message" :: Maybe (EventMessage) , "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "PlatformArn" :: Maybe (PlatformArn) , "RequestId" :: Maybe (RequestId) , "Severity" :: Maybe (EventSeverity) } -> {"EventDate" :: Maybe (EventDate) , "Message" :: Maybe (EventMessage) , "ApplicationName" :: Maybe (ApplicationName) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "PlatformArn" :: Maybe (PlatformArn) , "RequestId" :: Maybe (RequestId) , "Severity" :: Maybe (EventSeverity) } ) -> EventDescription
+newEventDescription'  customize = (EventDescription <<< customize) { "ApplicationName": Nothing, "EnvironmentName": Nothing, "EventDate": Nothing, "Message": Nothing, "PlatformArn": Nothing, "RequestId": Nothing, "Severity": Nothing, "TemplateName": Nothing, "VersionLabel": Nothing }
 
 
 
@@ -2178,8 +2177,8 @@ instance encodeEventDescriptionList :: Encode EventDescriptionList where encode 
 
 -- | <p>Result message wrapping a list of event descriptions.</p>
 newtype EventDescriptionsMessage = EventDescriptionsMessage 
-  { "Events" :: NullOrUndefined (EventDescriptionList)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "Events" :: Maybe (EventDescriptionList)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeEventDescriptionsMessage :: Newtype EventDescriptionsMessage _
 derive instance repGenericEventDescriptionsMessage :: Generic EventDescriptionsMessage _
@@ -2189,12 +2188,12 @@ instance encodeEventDescriptionsMessage :: Encode EventDescriptionsMessage where
 
 -- | Constructs EventDescriptionsMessage from required parameters
 newEventDescriptionsMessage :: EventDescriptionsMessage
-newEventDescriptionsMessage  = EventDescriptionsMessage { "Events": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newEventDescriptionsMessage  = EventDescriptionsMessage { "Events": Nothing, "NextToken": Nothing }
 
 -- | Constructs EventDescriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventDescriptionsMessage' :: ( { "Events" :: NullOrUndefined (EventDescriptionList) , "NextToken" :: NullOrUndefined (Token) } -> {"Events" :: NullOrUndefined (EventDescriptionList) , "NextToken" :: NullOrUndefined (Token) } ) -> EventDescriptionsMessage
-newEventDescriptionsMessage'  customize = (EventDescriptionsMessage <<< customize) { "Events": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newEventDescriptionsMessage' :: ( { "Events" :: Maybe (EventDescriptionList) , "NextToken" :: Maybe (Token) } -> {"Events" :: Maybe (EventDescriptionList) , "NextToken" :: Maybe (Token) } ) -> EventDescriptionsMessage
+newEventDescriptionsMessage'  customize = (EventDescriptionsMessage <<< customize) { "Events": Nothing, "NextToken": Nothing }
 
 
 
@@ -2290,7 +2289,7 @@ instance encodeIncludeDeletedBackTo :: Encode IncludeDeletedBackTo where encode 
 
 -- | <p>The description of an Amazon EC2 instance.</p>
 newtype Instance = Instance 
-  { "Id" :: NullOrUndefined (ResourceId)
+  { "Id" :: Maybe (ResourceId)
   }
 derive instance newtypeInstance :: Newtype Instance _
 derive instance repGenericInstance :: Generic Instance _
@@ -2300,12 +2299,12 @@ instance encodeInstance :: Encode Instance where encode = genericEncode options
 
 -- | Constructs Instance from required parameters
 newInstance :: Instance
-newInstance  = Instance { "Id": (NullOrUndefined Nothing) }
+newInstance  = Instance { "Id": Nothing }
 
 -- | Constructs Instance's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstance' :: ( { "Id" :: NullOrUndefined (ResourceId) } -> {"Id" :: NullOrUndefined (ResourceId) } ) -> Instance
-newInstance'  customize = (Instance <<< customize) { "Id": (NullOrUndefined Nothing) }
+newInstance' :: ( { "Id" :: Maybe (ResourceId) } -> {"Id" :: Maybe (ResourceId) } ) -> Instance
+newInstance'  customize = (Instance <<< customize) { "Id": Nothing }
 
 
 
@@ -2320,14 +2319,14 @@ instance encodeInstanceHealthList :: Encode InstanceHealthList where encode = ge
 
 -- | <p>Represents summary information about the health of an instance. For more information, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced-status.html">Health Colors and Statuses</a>.</p>
 newtype InstanceHealthSummary = InstanceHealthSummary 
-  { "NoData" :: NullOrUndefined (NullableInteger)
-  , "Unknown" :: NullOrUndefined (NullableInteger)
-  , "Pending" :: NullOrUndefined (NullableInteger)
-  , "Ok" :: NullOrUndefined (NullableInteger)
-  , "Info" :: NullOrUndefined (NullableInteger)
-  , "Warning" :: NullOrUndefined (NullableInteger)
-  , "Degraded" :: NullOrUndefined (NullableInteger)
-  , "Severe" :: NullOrUndefined (NullableInteger)
+  { "NoData" :: Maybe (NullableInteger)
+  , "Unknown" :: Maybe (NullableInteger)
+  , "Pending" :: Maybe (NullableInteger)
+  , "Ok" :: Maybe (NullableInteger)
+  , "Info" :: Maybe (NullableInteger)
+  , "Warning" :: Maybe (NullableInteger)
+  , "Degraded" :: Maybe (NullableInteger)
+  , "Severe" :: Maybe (NullableInteger)
   }
 derive instance newtypeInstanceHealthSummary :: Newtype InstanceHealthSummary _
 derive instance repGenericInstanceHealthSummary :: Generic InstanceHealthSummary _
@@ -2337,12 +2336,12 @@ instance encodeInstanceHealthSummary :: Encode InstanceHealthSummary where encod
 
 -- | Constructs InstanceHealthSummary from required parameters
 newInstanceHealthSummary :: InstanceHealthSummary
-newInstanceHealthSummary  = InstanceHealthSummary { "Degraded": (NullOrUndefined Nothing), "Info": (NullOrUndefined Nothing), "NoData": (NullOrUndefined Nothing), "Ok": (NullOrUndefined Nothing), "Pending": (NullOrUndefined Nothing), "Severe": (NullOrUndefined Nothing), "Unknown": (NullOrUndefined Nothing), "Warning": (NullOrUndefined Nothing) }
+newInstanceHealthSummary  = InstanceHealthSummary { "Degraded": Nothing, "Info": Nothing, "NoData": Nothing, "Ok": Nothing, "Pending": Nothing, "Severe": Nothing, "Unknown": Nothing, "Warning": Nothing }
 
 -- | Constructs InstanceHealthSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInstanceHealthSummary' :: ( { "NoData" :: NullOrUndefined (NullableInteger) , "Unknown" :: NullOrUndefined (NullableInteger) , "Pending" :: NullOrUndefined (NullableInteger) , "Ok" :: NullOrUndefined (NullableInteger) , "Info" :: NullOrUndefined (NullableInteger) , "Warning" :: NullOrUndefined (NullableInteger) , "Degraded" :: NullOrUndefined (NullableInteger) , "Severe" :: NullOrUndefined (NullableInteger) } -> {"NoData" :: NullOrUndefined (NullableInteger) , "Unknown" :: NullOrUndefined (NullableInteger) , "Pending" :: NullOrUndefined (NullableInteger) , "Ok" :: NullOrUndefined (NullableInteger) , "Info" :: NullOrUndefined (NullableInteger) , "Warning" :: NullOrUndefined (NullableInteger) , "Degraded" :: NullOrUndefined (NullableInteger) , "Severe" :: NullOrUndefined (NullableInteger) } ) -> InstanceHealthSummary
-newInstanceHealthSummary'  customize = (InstanceHealthSummary <<< customize) { "Degraded": (NullOrUndefined Nothing), "Info": (NullOrUndefined Nothing), "NoData": (NullOrUndefined Nothing), "Ok": (NullOrUndefined Nothing), "Pending": (NullOrUndefined Nothing), "Severe": (NullOrUndefined Nothing), "Unknown": (NullOrUndefined Nothing), "Warning": (NullOrUndefined Nothing) }
+newInstanceHealthSummary' :: ( { "NoData" :: Maybe (NullableInteger) , "Unknown" :: Maybe (NullableInteger) , "Pending" :: Maybe (NullableInteger) , "Ok" :: Maybe (NullableInteger) , "Info" :: Maybe (NullableInteger) , "Warning" :: Maybe (NullableInteger) , "Degraded" :: Maybe (NullableInteger) , "Severe" :: Maybe (NullableInteger) } -> {"NoData" :: Maybe (NullableInteger) , "Unknown" :: Maybe (NullableInteger) , "Pending" :: Maybe (NullableInteger) , "Ok" :: Maybe (NullableInteger) , "Info" :: Maybe (NullableInteger) , "Warning" :: Maybe (NullableInteger) , "Degraded" :: Maybe (NullableInteger) , "Severe" :: Maybe (NullableInteger) } ) -> InstanceHealthSummary
+newInstanceHealthSummary'  customize = (InstanceHealthSummary <<< customize) { "Degraded": Nothing, "Info": Nothing, "NoData": Nothing, "Ok": Nothing, "Pending": Nothing, "Severe": Nothing, "Unknown": Nothing, "Warning": Nothing }
 
 
 
@@ -2404,14 +2403,14 @@ instance encodeInvalidRequestException :: Encode InvalidRequestException where e
 
 -- | <p>Represents the average latency for the slowest X percent of requests over the last 10 seconds.</p>
 newtype Latency = Latency 
-  { "P999" :: NullOrUndefined (NullableDouble)
-  , "P99" :: NullOrUndefined (NullableDouble)
-  , "P95" :: NullOrUndefined (NullableDouble)
-  , "P90" :: NullOrUndefined (NullableDouble)
-  , "P85" :: NullOrUndefined (NullableDouble)
-  , "P75" :: NullOrUndefined (NullableDouble)
-  , "P50" :: NullOrUndefined (NullableDouble)
-  , "P10" :: NullOrUndefined (NullableDouble)
+  { "P999" :: Maybe (NullableDouble)
+  , "P99" :: Maybe (NullableDouble)
+  , "P95" :: Maybe (NullableDouble)
+  , "P90" :: Maybe (NullableDouble)
+  , "P85" :: Maybe (NullableDouble)
+  , "P75" :: Maybe (NullableDouble)
+  , "P50" :: Maybe (NullableDouble)
+  , "P10" :: Maybe (NullableDouble)
   }
 derive instance newtypeLatency :: Newtype Latency _
 derive instance repGenericLatency :: Generic Latency _
@@ -2421,18 +2420,18 @@ instance encodeLatency :: Encode Latency where encode = genericEncode options
 
 -- | Constructs Latency from required parameters
 newLatency :: Latency
-newLatency  = Latency { "P10": (NullOrUndefined Nothing), "P50": (NullOrUndefined Nothing), "P75": (NullOrUndefined Nothing), "P85": (NullOrUndefined Nothing), "P90": (NullOrUndefined Nothing), "P95": (NullOrUndefined Nothing), "P99": (NullOrUndefined Nothing), "P999": (NullOrUndefined Nothing) }
+newLatency  = Latency { "P10": Nothing, "P50": Nothing, "P75": Nothing, "P85": Nothing, "P90": Nothing, "P95": Nothing, "P99": Nothing, "P999": Nothing }
 
 -- | Constructs Latency's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLatency' :: ( { "P999" :: NullOrUndefined (NullableDouble) , "P99" :: NullOrUndefined (NullableDouble) , "P95" :: NullOrUndefined (NullableDouble) , "P90" :: NullOrUndefined (NullableDouble) , "P85" :: NullOrUndefined (NullableDouble) , "P75" :: NullOrUndefined (NullableDouble) , "P50" :: NullOrUndefined (NullableDouble) , "P10" :: NullOrUndefined (NullableDouble) } -> {"P999" :: NullOrUndefined (NullableDouble) , "P99" :: NullOrUndefined (NullableDouble) , "P95" :: NullOrUndefined (NullableDouble) , "P90" :: NullOrUndefined (NullableDouble) , "P85" :: NullOrUndefined (NullableDouble) , "P75" :: NullOrUndefined (NullableDouble) , "P50" :: NullOrUndefined (NullableDouble) , "P10" :: NullOrUndefined (NullableDouble) } ) -> Latency
-newLatency'  customize = (Latency <<< customize) { "P10": (NullOrUndefined Nothing), "P50": (NullOrUndefined Nothing), "P75": (NullOrUndefined Nothing), "P85": (NullOrUndefined Nothing), "P90": (NullOrUndefined Nothing), "P95": (NullOrUndefined Nothing), "P99": (NullOrUndefined Nothing), "P999": (NullOrUndefined Nothing) }
+newLatency' :: ( { "P999" :: Maybe (NullableDouble) , "P99" :: Maybe (NullableDouble) , "P95" :: Maybe (NullableDouble) , "P90" :: Maybe (NullableDouble) , "P85" :: Maybe (NullableDouble) , "P75" :: Maybe (NullableDouble) , "P50" :: Maybe (NullableDouble) , "P10" :: Maybe (NullableDouble) } -> {"P999" :: Maybe (NullableDouble) , "P99" :: Maybe (NullableDouble) , "P95" :: Maybe (NullableDouble) , "P90" :: Maybe (NullableDouble) , "P85" :: Maybe (NullableDouble) , "P75" :: Maybe (NullableDouble) , "P50" :: Maybe (NullableDouble) , "P10" :: Maybe (NullableDouble) } ) -> Latency
+newLatency'  customize = (Latency <<< customize) { "P10": Nothing, "P50": Nothing, "P75": Nothing, "P85": Nothing, "P90": Nothing, "P95": Nothing, "P99": Nothing, "P999": Nothing }
 
 
 
 -- | <p>Describes an Auto Scaling launch configuration.</p>
 newtype LaunchConfiguration = LaunchConfiguration 
-  { "Name" :: NullOrUndefined (ResourceId)
+  { "Name" :: Maybe (ResourceId)
   }
 derive instance newtypeLaunchConfiguration :: Newtype LaunchConfiguration _
 derive instance repGenericLaunchConfiguration :: Generic LaunchConfiguration _
@@ -2442,12 +2441,12 @@ instance encodeLaunchConfiguration :: Encode LaunchConfiguration where encode = 
 
 -- | Constructs LaunchConfiguration from required parameters
 newLaunchConfiguration :: LaunchConfiguration
-newLaunchConfiguration  = LaunchConfiguration { "Name": (NullOrUndefined Nothing) }
+newLaunchConfiguration  = LaunchConfiguration { "Name": Nothing }
 
 -- | Constructs LaunchConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLaunchConfiguration' :: ( { "Name" :: NullOrUndefined (ResourceId) } -> {"Name" :: NullOrUndefined (ResourceId) } ) -> LaunchConfiguration
-newLaunchConfiguration'  customize = (LaunchConfiguration <<< customize) { "Name": (NullOrUndefined Nothing) }
+newLaunchConfiguration' :: ( { "Name" :: Maybe (ResourceId) } -> {"Name" :: Maybe (ResourceId) } ) -> LaunchConfiguration
+newLaunchConfiguration'  customize = (LaunchConfiguration <<< customize) { "Name": Nothing }
 
 
 
@@ -2471,8 +2470,8 @@ instance encodeLaunchedAt :: Encode LaunchedAt where encode = genericEncode opti
 
 -- | <p>A list of available AWS Elastic Beanstalk solution stacks.</p>
 newtype ListAvailableSolutionStacksResultMessage = ListAvailableSolutionStacksResultMessage 
-  { "SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList)
-  , "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList)
+  { "SolutionStacks" :: Maybe (AvailableSolutionStackNamesList)
+  , "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList)
   }
 derive instance newtypeListAvailableSolutionStacksResultMessage :: Newtype ListAvailableSolutionStacksResultMessage _
 derive instance repGenericListAvailableSolutionStacksResultMessage :: Generic ListAvailableSolutionStacksResultMessage _
@@ -2482,19 +2481,19 @@ instance encodeListAvailableSolutionStacksResultMessage :: Encode ListAvailableS
 
 -- | Constructs ListAvailableSolutionStacksResultMessage from required parameters
 newListAvailableSolutionStacksResultMessage :: ListAvailableSolutionStacksResultMessage
-newListAvailableSolutionStacksResultMessage  = ListAvailableSolutionStacksResultMessage { "SolutionStackDetails": (NullOrUndefined Nothing), "SolutionStacks": (NullOrUndefined Nothing) }
+newListAvailableSolutionStacksResultMessage  = ListAvailableSolutionStacksResultMessage { "SolutionStackDetails": Nothing, "SolutionStacks": Nothing }
 
 -- | Constructs ListAvailableSolutionStacksResultMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListAvailableSolutionStacksResultMessage' :: ( { "SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList) , "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList) } -> {"SolutionStacks" :: NullOrUndefined (AvailableSolutionStackNamesList) , "SolutionStackDetails" :: NullOrUndefined (AvailableSolutionStackDetailsList) } ) -> ListAvailableSolutionStacksResultMessage
-newListAvailableSolutionStacksResultMessage'  customize = (ListAvailableSolutionStacksResultMessage <<< customize) { "SolutionStackDetails": (NullOrUndefined Nothing), "SolutionStacks": (NullOrUndefined Nothing) }
+newListAvailableSolutionStacksResultMessage' :: ( { "SolutionStacks" :: Maybe (AvailableSolutionStackNamesList) , "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList) } -> {"SolutionStacks" :: Maybe (AvailableSolutionStackNamesList) , "SolutionStackDetails" :: Maybe (AvailableSolutionStackDetailsList) } ) -> ListAvailableSolutionStacksResultMessage
+newListAvailableSolutionStacksResultMessage'  customize = (ListAvailableSolutionStacksResultMessage <<< customize) { "SolutionStackDetails": Nothing, "SolutionStacks": Nothing }
 
 
 
 newtype ListPlatformVersionsRequest = ListPlatformVersionsRequest 
-  { "Filters" :: NullOrUndefined (PlatformFilters)
-  , "MaxRecords" :: NullOrUndefined (PlatformMaxRecords)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "Filters" :: Maybe (PlatformFilters)
+  , "MaxRecords" :: Maybe (PlatformMaxRecords)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeListPlatformVersionsRequest :: Newtype ListPlatformVersionsRequest _
 derive instance repGenericListPlatformVersionsRequest :: Generic ListPlatformVersionsRequest _
@@ -2504,18 +2503,18 @@ instance encodeListPlatformVersionsRequest :: Encode ListPlatformVersionsRequest
 
 -- | Constructs ListPlatformVersionsRequest from required parameters
 newListPlatformVersionsRequest :: ListPlatformVersionsRequest
-newListPlatformVersionsRequest  = ListPlatformVersionsRequest { "Filters": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListPlatformVersionsRequest  = ListPlatformVersionsRequest { "Filters": Nothing, "MaxRecords": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListPlatformVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPlatformVersionsRequest' :: ( { "Filters" :: NullOrUndefined (PlatformFilters) , "MaxRecords" :: NullOrUndefined (PlatformMaxRecords) , "NextToken" :: NullOrUndefined (Token) } -> {"Filters" :: NullOrUndefined (PlatformFilters) , "MaxRecords" :: NullOrUndefined (PlatformMaxRecords) , "NextToken" :: NullOrUndefined (Token) } ) -> ListPlatformVersionsRequest
-newListPlatformVersionsRequest'  customize = (ListPlatformVersionsRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListPlatformVersionsRequest' :: ( { "Filters" :: Maybe (PlatformFilters) , "MaxRecords" :: Maybe (PlatformMaxRecords) , "NextToken" :: Maybe (Token) } -> {"Filters" :: Maybe (PlatformFilters) , "MaxRecords" :: Maybe (PlatformMaxRecords) , "NextToken" :: Maybe (Token) } ) -> ListPlatformVersionsRequest
+newListPlatformVersionsRequest'  customize = (ListPlatformVersionsRequest <<< customize) { "Filters": Nothing, "MaxRecords": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListPlatformVersionsResult = ListPlatformVersionsResult 
-  { "PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList)
-  , "NextToken" :: NullOrUndefined (Token)
+  { "PlatformSummaryList" :: Maybe (PlatformSummaryList)
+  , "NextToken" :: Maybe (Token)
   }
 derive instance newtypeListPlatformVersionsResult :: Newtype ListPlatformVersionsResult _
 derive instance repGenericListPlatformVersionsResult :: Generic ListPlatformVersionsResult _
@@ -2525,12 +2524,12 @@ instance encodeListPlatformVersionsResult :: Encode ListPlatformVersionsResult w
 
 -- | Constructs ListPlatformVersionsResult from required parameters
 newListPlatformVersionsResult :: ListPlatformVersionsResult
-newListPlatformVersionsResult  = ListPlatformVersionsResult { "NextToken": (NullOrUndefined Nothing), "PlatformSummaryList": (NullOrUndefined Nothing) }
+newListPlatformVersionsResult  = ListPlatformVersionsResult { "NextToken": Nothing, "PlatformSummaryList": Nothing }
 
 -- | Constructs ListPlatformVersionsResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPlatformVersionsResult' :: ( { "PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList) , "NextToken" :: NullOrUndefined (Token) } -> {"PlatformSummaryList" :: NullOrUndefined (PlatformSummaryList) , "NextToken" :: NullOrUndefined (Token) } ) -> ListPlatformVersionsResult
-newListPlatformVersionsResult'  customize = (ListPlatformVersionsResult <<< customize) { "NextToken": (NullOrUndefined Nothing), "PlatformSummaryList": (NullOrUndefined Nothing) }
+newListPlatformVersionsResult' :: ( { "PlatformSummaryList" :: Maybe (PlatformSummaryList) , "NextToken" :: Maybe (Token) } -> {"PlatformSummaryList" :: Maybe (PlatformSummaryList) , "NextToken" :: Maybe (Token) } ) -> ListPlatformVersionsResult
+newListPlatformVersionsResult'  customize = (ListPlatformVersionsResult <<< customize) { "NextToken": Nothing, "PlatformSummaryList": Nothing }
 
 
 
@@ -2556,8 +2555,8 @@ newListTagsForResourceMessage' _ResourceArn customize = (ListTagsForResourceMess
 
 -- | <p>Describes the properties of a Listener for the LoadBalancer.</p>
 newtype Listener = Listener 
-  { "Protocol" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (Int)
+  { "Protocol" :: Maybe (String)
+  , "Port" :: Maybe (Int)
   }
 derive instance newtypeListener :: Newtype Listener _
 derive instance repGenericListener :: Generic Listener _
@@ -2567,12 +2566,12 @@ instance encodeListener :: Encode Listener where encode = genericEncode options
 
 -- | Constructs Listener from required parameters
 newListener :: Listener
-newListener  = Listener { "Port": (NullOrUndefined Nothing), "Protocol": (NullOrUndefined Nothing) }
+newListener  = Listener { "Port": Nothing, "Protocol": Nothing }
 
 -- | Constructs Listener's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListener' :: ( { "Protocol" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) } -> {"Protocol" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) } ) -> Listener
-newListener'  customize = (Listener <<< customize) { "Port": (NullOrUndefined Nothing), "Protocol": (NullOrUndefined Nothing) }
+newListener' :: ( { "Protocol" :: Maybe (String) , "Port" :: Maybe (Int) } -> {"Protocol" :: Maybe (String) , "Port" :: Maybe (Int) } ) -> Listener
+newListener'  customize = (Listener <<< customize) { "Port": Nothing, "Protocol": Nothing }
 
 
 
@@ -2596,7 +2595,7 @@ instance encodeLoadAverageValue :: Encode LoadAverageValue where encode = generi
 
 -- | <p>Describes a LoadBalancer.</p>
 newtype LoadBalancer = LoadBalancer 
-  { "Name" :: NullOrUndefined (ResourceId)
+  { "Name" :: Maybe (ResourceId)
   }
 derive instance newtypeLoadBalancer :: Newtype LoadBalancer _
 derive instance repGenericLoadBalancer :: Generic LoadBalancer _
@@ -2606,20 +2605,20 @@ instance encodeLoadBalancer :: Encode LoadBalancer where encode = genericEncode 
 
 -- | Constructs LoadBalancer from required parameters
 newLoadBalancer :: LoadBalancer
-newLoadBalancer  = LoadBalancer { "Name": (NullOrUndefined Nothing) }
+newLoadBalancer  = LoadBalancer { "Name": Nothing }
 
 -- | Constructs LoadBalancer's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancer' :: ( { "Name" :: NullOrUndefined (ResourceId) } -> {"Name" :: NullOrUndefined (ResourceId) } ) -> LoadBalancer
-newLoadBalancer'  customize = (LoadBalancer <<< customize) { "Name": (NullOrUndefined Nothing) }
+newLoadBalancer' :: ( { "Name" :: Maybe (ResourceId) } -> {"Name" :: Maybe (ResourceId) } ) -> LoadBalancer
+newLoadBalancer'  customize = (LoadBalancer <<< customize) { "Name": Nothing }
 
 
 
 -- | <p>Describes the details of a LoadBalancer.</p>
 newtype LoadBalancerDescription = LoadBalancerDescription 
-  { "LoadBalancerName" :: NullOrUndefined (String)
-  , "Domain" :: NullOrUndefined (String)
-  , "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription)
+  { "LoadBalancerName" :: Maybe (String)
+  , "Domain" :: Maybe (String)
+  , "Listeners" :: Maybe (LoadBalancerListenersDescription)
   }
 derive instance newtypeLoadBalancerDescription :: Newtype LoadBalancerDescription _
 derive instance repGenericLoadBalancerDescription :: Generic LoadBalancerDescription _
@@ -2629,12 +2628,12 @@ instance encodeLoadBalancerDescription :: Encode LoadBalancerDescription where e
 
 -- | Constructs LoadBalancerDescription from required parameters
 newLoadBalancerDescription :: LoadBalancerDescription
-newLoadBalancerDescription  = LoadBalancerDescription { "Domain": (NullOrUndefined Nothing), "Listeners": (NullOrUndefined Nothing), "LoadBalancerName": (NullOrUndefined Nothing) }
+newLoadBalancerDescription  = LoadBalancerDescription { "Domain": Nothing, "Listeners": Nothing, "LoadBalancerName": Nothing }
 
 -- | Constructs LoadBalancerDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoadBalancerDescription' :: ( { "LoadBalancerName" :: NullOrUndefined (String) , "Domain" :: NullOrUndefined (String) , "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription) } -> {"LoadBalancerName" :: NullOrUndefined (String) , "Domain" :: NullOrUndefined (String) , "Listeners" :: NullOrUndefined (LoadBalancerListenersDescription) } ) -> LoadBalancerDescription
-newLoadBalancerDescription'  customize = (LoadBalancerDescription <<< customize) { "Domain": (NullOrUndefined Nothing), "Listeners": (NullOrUndefined Nothing), "LoadBalancerName": (NullOrUndefined Nothing) }
+newLoadBalancerDescription' :: ( { "LoadBalancerName" :: Maybe (String) , "Domain" :: Maybe (String) , "Listeners" :: Maybe (LoadBalancerListenersDescription) } -> {"LoadBalancerName" :: Maybe (String) , "Domain" :: Maybe (String) , "Listeners" :: Maybe (LoadBalancerListenersDescription) } ) -> LoadBalancerDescription
+newLoadBalancerDescription'  customize = (LoadBalancerDescription <<< customize) { "Domain": Nothing, "Listeners": Nothing, "LoadBalancerName": Nothing }
 
 
 
@@ -2667,11 +2666,11 @@ instance encodeMaintainer :: Encode Maintainer where encode = genericEncode opti
 
 -- | <p>The record of an upcoming or in-progress managed action.</p>
 newtype ManagedAction = ManagedAction 
-  { "ActionId" :: NullOrUndefined (String)
-  , "ActionDescription" :: NullOrUndefined (String)
-  , "ActionType" :: NullOrUndefined (ActionType)
-  , "Status" :: NullOrUndefined (ActionStatus)
-  , "WindowStartTime" :: NullOrUndefined (Types.Timestamp)
+  { "ActionId" :: Maybe (String)
+  , "ActionDescription" :: Maybe (String)
+  , "ActionType" :: Maybe (ActionType)
+  , "Status" :: Maybe (ActionStatus)
+  , "WindowStartTime" :: Maybe (Types.Timestamp)
   }
 derive instance newtypeManagedAction :: Newtype ManagedAction _
 derive instance repGenericManagedAction :: Generic ManagedAction _
@@ -2681,25 +2680,25 @@ instance encodeManagedAction :: Encode ManagedAction where encode = genericEncod
 
 -- | Constructs ManagedAction from required parameters
 newManagedAction :: ManagedAction
-newManagedAction  = ManagedAction { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "WindowStartTime": (NullOrUndefined Nothing) }
+newManagedAction  = ManagedAction { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "Status": Nothing, "WindowStartTime": Nothing }
 
 -- | Constructs ManagedAction's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newManagedAction' :: ( { "ActionId" :: NullOrUndefined (String) , "ActionDescription" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "Status" :: NullOrUndefined (ActionStatus) , "WindowStartTime" :: NullOrUndefined (Types.Timestamp) } -> {"ActionId" :: NullOrUndefined (String) , "ActionDescription" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "Status" :: NullOrUndefined (ActionStatus) , "WindowStartTime" :: NullOrUndefined (Types.Timestamp) } ) -> ManagedAction
-newManagedAction'  customize = (ManagedAction <<< customize) { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "WindowStartTime": (NullOrUndefined Nothing) }
+newManagedAction' :: ( { "ActionId" :: Maybe (String) , "ActionDescription" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "Status" :: Maybe (ActionStatus) , "WindowStartTime" :: Maybe (Types.Timestamp) } -> {"ActionId" :: Maybe (String) , "ActionDescription" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "Status" :: Maybe (ActionStatus) , "WindowStartTime" :: Maybe (Types.Timestamp) } ) -> ManagedAction
+newManagedAction'  customize = (ManagedAction <<< customize) { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "Status": Nothing, "WindowStartTime": Nothing }
 
 
 
 -- | <p>The record of a completed or failed managed action.</p>
 newtype ManagedActionHistoryItem = ManagedActionHistoryItem 
-  { "ActionId" :: NullOrUndefined (String)
-  , "ActionType" :: NullOrUndefined (ActionType)
-  , "ActionDescription" :: NullOrUndefined (String)
-  , "FailureType" :: NullOrUndefined (FailureType)
-  , "Status" :: NullOrUndefined (ActionHistoryStatus)
-  , "FailureDescription" :: NullOrUndefined (String)
-  , "ExecutedTime" :: NullOrUndefined (Types.Timestamp)
-  , "FinishedTime" :: NullOrUndefined (Types.Timestamp)
+  { "ActionId" :: Maybe (String)
+  , "ActionType" :: Maybe (ActionType)
+  , "ActionDescription" :: Maybe (String)
+  , "FailureType" :: Maybe (FailureType)
+  , "Status" :: Maybe (ActionHistoryStatus)
+  , "FailureDescription" :: Maybe (String)
+  , "ExecutedTime" :: Maybe (Types.Timestamp)
+  , "FinishedTime" :: Maybe (Types.Timestamp)
   }
 derive instance newtypeManagedActionHistoryItem :: Newtype ManagedActionHistoryItem _
 derive instance repGenericManagedActionHistoryItem :: Generic ManagedActionHistoryItem _
@@ -2709,12 +2708,12 @@ instance encodeManagedActionHistoryItem :: Encode ManagedActionHistoryItem where
 
 -- | Constructs ManagedActionHistoryItem from required parameters
 newManagedActionHistoryItem :: ManagedActionHistoryItem
-newManagedActionHistoryItem  = ManagedActionHistoryItem { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "ExecutedTime": (NullOrUndefined Nothing), "FailureDescription": (NullOrUndefined Nothing), "FailureType": (NullOrUndefined Nothing), "FinishedTime": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newManagedActionHistoryItem  = ManagedActionHistoryItem { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "ExecutedTime": Nothing, "FailureDescription": Nothing, "FailureType": Nothing, "FinishedTime": Nothing, "Status": Nothing }
 
 -- | Constructs ManagedActionHistoryItem's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newManagedActionHistoryItem' :: ( { "ActionId" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "ActionDescription" :: NullOrUndefined (String) , "FailureType" :: NullOrUndefined (FailureType) , "Status" :: NullOrUndefined (ActionHistoryStatus) , "FailureDescription" :: NullOrUndefined (String) , "ExecutedTime" :: NullOrUndefined (Types.Timestamp) , "FinishedTime" :: NullOrUndefined (Types.Timestamp) } -> {"ActionId" :: NullOrUndefined (String) , "ActionType" :: NullOrUndefined (ActionType) , "ActionDescription" :: NullOrUndefined (String) , "FailureType" :: NullOrUndefined (FailureType) , "Status" :: NullOrUndefined (ActionHistoryStatus) , "FailureDescription" :: NullOrUndefined (String) , "ExecutedTime" :: NullOrUndefined (Types.Timestamp) , "FinishedTime" :: NullOrUndefined (Types.Timestamp) } ) -> ManagedActionHistoryItem
-newManagedActionHistoryItem'  customize = (ManagedActionHistoryItem <<< customize) { "ActionDescription": (NullOrUndefined Nothing), "ActionId": (NullOrUndefined Nothing), "ActionType": (NullOrUndefined Nothing), "ExecutedTime": (NullOrUndefined Nothing), "FailureDescription": (NullOrUndefined Nothing), "FailureType": (NullOrUndefined Nothing), "FinishedTime": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newManagedActionHistoryItem' :: ( { "ActionId" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "ActionDescription" :: Maybe (String) , "FailureType" :: Maybe (FailureType) , "Status" :: Maybe (ActionHistoryStatus) , "FailureDescription" :: Maybe (String) , "ExecutedTime" :: Maybe (Types.Timestamp) , "FinishedTime" :: Maybe (Types.Timestamp) } -> {"ActionId" :: Maybe (String) , "ActionType" :: Maybe (ActionType) , "ActionDescription" :: Maybe (String) , "FailureType" :: Maybe (FailureType) , "Status" :: Maybe (ActionHistoryStatus) , "FailureDescription" :: Maybe (String) , "ExecutedTime" :: Maybe (Types.Timestamp) , "FinishedTime" :: Maybe (Types.Timestamp) } ) -> ManagedActionHistoryItem
+newManagedActionHistoryItem'  customize = (ManagedActionHistoryItem <<< customize) { "ActionDescription": Nothing, "ActionId": Nothing, "ActionType": Nothing, "ExecutedTime": Nothing, "FailureDescription": Nothing, "FailureType": Nothing, "FinishedTime": Nothing, "Status": Nothing }
 
 
 
@@ -2749,8 +2748,8 @@ instance encodeManagedActions :: Encode ManagedActions where encode = genericEnc
 -- | <p>A lifecycle rule that deletes application versions after the specified number of days.</p>
 newtype MaxAgeRule = MaxAgeRule 
   { "Enabled" :: (BoxedBoolean)
-  , "MaxAgeInDays" :: NullOrUndefined (BoxedInt)
-  , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean)
+  , "MaxAgeInDays" :: Maybe (BoxedInt)
+  , "DeleteSourceFromS3" :: Maybe (BoxedBoolean)
   }
 derive instance newtypeMaxAgeRule :: Newtype MaxAgeRule _
 derive instance repGenericMaxAgeRule :: Generic MaxAgeRule _
@@ -2760,20 +2759,20 @@ instance encodeMaxAgeRule :: Encode MaxAgeRule where encode = genericEncode opti
 
 -- | Constructs MaxAgeRule from required parameters
 newMaxAgeRule :: BoxedBoolean -> MaxAgeRule
-newMaxAgeRule _Enabled = MaxAgeRule { "Enabled": _Enabled, "DeleteSourceFromS3": (NullOrUndefined Nothing), "MaxAgeInDays": (NullOrUndefined Nothing) }
+newMaxAgeRule _Enabled = MaxAgeRule { "Enabled": _Enabled, "DeleteSourceFromS3": Nothing, "MaxAgeInDays": Nothing }
 
 -- | Constructs MaxAgeRule's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMaxAgeRule' :: BoxedBoolean -> ( { "Enabled" :: (BoxedBoolean) , "MaxAgeInDays" :: NullOrUndefined (BoxedInt) , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } -> {"Enabled" :: (BoxedBoolean) , "MaxAgeInDays" :: NullOrUndefined (BoxedInt) , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } ) -> MaxAgeRule
-newMaxAgeRule' _Enabled customize = (MaxAgeRule <<< customize) { "Enabled": _Enabled, "DeleteSourceFromS3": (NullOrUndefined Nothing), "MaxAgeInDays": (NullOrUndefined Nothing) }
+newMaxAgeRule' :: BoxedBoolean -> ( { "Enabled" :: (BoxedBoolean) , "MaxAgeInDays" :: Maybe (BoxedInt) , "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } -> {"Enabled" :: (BoxedBoolean) , "MaxAgeInDays" :: Maybe (BoxedInt) , "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } ) -> MaxAgeRule
+newMaxAgeRule' _Enabled customize = (MaxAgeRule <<< customize) { "Enabled": _Enabled, "DeleteSourceFromS3": Nothing, "MaxAgeInDays": Nothing }
 
 
 
 -- | <p>A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.</p>
 newtype MaxCountRule = MaxCountRule 
   { "Enabled" :: (BoxedBoolean)
-  , "MaxCount" :: NullOrUndefined (BoxedInt)
-  , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean)
+  , "MaxCount" :: Maybe (BoxedInt)
+  , "DeleteSourceFromS3" :: Maybe (BoxedBoolean)
   }
 derive instance newtypeMaxCountRule :: Newtype MaxCountRule _
 derive instance repGenericMaxCountRule :: Generic MaxCountRule _
@@ -2783,12 +2782,12 @@ instance encodeMaxCountRule :: Encode MaxCountRule where encode = genericEncode 
 
 -- | Constructs MaxCountRule from required parameters
 newMaxCountRule :: BoxedBoolean -> MaxCountRule
-newMaxCountRule _Enabled = MaxCountRule { "Enabled": _Enabled, "DeleteSourceFromS3": (NullOrUndefined Nothing), "MaxCount": (NullOrUndefined Nothing) }
+newMaxCountRule _Enabled = MaxCountRule { "Enabled": _Enabled, "DeleteSourceFromS3": Nothing, "MaxCount": Nothing }
 
 -- | Constructs MaxCountRule's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMaxCountRule' :: BoxedBoolean -> ( { "Enabled" :: (BoxedBoolean) , "MaxCount" :: NullOrUndefined (BoxedInt) , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } -> {"Enabled" :: (BoxedBoolean) , "MaxCount" :: NullOrUndefined (BoxedInt) , "DeleteSourceFromS3" :: NullOrUndefined (BoxedBoolean) } ) -> MaxCountRule
-newMaxCountRule' _Enabled customize = (MaxCountRule <<< customize) { "Enabled": _Enabled, "DeleteSourceFromS3": (NullOrUndefined Nothing), "MaxCount": (NullOrUndefined Nothing) }
+newMaxCountRule' :: BoxedBoolean -> ( { "Enabled" :: (BoxedBoolean) , "MaxCount" :: Maybe (BoxedInt) , "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } -> {"Enabled" :: (BoxedBoolean) , "MaxCount" :: Maybe (BoxedInt) , "DeleteSourceFromS3" :: Maybe (BoxedBoolean) } ) -> MaxCountRule
+newMaxCountRule' _Enabled customize = (MaxCountRule <<< customize) { "Enabled": _Enabled, "DeleteSourceFromS3": Nothing, "MaxCount": Nothing }
 
 
 
@@ -2921,8 +2920,8 @@ instance encodeOptionRestrictionMinValue :: Encode OptionRestrictionMinValue whe
 
 -- | <p>A regular expression representing a restriction on a string configuration option value.</p>
 newtype OptionRestrictionRegex = OptionRestrictionRegex 
-  { "Pattern" :: NullOrUndefined (RegexPattern)
-  , "Label" :: NullOrUndefined (RegexLabel)
+  { "Pattern" :: Maybe (RegexPattern)
+  , "Label" :: Maybe (RegexLabel)
   }
 derive instance newtypeOptionRestrictionRegex :: Newtype OptionRestrictionRegex _
 derive instance repGenericOptionRestrictionRegex :: Generic OptionRestrictionRegex _
@@ -2932,20 +2931,20 @@ instance encodeOptionRestrictionRegex :: Encode OptionRestrictionRegex where enc
 
 -- | Constructs OptionRestrictionRegex from required parameters
 newOptionRestrictionRegex :: OptionRestrictionRegex
-newOptionRestrictionRegex  = OptionRestrictionRegex { "Label": (NullOrUndefined Nothing), "Pattern": (NullOrUndefined Nothing) }
+newOptionRestrictionRegex  = OptionRestrictionRegex { "Label": Nothing, "Pattern": Nothing }
 
 -- | Constructs OptionRestrictionRegex's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionRestrictionRegex' :: ( { "Pattern" :: NullOrUndefined (RegexPattern) , "Label" :: NullOrUndefined (RegexLabel) } -> {"Pattern" :: NullOrUndefined (RegexPattern) , "Label" :: NullOrUndefined (RegexLabel) } ) -> OptionRestrictionRegex
-newOptionRestrictionRegex'  customize = (OptionRestrictionRegex <<< customize) { "Label": (NullOrUndefined Nothing), "Pattern": (NullOrUndefined Nothing) }
+newOptionRestrictionRegex' :: ( { "Pattern" :: Maybe (RegexPattern) , "Label" :: Maybe (RegexLabel) } -> {"Pattern" :: Maybe (RegexPattern) , "Label" :: Maybe (RegexLabel) } ) -> OptionRestrictionRegex
+newOptionRestrictionRegex'  customize = (OptionRestrictionRegex <<< customize) { "Label": Nothing, "Pattern": Nothing }
 
 
 
 -- | <p>A specification identifying an individual configuration option.</p>
 newtype OptionSpecification = OptionSpecification 
-  { "ResourceName" :: NullOrUndefined (ResourceName)
-  , "Namespace" :: NullOrUndefined (OptionNamespace)
-  , "OptionName" :: NullOrUndefined (ConfigurationOptionName)
+  { "ResourceName" :: Maybe (ResourceName)
+  , "Namespace" :: Maybe (OptionNamespace)
+  , "OptionName" :: Maybe (ConfigurationOptionName)
   }
 derive instance newtypeOptionSpecification :: Newtype OptionSpecification _
 derive instance repGenericOptionSpecification :: Generic OptionSpecification _
@@ -2955,12 +2954,12 @@ instance encodeOptionSpecification :: Encode OptionSpecification where encode = 
 
 -- | Constructs OptionSpecification from required parameters
 newOptionSpecification :: OptionSpecification
-newOptionSpecification  = OptionSpecification { "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "ResourceName": (NullOrUndefined Nothing) }
+newOptionSpecification  = OptionSpecification { "Namespace": Nothing, "OptionName": Nothing, "ResourceName": Nothing }
 
 -- | Constructs OptionSpecification's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionSpecification' :: ( { "ResourceName" :: NullOrUndefined (ResourceName) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) } -> {"ResourceName" :: NullOrUndefined (ResourceName) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) } ) -> OptionSpecification
-newOptionSpecification'  customize = (OptionSpecification <<< customize) { "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "ResourceName": (NullOrUndefined Nothing) }
+newOptionSpecification' :: ( { "ResourceName" :: Maybe (ResourceName) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) } -> {"ResourceName" :: Maybe (ResourceName) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) } ) -> OptionSpecification
+newOptionSpecification'  customize = (OptionSpecification <<< customize) { "Namespace": Nothing, "OptionName": Nothing, "ResourceName": Nothing }
 
 
 
@@ -2993,24 +2992,24 @@ instance encodePlatformCategory :: Encode PlatformCategory where encode = generi
 
 -- | <p>Detailed information about a platform.</p>
 newtype PlatformDescription = PlatformDescription 
-  { "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "PlatformOwner" :: NullOrUndefined (PlatformOwner)
-  , "PlatformName" :: NullOrUndefined (PlatformName)
-  , "PlatformVersion" :: NullOrUndefined (PlatformVersion)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformStatus" :: NullOrUndefined (PlatformStatus)
-  , "DateCreated" :: NullOrUndefined (CreationDate)
-  , "DateUpdated" :: NullOrUndefined (UpdateDate)
-  , "PlatformCategory" :: NullOrUndefined (PlatformCategory)
-  , "Description" :: NullOrUndefined (Description)
-  , "Maintainer" :: NullOrUndefined (Maintainer)
-  , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName)
-  , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion)
-  , "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages)
-  , "Frameworks" :: NullOrUndefined (PlatformFrameworks)
-  , "CustomAmiList" :: NullOrUndefined (CustomAmiList)
-  , "SupportedTierList" :: NullOrUndefined (SupportedTierList)
-  , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList)
+  { "PlatformArn" :: Maybe (PlatformArn)
+  , "PlatformOwner" :: Maybe (PlatformOwner)
+  , "PlatformName" :: Maybe (PlatformName)
+  , "PlatformVersion" :: Maybe (PlatformVersion)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformStatus" :: Maybe (PlatformStatus)
+  , "DateCreated" :: Maybe (CreationDate)
+  , "DateUpdated" :: Maybe (UpdateDate)
+  , "PlatformCategory" :: Maybe (PlatformCategory)
+  , "Description" :: Maybe (Description)
+  , "Maintainer" :: Maybe (Maintainer)
+  , "OperatingSystemName" :: Maybe (OperatingSystemName)
+  , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion)
+  , "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages)
+  , "Frameworks" :: Maybe (PlatformFrameworks)
+  , "CustomAmiList" :: Maybe (CustomAmiList)
+  , "SupportedTierList" :: Maybe (SupportedTierList)
+  , "SupportedAddonList" :: Maybe (SupportedAddonList)
   }
 derive instance newtypePlatformDescription :: Newtype PlatformDescription _
 derive instance repGenericPlatformDescription :: Generic PlatformDescription _
@@ -3020,20 +3019,20 @@ instance encodePlatformDescription :: Encode PlatformDescription where encode = 
 
 -- | Constructs PlatformDescription from required parameters
 newPlatformDescription :: PlatformDescription
-newPlatformDescription  = PlatformDescription { "CustomAmiList": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Frameworks": (NullOrUndefined Nothing), "Maintainer": (NullOrUndefined Nothing), "OperatingSystemName": (NullOrUndefined Nothing), "OperatingSystemVersion": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "PlatformCategory": (NullOrUndefined Nothing), "PlatformName": (NullOrUndefined Nothing), "PlatformOwner": (NullOrUndefined Nothing), "PlatformStatus": (NullOrUndefined Nothing), "PlatformVersion": (NullOrUndefined Nothing), "ProgrammingLanguages": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "SupportedAddonList": (NullOrUndefined Nothing), "SupportedTierList": (NullOrUndefined Nothing) }
+newPlatformDescription  = PlatformDescription { "CustomAmiList": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "Frameworks": Nothing, "Maintainer": Nothing, "OperatingSystemName": Nothing, "OperatingSystemVersion": Nothing, "PlatformArn": Nothing, "PlatformCategory": Nothing, "PlatformName": Nothing, "PlatformOwner": Nothing, "PlatformStatus": Nothing, "PlatformVersion": Nothing, "ProgrammingLanguages": Nothing, "SolutionStackName": Nothing, "SupportedAddonList": Nothing, "SupportedTierList": Nothing }
 
 -- | Constructs PlatformDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPlatformDescription' :: ( { "PlatformArn" :: NullOrUndefined (PlatformArn) , "PlatformOwner" :: NullOrUndefined (PlatformOwner) , "PlatformName" :: NullOrUndefined (PlatformName) , "PlatformVersion" :: NullOrUndefined (PlatformVersion) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformStatus" :: NullOrUndefined (PlatformStatus) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "PlatformCategory" :: NullOrUndefined (PlatformCategory) , "Description" :: NullOrUndefined (Description) , "Maintainer" :: NullOrUndefined (Maintainer) , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName) , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion) , "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages) , "Frameworks" :: NullOrUndefined (PlatformFrameworks) , "CustomAmiList" :: NullOrUndefined (CustomAmiList) , "SupportedTierList" :: NullOrUndefined (SupportedTierList) , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } -> {"PlatformArn" :: NullOrUndefined (PlatformArn) , "PlatformOwner" :: NullOrUndefined (PlatformOwner) , "PlatformName" :: NullOrUndefined (PlatformName) , "PlatformVersion" :: NullOrUndefined (PlatformVersion) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformStatus" :: NullOrUndefined (PlatformStatus) , "DateCreated" :: NullOrUndefined (CreationDate) , "DateUpdated" :: NullOrUndefined (UpdateDate) , "PlatformCategory" :: NullOrUndefined (PlatformCategory) , "Description" :: NullOrUndefined (Description) , "Maintainer" :: NullOrUndefined (Maintainer) , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName) , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion) , "ProgrammingLanguages" :: NullOrUndefined (PlatformProgrammingLanguages) , "Frameworks" :: NullOrUndefined (PlatformFrameworks) , "CustomAmiList" :: NullOrUndefined (CustomAmiList) , "SupportedTierList" :: NullOrUndefined (SupportedTierList) , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } ) -> PlatformDescription
-newPlatformDescription'  customize = (PlatformDescription <<< customize) { "CustomAmiList": (NullOrUndefined Nothing), "DateCreated": (NullOrUndefined Nothing), "DateUpdated": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Frameworks": (NullOrUndefined Nothing), "Maintainer": (NullOrUndefined Nothing), "OperatingSystemName": (NullOrUndefined Nothing), "OperatingSystemVersion": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "PlatformCategory": (NullOrUndefined Nothing), "PlatformName": (NullOrUndefined Nothing), "PlatformOwner": (NullOrUndefined Nothing), "PlatformStatus": (NullOrUndefined Nothing), "PlatformVersion": (NullOrUndefined Nothing), "ProgrammingLanguages": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "SupportedAddonList": (NullOrUndefined Nothing), "SupportedTierList": (NullOrUndefined Nothing) }
+newPlatformDescription' :: ( { "PlatformArn" :: Maybe (PlatformArn) , "PlatformOwner" :: Maybe (PlatformOwner) , "PlatformName" :: Maybe (PlatformName) , "PlatformVersion" :: Maybe (PlatformVersion) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformStatus" :: Maybe (PlatformStatus) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "PlatformCategory" :: Maybe (PlatformCategory) , "Description" :: Maybe (Description) , "Maintainer" :: Maybe (Maintainer) , "OperatingSystemName" :: Maybe (OperatingSystemName) , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion) , "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages) , "Frameworks" :: Maybe (PlatformFrameworks) , "CustomAmiList" :: Maybe (CustomAmiList) , "SupportedTierList" :: Maybe (SupportedTierList) , "SupportedAddonList" :: Maybe (SupportedAddonList) } -> {"PlatformArn" :: Maybe (PlatformArn) , "PlatformOwner" :: Maybe (PlatformOwner) , "PlatformName" :: Maybe (PlatformName) , "PlatformVersion" :: Maybe (PlatformVersion) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformStatus" :: Maybe (PlatformStatus) , "DateCreated" :: Maybe (CreationDate) , "DateUpdated" :: Maybe (UpdateDate) , "PlatformCategory" :: Maybe (PlatformCategory) , "Description" :: Maybe (Description) , "Maintainer" :: Maybe (Maintainer) , "OperatingSystemName" :: Maybe (OperatingSystemName) , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion) , "ProgrammingLanguages" :: Maybe (PlatformProgrammingLanguages) , "Frameworks" :: Maybe (PlatformFrameworks) , "CustomAmiList" :: Maybe (CustomAmiList) , "SupportedTierList" :: Maybe (SupportedTierList) , "SupportedAddonList" :: Maybe (SupportedAddonList) } ) -> PlatformDescription
+newPlatformDescription'  customize = (PlatformDescription <<< customize) { "CustomAmiList": Nothing, "DateCreated": Nothing, "DateUpdated": Nothing, "Description": Nothing, "Frameworks": Nothing, "Maintainer": Nothing, "OperatingSystemName": Nothing, "OperatingSystemVersion": Nothing, "PlatformArn": Nothing, "PlatformCategory": Nothing, "PlatformName": Nothing, "PlatformOwner": Nothing, "PlatformStatus": Nothing, "PlatformVersion": Nothing, "ProgrammingLanguages": Nothing, "SolutionStackName": Nothing, "SupportedAddonList": Nothing, "SupportedTierList": Nothing }
 
 
 
 -- | <p>Specify criteria to restrict the results when listing custom platforms.</p> <p>The filter is evaluated as the expression:</p> <p> <code>Type</code> <code>Operator</code> <code>Values[i]</code> </p>
 newtype PlatformFilter = PlatformFilter 
-  { "Type" :: NullOrUndefined (PlatformFilterType)
-  , "Operator" :: NullOrUndefined (PlatformFilterOperator)
-  , "Values" :: NullOrUndefined (PlatformFilterValueList)
+  { "Type" :: Maybe (PlatformFilterType)
+  , "Operator" :: Maybe (PlatformFilterOperator)
+  , "Values" :: Maybe (PlatformFilterValueList)
   }
 derive instance newtypePlatformFilter :: Newtype PlatformFilter _
 derive instance repGenericPlatformFilter :: Generic PlatformFilter _
@@ -3043,12 +3042,12 @@ instance encodePlatformFilter :: Encode PlatformFilter where encode = genericEnc
 
 -- | Constructs PlatformFilter from required parameters
 newPlatformFilter :: PlatformFilter
-newPlatformFilter  = PlatformFilter { "Operator": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newPlatformFilter  = PlatformFilter { "Operator": Nothing, "Type": Nothing, "Values": Nothing }
 
 -- | Constructs PlatformFilter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPlatformFilter' :: ( { "Type" :: NullOrUndefined (PlatformFilterType) , "Operator" :: NullOrUndefined (PlatformFilterOperator) , "Values" :: NullOrUndefined (PlatformFilterValueList) } -> {"Type" :: NullOrUndefined (PlatformFilterType) , "Operator" :: NullOrUndefined (PlatformFilterOperator) , "Values" :: NullOrUndefined (PlatformFilterValueList) } ) -> PlatformFilter
-newPlatformFilter'  customize = (PlatformFilter <<< customize) { "Operator": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newPlatformFilter' :: ( { "Type" :: Maybe (PlatformFilterType) , "Operator" :: Maybe (PlatformFilterOperator) , "Values" :: Maybe (PlatformFilterValueList) } -> {"Type" :: Maybe (PlatformFilterType) , "Operator" :: Maybe (PlatformFilterOperator) , "Values" :: Maybe (PlatformFilterValueList) } ) -> PlatformFilter
+newPlatformFilter'  customize = (PlatformFilter <<< customize) { "Operator": Nothing, "Type": Nothing, "Values": Nothing }
 
 
 
@@ -3099,8 +3098,8 @@ instance encodePlatformFilters :: Encode PlatformFilters where encode = genericE
 
 -- | <p>A framework supported by the custom platform.</p>
 newtype PlatformFramework = PlatformFramework 
-  { "Name" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypePlatformFramework :: Newtype PlatformFramework _
 derive instance repGenericPlatformFramework :: Generic PlatformFramework _
@@ -3110,12 +3109,12 @@ instance encodePlatformFramework :: Encode PlatformFramework where encode = gene
 
 -- | Constructs PlatformFramework from required parameters
 newPlatformFramework :: PlatformFramework
-newPlatformFramework  = PlatformFramework { "Name": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newPlatformFramework  = PlatformFramework { "Name": Nothing, "Version": Nothing }
 
 -- | Constructs PlatformFramework's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPlatformFramework' :: ( { "Name" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Name" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> PlatformFramework
-newPlatformFramework'  customize = (PlatformFramework <<< customize) { "Name": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newPlatformFramework' :: ( { "Name" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Name" :: Maybe (String) , "Version" :: Maybe (String) } ) -> PlatformFramework
+newPlatformFramework'  customize = (PlatformFramework <<< customize) { "Name": Nothing, "Version": Nothing }
 
 
 
@@ -3157,8 +3156,8 @@ instance encodePlatformOwner :: Encode PlatformOwner where encode = genericEncod
 
 -- | <p>A programming language supported by the platform.</p>
 newtype PlatformProgrammingLanguage = PlatformProgrammingLanguage 
-  { "Name" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypePlatformProgrammingLanguage :: Newtype PlatformProgrammingLanguage _
 derive instance repGenericPlatformProgrammingLanguage :: Generic PlatformProgrammingLanguage _
@@ -3168,12 +3167,12 @@ instance encodePlatformProgrammingLanguage :: Encode PlatformProgrammingLanguage
 
 -- | Constructs PlatformProgrammingLanguage from required parameters
 newPlatformProgrammingLanguage :: PlatformProgrammingLanguage
-newPlatformProgrammingLanguage  = PlatformProgrammingLanguage { "Name": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newPlatformProgrammingLanguage  = PlatformProgrammingLanguage { "Name": Nothing, "Version": Nothing }
 
 -- | Constructs PlatformProgrammingLanguage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPlatformProgrammingLanguage' :: ( { "Name" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Name" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> PlatformProgrammingLanguage
-newPlatformProgrammingLanguage'  customize = (PlatformProgrammingLanguage <<< customize) { "Name": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newPlatformProgrammingLanguage' :: ( { "Name" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Name" :: Maybe (String) , "Version" :: Maybe (String) } ) -> PlatformProgrammingLanguage
+newPlatformProgrammingLanguage'  customize = (PlatformProgrammingLanguage <<< customize) { "Name": Nothing, "Version": Nothing }
 
 
 
@@ -3197,14 +3196,14 @@ instance encodePlatformStatus :: Encode PlatformStatus where encode = genericEnc
 
 -- | <p>Detailed information about a platform.</p>
 newtype PlatformSummary = PlatformSummary 
-  { "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "PlatformOwner" :: NullOrUndefined (PlatformOwner)
-  , "PlatformStatus" :: NullOrUndefined (PlatformStatus)
-  , "PlatformCategory" :: NullOrUndefined (PlatformCategory)
-  , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName)
-  , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion)
-  , "SupportedTierList" :: NullOrUndefined (SupportedTierList)
-  , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList)
+  { "PlatformArn" :: Maybe (PlatformArn)
+  , "PlatformOwner" :: Maybe (PlatformOwner)
+  , "PlatformStatus" :: Maybe (PlatformStatus)
+  , "PlatformCategory" :: Maybe (PlatformCategory)
+  , "OperatingSystemName" :: Maybe (OperatingSystemName)
+  , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion)
+  , "SupportedTierList" :: Maybe (SupportedTierList)
+  , "SupportedAddonList" :: Maybe (SupportedAddonList)
   }
 derive instance newtypePlatformSummary :: Newtype PlatformSummary _
 derive instance repGenericPlatformSummary :: Generic PlatformSummary _
@@ -3214,12 +3213,12 @@ instance encodePlatformSummary :: Encode PlatformSummary where encode = genericE
 
 -- | Constructs PlatformSummary from required parameters
 newPlatformSummary :: PlatformSummary
-newPlatformSummary  = PlatformSummary { "OperatingSystemName": (NullOrUndefined Nothing), "OperatingSystemVersion": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "PlatformCategory": (NullOrUndefined Nothing), "PlatformOwner": (NullOrUndefined Nothing), "PlatformStatus": (NullOrUndefined Nothing), "SupportedAddonList": (NullOrUndefined Nothing), "SupportedTierList": (NullOrUndefined Nothing) }
+newPlatformSummary  = PlatformSummary { "OperatingSystemName": Nothing, "OperatingSystemVersion": Nothing, "PlatformArn": Nothing, "PlatformCategory": Nothing, "PlatformOwner": Nothing, "PlatformStatus": Nothing, "SupportedAddonList": Nothing, "SupportedTierList": Nothing }
 
 -- | Constructs PlatformSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPlatformSummary' :: ( { "PlatformArn" :: NullOrUndefined (PlatformArn) , "PlatformOwner" :: NullOrUndefined (PlatformOwner) , "PlatformStatus" :: NullOrUndefined (PlatformStatus) , "PlatformCategory" :: NullOrUndefined (PlatformCategory) , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName) , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion) , "SupportedTierList" :: NullOrUndefined (SupportedTierList) , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } -> {"PlatformArn" :: NullOrUndefined (PlatformArn) , "PlatformOwner" :: NullOrUndefined (PlatformOwner) , "PlatformStatus" :: NullOrUndefined (PlatformStatus) , "PlatformCategory" :: NullOrUndefined (PlatformCategory) , "OperatingSystemName" :: NullOrUndefined (OperatingSystemName) , "OperatingSystemVersion" :: NullOrUndefined (OperatingSystemVersion) , "SupportedTierList" :: NullOrUndefined (SupportedTierList) , "SupportedAddonList" :: NullOrUndefined (SupportedAddonList) } ) -> PlatformSummary
-newPlatformSummary'  customize = (PlatformSummary <<< customize) { "OperatingSystemName": (NullOrUndefined Nothing), "OperatingSystemVersion": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "PlatformCategory": (NullOrUndefined Nothing), "PlatformOwner": (NullOrUndefined Nothing), "PlatformStatus": (NullOrUndefined Nothing), "SupportedAddonList": (NullOrUndefined Nothing), "SupportedTierList": (NullOrUndefined Nothing) }
+newPlatformSummary' :: ( { "PlatformArn" :: Maybe (PlatformArn) , "PlatformOwner" :: Maybe (PlatformOwner) , "PlatformStatus" :: Maybe (PlatformStatus) , "PlatformCategory" :: Maybe (PlatformCategory) , "OperatingSystemName" :: Maybe (OperatingSystemName) , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion) , "SupportedTierList" :: Maybe (SupportedTierList) , "SupportedAddonList" :: Maybe (SupportedAddonList) } -> {"PlatformArn" :: Maybe (PlatformArn) , "PlatformOwner" :: Maybe (PlatformOwner) , "PlatformStatus" :: Maybe (PlatformStatus) , "PlatformCategory" :: Maybe (PlatformCategory) , "OperatingSystemName" :: Maybe (OperatingSystemName) , "OperatingSystemVersion" :: Maybe (OperatingSystemVersion) , "SupportedTierList" :: Maybe (SupportedTierList) , "SupportedAddonList" :: Maybe (SupportedAddonList) } ) -> PlatformSummary
+newPlatformSummary'  customize = (PlatformSummary <<< customize) { "OperatingSystemName": Nothing, "OperatingSystemVersion": Nothing, "PlatformArn": Nothing, "PlatformCategory": Nothing, "PlatformOwner": Nothing, "PlatformStatus": Nothing, "SupportedAddonList": Nothing, "SupportedTierList": Nothing }
 
 
 
@@ -3253,8 +3252,8 @@ instance encodePlatformVersionStillReferencedException :: Encode PlatformVersion
 
 -- | <p>Describes a queue.</p>
 newtype Queue = Queue 
-  { "Name" :: NullOrUndefined (String)
-  , "URL" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
+  , "URL" :: Maybe (String)
   }
 derive instance newtypeQueue :: Newtype Queue _
 derive instance repGenericQueue :: Generic Queue _
@@ -3264,12 +3263,12 @@ instance encodeQueue :: Encode Queue where encode = genericEncode options
 
 -- | Constructs Queue from required parameters
 newQueue :: Queue
-newQueue  = Queue { "Name": (NullOrUndefined Nothing), "URL": (NullOrUndefined Nothing) }
+newQueue  = Queue { "Name": Nothing, "URL": Nothing }
 
 -- | Constructs Queue's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newQueue' :: ( { "Name" :: NullOrUndefined (String) , "URL" :: NullOrUndefined (String) } -> {"Name" :: NullOrUndefined (String) , "URL" :: NullOrUndefined (String) } ) -> Queue
-newQueue'  customize = (Queue <<< customize) { "Name": (NullOrUndefined Nothing), "URL": (NullOrUndefined Nothing) }
+newQueue' :: ( { "Name" :: Maybe (String) , "URL" :: Maybe (String) } -> {"Name" :: Maybe (String) , "URL" :: Maybe (String) } ) -> Queue
+newQueue'  customize = (Queue <<< customize) { "Name": Nothing, "URL": Nothing }
 
 
 
@@ -3284,8 +3283,8 @@ instance encodeQueueList :: Encode QueueList where encode = genericEncode option
 
 -- | <p/>
 newtype RebuildEnvironmentMessage = RebuildEnvironmentMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeRebuildEnvironmentMessage :: Newtype RebuildEnvironmentMessage _
 derive instance repGenericRebuildEnvironmentMessage :: Generic RebuildEnvironmentMessage _
@@ -3295,12 +3294,12 @@ instance encodeRebuildEnvironmentMessage :: Encode RebuildEnvironmentMessage whe
 
 -- | Constructs RebuildEnvironmentMessage from required parameters
 newRebuildEnvironmentMessage :: RebuildEnvironmentMessage
-newRebuildEnvironmentMessage  = RebuildEnvironmentMessage { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRebuildEnvironmentMessage  = RebuildEnvironmentMessage { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs RebuildEnvironmentMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRebuildEnvironmentMessage' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> RebuildEnvironmentMessage
-newRebuildEnvironmentMessage'  customize = (RebuildEnvironmentMessage <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRebuildEnvironmentMessage' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } ) -> RebuildEnvironmentMessage
+newRebuildEnvironmentMessage'  customize = (RebuildEnvironmentMessage <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
@@ -3342,8 +3341,8 @@ instance encodeRequestCount :: Encode RequestCount where encode = genericEncode 
 
 -- | <p>Request to retrieve logs from an environment and store them in your Elastic Beanstalk storage bucket.</p>
 newtype RequestEnvironmentInfoMessage = RequestEnvironmentInfoMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   , "InfoType" :: (EnvironmentInfoType)
   }
 derive instance newtypeRequestEnvironmentInfoMessage :: Newtype RequestEnvironmentInfoMessage _
@@ -3354,12 +3353,12 @@ instance encodeRequestEnvironmentInfoMessage :: Encode RequestEnvironmentInfoMes
 
 -- | Constructs RequestEnvironmentInfoMessage from required parameters
 newRequestEnvironmentInfoMessage :: EnvironmentInfoType -> RequestEnvironmentInfoMessage
-newRequestEnvironmentInfoMessage _InfoType = RequestEnvironmentInfoMessage { "InfoType": _InfoType, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRequestEnvironmentInfoMessage _InfoType = RequestEnvironmentInfoMessage { "InfoType": _InfoType, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs RequestEnvironmentInfoMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRequestEnvironmentInfoMessage' :: EnvironmentInfoType -> ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } ) -> RequestEnvironmentInfoMessage
-newRequestEnvironmentInfoMessage' _InfoType customize = (RequestEnvironmentInfoMessage <<< customize) { "InfoType": _InfoType, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRequestEnvironmentInfoMessage' :: EnvironmentInfoType -> ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } ) -> RequestEnvironmentInfoMessage
+newRequestEnvironmentInfoMessage' _InfoType customize = (RequestEnvironmentInfoMessage <<< customize) { "InfoType": _InfoType, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
@@ -3410,8 +3409,8 @@ instance encodeResourceNotFoundException :: Encode ResourceNotFoundException whe
 
 
 newtype ResourceTagsDescriptionMessage = ResourceTagsDescriptionMessage 
-  { "ResourceArn" :: NullOrUndefined (ResourceArn)
-  , "ResourceTags" :: NullOrUndefined (TagList)
+  { "ResourceArn" :: Maybe (ResourceArn)
+  , "ResourceTags" :: Maybe (TagList)
   }
 derive instance newtypeResourceTagsDescriptionMessage :: Newtype ResourceTagsDescriptionMessage _
 derive instance repGenericResourceTagsDescriptionMessage :: Generic ResourceTagsDescriptionMessage _
@@ -3421,12 +3420,12 @@ instance encodeResourceTagsDescriptionMessage :: Encode ResourceTagsDescriptionM
 
 -- | Constructs ResourceTagsDescriptionMessage from required parameters
 newResourceTagsDescriptionMessage :: ResourceTagsDescriptionMessage
-newResourceTagsDescriptionMessage  = ResourceTagsDescriptionMessage { "ResourceArn": (NullOrUndefined Nothing), "ResourceTags": (NullOrUndefined Nothing) }
+newResourceTagsDescriptionMessage  = ResourceTagsDescriptionMessage { "ResourceArn": Nothing, "ResourceTags": Nothing }
 
 -- | Constructs ResourceTagsDescriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceTagsDescriptionMessage' :: ( { "ResourceArn" :: NullOrUndefined (ResourceArn) , "ResourceTags" :: NullOrUndefined (TagList) } -> {"ResourceArn" :: NullOrUndefined (ResourceArn) , "ResourceTags" :: NullOrUndefined (TagList) } ) -> ResourceTagsDescriptionMessage
-newResourceTagsDescriptionMessage'  customize = (ResourceTagsDescriptionMessage <<< customize) { "ResourceArn": (NullOrUndefined Nothing), "ResourceTags": (NullOrUndefined Nothing) }
+newResourceTagsDescriptionMessage' :: ( { "ResourceArn" :: Maybe (ResourceArn) , "ResourceTags" :: Maybe (TagList) } -> {"ResourceArn" :: Maybe (ResourceArn) , "ResourceTags" :: Maybe (TagList) } ) -> ResourceTagsDescriptionMessage
+newResourceTagsDescriptionMessage'  customize = (ResourceTagsDescriptionMessage <<< customize) { "ResourceArn": Nothing, "ResourceTags": Nothing }
 
 
 
@@ -3442,8 +3441,8 @@ instance encodeResourceTypeNotSupportedException :: Encode ResourceTypeNotSuppor
 
 -- | <p/>
 newtype RestartAppServerMessage = RestartAppServerMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeRestartAppServerMessage :: Newtype RestartAppServerMessage _
 derive instance repGenericRestartAppServerMessage :: Generic RestartAppServerMessage _
@@ -3453,19 +3452,19 @@ instance encodeRestartAppServerMessage :: Encode RestartAppServerMessage where e
 
 -- | Constructs RestartAppServerMessage from required parameters
 newRestartAppServerMessage :: RestartAppServerMessage
-newRestartAppServerMessage  = RestartAppServerMessage { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRestartAppServerMessage  = RestartAppServerMessage { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs RestartAppServerMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRestartAppServerMessage' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> RestartAppServerMessage
-newRestartAppServerMessage'  customize = (RestartAppServerMessage <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRestartAppServerMessage' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) } ) -> RestartAppServerMessage
+newRestartAppServerMessage'  customize = (RestartAppServerMessage <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
 -- | <p>Request to download logs retrieved with <a>RequestEnvironmentInfo</a>.</p>
 newtype RetrieveEnvironmentInfoMessage = RetrieveEnvironmentInfoMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   , "InfoType" :: (EnvironmentInfoType)
   }
 derive instance newtypeRetrieveEnvironmentInfoMessage :: Newtype RetrieveEnvironmentInfoMessage _
@@ -3476,18 +3475,18 @@ instance encodeRetrieveEnvironmentInfoMessage :: Encode RetrieveEnvironmentInfoM
 
 -- | Constructs RetrieveEnvironmentInfoMessage from required parameters
 newRetrieveEnvironmentInfoMessage :: EnvironmentInfoType -> RetrieveEnvironmentInfoMessage
-newRetrieveEnvironmentInfoMessage _InfoType = RetrieveEnvironmentInfoMessage { "InfoType": _InfoType, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRetrieveEnvironmentInfoMessage _InfoType = RetrieveEnvironmentInfoMessage { "InfoType": _InfoType, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 -- | Constructs RetrieveEnvironmentInfoMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRetrieveEnvironmentInfoMessage' :: EnvironmentInfoType -> ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } ) -> RetrieveEnvironmentInfoMessage
-newRetrieveEnvironmentInfoMessage' _InfoType customize = (RetrieveEnvironmentInfoMessage <<< customize) { "InfoType": _InfoType, "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing) }
+newRetrieveEnvironmentInfoMessage' :: EnvironmentInfoType -> ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "InfoType" :: (EnvironmentInfoType) } ) -> RetrieveEnvironmentInfoMessage
+newRetrieveEnvironmentInfoMessage' _InfoType customize = (RetrieveEnvironmentInfoMessage <<< customize) { "InfoType": _InfoType, "EnvironmentId": Nothing, "EnvironmentName": Nothing }
 
 
 
 -- | <p>Result message containing a description of the requested environment info.</p>
 newtype RetrieveEnvironmentInfoResultMessage = RetrieveEnvironmentInfoResultMessage 
-  { "EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList)
+  { "EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList)
   }
 derive instance newtypeRetrieveEnvironmentInfoResultMessage :: Newtype RetrieveEnvironmentInfoResultMessage _
 derive instance repGenericRetrieveEnvironmentInfoResultMessage :: Generic RetrieveEnvironmentInfoResultMessage _
@@ -3497,12 +3496,12 @@ instance encodeRetrieveEnvironmentInfoResultMessage :: Encode RetrieveEnvironmen
 
 -- | Constructs RetrieveEnvironmentInfoResultMessage from required parameters
 newRetrieveEnvironmentInfoResultMessage :: RetrieveEnvironmentInfoResultMessage
-newRetrieveEnvironmentInfoResultMessage  = RetrieveEnvironmentInfoResultMessage { "EnvironmentInfo": (NullOrUndefined Nothing) }
+newRetrieveEnvironmentInfoResultMessage  = RetrieveEnvironmentInfoResultMessage { "EnvironmentInfo": Nothing }
 
 -- | Constructs RetrieveEnvironmentInfoResultMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRetrieveEnvironmentInfoResultMessage' :: ( { "EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList) } -> {"EnvironmentInfo" :: NullOrUndefined (EnvironmentInfoDescriptionList) } ) -> RetrieveEnvironmentInfoResultMessage
-newRetrieveEnvironmentInfoResultMessage'  customize = (RetrieveEnvironmentInfoResultMessage <<< customize) { "EnvironmentInfo": (NullOrUndefined Nothing) }
+newRetrieveEnvironmentInfoResultMessage' :: ( { "EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList) } -> {"EnvironmentInfo" :: Maybe (EnvironmentInfoDescriptionList) } ) -> RetrieveEnvironmentInfoResultMessage
+newRetrieveEnvironmentInfoResultMessage'  customize = (RetrieveEnvironmentInfoResultMessage <<< customize) { "EnvironmentInfo": Nothing }
 
 
 
@@ -3526,8 +3525,8 @@ instance encodeS3Key :: Encode S3Key where encode = genericEncode options
 
 -- | <p>The bucket and key of an item stored in Amazon S3.</p>
 newtype S3Location = S3Location 
-  { "S3Bucket" :: NullOrUndefined (S3Bucket)
-  , "S3Key" :: NullOrUndefined (S3Key)
+  { "S3Bucket" :: Maybe (S3Bucket)
+  , "S3Key" :: Maybe (S3Key)
   }
 derive instance newtypeS3Location :: Newtype S3Location _
 derive instance repGenericS3Location :: Generic S3Location _
@@ -3537,12 +3536,12 @@ instance encodeS3Location :: Encode S3Location where encode = genericEncode opti
 
 -- | Constructs S3Location from required parameters
 newS3Location :: S3Location
-newS3Location  = S3Location { "S3Bucket": (NullOrUndefined Nothing), "S3Key": (NullOrUndefined Nothing) }
+newS3Location  = S3Location { "S3Bucket": Nothing, "S3Key": Nothing }
 
 -- | Constructs S3Location's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newS3Location' :: ( { "S3Bucket" :: NullOrUndefined (S3Bucket) , "S3Key" :: NullOrUndefined (S3Key) } -> {"S3Bucket" :: NullOrUndefined (S3Bucket) , "S3Key" :: NullOrUndefined (S3Key) } ) -> S3Location
-newS3Location'  customize = (S3Location <<< customize) { "S3Bucket": (NullOrUndefined Nothing), "S3Key": (NullOrUndefined Nothing) }
+newS3Location' :: ( { "S3Bucket" :: Maybe (S3Bucket) , "S3Key" :: Maybe (S3Key) } -> {"S3Bucket" :: Maybe (S3Bucket) , "S3Key" :: Maybe (S3Key) } ) -> S3Location
+newS3Location'  customize = (S3Location <<< customize) { "S3Bucket": Nothing, "S3Key": Nothing }
 
 
 
@@ -3577,16 +3576,16 @@ instance encodeSampleTimestamp :: Encode SampleTimestamp where encode = genericE
 
 -- | <p>Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.</p>
 newtype SingleInstanceHealth = SingleInstanceHealth 
-  { "InstanceId" :: NullOrUndefined (InstanceId)
-  , "HealthStatus" :: NullOrUndefined (String)
-  , "Color" :: NullOrUndefined (String)
-  , "Causes" :: NullOrUndefined (Causes)
-  , "LaunchedAt" :: NullOrUndefined (LaunchedAt)
-  , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics)
-  , "System" :: NullOrUndefined (SystemStatus)
-  , "Deployment" :: NullOrUndefined (Deployment)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "InstanceType" :: NullOrUndefined (String)
+  { "InstanceId" :: Maybe (InstanceId)
+  , "HealthStatus" :: Maybe (String)
+  , "Color" :: Maybe (String)
+  , "Causes" :: Maybe (Causes)
+  , "LaunchedAt" :: Maybe (LaunchedAt)
+  , "ApplicationMetrics" :: Maybe (ApplicationMetrics)
+  , "System" :: Maybe (SystemStatus)
+  , "Deployment" :: Maybe (Deployment)
+  , "AvailabilityZone" :: Maybe (String)
+  , "InstanceType" :: Maybe (String)
   }
 derive instance newtypeSingleInstanceHealth :: Newtype SingleInstanceHealth _
 derive instance repGenericSingleInstanceHealth :: Generic SingleInstanceHealth _
@@ -3596,19 +3595,19 @@ instance encodeSingleInstanceHealth :: Encode SingleInstanceHealth where encode 
 
 -- | Constructs SingleInstanceHealth from required parameters
 newSingleInstanceHealth :: SingleInstanceHealth
-newSingleInstanceHealth  = SingleInstanceHealth { "ApplicationMetrics": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "Causes": (NullOrUndefined Nothing), "Color": (NullOrUndefined Nothing), "Deployment": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "InstanceId": (NullOrUndefined Nothing), "InstanceType": (NullOrUndefined Nothing), "LaunchedAt": (NullOrUndefined Nothing), "System": (NullOrUndefined Nothing) }
+newSingleInstanceHealth  = SingleInstanceHealth { "ApplicationMetrics": Nothing, "AvailabilityZone": Nothing, "Causes": Nothing, "Color": Nothing, "Deployment": Nothing, "HealthStatus": Nothing, "InstanceId": Nothing, "InstanceType": Nothing, "LaunchedAt": Nothing, "System": Nothing }
 
 -- | Constructs SingleInstanceHealth's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSingleInstanceHealth' :: ( { "InstanceId" :: NullOrUndefined (InstanceId) , "HealthStatus" :: NullOrUndefined (String) , "Color" :: NullOrUndefined (String) , "Causes" :: NullOrUndefined (Causes) , "LaunchedAt" :: NullOrUndefined (LaunchedAt) , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics) , "System" :: NullOrUndefined (SystemStatus) , "Deployment" :: NullOrUndefined (Deployment) , "AvailabilityZone" :: NullOrUndefined (String) , "InstanceType" :: NullOrUndefined (String) } -> {"InstanceId" :: NullOrUndefined (InstanceId) , "HealthStatus" :: NullOrUndefined (String) , "Color" :: NullOrUndefined (String) , "Causes" :: NullOrUndefined (Causes) , "LaunchedAt" :: NullOrUndefined (LaunchedAt) , "ApplicationMetrics" :: NullOrUndefined (ApplicationMetrics) , "System" :: NullOrUndefined (SystemStatus) , "Deployment" :: NullOrUndefined (Deployment) , "AvailabilityZone" :: NullOrUndefined (String) , "InstanceType" :: NullOrUndefined (String) } ) -> SingleInstanceHealth
-newSingleInstanceHealth'  customize = (SingleInstanceHealth <<< customize) { "ApplicationMetrics": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "Causes": (NullOrUndefined Nothing), "Color": (NullOrUndefined Nothing), "Deployment": (NullOrUndefined Nothing), "HealthStatus": (NullOrUndefined Nothing), "InstanceId": (NullOrUndefined Nothing), "InstanceType": (NullOrUndefined Nothing), "LaunchedAt": (NullOrUndefined Nothing), "System": (NullOrUndefined Nothing) }
+newSingleInstanceHealth' :: ( { "InstanceId" :: Maybe (InstanceId) , "HealthStatus" :: Maybe (String) , "Color" :: Maybe (String) , "Causes" :: Maybe (Causes) , "LaunchedAt" :: Maybe (LaunchedAt) , "ApplicationMetrics" :: Maybe (ApplicationMetrics) , "System" :: Maybe (SystemStatus) , "Deployment" :: Maybe (Deployment) , "AvailabilityZone" :: Maybe (String) , "InstanceType" :: Maybe (String) } -> {"InstanceId" :: Maybe (InstanceId) , "HealthStatus" :: Maybe (String) , "Color" :: Maybe (String) , "Causes" :: Maybe (Causes) , "LaunchedAt" :: Maybe (LaunchedAt) , "ApplicationMetrics" :: Maybe (ApplicationMetrics) , "System" :: Maybe (SystemStatus) , "Deployment" :: Maybe (Deployment) , "AvailabilityZone" :: Maybe (String) , "InstanceType" :: Maybe (String) } ) -> SingleInstanceHealth
+newSingleInstanceHealth'  customize = (SingleInstanceHealth <<< customize) { "ApplicationMetrics": Nothing, "AvailabilityZone": Nothing, "Causes": Nothing, "Color": Nothing, "Deployment": Nothing, "HealthStatus": Nothing, "InstanceId": Nothing, "InstanceType": Nothing, "LaunchedAt": Nothing, "System": Nothing }
 
 
 
 -- | <p>Describes the solution stack.</p>
 newtype SolutionStackDescription = SolutionStackDescription 
-  { "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList)
+  { "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList)
   }
 derive instance newtypeSolutionStackDescription :: Newtype SolutionStackDescription _
 derive instance repGenericSolutionStackDescription :: Generic SolutionStackDescription _
@@ -3618,12 +3617,12 @@ instance encodeSolutionStackDescription :: Encode SolutionStackDescription where
 
 -- | Constructs SolutionStackDescription from required parameters
 newSolutionStackDescription :: SolutionStackDescription
-newSolutionStackDescription  = SolutionStackDescription { "PermittedFileTypes": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing) }
+newSolutionStackDescription  = SolutionStackDescription { "PermittedFileTypes": Nothing, "SolutionStackName": Nothing }
 
 -- | Constructs SolutionStackDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSolutionStackDescription' :: ( { "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList) } -> {"SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PermittedFileTypes" :: NullOrUndefined (SolutionStackFileTypeList) } ) -> SolutionStackDescription
-newSolutionStackDescription'  customize = (SolutionStackDescription <<< customize) { "PermittedFileTypes": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing) }
+newSolutionStackDescription' :: ( { "SolutionStackName" :: Maybe (SolutionStackName) , "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList) } -> {"SolutionStackName" :: Maybe (SolutionStackName) , "PermittedFileTypes" :: Maybe (SolutionStackFileTypeList) } ) -> SolutionStackDescription
+newSolutionStackDescription'  customize = (SolutionStackDescription <<< customize) { "PermittedFileTypes": Nothing, "SolutionStackName": Nothing }
 
 
 
@@ -3680,8 +3679,8 @@ instance encodeSourceBundleDeletionException :: Encode SourceBundleDeletionExcep
 
 -- | <p>A specification for an environment configuration</p>
 newtype SourceConfiguration = SourceConfiguration 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
   }
 derive instance newtypeSourceConfiguration :: Newtype SourceConfiguration _
 derive instance repGenericSourceConfiguration :: Generic SourceConfiguration _
@@ -3691,12 +3690,12 @@ instance encodeSourceConfiguration :: Encode SourceConfiguration where encode = 
 
 -- | Constructs SourceConfiguration from required parameters
 newSourceConfiguration :: SourceConfiguration
-newSourceConfiguration  = SourceConfiguration { "ApplicationName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newSourceConfiguration  = SourceConfiguration { "ApplicationName": Nothing, "TemplateName": Nothing }
 
 -- | Constructs SourceConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSourceConfiguration' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) } ) -> SourceConfiguration
-newSourceConfiguration'  customize = (SourceConfiguration <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newSourceConfiguration' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) } -> {"ApplicationName" :: Maybe (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) } ) -> SourceConfiguration
+newSourceConfiguration'  customize = (SourceConfiguration <<< customize) { "ApplicationName": Nothing, "TemplateName": Nothing }
 
 
 
@@ -3729,10 +3728,10 @@ instance encodeSourceType :: Encode SourceType where encode = genericEncode opti
 
 -- | <p>Represents the percentage of requests over the last 10 seconds that resulted in each type of status code response. For more information, see <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Status Code Definitions</a>.</p>
 newtype StatusCodes = StatusCodes 
-  { "Status2xx" :: NullOrUndefined (NullableInteger)
-  , "Status3xx" :: NullOrUndefined (NullableInteger)
-  , "Status4xx" :: NullOrUndefined (NullableInteger)
-  , "Status5xx" :: NullOrUndefined (NullableInteger)
+  { "Status2xx" :: Maybe (NullableInteger)
+  , "Status3xx" :: Maybe (NullableInteger)
+  , "Status4xx" :: Maybe (NullableInteger)
+  , "Status5xx" :: Maybe (NullableInteger)
   }
 derive instance newtypeStatusCodes :: Newtype StatusCodes _
 derive instance repGenericStatusCodes :: Generic StatusCodes _
@@ -3742,12 +3741,12 @@ instance encodeStatusCodes :: Encode StatusCodes where encode = genericEncode op
 
 -- | Constructs StatusCodes from required parameters
 newStatusCodes :: StatusCodes
-newStatusCodes  = StatusCodes { "Status2xx": (NullOrUndefined Nothing), "Status3xx": (NullOrUndefined Nothing), "Status4xx": (NullOrUndefined Nothing), "Status5xx": (NullOrUndefined Nothing) }
+newStatusCodes  = StatusCodes { "Status2xx": Nothing, "Status3xx": Nothing, "Status4xx": Nothing, "Status5xx": Nothing }
 
 -- | Constructs StatusCodes's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStatusCodes' :: ( { "Status2xx" :: NullOrUndefined (NullableInteger) , "Status3xx" :: NullOrUndefined (NullableInteger) , "Status4xx" :: NullOrUndefined (NullableInteger) , "Status5xx" :: NullOrUndefined (NullableInteger) } -> {"Status2xx" :: NullOrUndefined (NullableInteger) , "Status3xx" :: NullOrUndefined (NullableInteger) , "Status4xx" :: NullOrUndefined (NullableInteger) , "Status5xx" :: NullOrUndefined (NullableInteger) } ) -> StatusCodes
-newStatusCodes'  customize = (StatusCodes <<< customize) { "Status2xx": (NullOrUndefined Nothing), "Status3xx": (NullOrUndefined Nothing), "Status4xx": (NullOrUndefined Nothing), "Status5xx": (NullOrUndefined Nothing) }
+newStatusCodes' :: ( { "Status2xx" :: Maybe (NullableInteger) , "Status3xx" :: Maybe (NullableInteger) , "Status4xx" :: Maybe (NullableInteger) , "Status5xx" :: Maybe (NullableInteger) } -> {"Status2xx" :: Maybe (NullableInteger) , "Status3xx" :: Maybe (NullableInteger) , "Status4xx" :: Maybe (NullableInteger) , "Status5xx" :: Maybe (NullableInteger) } ) -> StatusCodes
+newStatusCodes'  customize = (StatusCodes <<< customize) { "Status2xx": Nothing, "Status3xx": Nothing, "Status4xx": Nothing, "Status5xx": Nothing }
 
 
 
@@ -3789,10 +3788,10 @@ instance encodeSupportedTierList :: Encode SupportedTierList where encode = gene
 
 -- | <p>Swaps the CNAMEs of two environments.</p>
 newtype SwapEnvironmentCNAMEsMessage = SwapEnvironmentCNAMEsMessage 
-  { "SourceEnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName)
+  { "SourceEnvironmentId" :: Maybe (EnvironmentId)
+  , "SourceEnvironmentName" :: Maybe (EnvironmentName)
+  , "DestinationEnvironmentId" :: Maybe (EnvironmentId)
+  , "DestinationEnvironmentName" :: Maybe (EnvironmentName)
   }
 derive instance newtypeSwapEnvironmentCNAMEsMessage :: Newtype SwapEnvironmentCNAMEsMessage _
 derive instance repGenericSwapEnvironmentCNAMEsMessage :: Generic SwapEnvironmentCNAMEsMessage _
@@ -3802,19 +3801,19 @@ instance encodeSwapEnvironmentCNAMEsMessage :: Encode SwapEnvironmentCNAMEsMessa
 
 -- | Constructs SwapEnvironmentCNAMEsMessage from required parameters
 newSwapEnvironmentCNAMEsMessage :: SwapEnvironmentCNAMEsMessage
-newSwapEnvironmentCNAMEsMessage  = SwapEnvironmentCNAMEsMessage { "DestinationEnvironmentId": (NullOrUndefined Nothing), "DestinationEnvironmentName": (NullOrUndefined Nothing), "SourceEnvironmentId": (NullOrUndefined Nothing), "SourceEnvironmentName": (NullOrUndefined Nothing) }
+newSwapEnvironmentCNAMEsMessage  = SwapEnvironmentCNAMEsMessage { "DestinationEnvironmentId": Nothing, "DestinationEnvironmentName": Nothing, "SourceEnvironmentId": Nothing, "SourceEnvironmentName": Nothing }
 
 -- | Constructs SwapEnvironmentCNAMEsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSwapEnvironmentCNAMEsMessage' :: ( { "SourceEnvironmentId" :: NullOrUndefined (EnvironmentId) , "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName) , "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId) , "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName) } -> {"SourceEnvironmentId" :: NullOrUndefined (EnvironmentId) , "SourceEnvironmentName" :: NullOrUndefined (EnvironmentName) , "DestinationEnvironmentId" :: NullOrUndefined (EnvironmentId) , "DestinationEnvironmentName" :: NullOrUndefined (EnvironmentName) } ) -> SwapEnvironmentCNAMEsMessage
-newSwapEnvironmentCNAMEsMessage'  customize = (SwapEnvironmentCNAMEsMessage <<< customize) { "DestinationEnvironmentId": (NullOrUndefined Nothing), "DestinationEnvironmentName": (NullOrUndefined Nothing), "SourceEnvironmentId": (NullOrUndefined Nothing), "SourceEnvironmentName": (NullOrUndefined Nothing) }
+newSwapEnvironmentCNAMEsMessage' :: ( { "SourceEnvironmentId" :: Maybe (EnvironmentId) , "SourceEnvironmentName" :: Maybe (EnvironmentName) , "DestinationEnvironmentId" :: Maybe (EnvironmentId) , "DestinationEnvironmentName" :: Maybe (EnvironmentName) } -> {"SourceEnvironmentId" :: Maybe (EnvironmentId) , "SourceEnvironmentName" :: Maybe (EnvironmentName) , "DestinationEnvironmentId" :: Maybe (EnvironmentId) , "DestinationEnvironmentName" :: Maybe (EnvironmentName) } ) -> SwapEnvironmentCNAMEsMessage
+newSwapEnvironmentCNAMEsMessage'  customize = (SwapEnvironmentCNAMEsMessage <<< customize) { "DestinationEnvironmentId": Nothing, "DestinationEnvironmentName": Nothing, "SourceEnvironmentId": Nothing, "SourceEnvironmentName": Nothing }
 
 
 
 -- | <p>CPU utilization and load average metrics for an Amazon EC2 instance.</p>
 newtype SystemStatus = SystemStatus 
-  { "CPUUtilization" :: NullOrUndefined (CPUUtilization)
-  , "LoadAverage" :: NullOrUndefined (LoadAverage)
+  { "CPUUtilization" :: Maybe (CPUUtilization)
+  , "LoadAverage" :: Maybe (LoadAverage)
   }
 derive instance newtypeSystemStatus :: Newtype SystemStatus _
 derive instance repGenericSystemStatus :: Generic SystemStatus _
@@ -3824,19 +3823,19 @@ instance encodeSystemStatus :: Encode SystemStatus where encode = genericEncode 
 
 -- | Constructs SystemStatus from required parameters
 newSystemStatus :: SystemStatus
-newSystemStatus  = SystemStatus { "CPUUtilization": (NullOrUndefined Nothing), "LoadAverage": (NullOrUndefined Nothing) }
+newSystemStatus  = SystemStatus { "CPUUtilization": Nothing, "LoadAverage": Nothing }
 
 -- | Constructs SystemStatus's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSystemStatus' :: ( { "CPUUtilization" :: NullOrUndefined (CPUUtilization) , "LoadAverage" :: NullOrUndefined (LoadAverage) } -> {"CPUUtilization" :: NullOrUndefined (CPUUtilization) , "LoadAverage" :: NullOrUndefined (LoadAverage) } ) -> SystemStatus
-newSystemStatus'  customize = (SystemStatus <<< customize) { "CPUUtilization": (NullOrUndefined Nothing), "LoadAverage": (NullOrUndefined Nothing) }
+newSystemStatus' :: ( { "CPUUtilization" :: Maybe (CPUUtilization) , "LoadAverage" :: Maybe (LoadAverage) } -> {"CPUUtilization" :: Maybe (CPUUtilization) , "LoadAverage" :: Maybe (LoadAverage) } ) -> SystemStatus
+newSystemStatus'  customize = (SystemStatus <<< customize) { "CPUUtilization": Nothing, "LoadAverage": Nothing }
 
 
 
 -- | <p>Describes a tag applied to a resource in an environment.</p>
 newtype Tag = Tag 
-  { "Key" :: NullOrUndefined (TagKey)
-  , "Value" :: NullOrUndefined (TagValue)
+  { "Key" :: Maybe (TagKey)
+  , "Value" :: Maybe (TagValue)
   }
 derive instance newtypeTag :: Newtype Tag _
 derive instance repGenericTag :: Generic Tag _
@@ -3846,12 +3845,12 @@ instance encodeTag :: Encode Tag where encode = genericEncode options
 
 -- | Constructs Tag from required parameters
 newTag :: Tag
-newTag  = Tag { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag  = Tag { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs Tag's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTag' :: ( { "Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } -> {"Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } ) -> Tag
-newTag'  customize = (Tag <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag' :: ( { "Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } -> {"Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } ) -> Tag
+newTag'  customize = (Tag <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -3911,10 +3910,10 @@ instance encodeTerminateEnvForce :: Encode TerminateEnvForce where encode = gene
 
 -- | <p>Request to terminate an environment.</p>
 newtype TerminateEnvironmentMessage = TerminateEnvironmentMessage 
-  { "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources)
-  , "ForceTerminate" :: NullOrUndefined (ForceTerminate)
+  { "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "TerminateResources" :: Maybe (TerminateEnvironmentResources)
+  , "ForceTerminate" :: Maybe (ForceTerminate)
   }
 derive instance newtypeTerminateEnvironmentMessage :: Newtype TerminateEnvironmentMessage _
 derive instance repGenericTerminateEnvironmentMessage :: Generic TerminateEnvironmentMessage _
@@ -3924,12 +3923,12 @@ instance encodeTerminateEnvironmentMessage :: Encode TerminateEnvironmentMessage
 
 -- | Constructs TerminateEnvironmentMessage from required parameters
 newTerminateEnvironmentMessage :: TerminateEnvironmentMessage
-newTerminateEnvironmentMessage  = TerminateEnvironmentMessage { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "ForceTerminate": (NullOrUndefined Nothing), "TerminateResources": (NullOrUndefined Nothing) }
+newTerminateEnvironmentMessage  = TerminateEnvironmentMessage { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "ForceTerminate": Nothing, "TerminateResources": Nothing }
 
 -- | Constructs TerminateEnvironmentMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTerminateEnvironmentMessage' :: ( { "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources) , "ForceTerminate" :: NullOrUndefined (ForceTerminate) } -> {"EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "TerminateResources" :: NullOrUndefined (TerminateEnvironmentResources) , "ForceTerminate" :: NullOrUndefined (ForceTerminate) } ) -> TerminateEnvironmentMessage
-newTerminateEnvironmentMessage'  customize = (TerminateEnvironmentMessage <<< customize) { "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "ForceTerminate": (NullOrUndefined Nothing), "TerminateResources": (NullOrUndefined Nothing) }
+newTerminateEnvironmentMessage' :: ( { "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "TerminateResources" :: Maybe (TerminateEnvironmentResources) , "ForceTerminate" :: Maybe (ForceTerminate) } -> {"EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "TerminateResources" :: Maybe (TerminateEnvironmentResources) , "ForceTerminate" :: Maybe (ForceTerminate) } ) -> TerminateEnvironmentMessage
+newTerminateEnvironmentMessage'  customize = (TerminateEnvironmentMessage <<< customize) { "EnvironmentId": Nothing, "EnvironmentName": Nothing, "ForceTerminate": Nothing, "TerminateResources": Nothing }
 
 
 
@@ -4041,7 +4040,7 @@ instance encodeTooManyTagsException :: Encode TooManyTagsException where encode 
 
 -- | <p>Describes a trigger.</p>
 newtype Trigger = Trigger 
-  { "Name" :: NullOrUndefined (ResourceId)
+  { "Name" :: Maybe (ResourceId)
   }
 derive instance newtypeTrigger :: Newtype Trigger _
 derive instance repGenericTrigger :: Generic Trigger _
@@ -4051,12 +4050,12 @@ instance encodeTrigger :: Encode Trigger where encode = genericEncode options
 
 -- | Constructs Trigger from required parameters
 newTrigger :: Trigger
-newTrigger  = Trigger { "Name": (NullOrUndefined Nothing) }
+newTrigger  = Trigger { "Name": Nothing }
 
 -- | Constructs Trigger's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTrigger' :: ( { "Name" :: NullOrUndefined (ResourceId) } -> {"Name" :: NullOrUndefined (ResourceId) } ) -> Trigger
-newTrigger'  customize = (Trigger <<< customize) { "Name": (NullOrUndefined Nothing) }
+newTrigger' :: ( { "Name" :: Maybe (ResourceId) } -> {"Name" :: Maybe (ResourceId) } ) -> Trigger
+newTrigger'  customize = (Trigger <<< customize) { "Name": Nothing }
 
 
 
@@ -4072,7 +4071,7 @@ instance encodeTriggerList :: Encode TriggerList where encode = genericEncode op
 -- | <p>Request to update an application.</p>
 newtype UpdateApplicationMessage = UpdateApplicationMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "Description" :: NullOrUndefined (Description)
+  , "Description" :: Maybe (Description)
   }
 derive instance newtypeUpdateApplicationMessage :: Newtype UpdateApplicationMessage _
 derive instance repGenericUpdateApplicationMessage :: Generic UpdateApplicationMessage _
@@ -4082,12 +4081,12 @@ instance encodeUpdateApplicationMessage :: Encode UpdateApplicationMessage where
 
 -- | Constructs UpdateApplicationMessage from required parameters
 newUpdateApplicationMessage :: ApplicationName -> UpdateApplicationMessage
-newUpdateApplicationMessage _ApplicationName = UpdateApplicationMessage { "ApplicationName": _ApplicationName, "Description": (NullOrUndefined Nothing) }
+newUpdateApplicationMessage _ApplicationName = UpdateApplicationMessage { "ApplicationName": _ApplicationName, "Description": Nothing }
 
 -- | Constructs UpdateApplicationMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "Description" :: NullOrUndefined (Description) } -> {"ApplicationName" :: (ApplicationName) , "Description" :: NullOrUndefined (Description) } ) -> UpdateApplicationMessage
-newUpdateApplicationMessage' _ApplicationName customize = (UpdateApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "Description": (NullOrUndefined Nothing) }
+newUpdateApplicationMessage' :: ApplicationName -> ( { "ApplicationName" :: (ApplicationName) , "Description" :: Maybe (Description) } -> {"ApplicationName" :: (ApplicationName) , "Description" :: Maybe (Description) } ) -> UpdateApplicationMessage
+newUpdateApplicationMessage' _ApplicationName customize = (UpdateApplicationMessage <<< customize) { "ApplicationName": _ApplicationName, "Description": Nothing }
 
 
 
@@ -4116,7 +4115,7 @@ newUpdateApplicationResourceLifecycleMessage' _ApplicationName _ResourceLifecycl
 newtype UpdateApplicationVersionMessage = UpdateApplicationVersionMessage 
   { "ApplicationName" :: (ApplicationName)
   , "VersionLabel" :: (VersionLabel)
-  , "Description" :: NullOrUndefined (Description)
+  , "Description" :: Maybe (Description)
   }
 derive instance newtypeUpdateApplicationVersionMessage :: Newtype UpdateApplicationVersionMessage _
 derive instance repGenericUpdateApplicationVersionMessage :: Generic UpdateApplicationVersionMessage _
@@ -4126,12 +4125,12 @@ instance encodeUpdateApplicationVersionMessage :: Encode UpdateApplicationVersio
 
 -- | Constructs UpdateApplicationVersionMessage from required parameters
 newUpdateApplicationVersionMessage :: ApplicationName -> VersionLabel -> UpdateApplicationVersionMessage
-newUpdateApplicationVersionMessage _ApplicationName _VersionLabel = UpdateApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "Description": (NullOrUndefined Nothing) }
+newUpdateApplicationVersionMessage _ApplicationName _VersionLabel = UpdateApplicationVersionMessage { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "Description": Nothing }
 
 -- | Constructs UpdateApplicationVersionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: NullOrUndefined (Description) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: NullOrUndefined (Description) } ) -> UpdateApplicationVersionMessage
-newUpdateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (UpdateApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "Description": (NullOrUndefined Nothing) }
+newUpdateApplicationVersionMessage' :: ApplicationName -> VersionLabel -> ( { "ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: Maybe (Description) } -> {"ApplicationName" :: (ApplicationName) , "VersionLabel" :: (VersionLabel) , "Description" :: Maybe (Description) } ) -> UpdateApplicationVersionMessage
+newUpdateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (UpdateApplicationVersionMessage <<< customize) { "ApplicationName": _ApplicationName, "VersionLabel": _VersionLabel, "Description": Nothing }
 
 
 
@@ -4139,9 +4138,9 @@ newUpdateApplicationVersionMessage' _ApplicationName _VersionLabel customize = (
 newtype UpdateConfigurationTemplateMessage = UpdateConfigurationTemplateMessage 
   { "ApplicationName" :: (ApplicationName)
   , "TemplateName" :: (ConfigurationTemplateName)
-  , "Description" :: NullOrUndefined (Description)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
-  , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList)
+  , "Description" :: Maybe (Description)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
+  , "OptionsToRemove" :: Maybe (OptionsSpecifierList)
   }
 derive instance newtypeUpdateConfigurationTemplateMessage :: Newtype UpdateConfigurationTemplateMessage _
 derive instance repGenericUpdateConfigurationTemplateMessage :: Generic UpdateConfigurationTemplateMessage _
@@ -4151,12 +4150,12 @@ instance encodeUpdateConfigurationTemplateMessage :: Encode UpdateConfigurationT
 
 -- | Constructs UpdateConfigurationTemplateMessage from required parameters
 newUpdateConfigurationTemplateMessage :: ApplicationName -> ConfigurationTemplateName -> UpdateConfigurationTemplateMessage
-newUpdateConfigurationTemplateMessage _ApplicationName _TemplateName = UpdateConfigurationTemplateMessage { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing) }
+newUpdateConfigurationTemplateMessage _ApplicationName _TemplateName = UpdateConfigurationTemplateMessage { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing }
 
 -- | Constructs UpdateConfigurationTemplateMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "Description" :: NullOrUndefined (Description) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } ) -> UpdateConfigurationTemplateMessage
-newUpdateConfigurationTemplateMessage' _ApplicationName _TemplateName customize = (UpdateConfigurationTemplateMessage <<< customize) { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing) }
+newUpdateConfigurationTemplateMessage' :: ApplicationName -> ConfigurationTemplateName -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: (ConfigurationTemplateName) , "Description" :: Maybe (Description) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } ) -> UpdateConfigurationTemplateMessage
+newUpdateConfigurationTemplateMessage' _ApplicationName _TemplateName customize = (UpdateConfigurationTemplateMessage <<< customize) { "ApplicationName": _ApplicationName, "TemplateName": _TemplateName, "Description": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing }
 
 
 
@@ -4171,18 +4170,18 @@ instance encodeUpdateDate :: Encode UpdateDate where encode = genericEncode opti
 
 -- | <p>Request to update an environment.</p>
 newtype UpdateEnvironmentMessage = UpdateEnvironmentMessage 
-  { "ApplicationName" :: NullOrUndefined (ApplicationName)
-  , "EnvironmentId" :: NullOrUndefined (EnvironmentId)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
-  , "GroupName" :: NullOrUndefined (GroupName)
-  , "Description" :: NullOrUndefined (Description)
-  , "Tier" :: NullOrUndefined (EnvironmentTier)
-  , "VersionLabel" :: NullOrUndefined (VersionLabel)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "SolutionStackName" :: NullOrUndefined (SolutionStackName)
-  , "PlatformArn" :: NullOrUndefined (PlatformArn)
-  , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList)
-  , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList)
+  { "ApplicationName" :: Maybe (ApplicationName)
+  , "EnvironmentId" :: Maybe (EnvironmentId)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
+  , "GroupName" :: Maybe (GroupName)
+  , "Description" :: Maybe (Description)
+  , "Tier" :: Maybe (EnvironmentTier)
+  , "VersionLabel" :: Maybe (VersionLabel)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "SolutionStackName" :: Maybe (SolutionStackName)
+  , "PlatformArn" :: Maybe (PlatformArn)
+  , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList)
+  , "OptionsToRemove" :: Maybe (OptionsSpecifierList)
   }
 derive instance newtypeUpdateEnvironmentMessage :: Newtype UpdateEnvironmentMessage _
 derive instance repGenericUpdateEnvironmentMessage :: Generic UpdateEnvironmentMessage _
@@ -4192,19 +4191,19 @@ instance encodeUpdateEnvironmentMessage :: Encode UpdateEnvironmentMessage where
 
 -- | Constructs UpdateEnvironmentMessage from required parameters
 newUpdateEnvironmentMessage :: UpdateEnvironmentMessage
-newUpdateEnvironmentMessage  = UpdateEnvironmentMessage { "ApplicationName": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newUpdateEnvironmentMessage  = UpdateEnvironmentMessage { "ApplicationName": Nothing, "Description": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "GroupName": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 -- | Constructs UpdateEnvironmentMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateEnvironmentMessage' :: ( { "ApplicationName" :: NullOrUndefined (ApplicationName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "GroupName" :: NullOrUndefined (GroupName) , "Description" :: NullOrUndefined (Description) , "Tier" :: NullOrUndefined (EnvironmentTier) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } -> {"ApplicationName" :: NullOrUndefined (ApplicationName) , "EnvironmentId" :: NullOrUndefined (EnvironmentId) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "GroupName" :: NullOrUndefined (GroupName) , "Description" :: NullOrUndefined (Description) , "Tier" :: NullOrUndefined (EnvironmentTier) , "VersionLabel" :: NullOrUndefined (VersionLabel) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "SolutionStackName" :: NullOrUndefined (SolutionStackName) , "PlatformArn" :: NullOrUndefined (PlatformArn) , "OptionSettings" :: NullOrUndefined (ConfigurationOptionSettingsList) , "OptionsToRemove" :: NullOrUndefined (OptionsSpecifierList) } ) -> UpdateEnvironmentMessage
-newUpdateEnvironmentMessage'  customize = (UpdateEnvironmentMessage <<< customize) { "ApplicationName": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EnvironmentId": (NullOrUndefined Nothing), "EnvironmentName": (NullOrUndefined Nothing), "GroupName": (NullOrUndefined Nothing), "OptionSettings": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing), "PlatformArn": (NullOrUndefined Nothing), "SolutionStackName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing), "Tier": (NullOrUndefined Nothing), "VersionLabel": (NullOrUndefined Nothing) }
+newUpdateEnvironmentMessage' :: ( { "ApplicationName" :: Maybe (ApplicationName) , "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "GroupName" :: Maybe (GroupName) , "Description" :: Maybe (Description) , "Tier" :: Maybe (EnvironmentTier) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } -> {"ApplicationName" :: Maybe (ApplicationName) , "EnvironmentId" :: Maybe (EnvironmentId) , "EnvironmentName" :: Maybe (EnvironmentName) , "GroupName" :: Maybe (GroupName) , "Description" :: Maybe (Description) , "Tier" :: Maybe (EnvironmentTier) , "VersionLabel" :: Maybe (VersionLabel) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "SolutionStackName" :: Maybe (SolutionStackName) , "PlatformArn" :: Maybe (PlatformArn) , "OptionSettings" :: Maybe (ConfigurationOptionSettingsList) , "OptionsToRemove" :: Maybe (OptionsSpecifierList) } ) -> UpdateEnvironmentMessage
+newUpdateEnvironmentMessage'  customize = (UpdateEnvironmentMessage <<< customize) { "ApplicationName": Nothing, "Description": Nothing, "EnvironmentId": Nothing, "EnvironmentName": Nothing, "GroupName": Nothing, "OptionSettings": Nothing, "OptionsToRemove": Nothing, "PlatformArn": Nothing, "SolutionStackName": Nothing, "TemplateName": Nothing, "Tier": Nothing, "VersionLabel": Nothing }
 
 
 
 newtype UpdateTagsForResourceMessage = UpdateTagsForResourceMessage 
   { "ResourceArn" :: (ResourceArn)
-  , "TagsToAdd" :: NullOrUndefined (TagList)
-  , "TagsToRemove" :: NullOrUndefined (TagKeyList)
+  , "TagsToAdd" :: Maybe (TagList)
+  , "TagsToRemove" :: Maybe (TagKeyList)
   }
 derive instance newtypeUpdateTagsForResourceMessage :: Newtype UpdateTagsForResourceMessage _
 derive instance repGenericUpdateTagsForResourceMessage :: Generic UpdateTagsForResourceMessage _
@@ -4214,12 +4213,12 @@ instance encodeUpdateTagsForResourceMessage :: Encode UpdateTagsForResourceMessa
 
 -- | Constructs UpdateTagsForResourceMessage from required parameters
 newUpdateTagsForResourceMessage :: ResourceArn -> UpdateTagsForResourceMessage
-newUpdateTagsForResourceMessage _ResourceArn = UpdateTagsForResourceMessage { "ResourceArn": _ResourceArn, "TagsToAdd": (NullOrUndefined Nothing), "TagsToRemove": (NullOrUndefined Nothing) }
+newUpdateTagsForResourceMessage _ResourceArn = UpdateTagsForResourceMessage { "ResourceArn": _ResourceArn, "TagsToAdd": Nothing, "TagsToRemove": Nothing }
 
 -- | Constructs UpdateTagsForResourceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateTagsForResourceMessage' :: ResourceArn -> ( { "ResourceArn" :: (ResourceArn) , "TagsToAdd" :: NullOrUndefined (TagList) , "TagsToRemove" :: NullOrUndefined (TagKeyList) } -> {"ResourceArn" :: (ResourceArn) , "TagsToAdd" :: NullOrUndefined (TagList) , "TagsToRemove" :: NullOrUndefined (TagKeyList) } ) -> UpdateTagsForResourceMessage
-newUpdateTagsForResourceMessage' _ResourceArn customize = (UpdateTagsForResourceMessage <<< customize) { "ResourceArn": _ResourceArn, "TagsToAdd": (NullOrUndefined Nothing), "TagsToRemove": (NullOrUndefined Nothing) }
+newUpdateTagsForResourceMessage' :: ResourceArn -> ( { "ResourceArn" :: (ResourceArn) , "TagsToAdd" :: Maybe (TagList) , "TagsToRemove" :: Maybe (TagKeyList) } -> {"ResourceArn" :: (ResourceArn) , "TagsToAdd" :: Maybe (TagList) , "TagsToRemove" :: Maybe (TagKeyList) } ) -> UpdateTagsForResourceMessage
+newUpdateTagsForResourceMessage' _ResourceArn customize = (UpdateTagsForResourceMessage <<< customize) { "ResourceArn": _ResourceArn, "TagsToAdd": Nothing, "TagsToRemove": Nothing }
 
 
 
@@ -4235,8 +4234,8 @@ instance encodeUserDefinedOption :: Encode UserDefinedOption where encode = gene
 -- | <p>A list of validation messages for a specified configuration template.</p>
 newtype ValidateConfigurationSettingsMessage = ValidateConfigurationSettingsMessage 
   { "ApplicationName" :: (ApplicationName)
-  , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName)
-  , "EnvironmentName" :: NullOrUndefined (EnvironmentName)
+  , "TemplateName" :: Maybe (ConfigurationTemplateName)
+  , "EnvironmentName" :: Maybe (EnvironmentName)
   , "OptionSettings" :: (ConfigurationOptionSettingsList)
   }
 derive instance newtypeValidateConfigurationSettingsMessage :: Newtype ValidateConfigurationSettingsMessage _
@@ -4247,21 +4246,21 @@ instance encodeValidateConfigurationSettingsMessage :: Encode ValidateConfigurat
 
 -- | Constructs ValidateConfigurationSettingsMessage from required parameters
 newValidateConfigurationSettingsMessage :: ApplicationName -> ConfigurationOptionSettingsList -> ValidateConfigurationSettingsMessage
-newValidateConfigurationSettingsMessage _ApplicationName _OptionSettings = ValidateConfigurationSettingsMessage { "ApplicationName": _ApplicationName, "OptionSettings": _OptionSettings, "EnvironmentName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newValidateConfigurationSettingsMessage _ApplicationName _OptionSettings = ValidateConfigurationSettingsMessage { "ApplicationName": _ApplicationName, "OptionSettings": _OptionSettings, "EnvironmentName": Nothing, "TemplateName": Nothing }
 
 -- | Constructs ValidateConfigurationSettingsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newValidateConfigurationSettingsMessage' :: ApplicationName -> ConfigurationOptionSettingsList -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "OptionSettings" :: (ConfigurationOptionSettingsList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: NullOrUndefined (ConfigurationTemplateName) , "EnvironmentName" :: NullOrUndefined (EnvironmentName) , "OptionSettings" :: (ConfigurationOptionSettingsList) } ) -> ValidateConfigurationSettingsMessage
-newValidateConfigurationSettingsMessage' _ApplicationName _OptionSettings customize = (ValidateConfigurationSettingsMessage <<< customize) { "ApplicationName": _ApplicationName, "OptionSettings": _OptionSettings, "EnvironmentName": (NullOrUndefined Nothing), "TemplateName": (NullOrUndefined Nothing) }
+newValidateConfigurationSettingsMessage' :: ApplicationName -> ConfigurationOptionSettingsList -> ( { "ApplicationName" :: (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "OptionSettings" :: (ConfigurationOptionSettingsList) } -> {"ApplicationName" :: (ApplicationName) , "TemplateName" :: Maybe (ConfigurationTemplateName) , "EnvironmentName" :: Maybe (EnvironmentName) , "OptionSettings" :: (ConfigurationOptionSettingsList) } ) -> ValidateConfigurationSettingsMessage
+newValidateConfigurationSettingsMessage' _ApplicationName _OptionSettings customize = (ValidateConfigurationSettingsMessage <<< customize) { "ApplicationName": _ApplicationName, "OptionSettings": _OptionSettings, "EnvironmentName": Nothing, "TemplateName": Nothing }
 
 
 
 -- | <p>An error or warning for a desired configuration option value.</p>
 newtype ValidationMessage = ValidationMessage 
-  { "Message" :: NullOrUndefined (ValidationMessageString)
-  , "Severity" :: NullOrUndefined (ValidationSeverity)
-  , "Namespace" :: NullOrUndefined (OptionNamespace)
-  , "OptionName" :: NullOrUndefined (ConfigurationOptionName)
+  { "Message" :: Maybe (ValidationMessageString)
+  , "Severity" :: Maybe (ValidationSeverity)
+  , "Namespace" :: Maybe (OptionNamespace)
+  , "OptionName" :: Maybe (ConfigurationOptionName)
   }
 derive instance newtypeValidationMessage :: Newtype ValidationMessage _
 derive instance repGenericValidationMessage :: Generic ValidationMessage _
@@ -4271,12 +4270,12 @@ instance encodeValidationMessage :: Encode ValidationMessage where encode = gene
 
 -- | Constructs ValidationMessage from required parameters
 newValidationMessage :: ValidationMessage
-newValidationMessage  = ValidationMessage { "Message": (NullOrUndefined Nothing), "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing) }
+newValidationMessage  = ValidationMessage { "Message": Nothing, "Namespace": Nothing, "OptionName": Nothing, "Severity": Nothing }
 
 -- | Constructs ValidationMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newValidationMessage' :: ( { "Message" :: NullOrUndefined (ValidationMessageString) , "Severity" :: NullOrUndefined (ValidationSeverity) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) } -> {"Message" :: NullOrUndefined (ValidationMessageString) , "Severity" :: NullOrUndefined (ValidationSeverity) , "Namespace" :: NullOrUndefined (OptionNamespace) , "OptionName" :: NullOrUndefined (ConfigurationOptionName) } ) -> ValidationMessage
-newValidationMessage'  customize = (ValidationMessage <<< customize) { "Message": (NullOrUndefined Nothing), "Namespace": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "Severity": (NullOrUndefined Nothing) }
+newValidationMessage' :: ( { "Message" :: Maybe (ValidationMessageString) , "Severity" :: Maybe (ValidationSeverity) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) } -> {"Message" :: Maybe (ValidationMessageString) , "Severity" :: Maybe (ValidationSeverity) , "Namespace" :: Maybe (OptionNamespace) , "OptionName" :: Maybe (ConfigurationOptionName) } ) -> ValidationMessage
+newValidationMessage'  customize = (ValidationMessage <<< customize) { "Message": Nothing, "Namespace": Nothing, "OptionName": Nothing, "Severity": Nothing }
 
 
 

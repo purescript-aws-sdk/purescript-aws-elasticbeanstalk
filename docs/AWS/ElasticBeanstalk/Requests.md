@@ -3,7 +3,7 @@
 #### `abortEnvironmentUpdate`
 
 ``` purescript
-abortEnvironmentUpdate :: forall eff. Service -> AbortEnvironmentUpdateMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+abortEnvironmentUpdate :: forall eff. Service -> AbortEnvironmentUpdateMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Cancels in-progress environment configuration update or application version deployment.</p>
@@ -83,7 +83,7 @@ createStorageLocation :: forall eff. Service -> Aff (exception :: EXCEPTION | ef
 #### `deleteApplication`
 
 ``` purescript
-deleteApplication :: forall eff. Service -> DeleteApplicationMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteApplication :: forall eff. Service -> DeleteApplicationMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified application along with all associated versions and configurations. The application versions will not be deleted from your Amazon S3 bucket.</p> <note> <p>You cannot delete an application that has a running environment.</p> </note>
@@ -91,7 +91,7 @@ deleteApplication :: forall eff. Service -> DeleteApplicationMessage -> Aff (exc
 #### `deleteApplicationVersion`
 
 ``` purescript
-deleteApplicationVersion :: forall eff. Service -> DeleteApplicationVersionMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteApplicationVersion :: forall eff. Service -> DeleteApplicationVersionMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified version from the specified application.</p> <note> <p>You cannot delete an application version that is associated with a running environment.</p> </note>
@@ -99,7 +99,7 @@ deleteApplicationVersion :: forall eff. Service -> DeleteApplicationVersionMessa
 #### `deleteConfigurationTemplate`
 
 ``` purescript
-deleteConfigurationTemplate :: forall eff. Service -> DeleteConfigurationTemplateMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteConfigurationTemplate :: forall eff. Service -> DeleteConfigurationTemplateMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified configuration template.</p> <note> <p>When you launch an environment using a configuration template, the environment gets a copy of the template. You can delete or modify the environment's copy of the template without affecting the running environment.</p> </note>
@@ -107,7 +107,7 @@ deleteConfigurationTemplate :: forall eff. Service -> DeleteConfigurationTemplat
 #### `deleteEnvironmentConfiguration`
 
 ``` purescript
-deleteEnvironmentConfiguration :: forall eff. Service -> DeleteEnvironmentConfigurationMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteEnvironmentConfiguration :: forall eff. Service -> DeleteEnvironmentConfigurationMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the draft configuration associated with the running environment.</p> <p>Updating a running environment with any configuration changes creates a draft configuration set. You can get the draft configuration using <a>DescribeConfigurationSettings</a> while the update is in progress or if the update fails. The <code>DeploymentStatus</code> for the draft configuration indicates whether the deployment is in process or has failed. The draft configuration remains in existence until it is deleted with this action.</p>
@@ -243,7 +243,7 @@ listTagsForResource :: forall eff. Service -> ListTagsForResourceMessage -> Aff 
 #### `rebuildEnvironment`
 
 ``` purescript
-rebuildEnvironment :: forall eff. Service -> RebuildEnvironmentMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+rebuildEnvironment :: forall eff. Service -> RebuildEnvironmentMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a specified environment and forces a restart.</p>
@@ -251,7 +251,7 @@ rebuildEnvironment :: forall eff. Service -> RebuildEnvironmentMessage -> Aff (e
 #### `requestEnvironmentInfo`
 
 ``` purescript
-requestEnvironmentInfo :: forall eff. Service -> RequestEnvironmentInfoMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+requestEnvironmentInfo :: forall eff. Service -> RequestEnvironmentInfoMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Initiates a request to compile the specified type of information of the deployed environment.</p> <p> Setting the <code>InfoType</code> to <code>tail</code> compiles the last lines from the application server log files of every Amazon EC2 instance in your environment. </p> <p> Setting the <code>InfoType</code> to <code>bundle</code> compresses the application server log files for every Amazon EC2 instance into a <code>.zip</code> file. Legacy and .NET containers do not support bundle logs. </p> <p> Use <a>RetrieveEnvironmentInfo</a> to obtain the set of logs. </p> <p>Related Topics</p> <ul> <li> <p> <a>RetrieveEnvironmentInfo</a> </p> </li> </ul>
@@ -259,7 +259,7 @@ requestEnvironmentInfo :: forall eff. Service -> RequestEnvironmentInfoMessage -
 #### `restartAppServer`
 
 ``` purescript
-restartAppServer :: forall eff. Service -> RestartAppServerMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+restartAppServer :: forall eff. Service -> RestartAppServerMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Causes the environment to restart the application container server running on each Amazon EC2 instance.</p>
@@ -275,7 +275,7 @@ retrieveEnvironmentInfo :: forall eff. Service -> RetrieveEnvironmentInfoMessage
 #### `swapEnvironmentCNAMEs`
 
 ``` purescript
-swapEnvironmentCNAMEs :: forall eff. Service -> SwapEnvironmentCNAMEsMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+swapEnvironmentCNAMEs :: forall eff. Service -> SwapEnvironmentCNAMEsMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Swaps the CNAMEs of two environments.</p>
@@ -331,7 +331,7 @@ updateEnvironment :: forall eff. Service -> UpdateEnvironmentMessage -> Aff (exc
 #### `updateTagsForResource`
 
 ``` purescript
-updateTagsForResource :: forall eff. Service -> UpdateTagsForResourceMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+updateTagsForResource :: forall eff. Service -> UpdateTagsForResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Update the list of tags applied to an AWS Elastic Beanstalk resource. Two lists can be passed: <code>TagsToAdd</code> for tags to add or update, and <code>TagsToRemove</code>.</p> <p>Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment tagging, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging Resources in Your Elastic Beanstalk Environment</a>.</p> <p>If you create a custom IAM user policy to control permission to this operation, specify one of the following two virtual actions (or both) instead of the API operation name:</p> <dl> <dt>elasticbeanstalk:AddTags</dt> <dd> <p>Controls permission to call <code>UpdateTagsForResource</code> and pass a list of tags to add in the <code>TagsToAdd</code> parameter.</p> </dd> <dt>elasticbeanstalk:RemoveTags</dt> <dd> <p>Controls permission to call <code>UpdateTagsForResource</code> and pass a list of tag keys to remove in the <code>TagsToRemove</code> parameter.</p> </dd> </dl> <p>For details about creating a custom user policy, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies">Creating a Custom User Policy</a>.</p>
